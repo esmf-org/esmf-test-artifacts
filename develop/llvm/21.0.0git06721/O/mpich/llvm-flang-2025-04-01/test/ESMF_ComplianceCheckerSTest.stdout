@@ -1,0 +1,87 @@
+2025-05-08 22:49:20
+Abort(1) on node 0 (rank 0 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 0
+Abort(1) on node 1 (rank 1 in comm 496): application called MPI_Abort(comm=0x84000001, 1) - process 1
+Abort(1) on node 2 (rank 2 in comm 496): application called MPI_Abort(comm=0x84000001, 1) - process 2
+Abort(1) on node 3 (rank 3 in comm 496): application called MPI_Abort(comm=0x84000001, 1) - process 3
+Abort(1) on node 4 (rank 4 in comm 496): application called MPI_Abort(comm=0x84000001, 1) - process 4
+Abort(1) on node 5 (rank 5 in comm 496): application called MPI_Abort(comm=0x84000001, 1) - process 5
+borgn005:rank4: Error opening remote shared memory object /psm3_shm.31128555.0x33d015a6703:fe80000000000000:b83fd20300fdaa66.0 in shm_open: No such file or directory (err=9)
+borgn005:rank5: Error opening remote shared memory object /psm3_shm.31128555.0x33d015a6703:fe80000000000000:b83fd20300fdaa66.0 in shm_open: No such file or directory (err=9)
+ --------------------------------------- 
+ Start of  System Test ESMF_ComplianceCheckerSTest
+ --------------------------------------- 
+ Comp Creates finished
+ 1 User Comp1 Register starting
+ 1 User Comp1 Register returning
+ User Coupler Register starting
+ Registered Initialize, Run, and Finalize routines
+ User Coupler Register returning
+ 1 User Comp1 Init starting
+ 1 User Comp1 Init returning
+ User Coupler Init starting
+ User Coupler Init returning
+ 1 User Comp1 Run starting
+ 1 User Comp1 Run returning
+ User Coupler Run starting
+ User Coupler Run returning
+ User Coupler Final starting
+ User Coupler Final returning
+ 1 User Comp1 Final starting
+ 1 User Comp1 Final returning
+borgn005:rank4: PSM could not set up shared memory segment (err=9)
+borgn005:rank5: PSM could not set up shared memory segment (err=9)
+libfabric:153267:1746762208::psm3:av:psmx3_epid_to_epaddr():240<warn> borgn005:rank5: psm3_ep_connect returned error PSM could not set up shared memory segment, remote epid=0x33d015a6703:fe80000000000000:b83fd20300fdaa66.
+ --------------------------------------- 
+ Start of  System Test ESMF_ComplianceCheckerSTest
+ --------------------------------------- 
+ Comp Creates finished
+ 2 User Comp1 Register starting
+ 2 User Comp1 Register returning
+ User Coupler Register starting
+ Registered Initialize, Run, and Finalize routines
+ User Coupler Register returning
+ 2 User Comp1 Init starting
+ 2 User Comp1 Init returning
+ User Coupler Init starting
+ User Coupler Init returning
+ 2 User Comp1 Run starting
+ 2 User Comp1 Run returning
+ User Coupler Run starting
+ User Coupler Run returning
+ User Coupler Final starting
+ User Coupler Final returning
+ 2 User Comp1 Final starting
+ 2 User Comp1 Final returning
+libfabric:153266:1746762208::psm3:av:psmx3_epid_to_epaddr():240<warn> borgn005:rank4: psm3_ep_connect returned error PSM could not set up shared memory segment, remote epid=0x33d015a6703:fe80000000000000:b83fd20300fdaa66.
+ --------------------------------------- 
+ Start of  System Test ESMF_ComplianceCheckerSTest
+ --------------------------------------- 
+ Comp Creates finished
+ 0 User Comp1 Register starting
+ 0 User Comp1 Register returning
+ User Coupler Register starting
+ Registered Initialize, Run, and Finalize routines
+ User Coupler Register returning
+ 0 User Comp1 Init starting
+ 0 User Comp1 Init returning
+ User Coupler Init starting
+ User Coupler Init returning
+ 0 User Comp1 Run starting
+ 0 User Comp1 Run returning
+ User Coupler Run starting
+ User Coupler Run returning
+ User Coupler Final starting
+ User Coupler Final returning
+ 0 User Comp1 Final starting
+ 0 User Comp1 Final returning
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 153266 RUNNING AT borgn005
+=   EXIT CODE: 6
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+YOUR APPLICATION TERMINATED WITH THE EXIT STRING: Aborted (signal 6)
+This typically refers to a problem with your application.
+Please see the FAQ page for debugging suggestions

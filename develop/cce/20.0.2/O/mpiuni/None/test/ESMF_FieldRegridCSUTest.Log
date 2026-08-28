@@ -1,0 +1,56 @@
+2026-08-28 04:51:59
+20260828 052330.787 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260828 052330.787 INFO             PET0 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20260828 052330.787 INFO             PET0 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20260828 052330.787 INFO             PET0 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20260828 052330.787 INFO             PET0 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20260828 052330.787 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260828 052330.787 INFO             PET0 Running with ESMF Version   : develop+g1082792c4b
+20260828 052330.787 INFO             PET0 ESMF library build date/time: "Aug 28 2026" "04:50:08"
+20260828 052330.787 INFO             PET0 ESMF library build location : /tmp/cce_20.0.2_mpiuni_O_develop/esmf
+20260828 052330.787 INFO             PET0 ESMF_COMM                   : mpiuni
+20260828 052330.787 INFO             PET0 ESMF_MOAB                   : enabled
+20260828 052330.787 INFO             PET0 ESMF_LAPACK                 : enabled
+20260828 052330.787 INFO             PET0 ESMF_NETCDF                 : enabled
+20260828 052330.787 INFO             PET0 ESMF_PNETCDF                : disabled
+20260828 052330.787 INFO             PET0 ESMF_PIO                    : enabled
+20260828 052330.787 INFO             PET0 ESMF_YAMLCPP                : enabled
+20260828 052330.787 INFO             PET0  Beginning Test, file ESMF_FieldRegridCSUTest.F90, line 60
+20260828 052330.787 INFO             PET0  NUMBER_OF_PROCESSORS 1
+20260828 052330.859 INFO             PET0  PASS  Bilinear regrid a cubed sphere Grid with regular decomposition, ESMF_FieldRegridCSUTest.F90, line 80
+20260828 052330.919 INFO             PET0  PASS  Bilinear regrid a cubed sphere Grid with irregular decomposition, ESMF_FieldRegridCSUTest.F90, line 96
+20260828 052330.985 INFO             PET0  PASS  Bilinear regrid a cubed sphere Grid with ESMF_COORDSYS_SPH_RAD, ESMF_FieldRegridCSUTest.F90, line 112
+20260828 052331.520 INFO             PET0  PASS  Patch regrid a cubed sphere Grid, ESMF_FieldRegridCSUTest.F90, line 129
+20260828 052331.553 INFO             PET0  PASS  Nearest neighbor regrid a cubed sphere Grid, ESMF_FieldRegridCSUTest.F90, line 148
+20260828 052331.723 INFO             PET0  PASS  Conservative regrid a cubed sphere Grid with regular decomposition, ESMF_FieldRegridCSUTest.F90, line 164
+20260828 052331.887 INFO             PET0  PASS  Conservative regrid a cubed sphere Grid with irregular decomposition, ESMF_FieldRegridCSUTest.F90, line 180
+20260828 052332.016 ERROR            PET0 ESMCI_Mesh_Regrid_Glue.C:842 ESMCI_regrid_create() Internal error: Bad condition  - Condition {sdim == dst_dim} failed at /tmp/cce_20.0.2_mpiuni_O_develop/esmf/src/Infrastructure/Mesh/src/Legacy/ESMCI_GeomRendezvous.C, line:282
+20260828 052332.016 ERROR            PET0 ESMCI_MeshCap.C:1681 MeshCap::regrid_create() Internal error: Bad condition  - Internal subroutine call returned Error
+20260828 052332.016 ERROR            PET0 ESMF_Regrid.F90:384 ESMF_RegridStore Internal error: Bad condition  - Internal subroutine call returned Error
+20260828 052332.016 ERROR            PET0 ESMF_FieldRegrid.F90:1383 ESMF_FieldRegridStoreNX Internal error: Bad condition  - Internal subroutine call returned Error
+20260828 052332.016 ERROR            PET0 ESMF_FieldRegridCSUTest.F90:2752 test_bilinear_regrid_csmesh Internal error: Bad condition  - Internal subroutine call returned Error
+20260828 052332.016 INFO             PET0  FAIL  Bilinear regrid a cubed sphere Mesh, ESMF_FieldRegridCSUTest.F90, line 196:  Test unsuccessful
+20260828 052332.150 ERROR            PET0 ESMCI_Mesh_Regrid_Glue.C:842 ESMCI_regrid_create() Internal error: Bad condition  - Condition {sdim == dst_dim} failed at /tmp/cce_20.0.2_mpiuni_O_develop/esmf/src/Infrastructure/Mesh/src/Legacy/ESMCI_GeomRendezvous.C, line:282
+20260828 052332.150 ERROR            PET0 ESMCI_MeshCap.C:1681 MeshCap::regrid_create() Internal error: Bad condition  - Internal subroutine call returned Error
+20260828 052332.150 ERROR            PET0 ESMF_Regrid.F90:384 ESMF_RegridStore Internal error: Bad condition  - Internal subroutine call returned Error
+20260828 052332.150 ERROR            PET0 ESMF_FieldRegrid.F90:1383 ESMF_FieldRegridStoreNX Internal error: Bad condition  - Internal subroutine call returned Error
+20260828 052332.150 ERROR            PET0 ESMF_FieldRegridCSUTest.F90:3118 test_patch_regrid_csmesh Internal error: Bad condition  - Internal subroutine call returned Error
+20260828 052332.150 INFO             PET0  FAIL  Patch regrid a cubed sphere Mesh, ESMF_FieldRegridCSUTest.F90, line 212:  Test unsuccessful
+20260828 052332.238 ERROR            PET0 ESMCI_Mesh_Regrid_Glue.C:842 ESMCI_regrid_create() Internal error: Bad condition  - Condition {sdim == dst_dim} failed at /tmp/cce_20.0.2_mpiuni_O_develop/esmf/src/Infrastructure/Mesh/src/Legacy/ESMCI_GeomRendezvous.C, line:282
+20260828 052332.238 ERROR            PET0 ESMCI_MeshCap.C:1681 MeshCap::regrid_create() Internal error: Bad condition  - Internal subroutine call returned Error
+20260828 052332.238 ERROR            PET0 ESMF_Regrid.F90:384 ESMF_RegridStore Internal error: Bad condition  - Internal subroutine call returned Error
+20260828 052332.238 ERROR            PET0 ESMF_FieldRegrid.F90:1383 ESMF_FieldRegridStoreNX Internal error: Bad condition  - Internal subroutine call returned Error
+20260828 052332.238 ERROR            PET0 ESMF_FieldRegridCSUTest.F90:3484 test_nearest_regrid_csmesh Internal error: Bad condition  - Internal subroutine call returned Error
+20260828 052332.238 INFO             PET0  FAIL  Nearest neighbor regrid a cubed sphere Mesh, ESMF_FieldRegridCSUTest.F90, line 231:  Test unsuccessful
+20260828 052332.323 ERROR            PET0 ESMCI_Mesh_Regrid_Glue.C:842 ESMCI_regrid_create() Internal error: Bad condition  - Condition {sdim == dst_dim} failed at /tmp/cce_20.0.2_mpiuni_O_develop/esmf/src/Infrastructure/Mesh/src/Legacy/ESMCI_GeomRendezvous.C, line:282
+20260828 052332.324 ERROR            PET0 ESMCI_MeshCap.C:1681 MeshCap::regrid_create() Internal error: Bad condition  - Internal subroutine call returned Error
+20260828 052332.324 ERROR            PET0 ESMF_Regrid.F90:384 ESMF_RegridStore Internal error: Bad condition  - Internal subroutine call returned Error
+20260828 052332.324 ERROR            PET0 ESMF_FieldRegrid.F90:1383 ESMF_FieldRegridStoreNX Internal error: Bad condition  - Internal subroutine call returned Error
+20260828 052332.324 ERROR            PET0 ESMF_FieldRegridCSUTest.F90:3893 test_conserve_regrid_csmesh Internal error: Bad condition  - Internal subroutine call returned Error
+20260828 052332.324 INFO             PET0  FAIL  Conservative regrid a cubed sphere Mesh, ESMF_FieldRegridCSUTest.F90, line 246:  Test unsuccessful
+20260828 052332.539 INFO             PET0  PASS  Bilinear regrid a regularly decomposed cubed sphere Grid defined in GRIDSPEC Mosaic file, ESMF_FieldRegridCSUTest.F90, line 262
+20260828 052332.709 INFO             PET0  PASS  Bilinear regrid an irregularly decomposed cubed sphere Grid defined in GRIDSPEC Mosaic file, ESMF_FieldRegridCSUTest.F90, line 282
+20260828 052333.316 INFO             PET0  PASS  Conservative regrid a regularly decomposed cubed sphere Grid defined in a GRIDSPEC Mosaic file, ESMF_FieldRegridCSUTest.F90, line 302
+20260828 052333.887 INFO             PET0  PASS  Conservative regrid a irregularly decomposed cubed sphere Grid defined in a GRIDSPEC Mosaic file, ESMF_FieldRegridCSUTest.F90, line 323
+20260828 052333.888 INFO             PET0  Ending Test, file ESMF_FieldRegridCSUTest.F90, line 332
+20260828 052333.888 INFO             PET0  Finalizing ESMF

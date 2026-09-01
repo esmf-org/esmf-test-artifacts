@@ -1,0 +1,116 @@
+2026-09-01 00:37:27
+20260901 005307.967 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260901 005307.967 INFO             PET0 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20260901 005307.967 INFO             PET0 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20260901 005307.967 INFO             PET0 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20260901 005307.967 INFO             PET0 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20260901 005307.967 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260901 005307.967 INFO             PET0 Running with ESMF Version   : develop+g849fce6537
+20260901 005307.967 INFO             PET0 ESMF library build date/time: "Sep  1 2026" "00:35:29"
+20260901 005307.967 INFO             PET0 ESMF library build location : /project/esmf/ESMF-Nightly-Testing-Bighorn/gfortran_8.2.0_mpiuni_O_develop/esmf
+20260901 005307.967 INFO             PET0 ESMF_COMM                   : mpiuni
+20260901 005307.967 INFO             PET0 ESMF_MOAB                   : enabled
+20260901 005307.967 INFO             PET0 ESMF_LAPACK                 : enabled
+20260901 005307.967 INFO             PET0 ESMF_NETCDF                 : enabled
+20260901 005307.967 INFO             PET0 ESMF_PNETCDF                : disabled
+20260901 005307.967 INFO             PET0 ESMF_PIO                    : enabled
+20260901 005307.967 INFO             PET0 ESMF_YAMLCPP                : enabled
+20260901 005307.967 INFO             PET0 Beginning Test, file ESMC_GridUTest.c, line 54
+20260901 005307.967 INFO             PET0 Beginning Test, file ESMC_GridUTest.c, line 54NUMBER_OF_PROCESSORS 1
+20260901 005307.980 INFO             PET0 PASS GridCreateCubedSphere without regDecompPTile, ESMC_GridUTest.c, line 139
+20260901 005308.062 INFO             PET0 PASS GridCreateCubedSphere with regDecompPTile, ESMC_GridUTest.c, line 145
+20260901 005308.328 INFO             PET0 PASS GridWrite(cubedsphere), ESMC_GridUTest.c, line 156
+20260901 005308.328 INFO             PET0 PASS GridCreateGetCoord(cubedsphere), ESMC_GridUTest.c, line 165
+20260901 005308.328 INFO             PET0 PASS GridDestroy(cubedsphere), ESMC_GridUTest.c, line 191
+20260901 005308.328 INFO             PET0 PASS GridCreate, ESMC_GridUTest.c, line 212
+20260901 005308.328 INFO             PET0 PASS GridCreate_periodicDim_1, ESMC_GridUTest.c, line 227
+20260901 005308.328 INFO             PET0 PASS GridCreate_periodicDim_2, ESMC_GridUTest.c, line 249
+20260901 005308.334 INFO             PET0 PASS GridCreateFromFile_SCRIP, ESMC_GridUTest.c, line 268
+20260901 005308.336 INFO             PET0 PASS GridCreateFromFile_SCRIP_decomp_BALANCED_BALANCED, ESMC_GridUTest.c, line 293
+20260901 005308.338 INFO             PET0 PASS GridCreateFromFile_SCRIP_decomp_BALANCED_RESTFIRST, ESMC_GridUTest.c, line 317
+20260901 005308.340 INFO             PET0 PASS GridCreateFromFile_SCRIP_decomp_BALANCED_RESTLAST, ESMC_GridUTest.c, line 341
+20260901 005308.340 ERROR            PET0 ESMF_Grid.F90:29697 ESMF_GridCreateDistgridReg Input argument out of range  - - decompFlag isn't allowed to be ESMF_DECOMP_CYCLIC when creating a Grid.
+20260901 005308.340 ERROR            PET0 ESMF_Grid.F90:9350 ESMF_GridCreate1PeriDimR Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.340 ERROR            PET0 ESMF_Grid.F90:6794 ESMF_GridCreateFrmScrip Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.340 ERROR            PET0 ESMF_Grid.F90:6520 ESMF_GridCreateFrmNCFile Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.340 ERROR            PET0 ESMF_Grid_C.F90:319 f_esmf_gridcreatefromfile Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.340 ERROR            PET0 ESMCI_Grid.C:658 ESMCI::Grid::createfromfile() Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.340 ERROR            PET0 ESMC_Grid.C:180 ESMC_GridCreateFromFile() Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.340 INFO             PET0 PASS GridCreateFromFile_SCRIP_decomp_BALANCED_CYCLIC, ESMC_GridUTest.c, line 367
+20260901 005308.342 INFO             PET0 PASS GridCreateFromFile_SCRIP_decomp_RESTFIRST_BALANCED, ESMC_GridUTest.c, line 392
+20260901 005308.344 INFO             PET0 PASS GridCreateFromFile_SCRIP_decomp_RESTFIRST_RESTFIRST, ESMC_GridUTest.c, line 416
+20260901 005308.346 INFO             PET0 PASS GridCreateFromFile_SCRIP_decomp_RESTFIRST_RESTLAST, ESMC_GridUTest.c, line 440
+20260901 005308.346 ERROR            PET0 ESMF_Grid.F90:29697 ESMF_GridCreateDistgridReg Input argument out of range  - - decompFlag isn't allowed to be ESMF_DECOMP_CYCLIC when creating a Grid.
+20260901 005308.346 ERROR            PET0 ESMF_Grid.F90:9350 ESMF_GridCreate1PeriDimR Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.346 ERROR            PET0 ESMF_Grid.F90:6794 ESMF_GridCreateFrmScrip Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.346 ERROR            PET0 ESMF_Grid.F90:6520 ESMF_GridCreateFrmNCFile Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.346 ERROR            PET0 ESMF_Grid_C.F90:319 f_esmf_gridcreatefromfile Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.346 ERROR            PET0 ESMCI_Grid.C:658 ESMCI::Grid::createfromfile() Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.346 ERROR            PET0 ESMC_Grid.C:180 ESMC_GridCreateFromFile() Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.346 INFO             PET0 PASS GridCreateFromFile_SCRIP_decomp_RESTFIRST_CYCLIC, ESMC_GridUTest.c, line 466
+20260901 005308.348 INFO             PET0 PASS GridCreateFromFile_SCRIP_decomp_RESTLAST_BALANCED, ESMC_GridUTest.c, line 491
+20260901 005308.350 INFO             PET0 PASS GridCreateFromFile_SCRIP_decomp_RESTLAST_RESTFIRST, ESMC_GridUTest.c, line 515
+20260901 005308.352 INFO             PET0 PASS GridCreateFromFile_SCRIP_decomp_RESTLAST_RESTLAST, ESMC_GridUTest.c, line 539
+20260901 005308.352 ERROR            PET0 ESMF_Grid.F90:29697 ESMF_GridCreateDistgridReg Input argument out of range  - - decompFlag isn't allowed to be ESMF_DECOMP_CYCLIC when creating a Grid.
+20260901 005308.352 ERROR            PET0 ESMF_Grid.F90:9350 ESMF_GridCreate1PeriDimR Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.352 ERROR            PET0 ESMF_Grid.F90:6794 ESMF_GridCreateFrmScrip Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.352 ERROR            PET0 ESMF_Grid.F90:6520 ESMF_GridCreateFrmNCFile Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.352 ERROR            PET0 ESMF_Grid_C.F90:319 f_esmf_gridcreatefromfile Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.352 ERROR            PET0 ESMCI_Grid.C:658 ESMCI::Grid::createfromfile() Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.352 ERROR            PET0 ESMC_Grid.C:180 ESMC_GridCreateFromFile() Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.352 INFO             PET0 PASS GridCreateFromFile_SCRIP_decomp_RESTLAST_CYCLIC, ESMC_GridUTest.c, line 565
+20260901 005308.352 ERROR            PET0 ESMF_Grid.F90:29697 ESMF_GridCreateDistgridReg Input argument out of range  - - decompFlag isn't allowed to be ESMF_DECOMP_CYCLIC when creating a Grid.
+20260901 005308.352 ERROR            PET0 ESMF_Grid.F90:9350 ESMF_GridCreate1PeriDimR Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.352 ERROR            PET0 ESMF_Grid.F90:6794 ESMF_GridCreateFrmScrip Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.352 ERROR            PET0 ESMF_Grid.F90:6520 ESMF_GridCreateFrmNCFile Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.352 ERROR            PET0 ESMF_Grid_C.F90:319 f_esmf_gridcreatefromfile Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.352 ERROR            PET0 ESMCI_Grid.C:658 ESMCI::Grid::createfromfile() Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.353 ERROR            PET0 ESMC_Grid.C:180 ESMC_GridCreateFromFile() Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.353 INFO             PET0 PASS GridCreateFromFile_SCRIP_decomp_CYCLIC_BALANCED, ESMC_GridUTest.c, line 592
+20260901 005308.353 ERROR            PET0 ESMF_Grid.F90:29697 ESMF_GridCreateDistgridReg Input argument out of range  - - decompFlag isn't allowed to be ESMF_DECOMP_CYCLIC when creating a Grid.
+20260901 005308.353 ERROR            PET0 ESMF_Grid.F90:9350 ESMF_GridCreate1PeriDimR Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.353 ERROR            PET0 ESMF_Grid.F90:6794 ESMF_GridCreateFrmScrip Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.353 ERROR            PET0 ESMF_Grid.F90:6520 ESMF_GridCreateFrmNCFile Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.353 ERROR            PET0 ESMF_Grid_C.F90:319 f_esmf_gridcreatefromfile Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.353 ERROR            PET0 ESMCI_Grid.C:658 ESMCI::Grid::createfromfile() Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.353 ERROR            PET0 ESMC_Grid.C:180 ESMC_GridCreateFromFile() Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.353 INFO             PET0 PASS GridCreateFromFile_SCRIP_decomp_CYCLIC_RESTFIRST, ESMC_GridUTest.c, line 618
+20260901 005308.353 ERROR            PET0 ESMF_Grid.F90:29697 ESMF_GridCreateDistgridReg Input argument out of range  - - decompFlag isn't allowed to be ESMF_DECOMP_CYCLIC when creating a Grid.
+20260901 005308.353 ERROR            PET0 ESMF_Grid.F90:9350 ESMF_GridCreate1PeriDimR Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.353 ERROR            PET0 ESMF_Grid.F90:6794 ESMF_GridCreateFrmScrip Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.353 ERROR            PET0 ESMF_Grid.F90:6520 ESMF_GridCreateFrmNCFile Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.353 ERROR            PET0 ESMF_Grid_C.F90:319 f_esmf_gridcreatefromfile Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.353 ERROR            PET0 ESMCI_Grid.C:658 ESMCI::Grid::createfromfile() Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.353 ERROR            PET0 ESMC_Grid.C:180 ESMC_GridCreateFromFile() Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.353 INFO             PET0 PASS GridCreateFromFile_SCRIP_decomp_CYCLIC_RESTLAST, ESMC_GridUTest.c, line 644
+20260901 005308.354 ERROR            PET0 ESMF_Grid.F90:29697 ESMF_GridCreateDistgridReg Input argument out of range  - - decompFlag isn't allowed to be ESMF_DECOMP_CYCLIC when creating a Grid.
+20260901 005308.354 ERROR            PET0 ESMF_Grid.F90:9350 ESMF_GridCreate1PeriDimR Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.354 ERROR            PET0 ESMF_Grid.F90:6794 ESMF_GridCreateFrmScrip Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.354 ERROR            PET0 ESMF_Grid.F90:6520 ESMF_GridCreateFrmNCFile Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.354 ERROR            PET0 ESMF_Grid_C.F90:319 f_esmf_gridcreatefromfile Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.354 ERROR            PET0 ESMCI_Grid.C:658 ESMCI::Grid::createfromfile() Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.354 ERROR            PET0 ESMC_Grid.C:180 ESMC_GridCreateFromFile() Input argument out of range  - Internal subroutine call returned Error
+20260901 005308.354 INFO             PET0 PASS GridCreateFromFile_SCRIP_decomp_CYCLIC_CYCLIC, ESMC_GridUTest.c, line 670
+20260901 005308.354 INFO             PET0 PASS GridCreate, ESMC_GridUTest.c, line 697
+20260901 005308.354 INFO             PET0 PASS GridGetLocalDECount, ESMC_GridUTest.c, line 713
+20260901 005308.354 INFO             PET0 PASS GridAddCoord, ESMC_GridUTest.c, line 725
+20260901 005308.354 INFO             PET0 PASS GridGetCoordBounds, ESMC_GridUTest.c, line 738
+20260901 005308.354 INFO             PET0 PASS GridAddItem, ESMC_GridUTest.c, line 750
+20260901 005308.354 INFO             PET0 PASS GridCreate, ESMC_GridUTest.c, line 773
+20260901 005308.354 INFO             PET0 PASS GridAddCoord, ESMC_GridUTest.c, line 787
+20260901 005308.354 INFO             PET0 PASS GridGetCoord - X, ESMC_GridUTest.c, line 814
+20260901 005308.354 INFO             PET0 PASS GridGetCoord - Y, ESMC_GridUTest.c, line 836
+20260901 005308.355 INFO             PET0 PASS GridAddCoord, ESMC_GridUTest.c, line 848
+20260901 005308.355 INFO             PET0 PASS GridGetCoord - X, ESMC_GridUTest.c, line 873
+20260901 005308.355 INFO             PET0 PASS GridGetCoord - Y, ESMC_GridUTest.c, line 895
+20260901 005308.355 INFO             PET0 PASS Validate Grid coordinates - X, ESMC_GridUTest.c, line 917
+20260901 005308.355 INFO             PET0 PASS Validate Grid coordinates - Y, ESMC_GridUTest.c, line 939
+20260901 005308.355 INFO             PET0 PASS GridAddItem, ESMC_GridUTest.c, line 951
+20260901 005308.355 INFO             PET0 PASS GridGetItem, ESMC_GridUTest.c, line 973
+20260901 005308.355 INFO             PET0 PASS GridAddItem, ESMC_GridUTest.c, line 985
+20260901 005308.355 INFO             PET0 PASS GridGetItem, ESMC_GridUTest.c, line 1007
+20260901 005308.364 INFO             PET0 PASS GridWrite, ESMC_GridUTest.c, line 1020
+20260901 005308.364 INFO             PET0 PASS GridDestroy, ESMC_GridUTest.c, line 1033
+20260901 005308.364 INFO             PET0 PASS GridDestroy, ESMC_GridUTest.c, line 1042
+20260901 005308.364 INFO             PET0 Ending Test, file ESMC_GridUTest.c, line 1053
+20260901 005308.364 INFO             PET0  Finalizing ESMF

@@ -1,0 +1,225 @@
+2026-09-02 02:07:00
+20260902 021738.682 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260902 021738.687 INFO             PET0 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20260902 021738.687 INFO             PET0 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20260902 021738.687 INFO             PET0 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20260902 021738.687 INFO             PET0 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20260902 021738.687 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260902 021738.687 INFO             PET0 Running with ESMF Version   : develop+g4161bf9d44
+20260902 021738.687 INFO             PET0 ESMF library build date/time: "Sep  2 2026" "02:05:21"
+20260902 021738.687 INFO             PET0 ESMF library build location : /usr/local/esmf/esmf-testing/gfortranclang_14.2.0_17.0.0_mpich_O_develop/esmf
+20260902 021738.687 INFO             PET0 ESMF_COMM                   : mpich
+20260902 021738.687 INFO             PET0 ESMF_MOAB                   : enabled
+20260902 021738.687 INFO             PET0 ESMF_LAPACK                 : enabled
+20260902 021738.687 INFO             PET0 ESMF_NETCDF                 : enabled
+20260902 021738.687 INFO             PET0 ESMF_PNETCDF                : disabled
+20260902 021738.687 INFO             PET0 ESMF_PIO                    : enabled
+20260902 021738.687 INFO             PET0 ESMF_YAMLCPP                : enabled
+20260902 021738.692 INFO             PET0  Beginning Test, file ESMF_RouteHandleAdvancedUTest.F90, line 357
+20260902 021738.692 INFO             PET0  NUMBER_OF_PROCESSORS           4
+20260902 021738.701 INFO             PET0 ESMF_FieldRedistStoreNF(): Just entered routine.
+20260902 021738.928 INFO             PET0 ESMF_FieldRedistStoreNF(): Leaving routine.
+20260902 021738.928 INFO             PET0  PASS  Create RouteHandle for the original petList, ESMF_RouteHandleAdvancedUTest.F90, line 522
+20260902 021738.928 INFO             PET0  PASS  Test RouteHandleIsCreated(), ESMF_RouteHandleAdvancedUTest.F90, line 530
+20260902 021738.928 INFO             PET0  PASS  Test RouteHandleIsCreated() return value, ESMF_RouteHandleAdvancedUTest.F90, line 537
+20260902 021738.928 INFO             PET0  PASS  Test RouteHandleGet(), ESMF_RouteHandleAdvancedUTest.F90, line 545
+20260902 021738.947 INFO             PET0  PASS  Test RouteHandleWrite(), ESMF_RouteHandleAdvancedUTest.F90, line 553
+20260902 021738.947 INFO             PET0  PASS  Test RouteHandleDestroy(), ESMF_RouteHandleAdvancedUTest.F90, line 561
+20260902 021738.986 INFO             PET0  PASS  Test RouteHandleCreate(from file), ESMF_RouteHandleAdvancedUTest.F90, line 569
+20260902 021738.987 INFO             PET0  PASS  Apply the read in Routehandle, ESMF_RouteHandleAdvancedUTest.F90, line 578
+20260902 021738.992 INFO             PET0  PASS  Test RouteHandleDestroy() for the read in Routehandle, ESMF_RouteHandleAdvancedUTest.F90, line 586
+20260902 021738.992 INFO             PET0 ESMF_FieldRedistStoreNF(): Just entered routine.
+20260902 021739.277 INFO             PET0 ESMF_FieldRedistStoreNF(): Leaving routine.
+20260902 021739.277 INFO             PET0  PASS  Create RouteHandle for the original petList, ESMF_RouteHandleAdvancedUTest.F90, line 596
+20260902 021739.278 INFO             PET0  PASS  Transfer RouteHandle to a different petList, ESMF_RouteHandleAdvancedUTest.F90, line 613
+20260902 021739.317 INFO             PET0  PASS  Test RouteHandleDestroy(), ESMF_RouteHandleAdvancedUTest.F90, line 644
+20260902 021739.317 INFO             PET0  PASS  Apply the copied Routehandle, ESMF_RouteHandleAdvancedUTest.F90, line 654
+20260902 021739.317 INFO             PET0  PASS  Test RouteHandleDestroy() for the copied Routehandle, ESMF_RouteHandleAdvancedUTest.F90, line 662
+20260902 021739.317 INFO             PET0  PASS  Test ESMF_DynamicMaskSetR8R8R8(), ESMF_RouteHandleAdvancedUTest.F90, line 673
+20260902 021740.821 INFO             PET0  PASS  Create RouteHandle for dynamic masking - srcTermProcessing=1, ESMF_RouteHandleAdvancedUTest.F90, line 683
+20260902 021740.821 ERROR            PET0 ESMCI_DELayout.C:3776 ESMCI::XXE::exec() Invalid argument  - Dynamic Masking requires RouteHandle with srcTermProcessing=0
+20260902 021740.821 ERROR            PET0 ESMCI_Array.C:12460 ESMCI::Array::sparseMatMul() Invalid argument  - Internal subroutine call returned Error
+20260902 021740.821 ERROR            PET0 ESMCI_Array_F.C:1294 c_esmc_arraysmm() Invalid argument  - Internal subroutine call returned Error
+20260902 021740.821 ERROR            PET0 ESMF_Array.F90:941 ESMF_ArraySMM() Invalid argument  - Internal subroutine call returned Error
+20260902 021740.821 ERROR            PET0 ESMF_FieldRegrid.F90:263 ESMF_FieldRegrid Invalid argument  - Internal subroutine call returned Error
+20260902 021740.821 INFO             PET0  PASS  Apply the Routehandle with dynamic masking - srcTermProcessing=1, ESMF_RouteHandleAdvancedUTest.F90, line 692
+20260902 021740.821 INFO             PET0  PASS  Test RouteHandleDestroy(), ESMF_RouteHandleAdvancedUTest.F90, line 700
+20260902 021742.338 INFO             PET0  PASS  Create RouteHandle for dynamic masking - srcTermProcessing=0, ESMF_RouteHandleAdvancedUTest.F90, line 710
+20260902 021742.338 INFO             PET0  PASS  Apply the Routehandle with dynamic masking - srcTermProcessing=0, ESMF_RouteHandleAdvancedUTest.F90, line 719
+20260902 021742.338 ERROR            PET0 ESMF_Array.F90:932 ESMF_ArraySMM() Arguments are incompatible  - Must use 'ESMF_TERMORDER_SRCSEQ' for dynamic masking
+20260902 021742.338 ERROR            PET0 ESMF_FieldRegrid.F90:263 ESMF_FieldRegrid Arguments are incompatible  - Internal subroutine call returned Error
+20260902 021742.338 INFO             PET0  PASS  Apply the Routehandle with dynamic masking - ESMF_TERMORDER_FREE, ESMF_RouteHandleAdvancedUTest.F90, line 729
+20260902 021742.338 INFO             PET0  PASS  Test RouteHandleDestroy(), ESMF_RouteHandleAdvancedUTest.F90, line 737
+20260902 021742.338 INFO             PET0  PASS  Test ESMF_DynamicMaskSetR4R4R4(), ESMF_RouteHandleAdvancedUTest.F90, line 804
+20260902 021742.338 INFO             PET0  PASS  Test ESMF_DynamicMaskSetR4R4R4V(), ESMF_RouteHandleAdvancedUTest.F90, line 813
+20260902 021742.338 INFO             PET0  PASS  Test ESMF_DynamicMaskSetR4R8R4V(), ESMF_RouteHandleAdvancedUTest.F90, line 822
+20260902 021742.338 INFO             PET0  Ending Test, file ESMF_RouteHandleAdvancedUTest.F90, line 837
+20260902 021742.338 INFO             PET0  Finalizing ESMF
+20260902 021738.682 INFO             PET1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260902 021738.688 INFO             PET1 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20260902 021738.688 INFO             PET1 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20260902 021738.688 INFO             PET1 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20260902 021738.688 INFO             PET1 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20260902 021738.688 INFO             PET1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260902 021738.688 INFO             PET1 Running with ESMF Version   : develop+g4161bf9d44
+20260902 021738.688 INFO             PET1 ESMF library build date/time: "Sep  2 2026" "02:05:21"
+20260902 021738.688 INFO             PET1 ESMF library build location : /usr/local/esmf/esmf-testing/gfortranclang_14.2.0_17.0.0_mpich_O_develop/esmf
+20260902 021738.688 INFO             PET1 ESMF_COMM                   : mpich
+20260902 021738.688 INFO             PET1 ESMF_MOAB                   : enabled
+20260902 021738.688 INFO             PET1 ESMF_LAPACK                 : enabled
+20260902 021738.688 INFO             PET1 ESMF_NETCDF                 : enabled
+20260902 021738.688 INFO             PET1 ESMF_PNETCDF                : disabled
+20260902 021738.688 INFO             PET1 ESMF_PIO                    : enabled
+20260902 021738.688 INFO             PET1 ESMF_YAMLCPP                : enabled
+20260902 021738.692 INFO             PET1  Beginning Test, file ESMF_RouteHandleAdvancedUTest.F90, line 357
+20260902 021738.692 INFO             PET1  NUMBER_OF_PROCESSORS           4
+20260902 021738.701 INFO             PET1 ESMF_FieldRedistStoreNF(): Just entered routine.
+20260902 021738.924 INFO             PET1 ESMF_FieldRedistStoreNF(): Leaving routine.
+20260902 021738.925 INFO             PET1  PASS  Create RouteHandle for the original petList, ESMF_RouteHandleAdvancedUTest.F90, line 522
+20260902 021738.925 INFO             PET1  PASS  Test RouteHandleIsCreated(), ESMF_RouteHandleAdvancedUTest.F90, line 530
+20260902 021738.925 INFO             PET1  PASS  Test RouteHandleIsCreated() return value, ESMF_RouteHandleAdvancedUTest.F90, line 537
+20260902 021738.925 INFO             PET1  PASS  Test RouteHandleGet(), ESMF_RouteHandleAdvancedUTest.F90, line 545
+20260902 021738.947 INFO             PET1  PASS  Test RouteHandleWrite(), ESMF_RouteHandleAdvancedUTest.F90, line 553
+20260902 021738.947 INFO             PET1  PASS  Test RouteHandleDestroy(), ESMF_RouteHandleAdvancedUTest.F90, line 561
+20260902 021738.987 INFO             PET1  PASS  Test RouteHandleCreate(from file), ESMF_RouteHandleAdvancedUTest.F90, line 569
+20260902 021738.987 INFO             PET1  PASS  Apply the read in Routehandle, ESMF_RouteHandleAdvancedUTest.F90, line 578
+20260902 021738.987 INFO             PET1  PASS  Test RouteHandleDestroy() for the read in Routehandle, ESMF_RouteHandleAdvancedUTest.F90, line 586
+20260902 021738.987 INFO             PET1 ESMF_FieldRedistStoreNF(): Just entered routine.
+20260902 021739.278 INFO             PET1 ESMF_FieldRedistStoreNF(): Leaving routine.
+20260902 021739.278 INFO             PET1  PASS  Create RouteHandle for the original petList, ESMF_RouteHandleAdvancedUTest.F90, line 596
+20260902 021739.278 INFO             PET1  PASS  Transfer RouteHandle to a different petList, ESMF_RouteHandleAdvancedUTest.F90, line 613
+20260902 021739.317 INFO             PET1  PASS  Test RouteHandleDestroy(), ESMF_RouteHandleAdvancedUTest.F90, line 644
+20260902 021739.317 INFO             PET1  PASS  Apply the copied Routehandle, ESMF_RouteHandleAdvancedUTest.F90, line 654
+20260902 021739.317 INFO             PET1  PASS  Test RouteHandleDestroy() for the copied Routehandle, ESMF_RouteHandleAdvancedUTest.F90, line 662
+20260902 021739.317 INFO             PET1  PASS  Test ESMF_DynamicMaskSetR8R8R8(), ESMF_RouteHandleAdvancedUTest.F90, line 673
+20260902 021740.816 INFO             PET1  PASS  Create RouteHandle for dynamic masking - srcTermProcessing=1, ESMF_RouteHandleAdvancedUTest.F90, line 683
+20260902 021740.817 ERROR            PET1 ESMCI_DELayout.C:3776 ESMCI::XXE::exec() Invalid argument  - Dynamic Masking requires RouteHandle with srcTermProcessing=0
+20260902 021740.817 ERROR            PET1 ESMCI_Array.C:12460 ESMCI::Array::sparseMatMul() Invalid argument  - Internal subroutine call returned Error
+20260902 021740.817 ERROR            PET1 ESMCI_Array_F.C:1294 c_esmc_arraysmm() Invalid argument  - Internal subroutine call returned Error
+20260902 021740.817 ERROR            PET1 ESMF_Array.F90:941 ESMF_ArraySMM() Invalid argument  - Internal subroutine call returned Error
+20260902 021740.817 ERROR            PET1 ESMF_FieldRegrid.F90:263 ESMF_FieldRegrid Invalid argument  - Internal subroutine call returned Error
+20260902 021740.817 INFO             PET1  PASS  Apply the Routehandle with dynamic masking - srcTermProcessing=1, ESMF_RouteHandleAdvancedUTest.F90, line 692
+20260902 021740.817 INFO             PET1  PASS  Test RouteHandleDestroy(), ESMF_RouteHandleAdvancedUTest.F90, line 700
+20260902 021742.332 INFO             PET1  PASS  Create RouteHandle for dynamic masking - srcTermProcessing=0, ESMF_RouteHandleAdvancedUTest.F90, line 710
+20260902 021742.338 INFO             PET1  PASS  Apply the Routehandle with dynamic masking - srcTermProcessing=0, ESMF_RouteHandleAdvancedUTest.F90, line 719
+20260902 021742.338 ERROR            PET1 ESMF_Array.F90:932 ESMF_ArraySMM() Arguments are incompatible  - Must use 'ESMF_TERMORDER_SRCSEQ' for dynamic masking
+20260902 021742.338 ERROR            PET1 ESMF_FieldRegrid.F90:263 ESMF_FieldRegrid Arguments are incompatible  - Internal subroutine call returned Error
+20260902 021742.338 INFO             PET1  PASS  Apply the Routehandle with dynamic masking - ESMF_TERMORDER_FREE, ESMF_RouteHandleAdvancedUTest.F90, line 729
+20260902 021742.339 INFO             PET1  PASS  Test RouteHandleDestroy(), ESMF_RouteHandleAdvancedUTest.F90, line 737
+20260902 021742.339 INFO             PET1  PASS  Test ESMF_DynamicMaskSetR4R4R4(), ESMF_RouteHandleAdvancedUTest.F90, line 804
+20260902 021742.339 INFO             PET1  PASS  Test ESMF_DynamicMaskSetR4R4R4V(), ESMF_RouteHandleAdvancedUTest.F90, line 813
+20260902 021742.339 INFO             PET1  PASS  Test ESMF_DynamicMaskSetR4R8R4V(), ESMF_RouteHandleAdvancedUTest.F90, line 822
+20260902 021742.339 INFO             PET1  Ending Test, file ESMF_RouteHandleAdvancedUTest.F90, line 837
+20260902 021742.339 INFO             PET1  Finalizing ESMF
+20260902 021738.684 INFO             PET2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260902 021738.691 INFO             PET2 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20260902 021738.691 INFO             PET2 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20260902 021738.691 INFO             PET2 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20260902 021738.691 INFO             PET2 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20260902 021738.691 INFO             PET2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260902 021738.691 INFO             PET2 Running with ESMF Version   : develop+g4161bf9d44
+20260902 021738.691 INFO             PET2 ESMF library build date/time: "Sep  2 2026" "02:05:21"
+20260902 021738.691 INFO             PET2 ESMF library build location : /usr/local/esmf/esmf-testing/gfortranclang_14.2.0_17.0.0_mpich_O_develop/esmf
+20260902 021738.691 INFO             PET2 ESMF_COMM                   : mpich
+20260902 021738.691 INFO             PET2 ESMF_MOAB                   : enabled
+20260902 021738.691 INFO             PET2 ESMF_LAPACK                 : enabled
+20260902 021738.691 INFO             PET2 ESMF_NETCDF                 : enabled
+20260902 021738.691 INFO             PET2 ESMF_PNETCDF                : disabled
+20260902 021738.691 INFO             PET2 ESMF_PIO                    : enabled
+20260902 021738.691 INFO             PET2 ESMF_YAMLCPP                : enabled
+20260902 021738.692 INFO             PET2  Beginning Test, file ESMF_RouteHandleAdvancedUTest.F90, line 357
+20260902 021738.692 INFO             PET2  NUMBER_OF_PROCESSORS           4
+20260902 021738.701 INFO             PET2 ESMF_FieldRedistStoreNF(): Just entered routine.
+20260902 021738.925 INFO             PET2 ESMF_FieldRedistStoreNF(): Leaving routine.
+20260902 021738.926 INFO             PET2  PASS  Create RouteHandle for the original petList, ESMF_RouteHandleAdvancedUTest.F90, line 522
+20260902 021738.926 INFO             PET2  PASS  Test RouteHandleIsCreated(), ESMF_RouteHandleAdvancedUTest.F90, line 530
+20260902 021738.926 INFO             PET2  PASS  Test RouteHandleIsCreated() return value, ESMF_RouteHandleAdvancedUTest.F90, line 537
+20260902 021738.927 INFO             PET2  PASS  Test RouteHandleGet(), ESMF_RouteHandleAdvancedUTest.F90, line 545
+20260902 021738.950 INFO             PET2  PASS  Test RouteHandleWrite(), ESMF_RouteHandleAdvancedUTest.F90, line 553
+20260902 021738.951 INFO             PET2  PASS  Test RouteHandleDestroy(), ESMF_RouteHandleAdvancedUTest.F90, line 561
+20260902 021738.987 INFO             PET2  PASS  Test RouteHandleCreate(from file), ESMF_RouteHandleAdvancedUTest.F90, line 569
+20260902 021738.987 INFO             PET2  PASS  Apply the read in Routehandle, ESMF_RouteHandleAdvancedUTest.F90, line 578
+20260902 021738.987 INFO             PET2  PASS  Test RouteHandleDestroy() for the read in Routehandle, ESMF_RouteHandleAdvancedUTest.F90, line 586
+20260902 021738.987 INFO             PET2 ESMF_FieldRedistStoreNF(): Just entered routine.
+20260902 021739.285 INFO             PET2 ESMF_FieldRedistStoreNF(): Leaving routine.
+20260902 021739.285 INFO             PET2  PASS  Create RouteHandle for the original petList, ESMF_RouteHandleAdvancedUTest.F90, line 596
+20260902 021739.287 INFO             PET2  PASS  Transfer RouteHandle to a different petList, ESMF_RouteHandleAdvancedUTest.F90, line 613
+20260902 021739.317 INFO             PET2  PASS  Test RouteHandleDestroy(), ESMF_RouteHandleAdvancedUTest.F90, line 644
+20260902 021739.317 INFO             PET2  PASS  Apply the copied Routehandle, ESMF_RouteHandleAdvancedUTest.F90, line 654
+20260902 021739.317 INFO             PET2  PASS  Test RouteHandleDestroy() for the copied Routehandle, ESMF_RouteHandleAdvancedUTest.F90, line 662
+20260902 021739.317 INFO             PET2  PASS  Test ESMF_DynamicMaskSetR8R8R8(), ESMF_RouteHandleAdvancedUTest.F90, line 673
+20260902 021740.813 INFO             PET2  PASS  Create RouteHandle for dynamic masking - srcTermProcessing=1, ESMF_RouteHandleAdvancedUTest.F90, line 683
+20260902 021740.813 ERROR            PET2 ESMCI_DELayout.C:3776 ESMCI::XXE::exec() Invalid argument  - Dynamic Masking requires RouteHandle with srcTermProcessing=0
+20260902 021740.813 ERROR            PET2 ESMCI_Array.C:12460 ESMCI::Array::sparseMatMul() Invalid argument  - Internal subroutine call returned Error
+20260902 021740.813 ERROR            PET2 ESMCI_Array_F.C:1294 c_esmc_arraysmm() Invalid argument  - Internal subroutine call returned Error
+20260902 021740.813 ERROR            PET2 ESMF_Array.F90:941 ESMF_ArraySMM() Invalid argument  - Internal subroutine call returned Error
+20260902 021740.813 ERROR            PET2 ESMF_FieldRegrid.F90:263 ESMF_FieldRegrid Invalid argument  - Internal subroutine call returned Error
+20260902 021740.813 INFO             PET2  PASS  Apply the Routehandle with dynamic masking - srcTermProcessing=1, ESMF_RouteHandleAdvancedUTest.F90, line 692
+20260902 021740.813 INFO             PET2  PASS  Test RouteHandleDestroy(), ESMF_RouteHandleAdvancedUTest.F90, line 700
+20260902 021742.334 INFO             PET2  PASS  Create RouteHandle for dynamic masking - srcTermProcessing=0, ESMF_RouteHandleAdvancedUTest.F90, line 710
+20260902 021742.349 INFO             PET2  PASS  Apply the Routehandle with dynamic masking - srcTermProcessing=0, ESMF_RouteHandleAdvancedUTest.F90, line 719
+20260902 021742.349 ERROR            PET2 ESMF_Array.F90:932 ESMF_ArraySMM() Arguments are incompatible  - Must use 'ESMF_TERMORDER_SRCSEQ' for dynamic masking
+20260902 021742.349 ERROR            PET2 ESMF_FieldRegrid.F90:263 ESMF_FieldRegrid Arguments are incompatible  - Internal subroutine call returned Error
+20260902 021742.349 INFO             PET2  PASS  Apply the Routehandle with dynamic masking - ESMF_TERMORDER_FREE, ESMF_RouteHandleAdvancedUTest.F90, line 729
+20260902 021742.350 INFO             PET2  PASS  Test RouteHandleDestroy(), ESMF_RouteHandleAdvancedUTest.F90, line 737
+20260902 021742.350 INFO             PET2  PASS  Test ESMF_DynamicMaskSetR4R4R4(), ESMF_RouteHandleAdvancedUTest.F90, line 804
+20260902 021742.350 INFO             PET2  PASS  Test ESMF_DynamicMaskSetR4R4R4V(), ESMF_RouteHandleAdvancedUTest.F90, line 813
+20260902 021742.350 INFO             PET2  PASS  Test ESMF_DynamicMaskSetR4R8R4V(), ESMF_RouteHandleAdvancedUTest.F90, line 822
+20260902 021742.350 INFO             PET2  Ending Test, file ESMF_RouteHandleAdvancedUTest.F90, line 837
+20260902 021742.350 INFO             PET2  Finalizing ESMF
+20260902 021738.683 INFO             PET3 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260902 021738.689 INFO             PET3 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20260902 021738.689 INFO             PET3 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20260902 021738.689 INFO             PET3 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20260902 021738.689 INFO             PET3 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20260902 021738.689 INFO             PET3 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260902 021738.689 INFO             PET3 Running with ESMF Version   : develop+g4161bf9d44
+20260902 021738.689 INFO             PET3 ESMF library build date/time: "Sep  2 2026" "02:05:21"
+20260902 021738.689 INFO             PET3 ESMF library build location : /usr/local/esmf/esmf-testing/gfortranclang_14.2.0_17.0.0_mpich_O_develop/esmf
+20260902 021738.689 INFO             PET3 ESMF_COMM                   : mpich
+20260902 021738.689 INFO             PET3 ESMF_MOAB                   : enabled
+20260902 021738.689 INFO             PET3 ESMF_LAPACK                 : enabled
+20260902 021738.689 INFO             PET3 ESMF_NETCDF                 : enabled
+20260902 021738.689 INFO             PET3 ESMF_PNETCDF                : disabled
+20260902 021738.689 INFO             PET3 ESMF_PIO                    : enabled
+20260902 021738.689 INFO             PET3 ESMF_YAMLCPP                : enabled
+20260902 021738.692 INFO             PET3  Beginning Test, file ESMF_RouteHandleAdvancedUTest.F90, line 357
+20260902 021738.692 INFO             PET3  NUMBER_OF_PROCESSORS           4
+20260902 021738.701 INFO             PET3 ESMF_FieldRedistStoreNF(): Just entered routine.
+20260902 021738.924 INFO             PET3 ESMF_FieldRedistStoreNF(): Leaving routine.
+20260902 021738.924 INFO             PET3  PASS  Create RouteHandle for the original petList, ESMF_RouteHandleAdvancedUTest.F90, line 522
+20260902 021738.924 INFO             PET3  PASS  Test RouteHandleIsCreated(), ESMF_RouteHandleAdvancedUTest.F90, line 530
+20260902 021738.924 INFO             PET3  PASS  Test RouteHandleIsCreated() return value, ESMF_RouteHandleAdvancedUTest.F90, line 537
+20260902 021738.924 INFO             PET3  PASS  Test RouteHandleGet(), ESMF_RouteHandleAdvancedUTest.F90, line 545
+20260902 021738.949 INFO             PET3  PASS  Test RouteHandleWrite(), ESMF_RouteHandleAdvancedUTest.F90, line 553
+20260902 021738.949 INFO             PET3  PASS  Test RouteHandleDestroy(), ESMF_RouteHandleAdvancedUTest.F90, line 561
+20260902 021738.987 INFO             PET3  PASS  Test RouteHandleCreate(from file), ESMF_RouteHandleAdvancedUTest.F90, line 569
+20260902 021738.988 INFO             PET3  PASS  Apply the read in Routehandle, ESMF_RouteHandleAdvancedUTest.F90, line 578
+20260902 021738.988 INFO             PET3  PASS  Test RouteHandleDestroy() for the read in Routehandle, ESMF_RouteHandleAdvancedUTest.F90, line 586
+20260902 021738.988 INFO             PET3 ESMF_FieldRedistStoreNF(): Just entered routine.
+20260902 021739.277 INFO             PET3 ESMF_FieldRedistStoreNF(): Leaving routine.
+20260902 021739.277 INFO             PET3  PASS  Create RouteHandle for the original petList, ESMF_RouteHandleAdvancedUTest.F90, line 596
+20260902 021739.294 INFO             PET3  PASS  Transfer RouteHandle to a different petList, ESMF_RouteHandleAdvancedUTest.F90, line 613
+20260902 021739.317 INFO             PET3  PASS  Test RouteHandleDestroy(), ESMF_RouteHandleAdvancedUTest.F90, line 644
+20260902 021739.317 INFO             PET3  PASS  Apply the copied Routehandle, ESMF_RouteHandleAdvancedUTest.F90, line 654
+20260902 021739.317 INFO             PET3  PASS  Test RouteHandleDestroy() for the copied Routehandle, ESMF_RouteHandleAdvancedUTest.F90, line 662
+20260902 021739.317 INFO             PET3  PASS  Test ESMF_DynamicMaskSetR8R8R8(), ESMF_RouteHandleAdvancedUTest.F90, line 673
+20260902 021740.811 INFO             PET3  PASS  Create RouteHandle for dynamic masking - srcTermProcessing=1, ESMF_RouteHandleAdvancedUTest.F90, line 683
+20260902 021740.812 ERROR            PET3 ESMCI_DELayout.C:3776 ESMCI::XXE::exec() Invalid argument  - Dynamic Masking requires RouteHandle with srcTermProcessing=0
+20260902 021740.812 ERROR            PET3 ESMCI_Array.C:12460 ESMCI::Array::sparseMatMul() Invalid argument  - Internal subroutine call returned Error
+20260902 021740.812 ERROR            PET3 ESMCI_Array_F.C:1294 c_esmc_arraysmm() Invalid argument  - Internal subroutine call returned Error
+20260902 021740.812 ERROR            PET3 ESMF_Array.F90:941 ESMF_ArraySMM() Invalid argument  - Internal subroutine call returned Error
+20260902 021740.812 ERROR            PET3 ESMF_FieldRegrid.F90:263 ESMF_FieldRegrid Invalid argument  - Internal subroutine call returned Error
+20260902 021740.812 INFO             PET3  PASS  Apply the Routehandle with dynamic masking - srcTermProcessing=1, ESMF_RouteHandleAdvancedUTest.F90, line 692
+20260902 021740.812 INFO             PET3  PASS  Test RouteHandleDestroy(), ESMF_RouteHandleAdvancedUTest.F90, line 700
+20260902 021742.326 INFO             PET3  PASS  Create RouteHandle for dynamic masking - srcTermProcessing=0, ESMF_RouteHandleAdvancedUTest.F90, line 710
+20260902 021742.327 INFO             PET3  PASS  Apply the Routehandle with dynamic masking - srcTermProcessing=0, ESMF_RouteHandleAdvancedUTest.F90, line 719
+20260902 021742.327 ERROR            PET3 ESMF_Array.F90:932 ESMF_ArraySMM() Arguments are incompatible  - Must use 'ESMF_TERMORDER_SRCSEQ' for dynamic masking
+20260902 021742.327 ERROR            PET3 ESMF_FieldRegrid.F90:263 ESMF_FieldRegrid Arguments are incompatible  - Internal subroutine call returned Error
+20260902 021742.327 INFO             PET3  PASS  Apply the Routehandle with dynamic masking - ESMF_TERMORDER_FREE, ESMF_RouteHandleAdvancedUTest.F90, line 729
+20260902 021742.328 INFO             PET3  PASS  Test RouteHandleDestroy(), ESMF_RouteHandleAdvancedUTest.F90, line 737
+20260902 021742.329 INFO             PET3  PASS  Test ESMF_DynamicMaskSetR4R4R4(), ESMF_RouteHandleAdvancedUTest.F90, line 804
+20260902 021742.329 INFO             PET3  PASS  Test ESMF_DynamicMaskSetR4R4R4V(), ESMF_RouteHandleAdvancedUTest.F90, line 813
+20260902 021742.329 INFO             PET3  PASS  Test ESMF_DynamicMaskSetR4R8R4V(), ESMF_RouteHandleAdvancedUTest.F90, line 822
+20260902 021742.329 INFO             PET3  Ending Test, file ESMF_RouteHandleAdvancedUTest.F90, line 837
+20260902 021742.329 INFO             PET3  Finalizing ESMF

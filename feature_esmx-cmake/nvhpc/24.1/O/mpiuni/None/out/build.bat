@@ -1,0 +1,32 @@
+#!/bin/bash -l
+#SBATCH --account=nems
+#SBATCH -o /scratch3/NCEPDEV/stmp/Gerhard.Theurich/ESMF-Nightly-Testing-Hera/nvhpc_24.1_mpiuni_O_feature_esmx-cmake/build.bat_%j.o
+#SBATCH -e /scratch3/NCEPDEV/stmp/Gerhard.Theurich/ESMF-Nightly-Testing-Hera/nvhpc_24.1_mpiuni_O_feature_esmx-cmake/build.bat_%j.e
+#SBATCH --time=2:00:00
+#SBATCH --partition=hera
+#SBATCH --qos=batch
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=40
+#SBATCH --exclusive
+export JOBID=$SLURM_JOBID
+
+
+module load cmake/3.28.1
+module load nvhpc/24.1 
+
+set -x
+export ESMF_DIR=/scratch3/NCEPDEV/stmp/Gerhard.Theurich/ESMF-Nightly-Testing-Hera/nvhpc_24.1_mpiuni_O_feature_esmx-cmake/esmf
+export ESMF_COMPILER=nvhpc
+export ESMF_COMM=mpiuni
+export ESMF_BOPT='O'
+export ESMF_TESTEXHAUSTIVE='ON'
+export ESMF_TESTWITHTHREADS='ON'
+export ESMF_MPIRUN=/scratch3/NCEPDEV/stmp/Gerhard.Theurich/ESMF-Nightly-Testing-Hera/nvhpc_24.1_mpiuni_O_feature_esmx-cmake/esmf/src/Infrastructure/stubs/mpiuni/mpirun
+module list >& /scratch3/NCEPDEV/stmp/Gerhard.Theurich/ESMF-Nightly-Testing-Hera/nvhpc_24.1_mpiuni_O_feature_esmx-cmake/module-build.log
+export WORK_ROOT=/scratch3/NCEPDEV/stmp/Gerhard.Theurich/ESMF-Nightly-Testing-Hera/nvhpc_24.1_mpiuni_O_feature_esmx-cmake
+export TEMP_ROOT=/scratch3/NCEPDEV/stmp/Gerhard.Theurich/ESMF-Nightly-Testing-Hera/nvhpc_24.1_mpiuni_O_feature_esmx-cmake
+cd $TEMP_ROOT/esmf
+export ESMF_DIR=`pwd`
+set -o pipefail
+make info 2>&1| tee $WORK_ROOT/info.log
+make -j 40 2>&1| tee $WORK_ROOT/build.log

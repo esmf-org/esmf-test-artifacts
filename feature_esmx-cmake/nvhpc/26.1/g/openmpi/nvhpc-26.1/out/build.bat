@@ -1,0 +1,33 @@
+#!/bin/bash -l
+#SBATCH --account=s1873
+#SBATCH -o /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/nvhpc_26.1_openmpi_g_feature_esmx-cmake/build.bat_%j.o
+#SBATCH -e /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/nvhpc_26.1_openmpi_g_feature_esmx-cmake/build.bat_%j.e
+#SBATCH --time=1:00:00
+#SBATCH --partition=compute
+#SBATCH -C mil
+#SBATCH --qos=allnccs
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=120
+#SBATCH --exclusive
+export JOBID=$SLURM_JOBID
+
+
+module use /discover/swdev/gmao_SIteam/modulefiles-SLES15
+module load cmake/3.30.3
+module load comp/nvhpc/26.1 mpi/openmpi/5.0.10/nvhpc-26.1
+
+set -x
+export ESMF_DIR=/discover/nobackup/projects/gmao/SIteam/ESMF_Testing/nvhpc_26.1_openmpi_g_feature_esmx-cmake/esmf
+export ESMF_COMPILER=nvhpc
+export ESMF_COMM=openmpi
+export ESMF_BOPT='g'
+export ESMF_TESTEXHAUSTIVE='ON'
+export ESMF_TESTWITHTHREADS='ON'
+module list >& /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/nvhpc_26.1_openmpi_g_feature_esmx-cmake/module-build.log
+export WORK_ROOT=/discover/nobackup/projects/gmao/SIteam/ESMF_Testing/nvhpc_26.1_openmpi_g_feature_esmx-cmake
+export TEMP_ROOT=/discover/nobackup/projects/gmao/SIteam/ESMF_Testing/nvhpc_26.1_openmpi_g_feature_esmx-cmake
+cd $TEMP_ROOT/esmf
+export ESMF_DIR=`pwd`
+set -o pipefail
+make info 2>&1| tee $WORK_ROOT/info.log
+make -j 120 2>&1| tee $WORK_ROOT/build.log

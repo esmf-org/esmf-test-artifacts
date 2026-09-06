@@ -1,0 +1,135 @@
+2026-09-05 23:58:55
+[borgq123:88397:0:88397] Caught signal 8 (Floating point exception: floating-point underflow)
+[borgq123:88396:0:88396] Caught signal 8 (Floating point exception: floating-point underflow)
+[borgq123:88395:0:88395] Caught signal 8 (Floating point exception: floating-point underflow)
+[borgq123:88394:0:88394] Caught signal 8 (Floating point exception: floating-point underflow)
+==== backtrace (tid:  88395) ====
+ 0 0x0000000000016910 __funlockfile()  ???:0
+ 1 0x0000000000f39965 ESMCI::XXE::exec_psssDstRra<float, double, double>()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/DELayout/src/ESMCI_DELayout.C:6576
+ 2 0x0000000000edd9c9 ESMCI::XXE::psssDstRra<float, double, double>()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/DELayout/src/ESMCI_DELayout.C:6548
+ 3 0x0000000000e87cf1 ESMCI::XXE::psssDstRra<float, double, int>()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/DELayout/src/ESMCI_DELayout.C:6512
+ 4 0x0000000000e5cc9c ESMCI::XXE::psssDstRra<float, int, int>()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/DELayout/src/ESMCI_DELayout.C:6472
+ 5 0x0000000000e4ffd1 ESMCI::XXE::psssDstRra<int, int, int>()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/DELayout/src/ESMCI_DELayout.C:6424
+ 6 0x0000000000e43b9e ESMCI::XXE::exec()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/DELayout/src/ESMCI_DELayout.C:4851
+ 7 0x0000000000e42dfb ESMCI::XXE::exec()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/DELayout/src/ESMCI_DELayout.C:4419
+ 8 0x0000000000d27666 ESMCI::sparseMatMulStoreEncodeXXE<ESMCI::SeqIndex<int>, ESMCI::SeqIndex<int> >()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/Array/src/ESMCI_Array.C:11223
+ 9 0x0000000000d188d6 ESMCI::Array::tSparseMatMulStore<int, int>()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/Array/src/ESMCI_Array.C:9613
+10 0x0000000000d14337 ESMCI::Array::sparseMatMulStore<int, int>()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/Array/src/ESMCI_Array.C:8906
+11 0x0000000000ce90b8 c_esmc_arraysmmstoreind4_()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/Array/interface/ESMCI_Array_F.C:1105
+12 0x0000000001322e02 ESMCI_regrid_create()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/Mesh/src/ESMCI_Mesh_Regrid_Glue.C:681
+13 0x000000000127c12e ESMCI::MeshCap::regrid_create()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/Mesh/src/ESMCI_MeshCap.C:1658
+14 0x00000000013ba390 c_esmc_regrid_create_()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/Regrid/interface/ESMCI_Regrid_F.C:93
+15 0x0000000002218378 __esmf_regridmod_MOD_esmf_regridstore()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/Regrid/src/ESMF_Regrid.F90:381
+16 0x0000000001cbda27 __esmf_fieldregridmod_MOD_esmf_fieldregridstorenx()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/Field/src/ESMF_FieldRegrid.F90:1346
+17 0x00000000018d4606 __esmf_fieldbundlemod_MOD_esmf_fieldbundleregridstorepair()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/FieldBundle/src/ESMF_FieldBundle.F90:16193
+18 0x000000000257fe31 __nuopc_connector_MOD_fieldbundlecplstore()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/addon/NUOPC/src/NUOPC_Connector.F90:7857
+19 0x00000000025a98b9 __nuopc_connector_MOD_initializeipdv05p6b()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/addon/NUOPC/src/NUOPC_Connector.F90:5540
+20 0x0000000001026a78 ESMCI::FTable::callVFuncPtr()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMCI_FTable.C:2192
+21 0x0000000001023b48 ESMCI_FTableCallEntryPointVMHop()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMCI_FTable.C:849
+22 0x0000000001483f72 ESMCI::VMK::enter()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/VM/src/ESMCI_VMKernel.C:2740
+23 0x00000000014a3abf ESMCI::VM::enter()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/VM/src/ESMCI_VM.C:1365
+24 0x0000000001023fe1 c_esmc_ftablecallentrypointvm_()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMCI_FTable.C:1006
+25 0x000000000185e9e9 __esmf_compmod_MOD_esmf_compexecute()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMF_Comp.F90:1274
+26 0x0000000001877d7d __esmf_cplcompmod_MOD_esmf_cplcompinitialize()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMF_CplComp.F90:1327
+27 0x0000000002692a68 __nuopc_driver_MOD_loopconnectorcompss()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/addon/NUOPC/src/NUOPC_Driver.F90:2954
+28 0x00000000026a6188 __nuopc_driver_MOD_initializeipdv02p3()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/addon/NUOPC/src/NUOPC_Driver.F90:2225
+29 0x00000000026cd0b0 __nuopc_driver_MOD_initializegeneric()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/addon/NUOPC/src/NUOPC_Driver.F90:432
+30 0x0000000001026a78 ESMCI::FTable::callVFuncPtr()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMCI_FTable.C:2192
+31 0x0000000001023b48 ESMCI_FTableCallEntryPointVMHop()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMCI_FTable.C:849
+32 0x0000000001483f72 ESMCI::VMK::enter()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/VM/src/ESMCI_VMKernel.C:2740
+33 0x00000000014a3abf ESMCI::VM::enter()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/VM/src/ESMCI_VM.C:1365
+34 0x0000000001023fe1 c_esmc_ftablecallentrypointvm_()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMCI_FTable.C:1006
+35 0x000000000185e9e9 __esmf_compmod_MOD_esmf_compexecute()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMF_Comp.F90:1274
+36 0x0000000001d3f2d0 __esmf_gridcompmod_MOD_esmf_gridcompinitialize()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMF_GridComp.F90:1567
+37 0x0000000000417f73 MAIN__()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:385
+38 0x000000000041864c main()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:14
+39 0x000000000003524d __libc_start_main()  ???:0
+40 0x00000000004143ca _start()  /home/abuild/rpmbuild/BUILD/glibc-2.31/csu/../sysdeps/x86_64/start.S:120
+=================================
+
+Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
+
+Backtrace for this error:
+#0  0x14e234e5a90f in ???
+#1  0x14e236f79965 in _ZN5ESMCI3XXE15exec_psssDstRraIfddEEvPT_PiPT0_PT1_S4_ii
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/DELayout/src/ESMCI_DELayout.C:6576
+#2  0x14e236f1d9c8 in _ZN5ESMCI3XXE10psssDstRraIfddEEvPT_NS0_4TKIdEPiPT0_S4_PT1_S5_S4_iiiiiiiS5_S5_b
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/DELayout/src/ESMCI_DELayout.C:6548
+#3  0x14e236ec7cf0 in _ZN5ESMCI3XXE10psssDstRraIfdiEEvPT_NS0_4TKIdEPiPT0_S4_PT1_S5_S4_iiiiiiiS5_S5_b
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/DELayout/src/ESMCI_DELayout.C:6512
+#4  0x14e236e9cc9b in _ZN5ESMCI3XXE10psssDstRraIfiiEEvPT_NS0_4TKIdEPiPT0_S4_PT1_S5_S4_iiiiiiiS5_S5_b
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/DELayout/src/ESMCI_DELayout.C:6472
+#5  0x14e236e8ffd0 in ???
+#6  0x14e236e83b9d in _ZN5ESMCI3XXE4execEiPPcPiiPbS4_PdiiS3_PNS0_10SuperVectPE
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/DELayout/src/ESMCI_DELayout.C:4851
+#7  0x14e236e82dfa in _ZN5ESMCI3XXE4execEiPPcPiiPbS4_PdiiS3_PNS0_10SuperVectPE
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/DELayout/src/ESMCI_DELayout.C:4419
+#8  0x14e236d67665 in _ZN5ESMCI26sparseMatMulStoreEncodeXXEINS_8SeqIndexIiEES2_EEiPNS_2VMEPNS_8DELayoutES6_bii18ESMC_TypeKind_FlagS7_S7_RSt6vectorINS_11ArrayHelper13SendnbElementIT_T0_EESaISD_EERS8_INS9_13RecvnbElementISC_SB_EESaISI_EEPKiPPciPPNS_11RouteHandleEbPiST_
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/Array/src/ESMCI_Array.C:11223
+#9  0x14e236d588d5 in _ZN5ESMCI5Array18tSparseMatMulStoreIiiEEiPS0_S2_PPNS_11RouteHandleERKSt6vectorINS_12SparseMatrixIT_T0_EESaISA_EEbbPiSF_
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/Array/src/ESMCI_Array.C:9613
+#10  0x14e236d54336 in _ZN5ESMCI5Array17sparseMatMulStoreIiiEEiPS0_S2_PPNS_11RouteHandleERKSt6vectorINS_12SparseMatrixIT_T0_EESaISA_EEbbPiSF_
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/Array/src/ESMCI_Array.C:8906
+#11  0x14e236d290b7 in c_esmc_arraysmmstoreind4_
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/Array/interface/ESMCI_Array_F.C:1105
+#12  0x14e237362e01 in _Z19ESMCI_regrid_createPPN5ESMCI4MeshEPPNS_5ArrayEPPNS_9PointListES2_S5_S8_PiS9_S9_S9_S9_S9_S9_S9_PdS9_S9_S9_S9_S9_S9_PPNS_11RouteHandleES9_S9_S9_PPNS_11TempWeightsESD_S9_S9_S9_PPNS_7TempUDLES9_S5_S9_S9_
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/Mesh/src/ESMCI_Mesh_Regrid_Glue.C:681
+#13  0x14e2372bc12d in _ZN5ESMCI7MeshCap13regrid_createEPPS0_PPNS_5ArrayEPPNS_9PointListES2_S5_S8_PiS9_S9_S9_S9_S9_S9_S9_PdS9_S9_S9_S9_S9_S9_PPNS_11RouteHandleES9_S9_S9_PPNS_11TempWeightsESD_S9_S9_S9_PPNS_7TempUDLES9_S5_S9_S9_
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/Mesh/src/ESMCI_MeshCap.C:1658
+#14  0x14e2373fa38f in c_esmc_regrid_create_
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/Regrid/interface/ESMCI_Regrid_F.C:93
+#15  0x14e238258377 in __esmf_regridmod_MOD_esmf_regridstore
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/Regrid/src/ESMF_Regrid.F90:381
+#16  0x14e237cfda26 in __esmf_fieldregridmod_MOD_esmf_fieldregridstorenx
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/Field/src/ESMF_FieldRegrid.F90:1346
+#17  0x14e237914605 in __esmf_fieldbundlemod_MOD_esmf_fieldbundleregridstorepair
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/FieldBundle/src/ESMF_FieldBundle.F90:16193
+#18  0x14e2385bfe30 in fieldbundlecplstore
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/addon/NUOPC/src/NUOPC_Connector.F90:7857
+#19  0x14e2385e98b8 in initializeipdv05p6b
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/addon/NUOPC/src/NUOPC_Connector.F90:5540
+#20  0x14e237066a77 in _ZN5ESMCI6FTable12callVFuncPtrEPKcPNS_2VMEPi
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMCI_FTable.C:2192
+#21  0x14e237063b47 in ESMCI_FTableCallEntryPointVMHop
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMCI_FTable.C:849
+#22  0x14e2374c3f71 in _ZN5ESMCI3VMK5enterEPNS_7VMKPlanEPvS3_
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/VM/src/ESMCI_VMKernel.C:2740
+#23  0x14e2374e3abe in _ZN5ESMCI2VM5enterEPNS_6VMPlanEPvS3_
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/VM/src/ESMCI_VM.C:1365
+#24  0x14e237063fe0 in c_esmc_ftablecallentrypointvm_
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMCI_FTable.C:1006
+#25  0x14e23789e9e8 in __esmf_compmod_MOD_esmf_compexecute
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMF_Comp.F90:1274
+#26  0x14e2378b7d7c in __esmf_cplcompmod_MOD_esmf_cplcompinitialize
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMF_CplComp.F90:1327
+#27  0x14e2386d2a67 in loopconnectorcompss
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/addon/NUOPC/src/NUOPC_Driver.F90:2954
+#28  0x14e2386e6187 in initializeipdv02p3
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/addon/NUOPC/src/NUOPC_Driver.F90:2225
+#29  0x14e23870d0af in initializegeneric
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/addon/NUOPC/src/NUOPC_Driver.F90:432
+#30  0x14e237066a77 in _ZN5ESMCI6FTable12callVFuncPtrEPKcPNS_2VMEPi
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMCI_FTable.C:2192
+#31  0x14e237063b47 in ESMCI_FTableCallEntryPointVMHop
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMCI_FTable.C:849
+#32  0x14e2374c3f71 in _ZN5ESMCI3VMK5enterEPNS_7VMKPlanEPvS3_
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/VM/src/ESMCI_VMKernel.C:2740
+#33  0x14e2374e3abe in _ZN5ESMCI2VM5enterEPNS_6VMPlanEPvS3_
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Infrastructure/VM/src/ESMCI_VM.C:1365
+#34  0x14e237063fe0 in c_esmc_ftablecallentrypointvm_
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMCI_FTable.C:1006
+#35  0x14e23789e9e8 in __esmf_compmod_MOD_esmf_compexecute
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMF_Comp.F90:1274
+#36  0x14e237d7f2cf in __esmf_gridcompmod_MOD_esmf_gridcompinitialize
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/src/Superstructure/Component/src/ESMF_GridComp.F90:1567
+#37  0x417f72 in esmx_app
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:385
+#38  0x41864b in main
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_14.2.0_openmpi_g_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:14
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1 with PID 88395 on node borgq123 exited on signal 8 (Floating point exception).
+--------------------------------------------------------------------------

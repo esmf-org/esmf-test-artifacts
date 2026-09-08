@@ -1,0 +1,142 @@
+ 
+Installing ESMF:
+ 
+mkdir -p /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/include
+cp -f /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/include/NUOPC.h /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/include
+cp -f /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/include/ESMC.h /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/include
+cp -f /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/include/ESMC_*.h /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/include
+cp -f /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/build_config/Unicos.nvhpc.default/ESMC_Conf.h /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/include
+cp -fr /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/addon/ESMX /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/include
+mkdir -p /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/cmake
+cp -f /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/cmake/FindESMF.cmake /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/cmake
+mkdir -p /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/mod/modg/Unicos.nvhpc.64.mpiuni.default
+cp -f /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/mod/modg/Unicos.nvhpc.64.mpiuni.default/*.mod /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/mod/modg/Unicos.nvhpc.64.mpiuni.default
+mkdir -p /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default
+cp -f /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/lib/libg/Unicos.nvhpc.64.mpiuni.default/libesmf*.* /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default
+cp -f /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/lib/libg/Unicos.nvhpc.64.mpiuni.default/libpioc.* /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default
+make ESMF_PRELOADDIR=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default build_preload_script
+make[1]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf'
+chmod 755 /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default/preload.sh
+make[1]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf'
+ranlib /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default/libesmf*.a
+make install_apps
+make[1]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf'
+mkdir -p /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/bin/bing/Unicos.nvhpc.64.mpiuni.default
+make build_apps ESMF_APPSDIR=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/bin/bing/Unicos.nvhpc.64.mpiuni.default ESMF_LDIR=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default ESMF_LIBDIR=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default ESMF_MODDIR=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/mod/modg/Unicos.nvhpc.64.mpiuni.default
+make[2]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf'
+cd /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps; make ACTION=tree_build_apps tree
+make[3]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps'
+tree_build_apps in: /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_PrintInfo
+make[4]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_PrintInfo'
+make chkdir_locobj
+make[5]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_PrintInfo'
+Making directory /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/obj/objg/Unicos.nvhpc.64.mpiuni.default/src/apps/ESMF_PrintInfo for apps output
+make[5]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_PrintInfo'
+ftn -c -g  -fpic -mcmodel=small -Mallocatable=03 -pthread  -mp -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_PrintInfo -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/build_config/Unicos.nvhpc.default -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Infrastructure -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Superstructure -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/mod/modg/Unicos.nvhpc.64.mpiuni.default -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/include -I/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/include -I/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/include  -DESMF_NO_INTEGER_1_BYTE -DESMF_NO_INTEGER_2_BYTE -DESMF_VERSION_STRING_GIT='"develop+g4161bf9d44"' -DESMF_MPIUNI -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Infrastructure/stubs/mpiuni -DESMF_MOAB=1 -DESMF_LAPACK=1 -DESMF_LAPACK_INTERNAL=1 -DESMF_NO_ACC_SOFTWARE_STACK=1 -DESMF_PIO=1 -DESMF_NETCDF=1 -DYAML=ESMF_YAML -DESMF_YAMLCPP=1 -DESMF_NO_OPENACC -DESMF_TESTEXHAUSTIVE -DESMF_BOPT_g -DESMF_TESTPERFORMANCE -DESMF_TESTCOMPTUNNEL -DESMF_TESTWITHTHREADS -DSx86_64_small=1 -DESMF_OS_Unicos=1 -DESMF_COMM=mpiuni -DESMF_DIR=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf -DESMF_NO_F2018ASSUMEDTYPE ESMF_PrintInfo.F90 -o /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/obj/objg/Unicos.nvhpc.64.mpiuni.default/src/apps/ESMF_PrintInfo/ESMF_PrintInfo.o
+make chkdir_apps
+make[5]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_PrintInfo'
+make[5]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_PrintInfo'
+ftn    -mcmodel=small -pthread -Wl,--no-as-needed  -mp -L/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default -L/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/lib -Wl,-rpath,/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default  -Wl,-rpath,/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/lib -o /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/bin/bing/Unicos.nvhpc.64.mpiuni.default/ESMF_PrintInfo /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/obj/objg/Unicos.nvhpc.64.mpiuni.default/src/apps/ESMF_PrintInfo/ESMF_PrintInfo.o -lesmf -lpioc -lnetcdff -lnetcdf -c++libs
+make[4]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_PrintInfo'
+tree_build_apps in: /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_PrintInfoC
+make[4]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_PrintInfoC'
+make chkdir_locobj
+make[5]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_PrintInfoC'
+Making directory /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/obj/objg/Unicos.nvhpc.64.mpiuni.default/src/apps/ESMF_PrintInfoC for apps output
+make[5]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_PrintInfoC'
+cc -c  -g  -fpic  -mp -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_PrintInfoC -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_PrintInfoC/../include -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/build_config/Unicos.nvhpc.default -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Infrastructure -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Superstructure  -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/include   -DESMF_NO_INTEGER_1_BYTE -DESMF_NO_INTEGER_2_BYTE -DESMF_VERSION_STRING_GIT='"develop+g4161bf9d44"' -DESMF_MPIUNI -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Infrastructure/stubs/mpiuni -DESMF_MOAB=1 -DESMF_LAPACK=1 -DESMF_LAPACK_INTERNAL=1 -DESMF_NO_ACC_SOFTWARE_STACK=1 -DESMF_PIO=1 -DESMF_NETCDF=1 -DYAML=ESMF_YAML -DESMF_YAMLCPP=1 -DESMF_NO_OPENACC -DESMF_TESTEXHAUSTIVE -DESMF_BOPT_g -DESMF_TESTPERFORMANCE -DESMF_TESTCOMPTUNNEL -DESMF_TESTWITHTHREADS -DSx86_64_small=1 -DESMF_OS_Unicos=1 -DESMF_COMM=mpiuni -DESMF_DIR=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf -D__SDIR__='"src/apps/ESMF_PrintInfoC"' ESMF_PrintInfoC.c -o /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/obj/objg/Unicos.nvhpc.64.mpiuni.default/src/apps/ESMF_PrintInfoC/ESMF_PrintInfoC.o
+make chkdir_apps
+make[5]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_PrintInfoC'
+make[5]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_PrintInfoC'
+cc     -mp -L/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default -L/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/lib -L/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default -L/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/lib -Wl,-rpath,/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default -Wl,-rpath,/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/lib -Wl,-rpath,/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default -Wl,-rpath,/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/lib -o /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/bin/bing/Unicos.nvhpc.64.mpiuni.default/ESMF_PrintInfoC /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/obj/objg/Unicos.nvhpc.64.mpiuni.default/src/apps/ESMF_PrintInfoC/ESMF_PrintInfoC.o -lesmf -lpioc -lnetcdff -lnetcdf -fortranlibs -lpioc -lnetcdff -lnetcdf -c++libs
+make[4]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_PrintInfoC'
+tree_build_apps in: /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_RegridWeightGen
+make[4]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_RegridWeightGen'
+make chkdir_locobj
+make[5]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_RegridWeightGen'
+Making directory /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/obj/objg/Unicos.nvhpc.64.mpiuni.default/src/apps/ESMF_RegridWeightGen for apps output
+make[5]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_RegridWeightGen'
+ftn -c -g  -fpic -mcmodel=small -Mallocatable=03 -pthread  -mp -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_RegridWeightGen -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/build_config/Unicos.nvhpc.default -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Infrastructure -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Superstructure -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/mod/modg/Unicos.nvhpc.64.mpiuni.default -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/include -I/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/include -I/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/include  -DESMF_NO_INTEGER_1_BYTE -DESMF_NO_INTEGER_2_BYTE -DESMF_VERSION_STRING_GIT='"develop+g4161bf9d44"' -DESMF_MPIUNI -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Infrastructure/stubs/mpiuni -DESMF_MOAB=1 -DESMF_LAPACK=1 -DESMF_LAPACK_INTERNAL=1 -DESMF_NO_ACC_SOFTWARE_STACK=1 -DESMF_PIO=1 -DESMF_NETCDF=1 -DYAML=ESMF_YAML -DESMF_YAMLCPP=1 -DESMF_NO_OPENACC -DESMF_TESTEXHAUSTIVE -DESMF_BOPT_g -DESMF_TESTPERFORMANCE -DESMF_TESTCOMPTUNNEL -DESMF_TESTWITHTHREADS -DSx86_64_small=1 -DESMF_OS_Unicos=1 -DESMF_COMM=mpiuni -DESMF_DIR=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf -DESMF_NO_F2018ASSUMEDTYPE ESMF_RegridWeightGen.F90 -o /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/obj/objg/Unicos.nvhpc.64.mpiuni.default/src/apps/ESMF_RegridWeightGen/ESMF_RegridWeightGen.o
+make chkdir_apps
+make[5]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_RegridWeightGen'
+make[5]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_RegridWeightGen'
+ftn    -mcmodel=small -pthread -Wl,--no-as-needed  -mp -L/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default -L/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/lib -Wl,-rpath,/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default  -Wl,-rpath,/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/lib -o /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/bin/bing/Unicos.nvhpc.64.mpiuni.default/ESMF_RegridWeightGen /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/obj/objg/Unicos.nvhpc.64.mpiuni.default/src/apps/ESMF_RegridWeightGen/ESMF_RegridWeightGen.o -lesmf -lpioc -lnetcdff -lnetcdf -c++libs
+make[4]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_RegridWeightGen'
+tree_build_apps in: /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_WebServController
+make[4]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_WebServController'
+make chkdir_locobj
+make[5]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_WebServController'
+Making directory /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/obj/objg/Unicos.nvhpc.64.mpiuni.default/src/apps/ESMF_WebServController for apps output
+make[5]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_WebServController'
+CC -c -std=c++11 -g  -fpic -mcmodel=small -pthread  -mp -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_WebServController -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_WebServController/../include -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/build_config/Unicos.nvhpc.default -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Infrastructure -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Superstructure -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Infrastructure/stubs/pthread  -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/include  -I/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/include -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/prologue/yaml-cpp/include -DESMF_NO_INTEGER_1_BYTE -DESMF_NO_INTEGER_2_BYTE -DESMF_VERSION_STRING_GIT='"develop+g4161bf9d44"' -DESMF_MPIUNI -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Infrastructure/stubs/mpiuni -DESMF_MOAB=1 -DESMF_LAPACK=1 -DESMF_LAPACK_INTERNAL=1 -DESMF_NO_ACC_SOFTWARE_STACK=1 -DESMF_PIO=1 -DESMF_NETCDF=1 -DYAML=ESMF_YAML -DESMF_YAMLCPP=1 -DESMF_NO_OPENACC -DESMF_TESTEXHAUSTIVE -DESMF_BOPT_g -DESMF_TESTPERFORMANCE -DESMF_TESTCOMPTUNNEL -DESMF_TESTWITHTHREADS -DSx86_64_small=1 -DESMF_OS_Unicos=1 -DESMF_COMM=mpiuni -DESMF_DIR=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf -D__SDIR__='"src/apps/ESMF_WebServController"' -DESMF_CXXSTD=11 -DESMF_NO_F2018ASSUMEDTYPE ESMF_WebServController.C -o /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/obj/objg/Unicos.nvhpc.64.mpiuni.default/src/apps/ESMF_WebServController/ESMF_WebServController.o
+make chkdir_apps
+make[5]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_WebServController'
+make[5]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_WebServController'
+CC    -mcmodel=small -pthread -Wl,--no-as-needed  -mp -L/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default -L/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/lib -Wl,-rpath,/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default  -Wl,-rpath,/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/lib -o /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/bin/bing/Unicos.nvhpc.64.mpiuni.default/ESMF_WebServController /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/obj/objg/Unicos.nvhpc.64.mpiuni.default/src/apps/ESMF_WebServController/ESMF_WebServController.o -lesmf -lpioc -lnetcdff -lnetcdf -fortranlibs
+make[4]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_WebServController'
+tree_build_apps in: /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_Scrip2Unstruct
+make[4]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_Scrip2Unstruct'
+make chkdir_locobj
+make[5]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_Scrip2Unstruct'
+Making directory /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/obj/objg/Unicos.nvhpc.64.mpiuni.default/src/apps/ESMF_Scrip2Unstruct for apps output
+make[5]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_Scrip2Unstruct'
+CC -c -std=c++11 -g  -fpic -mcmodel=small -pthread  -mp -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_Scrip2Unstruct -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_Scrip2Unstruct/../include -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/build_config/Unicos.nvhpc.default -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Infrastructure -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Superstructure -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Infrastructure/stubs/pthread  -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/include  -I/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/include -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/prologue/yaml-cpp/include -DESMF_NO_INTEGER_1_BYTE -DESMF_NO_INTEGER_2_BYTE -DESMF_VERSION_STRING_GIT='"develop+g4161bf9d44"' -DESMF_MPIUNI -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Infrastructure/stubs/mpiuni -DESMF_MOAB=1 -DESMF_LAPACK=1 -DESMF_LAPACK_INTERNAL=1 -DESMF_NO_ACC_SOFTWARE_STACK=1 -DESMF_PIO=1 -DESMF_NETCDF=1 -DYAML=ESMF_YAML -DESMF_YAMLCPP=1 -DESMF_NO_OPENACC -DESMF_TESTEXHAUSTIVE -DESMF_BOPT_g -DESMF_TESTPERFORMANCE -DESMF_TESTCOMPTUNNEL -DESMF_TESTWITHTHREADS -DSx86_64_small=1 -DESMF_OS_Unicos=1 -DESMF_COMM=mpiuni -DESMF_DIR=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf -D__SDIR__='"src/apps/ESMF_Scrip2Unstruct"' -DESMF_CXXSTD=11 -DESMF_NO_F2018ASSUMEDTYPE ESMF_Scrip2Unstruct.C -o /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/obj/objg/Unicos.nvhpc.64.mpiuni.default/src/apps/ESMF_Scrip2Unstruct/ESMF_Scrip2Unstruct.o
+"ESMF_Scrip2Unstruct.C", line 403: warning: variable "startind" was set but never used [set_but_not_used]
+    int ind, startind;
+             ^
+
+Remark: individual warnings can be suppressed with "--diag_suppress <warning-name>"
+
+"ESMF_Scrip2Unstruct.C", line 407: warning: variable "offset" was declared but never referenced [declared_but_not_referenced]
+    int alltotal, mypart, left, offset, mystart, mystartelement;
+                                ^
+
+"ESMF_Scrip2Unstruct.C", line 420: warning: variable "ogr_dimid" was declared but never referenced [declared_but_not_referenced]
+    int ogr_dimid, ogd_id;  
+        ^
+
+"ESMF_Scrip2Unstruct.C", line 692: warning: variable "mycount" was declared but never referenced [declared_but_not_referenced]
+    int mycount = 0;
+        ^
+
+make chkdir_apps
+make[5]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_Scrip2Unstruct'
+make[5]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_Scrip2Unstruct'
+CC    -mcmodel=small -pthread -Wl,--no-as-needed  -mp -L/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default -L/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/lib -Wl,-rpath,/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default  -Wl,-rpath,/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/lib -o /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/bin/bing/Unicos.nvhpc.64.mpiuni.default/ESMF_Scrip2Unstruct /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/obj/objg/Unicos.nvhpc.64.mpiuni.default/src/apps/ESMF_Scrip2Unstruct/ESMF_Scrip2Unstruct.o -lesmf -lpioc -lnetcdff -lnetcdf -fortranlibs
+make[4]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_Scrip2Unstruct'
+tree_build_apps in: /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_Regrid
+make[4]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_Regrid'
+make chkdir_locobj
+make[5]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_Regrid'
+Making directory /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/obj/objg/Unicos.nvhpc.64.mpiuni.default/src/apps/ESMF_Regrid for apps output
+make[5]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_Regrid'
+ftn -c -g  -fpic -mcmodel=small -Mallocatable=03 -pthread  -mp -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_Regrid -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/build_config/Unicos.nvhpc.default -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Infrastructure -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Superstructure -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/mod/modg/Unicos.nvhpc.64.mpiuni.default -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/include -I/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/include -I/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/include  -DESMF_NO_INTEGER_1_BYTE -DESMF_NO_INTEGER_2_BYTE -DESMF_VERSION_STRING_GIT='"develop+g4161bf9d44"' -DESMF_MPIUNI -I/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/Infrastructure/stubs/mpiuni -DESMF_MOAB=1 -DESMF_LAPACK=1 -DESMF_LAPACK_INTERNAL=1 -DESMF_NO_ACC_SOFTWARE_STACK=1 -DESMF_PIO=1 -DESMF_NETCDF=1 -DYAML=ESMF_YAML -DESMF_YAMLCPP=1 -DESMF_NO_OPENACC -DESMF_TESTEXHAUSTIVE -DESMF_BOPT_g -DESMF_TESTPERFORMANCE -DESMF_TESTCOMPTUNNEL -DESMF_TESTWITHTHREADS -DSx86_64_small=1 -DESMF_OS_Unicos=1 -DESMF_COMM=mpiuni -DESMF_DIR=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf -DESMF_NO_F2018ASSUMEDTYPE ESMF_Regrid.F90 -o /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/obj/objg/Unicos.nvhpc.64.mpiuni.default/src/apps/ESMF_Regrid/ESMF_Regrid.o
+make chkdir_apps
+make[5]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_Regrid'
+make[5]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_Regrid'
+ftn    -mcmodel=small -pthread -Wl,--no-as-needed  -mp -L/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default -L/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/lib -Wl,-rpath,/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default  -Wl,-rpath,/opt/cray/pe/netcdf/4.9.0.11/nvidia/23.3/lib -o /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/bin/bing/Unicos.nvhpc.64.mpiuni.default/ESMF_Regrid /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/obj/objg/Unicos.nvhpc.64.mpiuni.default/src/apps/ESMF_Regrid/ESMF_Regrid.o -lesmf -lpioc -lnetcdff -lnetcdf -c++libs
+make[4]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMF_Regrid'
+tree_build_apps in: /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMX_Builder
+make[4]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMX_Builder'
+make chkdir_apps
+make[5]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMX_Builder'
+make[5]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMX_Builder'
+cp -f ESMX_Builder.sh /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/bin/bing/Unicos.nvhpc.64.mpiuni.default/ESMX_Builder
+make[4]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps/ESMX_Builder'
+make[3]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/src/apps'
+ESMF apps built successfully.
+make[2]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf'
+make[1]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf'
+mkdir -p /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/doc
+make install_info_mk
+make[1]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf'
+make info_mk ESMF_APPSDIR=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/bin/bing/Unicos.nvhpc.64.mpiuni.default ESMF_LDIR=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default ESMF_LIBDIR=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default ESMF_ESMXDIR=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/include/ESMX ESMF_CMAKEDIR=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/cmake ESMF_MODDIR=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/mod/modg/Unicos.nvhpc.64.mpiuni.default ESMF_INCDIR=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/include
+make[2]: Entering directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf'
+make[2]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf'
+make[1]: Leaving directory '/tmp/nvhpc_25.5_mpiuni_g_develop/esmf'
+/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/cmake/generate_config.py --esmfmkfile=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default/esmf.mk --template=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/cmake/ESMFConfig.cmake.in --outputdir=/tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default/cmake/ESMF
+Successfully generated config: /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default/cmake/ESMF/ESMFConfig.cmake (MPI: FALSE, Imported Target: libesmf.so)
+Successfully generated version handler: /tmp/nvhpc_25.5_mpiuni_g_develop/esmf/DEFAULTINSTALLDIR/lib/libg/Unicos.nvhpc.64.mpiuni.default/cmake/ESMF/ESMFConfigVersion.cmake
+ 
+ESMF installation complete.
+ 

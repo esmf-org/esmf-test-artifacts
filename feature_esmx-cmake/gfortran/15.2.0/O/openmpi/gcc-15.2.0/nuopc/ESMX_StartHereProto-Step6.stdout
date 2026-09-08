@@ -1,0 +1,357 @@
+2026-09-07 23:00:19
+[borgm061:88773:0:88773] Caught signal 8 (Floating point exception: floating-point underflow)
+[borgm061:88774:0:88774] Caught signal 8 (Floating point exception: floating-point underflow)
+[borgm061:88771:0:88771] Caught signal 8 (Floating point exception: floating-point underflow)
+[borgm061:88772:0:88772] Caught signal 8 (Floating point exception: floating-point underflow)
+==== backtrace (tid:  88774) ====
+ 0 0x0000000000016910 __funlockfile()  ???:0
+ 1 0x00000000004b5cde ESMCI::XXE::psssDstRra<float, double, double>()  ???:0
+ 2 0x00000000004ad665 ESMCI::XXE::psssDstRra<float, double, int>()  ???:0
+ 3 0x00000000004ba574 ESMCI::XXE::psssDstRra<float, int, int>()  ???:0
+ 4 0x00000000004babc8 ESMCI::XXE::psssDstRra<int, int, int>()  ???:0
+ 5 0x00000000004779b7 ESMCI::XXE::exec()  ESMCI_DELayout.C:0
+ 6 0x0000000000475c54 ESMCI::XXE::exec()  ESMCI_DELayout.C:0
+ 7 0x00000000003fe3ac ESMCI::sparseMatMulStoreEncodeXXE<ESMCI::SeqIndex<int>, ESMCI::SeqIndex<int> >()  ???:0
+ 8 0x0000000000408d72 ESMCI::Array::tSparseMatMulStore<int, int>()  ???:0
+ 9 0x00000000004097cc ESMCI::Array::sparseMatMulStore<int, int>()  ???:0
+10 0x000000000039e2d2 c_esmc_arraysmmstoreind4_()  ???:0
+11 0x000000000082fc7b ESMCI_regrid_create()  ???:0
+12 0x00000000007b2728 ESMCI::MeshCap::regrid_create()  ???:0
+13 0x0000000000893c20 c_esmc_regrid_create_()  ???:0
+14 0x0000000000f7b441 __esmf_regridmod_MOD_esmf_regridstore()  ???:0
+15 0x0000000000d40a1a __esmf_fieldregridmod_MOD_esmf_fieldregridstorenx()  ???:0
+16 0x0000000000b6dfa5 __esmf_fieldbundlemod_MOD_esmf_fieldbundleregridstorepair()  ???:0
+17 0x0000000001198944 __nuopc_connector_MOD_fieldbundlecplstore()  NUOPC_Connector.F90:0
+18 0x00000000011a2a94 __nuopc_connector_MOD_initializeipdv05p6b()  NUOPC_Connector.F90:0
+19 0x00000000005e930c ESMCI::FTable::callVFuncPtr()  ???:0
+20 0x00000000005e9665 ESMCI_FTableCallEntryPointVMHop()  ???:0
+21 0x0000000000929edf ESMCI::VMK::enter()  ???:0
+22 0x00000000009417a6 ESMCI::VM::enter()  ???:0
+23 0x00000000005e8162 c_esmc_ftablecallentrypointvm_()  ???:0
+24 0x0000000000b41323 __esmf_compmod_MOD_esmf_compexecute()  ???:0
+25 0x0000000000b4e14a __esmf_cplcompmod_MOD_esmf_cplcompinitialize()  ???:0
+26 0x00000000011e3dea __nuopc_driver_MOD_loopconnectorcompss()  NUOPC_Driver.F90:0
+27 0x00000000011f5759 __nuopc_driver_MOD_initializeipdv02p3()  NUOPC_Driver.F90:0
+28 0x0000000001225d0b __nuopc_driver_MOD_initializegeneric()  NUOPC_Driver.F90:0
+29 0x00000000005e930c ESMCI::FTable::callVFuncPtr()  ???:0
+30 0x00000000005e9665 ESMCI_FTableCallEntryPointVMHop()  ???:0
+31 0x0000000000929edf ESMCI::VMK::enter()  ???:0
+32 0x00000000009417a6 ESMCI::VM::enter()  ???:0
+33 0x00000000005e8162 c_esmc_ftablecallentrypointvm_()  ???:0
+34 0x0000000000b41323 __esmf_compmod_MOD_esmf_compexecute()  ???:0
+35 0x0000000000d7c7f1 __esmf_gridcompmod_MOD_esmf_gridcompinitialize()  ???:0
+36 0x0000000000417fb5 MAIN__()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_15.2.0_openmpi_O_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:385
+37 0x000000000041868e main()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_15.2.0_openmpi_O_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:14
+38 0x000000000003524d __libc_start_main()  ???:0
+39 0x00000000004143da _start()  /home/abuild/rpmbuild/BUILD/glibc-2.31/csu/../sysdeps/x86_64/start.S:120
+=================================
+
+Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
+
+Backtrace for this error:
+==== backtrace (tid:  88773) ====
+ 0 0x0000000000016910 __funlockfile()  ???:0
+ 1 0x00000000004b5cde ESMCI::XXE::psssDstRra<float, double, double>()  ???:0
+ 2 0x00000000004ad665 ESMCI::XXE::psssDstRra<float, double, int>()  ???:0
+ 3 0x00000000004ba574 ESMCI::XXE::psssDstRra<float, int, int>()  ???:0
+ 4 0x00000000004babc8 ESMCI::XXE::psssDstRra<int, int, int>()  ???:0
+ 5 0x00000000004779b7 ESMCI::XXE::exec()  ESMCI_DELayout.C:0
+ 6 0x0000000000475c54 ESMCI::XXE::exec()  ESMCI_DELayout.C:0
+ 7 0x00000000003fe3ac ESMCI::sparseMatMulStoreEncodeXXE<ESMCI::SeqIndex<int>, ESMCI::SeqIndex<int> >()  ???:0
+ 8 0x0000000000408d72 ESMCI::Array::tSparseMatMulStore<int, int>()  ???:0
+ 9 0x00000000004097cc ESMCI::Array::sparseMatMulStore<int, int>()  ???:0
+10 0x000000000039e2d2 c_esmc_arraysmmstoreind4_()  ???:0
+11 0x000000000082fc7b ESMCI_regrid_create()  ???:0
+12 0x00000000007b2728 ESMCI::MeshCap::regrid_create()  ???:0
+13 0x0000000000893c20 c_esmc_regrid_create_()  ???:0
+14 0x0000000000f7b441 __esmf_regridmod_MOD_esmf_regridstore()  ???:0
+15 0x0000000000d40a1a __esmf_fieldregridmod_MOD_esmf_fieldregridstorenx()  ???:0
+16 0x0000000000b6dfa5 __esmf_fieldbundlemod_MOD_esmf_fieldbundleregridstorepair()  ???:0
+17 0x0000000001198944 __nuopc_connector_MOD_fieldbundlecplstore()  NUOPC_Connector.F90:0
+18 0x00000000011a2a94 __nuopc_connector_MOD_initializeipdv05p6b()  NUOPC_Connector.F90:0
+==== backtrace (tid:  88771) ====
+ 0 0x0000000000016910 __funlockfile()  ???:0
+ 1 0x00000000004b5cde ESMCI::XXE::psssDstRra<float, double, double>()  ???:0
+ 2 0x00000000004ad665 ESMCI::XXE::psssDstRra<float, double, int>()  ???:0
+ 3 0x00000000004ba574 ESMCI::XXE::psssDstRra<float, int, int>()  ???:0
+ 4 0x00000000004babc8 ESMCI::XXE::psssDstRra<int, int, int>()  ???:0
+ 5 0x00000000004779b7 ESMCI::XXE::exec()  ESMCI_DELayout.C:0
+ 6 0x0000000000475c54 ESMCI::XXE::exec()  ESMCI_DELayout.C:0
+ 7 0x00000000003fe3ac ESMCI::sparseMatMulStoreEncodeXXE<ESMCI::SeqIndex<int>, ESMCI::SeqIndex<int> >()  ???:0
+ 8 0x0000000000408d72 ESMCI::Array::tSparseMatMulStore<int, int>()  ???:0
+ 9 0x00000000004097cc ESMCI::Array::sparseMatMulStore<int, int>()  ???:0
+10 0x000000000039e2d2 c_esmc_arraysmmstoreind4_()  ???:0
+11 0x000000000082fc7b ESMCI_regrid_create()  ???:0
+12 0x00000000007b2728 ESMCI::MeshCap::regrid_create()  ???:0
+19 0x00000000005e930c ESMCI::FTable::callVFuncPtr()  ???:0
+20 0x00000000005e9665 ESMCI_FTableCallEntryPointVMHop()  ???:0
+21 0x0000000000929edf ESMCI::VMK::enter()  ???:0
+22 0x00000000009417a6 ESMCI::VM::enter()  ???:0
+23 0x00000000005e8162 c_esmc_ftablecallentrypointvm_()  ???:0
+24 0x0000000000b41323 __esmf_compmod_MOD_esmf_compexecute()  ???:0
+25 0x0000000000b4e14a __esmf_cplcompmod_MOD_esmf_cplcompinitialize()  ???:0
+26 0x00000000011e3dea __nuopc_driver_MOD_loopconnectorcompss()  NUOPC_Driver.F90:0
+27 0x00000000011f5759 __nuopc_driver_MOD_initializeipdv02p3()  NUOPC_Driver.F90:0
+28 0x0000000001225d0b __nuopc_driver_MOD_initializegeneric()  NUOPC_Driver.F90:0
+29 0x00000000005e930c ESMCI::FTable::callVFuncPtr()  ???:0
+30 0x00000000005e9665 ESMCI_FTableCallEntryPointVMHop()  ???:0
+31 0x0000000000929edf ESMCI::VMK::enter()  ???:0
+32 0x00000000009417a6 ESMCI::VM::enter()  ???:0
+33 0x00000000005e8162 c_esmc_ftablecallentrypointvm_()  ???:0
+34 0x0000000000b41323 __esmf_compmod_MOD_esmf_compexecute()  ???:0
+35 0x0000000000d7c7f1 __esmf_gridcompmod_MOD_esmf_gridcompinitialize()  ???:0
+36 0x0000000000417fb5 MAIN__()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_15.2.0_openmpi_O_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:385
+37 0x000000000041868e main()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_15.2.0_openmpi_O_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:14
+38 0x000000000003524d __libc_start_main()  ???:0
+39 0x00000000004143da _start()  /home/abuild/rpmbuild/BUILD/glibc-2.31/csu/../sysdeps/x86_64/start.S:120
+=================================
+
+Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
+
+Backtrace for this error:
+13 0x0000000000893c20 c_esmc_regrid_create_()  ???:0
+14 0x0000000000f7b441 __esmf_regridmod_MOD_esmf_regridstore()  ???:0
+15 0x0000000000d40a1a __esmf_fieldregridmod_MOD_esmf_fieldregridstorenx()  ???:0
+16 0x0000000000b6dfa5 __esmf_fieldbundlemod_MOD_esmf_fieldbundleregridstorepair()  ???:0
+17 0x0000000001198944 __nuopc_connector_MOD_fieldbundlecplstore()  NUOPC_Connector.F90:0
+18 0x00000000011a2a94 __nuopc_connector_MOD_initializeipdv05p6b()  NUOPC_Connector.F90:0
+19 0x00000000005e930c ESMCI::FTable::callVFuncPtr()  ???:0
+20 0x00000000005e9665 ESMCI_FTableCallEntryPointVMHop()  ???:0
+21 0x0000000000929edf ESMCI::VMK::enter()  ???:0
+22 0x00000000009417a6 ESMCI::VM::enter()  ???:0
+23 0x00000000005e8162 c_esmc_ftablecallentrypointvm_()  ???:0
+24 0x0000000000b41323 __esmf_compmod_MOD_esmf_compexecute()  ???:0
+25 0x0000000000b4e14a __esmf_cplcompmod_MOD_esmf_cplcompinitialize()  ???:0
+26 0x00000000011e3dea __nuopc_driver_MOD_loopconnectorcompss()  NUOPC_Driver.F90:0
+27 0x00000000011f5759 __nuopc_driver_MOD_initializeipdv02p3()  NUOPC_Driver.F90:0
+28 0x0000000001225d0b __nuopc_driver_MOD_initializegeneric()  NUOPC_Driver.F90:0
+29 0x00000000005e930c ESMCI::FTable::callVFuncPtr()  ???:0
+30 0x00000000005e9665 ESMCI_FTableCallEntryPointVMHop()  ???:0
+31 0x0000000000929edf ESMCI::VMK::enter()  ???:0
+32 0x00000000009417a6 ESMCI::VM::enter()  ???:0
+33 0x00000000005e8162 c_esmc_ftablecallentrypointvm_()  ???:0
+34 0x0000000000b41323 __esmf_compmod_MOD_esmf_compexecute()  ???:0
+35 0x0000000000d7c7f1 __esmf_gridcompmod_MOD_esmf_gridcompinitialize()  ???:0
+36 0x0000000000417fb5 MAIN__()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_15.2.0_openmpi_O_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:385
+37 0x000000000041868e main()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_15.2.0_openmpi_O_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:14
+38 0x000000000003524d __libc_start_main()  ???:0
+39 0x00000000004143da _start()  /home/abuild/rpmbuild/BUILD/glibc-2.31/csu/../sysdeps/x86_64/start.S:120
+=================================
+
+Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
+
+Backtrace for this error:
+==== backtrace (tid:  88772) ====
+ 0 0x0000000000016910 __funlockfile()  ???:0
+ 1 0x00000000004b5cde ESMCI::XXE::psssDstRra<float, double, double>()  ???:0
+ 2 0x00000000004ad665 ESMCI::XXE::psssDstRra<float, double, int>()  ???:0
+ 3 0x00000000004ba574 ESMCI::XXE::psssDstRra<float, int, int>()  ???:0
+ 4 0x00000000004babc8 ESMCI::XXE::psssDstRra<int, int, int>()  ???:0
+ 5 0x00000000004779b7 ESMCI::XXE::exec()  ESMCI_DELayout.C:0
+ 6 0x0000000000475c54 ESMCI::XXE::exec()  ESMCI_DELayout.C:0
+ 7 0x00000000003fe3ac ESMCI::sparseMatMulStoreEncodeXXE<ESMCI::SeqIndex<int>, ESMCI::SeqIndex<int> >()  ???:0
+ 8 0x0000000000408d72 ESMCI::Array::tSparseMatMulStore<int, int>()  ???:0
+ 9 0x00000000004097cc ESMCI::Array::sparseMatMulStore<int, int>()  ???:0
+10 0x000000000039e2d2 c_esmc_arraysmmstoreind4_()  ???:0
+11 0x000000000082fc7b ESMCI_regrid_create()  ???:0
+12 0x00000000007b2728 ESMCI::MeshCap::regrid_create()  ???:0
+13 0x0000000000893c20 c_esmc_regrid_create_()  ???:0
+14 0x0000000000f7b441 __esmf_regridmod_MOD_esmf_regridstore()  ???:0
+15 0x0000000000d40a1a __esmf_fieldregridmod_MOD_esmf_fieldregridstorenx()  ???:0
+16 0x0000000000b6dfa5 __esmf_fieldbundlemod_MOD_esmf_fieldbundleregridstorepair()  ???:0
+17 0x0000000001198944 __nuopc_connector_MOD_fieldbundlecplstore()  NUOPC_Connector.F90:0
+18 0x00000000011a2a94 __nuopc_connector_MOD_initializeipdv05p6b()  NUOPC_Connector.F90:0
+19 0x00000000005e930c ESMCI::FTable::callVFuncPtr()  ???:0
+20 0x00000000005e9665 ESMCI_FTableCallEntryPointVMHop()  ???:0
+21 0x0000000000929edf ESMCI::VMK::enter()  ???:0
+22 0x00000000009417a6 ESMCI::VM::enter()  ???:0
+23 0x00000000005e8162 c_esmc_ftablecallentrypointvm_()  ???:0
+24 0x0000000000b41323 __esmf_compmod_MOD_esmf_compexecute()  ???:0
+25 0x0000000000b4e14a __esmf_cplcompmod_MOD_esmf_cplcompinitialize()  ???:0
+26 0x00000000011e3dea __nuopc_driver_MOD_loopconnectorcompss()  NUOPC_Driver.F90:0
+27 0x00000000011f5759 __nuopc_driver_MOD_initializeipdv02p3()  NUOPC_Driver.F90:0
+28 0x0000000001225d0b __nuopc_driver_MOD_initializegeneric()  NUOPC_Driver.F90:0
+29 0x00000000005e930c ESMCI::FTable::callVFuncPtr()  ???:0
+30 0x00000000005e9665 ESMCI_FTableCallEntryPointVMHop()  ???:0
+31 0x0000000000929edf ESMCI::VMK::enter()  ???:0
+32 0x00000000009417a6 ESMCI::VM::enter()  ???:0
+33 0x00000000005e8162 c_esmc_ftablecallentrypointvm_()  ???:0
+34 0x0000000000b41323 __esmf_compmod_MOD_esmf_compexecute()  ???:0
+35 0x0000000000d7c7f1 __esmf_gridcompmod_MOD_esmf_gridcompinitialize()  ???:0
+36 0x0000000000417fb5 MAIN__()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_15.2.0_openmpi_O_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:385
+37 0x000000000041868e main()  /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_15.2.0_openmpi_O_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:14
+38 0x000000000003524d __libc_start_main()  ???:0
+39 0x00000000004143da _start()  /home/abuild/rpmbuild/BUILD/glibc-2.31/csu/../sysdeps/x86_64/start.S:120
+=================================
+
+Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
+
+Backtrace for this error:
+#0  0x14b95288890f in ???
+#1  0x14b953f67cde in ???
+#2  0x14b953f5f664 in ???
+#0  0x14c30992090f in ???
+#1  0x14c30b5dfcde in ???
+#2  0x14c30b5d7664 in ???
+#3  0x14c30b5e4573 in ???
+#3  0x14b953f6c573 in ???
+#4  0x14b953f6cbc7 in ???
+#5  0x14b953f299b6 in ???
+#4  0x14c30b5e4bc7 in ???
+#5  0x14c30b5a19b6 in ???
+#6  0x14c30b59fc53 in ???
+#6  0x14b953f27c53 in ???
+#7  0x14b953eb03ab in ???
+#8  0x14b953ebad71 in ???
+#9  0x14b953ebb7cb in ???
+#10  0x14b953e502d1 in ???
+#11  0x14b9542e1c7a in ???
+#12  0x14b954264727 in ???
+#13  0x14b954345c1f in ???
+#14  0x14b954a2d440 in ???
+#15  0x14b9547f2a19 in ???
+#7  0x14c30b5283ab in ???
+#8  0x14c30b532d71 in ???
+#9  0x14c30b5337cb in ???
+#10  0x14c30b4c82d1 in ???
+#11  0x14c30b959c7a in ???
+#12  0x14c30b8dc727 in ???
+#13  0x14c30b9bdc1f in ???
+#14  0x14c30c0a5440 in ???
+#15  0x14c30be6aa19 in ???
+#16  0x14c30bc97fa4 in ???
+#16  0x14b95461ffa4 in ???
+#17  0x14c30c2c2943 in ???
+#18  0x14c30c2cca93 in ???
+#19  0x14c30b71330b in ???
+#20  0x14c30b713664 in ???
+#21  0x14c30ba53ede in ???
+#22  0x14c30ba6b7a5 in ???
+#23  0x14c30b712161 in ???
+#24  0x14c30bc6b322 in ???
+#25  0x14c30bc78149 in ???
+#17  0x14b954c4a943 in ???
+#18  0x14b954c54a93 in ???
+#19  0x14b95409b30b in ???
+#20  0x14b95409b664 in ???
+#21  0x14b9543dbede in ???
+#22  0x14b9543f37a5 in ???
+#23  0x14b95409a161 in ???
+#24  0x14b9545f3322 in ???
+#25  0x14b954600149 in ???
+#26  0x14b954c95de9 in ???
+#26  0x14c30c30dde9 in ???
+#27  0x14c30c31f758 in ???
+#27  0x14b954ca7758 in ???
+#28  0x14b954cd7d0a in ???
+#28  0x14c30c34fd0a in ???
+#29  0x14c30b71330b in ???
+#30  0x14c30b713664 in ???
+#31  0x14c30ba53ede in ???
+#32  0x14c30ba6b7a5 in ???
+#33  0x14c30b712161 in ???
+#34  0x14c30bc6b322 in ???
+#35  0x14c30bea67f0 in ???
+#29  0x14b95409b30b in ???
+#30  0x14b95409b664 in ???
+#31  0x14b9543dbede in ???
+#32  0x14b9543f37a5 in ???
+#33  0x14b95409a161 in ???
+#34  0x14b9545f3322 in ???
+#35  0x14b95482e7f0 in ???
+#0  0x147b49a8890f in ???
+#1  0x147b4b17fcde in ???
+#0  0x153a63c7990f in ???
+#1  0x153a65361cde in ???
+#2  0x147b4b177664 in ???
+#3  0x147b4b184573 in ???
+#4  0x147b4b184bc7 in ???
+#2  0x153a65359664 in ???
+#3  0x153a65366573 in ???
+#4  0x153a65366bc7 in ???
+#5  0x147b4b1419b6 in ???
+#6  0x147b4b13fc53 in ???
+#7  0x147b4b0c83ab in ???
+#8  0x147b4b0d2d71 in ???
+#9  0x147b4b0d37cb in ???
+#10  0x147b4b0682d1 in ???
+#11  0x147b4b4f9c7a in ???
+#12  0x147b4b47c727 in ???
+#13  0x147b4b55dc1f in ???
+#14  0x147b4bc45440 in ???
+#5  0x153a653239b6 in ???
+#6  0x153a65321c53 in ???
+#7  0x153a652aa3ab in ???
+#8  0x153a652b4d71 in ???
+#9  0x153a652b57cb in ???
+#10  0x153a6524a2d1 in ???
+#11  0x153a656dbc7a in ???
+#12  0x153a6565e727 in ???
+#13  0x153a6573fc1f in ???
+#14  0x153a65e27440 in ???
+#15  0x147b4ba0aa19 in ???
+#15  0x153a65beca19 in ???
+#16  0x147b4b837fa4 in ???
+#17  0x147b4be62943 in ???
+#18  0x147b4be6ca93 in ???
+#19  0x147b4b2b330b in ???
+#20  0x147b4b2b3664 in ???
+#21  0x147b4b5f3ede in ???
+#22  0x147b4b60b7a5 in ???
+#23  0x147b4b2b2161 in ???
+#24  0x147b4b80b322 in ???
+#25  0x147b4b818149 in ???
+#26  0x147b4beadde9 in ???
+#36  0x417fb4 in esmx_app
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_15.2.0_openmpi_O_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:385
+#37  0x41868d in main
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_15.2.0_openmpi_O_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:14
+#16  0x153a65a19fa4 in ???
+#17  0x153a66044943 in ???
+#18  0x153a6604ea93 in ???
+#19  0x153a6549530b in ???
+#20  0x153a65495664 in ???
+#21  0x153a657d5ede in ???
+#22  0x153a657ed7a5 in ???
+#23  0x153a65494161 in ???
+#24  0x153a659ed322 in ???
+#25  0x153a659fa149 in ???
+#26  0x153a6608fde9 in ???
+#36  0x417fb4 in esmx_app
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_15.2.0_openmpi_O_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:385
+#37  0x41868d in main
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_15.2.0_openmpi_O_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:14
+#27  0x147b4bebf758 in ???
+#28  0x147b4beefd0a in ???
+#29  0x147b4b2b330b in ???
+#30  0x147b4b2b3664 in ???
+#27  0x153a660a1758 in ???
+#28  0x153a660d1d0a in ???
+#29  0x153a6549530b in ???
+#30  0x153a65495664 in ???
+#31  0x153a657d5ede in ???
+#31  0x147b4b5f3ede in ???
+#32  0x147b4b60b7a5 in ???
+#33  0x147b4b2b2161 in ???
+#34  0x147b4b80b322 in ???
+#35  0x147b4ba467f0 in ???
+#32  0x153a657ed7a5 in ???
+#33  0x153a65494161 in ???
+#34  0x153a659ed322 in ???
+#35  0x153a65c287f0 in ???
+#36  0x417fb4 in esmx_app
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_15.2.0_openmpi_O_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:385
+#37  0x41868d in main
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_15.2.0_openmpi_O_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:14
+#36  0x417fb4 in esmx_app
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_15.2.0_openmpi_O_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:385
+#37  0x41868d in main
+	at /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/gfortran_15.2.0_openmpi_O_feature_esmx-cmake/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:14
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 2 with PID 88773 on node borgm061 exited on signal 8 (Floating point exception).
+--------------------------------------------------------------------------
+3 total processes killed (some possibly by mpirun during cleanup)

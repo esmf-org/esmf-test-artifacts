@@ -1,0 +1,393 @@
+2026-09-17 06:47:05
+20260917 065835.231 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260917 065835.232 INFO             PET0 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20260917 065835.232 INFO             PET0 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20260917 065835.232 INFO             PET0 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20260917 065835.232 INFO             PET0 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20260917 065835.232 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260917 065835.232 INFO             PET0 Running with ESMF Version   : v9.0.0b18
+20260917 065835.232 INFO             PET0 ESMF library build date/time: "Sep 17 2026" "06:45:33"
+20260917 065835.232 INFO             PET0 ESMF library build location : /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpich_O_develop/esmf
+20260917 065835.232 INFO             PET0 ESMF_COMM                   : mpich
+20260917 065835.232 INFO             PET0 ESMF_MOAB                   : enabled
+20260917 065835.232 INFO             PET0 ESMF_LAPACK                 : enabled
+20260917 065835.232 INFO             PET0 ESMF_NETCDF                 : enabled
+20260917 065835.232 INFO             PET0 ESMF_PNETCDF                : disabled
+20260917 065835.232 INFO             PET0 ESMF_PIO                    : enabled
+20260917 065835.232 INFO             PET0 ESMF_YAMLCPP                : enabled
+20260917 065835.270 INFO             PET0  Beginning Test, file ESMF_IO_MultitileUTest.F90, line 116
+20260917 065835.270 INFO             PET0  NUMBER_OF_PROCESSORS           8
+20260917 065839.992 INFO             PET0  PASS  Create fields for multitile IO tests, ESMF_IO_MultitileUTest.F90, line 129
+20260917 065843.825 INFO             PET0  PASS  Write a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, line 138
+20260917 065846.292 INFO             PET0  PASS  Read a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, line 151
+20260917 065846.294 INFO             PET0  PASS  Confirm that simple FieldBundle-read fields match originals, ESMF_IO_MultitileUTest.F90, line 167
+20260917 065846.294 INFO             PET0  PASS  Confirm that FieldBundle-read field with ungridded dim matches original, ESMF_IO_MultitileUTest.F90, line 180
+20260917 065847.380 INFO             PET0  PASS  Write a multi-tile Field to existing files, ESMF_IO_MultitileUTest.F90, line 197
+20260917 065848.449 INFO             PET0  PASS  Rewrite an existing multi-tile Field to existing files, ESMF_IO_MultitileUTest.F90, line 213
+20260917 065849.266 INFO             PET0  PASS  Read a multi-tile Field, ESMF_IO_MultitileUTest.F90, line 226
+20260917 065849.266 INFO             PET0  PASS  Confirm that Field-read field matches original, ESMF_IO_MultitileUTest.F90, line 239
+20260917 065849.273 INFO             PET0  PASS  Create single-tile field for failure testing, ESMF_IO_MultitileUTest.F90, line 251
+20260917 065849.273 ERROR            PET0 ESMCI_IO.C:1614 ESMCI::IO::checkNtiles() Wrong data value  - New number of tiles (1) does not match previously-set number of tiles (6) for this IO object. All arrays handled by a given IO object must have the same number of tiles.
+20260917 065849.273 ERROR            PET0 ESMCI_IO.C:1566 ESMCI::IO::setOrCheckNtiles() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.273 ERROR            PET0 ESMCI_IO.C:1064 ESMCI::IO::addArray() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.273 ERROR            PET0 /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpich_O_develop/esmf/src/Infrastructure/Field/interface/ESMCI_Field_F.C:144 c_esmc_fieldioaddarray() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.273 ERROR            PET0 ESMF_FieldBundle.F90:17940 ESMF_FieldBundleWrite() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.273 INFO             PET0  PASS  Failure test: try to write fields with different tile counts, ESMF_IO_MultitileUTest.F90, line 260
+20260917 065849.273 INFO             PET0  PASS  Create arrays for multitile IO tests, ESMF_IO_MultitileUTest.F90, line 272
+20260917 065850.423 INFO             PET0  PASS  Write an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, line 281
+20260917 065851.276 INFO             PET0  PASS  Read an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, line 294
+20260917 065851.276 INFO             PET0  PASS  Confirm that ArrayBundle-read arrays match originals, ESMF_IO_MultitileUTest.F90, line 309
+20260917 065851.888 INFO             PET0  PASS  Write a multi-tile Array to existing files, ESMF_IO_MultitileUTest.F90, line 322
+20260917 065852.332 INFO             PET0  PASS  Read a multi-tile Array, ESMF_IO_MultitileUTest.F90, line 335
+20260917 065852.332 INFO             PET0  PASS  Confirm that Array-read array matches original, ESMF_IO_MultitileUTest.F90, line 348
+20260917 065855.853 INFO             PET0  PASS  Write a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 361
+20260917 065859.062 INFO             PET0  PASS  Read a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 374
+20260917 065859.062 INFO             PET0  PASS  Confirm that Field-read field matches original with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 397
+20260917 065902.603 INFO             PET0  PASS  Write a multi-tile Field with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 413
+20260917 065905.707 INFO             PET0  PASS  Read a multi-tile Field with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 426
+20260917 065905.707 INFO             PET0  PASS  Confirm that Field-read field matches original with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 449
+20260917 065905.707 INFO             PET0  Ending Test, file ESMF_IO_MultitileUTest.F90, line 462
+20260917 065905.707 INFO             PET0  Finalizing ESMF
+20260917 065835.236 INFO             PET1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260917 065835.246 INFO             PET1 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20260917 065835.246 INFO             PET1 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20260917 065835.246 INFO             PET1 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20260917 065835.246 INFO             PET1 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20260917 065835.246 INFO             PET1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260917 065835.246 INFO             PET1 Running with ESMF Version   : v9.0.0b18
+20260917 065835.246 INFO             PET1 ESMF library build date/time: "Sep 17 2026" "06:45:33"
+20260917 065835.246 INFO             PET1 ESMF library build location : /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpich_O_develop/esmf
+20260917 065835.246 INFO             PET1 ESMF_COMM                   : mpich
+20260917 065835.246 INFO             PET1 ESMF_MOAB                   : enabled
+20260917 065835.246 INFO             PET1 ESMF_LAPACK                 : enabled
+20260917 065835.246 INFO             PET1 ESMF_NETCDF                 : enabled
+20260917 065835.246 INFO             PET1 ESMF_PNETCDF                : disabled
+20260917 065835.246 INFO             PET1 ESMF_PIO                    : enabled
+20260917 065835.246 INFO             PET1 ESMF_YAMLCPP                : enabled
+20260917 065835.272 INFO             PET1  Beginning Test, file ESMF_IO_MultitileUTest.F90, line 116
+20260917 065835.272 INFO             PET1  NUMBER_OF_PROCESSORS           8
+20260917 065840.004 INFO             PET1  PASS  Create fields for multitile IO tests, ESMF_IO_MultitileUTest.F90, line 129
+20260917 065843.825 INFO             PET1  PASS  Write a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, line 138
+20260917 065846.292 INFO             PET1  PASS  Read a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, line 151
+20260917 065846.292 INFO             PET1  PASS  Confirm that simple FieldBundle-read fields match originals, ESMF_IO_MultitileUTest.F90, line 167
+20260917 065846.292 INFO             PET1  PASS  Confirm that FieldBundle-read field with ungridded dim matches original, ESMF_IO_MultitileUTest.F90, line 180
+20260917 065847.386 INFO             PET1  PASS  Write a multi-tile Field to existing files, ESMF_IO_MultitileUTest.F90, line 197
+20260917 065848.450 INFO             PET1  PASS  Rewrite an existing multi-tile Field to existing files, ESMF_IO_MultitileUTest.F90, line 213
+20260917 065849.268 INFO             PET1  PASS  Read a multi-tile Field, ESMF_IO_MultitileUTest.F90, line 226
+20260917 065849.268 INFO             PET1  PASS  Confirm that Field-read field matches original, ESMF_IO_MultitileUTest.F90, line 239
+20260917 065849.268 INFO             PET1  PASS  Create single-tile field for failure testing, ESMF_IO_MultitileUTest.F90, line 251
+20260917 065849.269 ERROR            PET1 ESMCI_IO.C:1614 ESMCI::IO::checkNtiles() Wrong data value  - New number of tiles (1) does not match previously-set number of tiles (6) for this IO object. All arrays handled by a given IO object must have the same number of tiles.
+20260917 065849.269 ERROR            PET1 ESMCI_IO.C:1566 ESMCI::IO::setOrCheckNtiles() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.269 ERROR            PET1 ESMCI_IO.C:1064 ESMCI::IO::addArray() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.269 ERROR            PET1 /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpich_O_develop/esmf/src/Infrastructure/Field/interface/ESMCI_Field_F.C:144 c_esmc_fieldioaddarray() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.269 ERROR            PET1 ESMF_FieldBundle.F90:17940 ESMF_FieldBundleWrite() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.269 INFO             PET1  PASS  Failure test: try to write fields with different tile counts, ESMF_IO_MultitileUTest.F90, line 260
+20260917 065849.269 INFO             PET1  PASS  Create arrays for multitile IO tests, ESMF_IO_MultitileUTest.F90, line 272
+20260917 065850.432 INFO             PET1  PASS  Write an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, line 281
+20260917 065851.276 INFO             PET1  PASS  Read an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, line 294
+20260917 065851.276 INFO             PET1  PASS  Confirm that ArrayBundle-read arrays match originals, ESMF_IO_MultitileUTest.F90, line 309
+20260917 065851.891 INFO             PET1  PASS  Write a multi-tile Array to existing files, ESMF_IO_MultitileUTest.F90, line 322
+20260917 065852.333 INFO             PET1  PASS  Read a multi-tile Array, ESMF_IO_MultitileUTest.F90, line 335
+20260917 065852.333 INFO             PET1  PASS  Confirm that Array-read array matches original, ESMF_IO_MultitileUTest.F90, line 348
+20260917 065855.855 INFO             PET1  PASS  Write a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 361
+20260917 065859.069 INFO             PET1  PASS  Read a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 374
+20260917 065859.069 INFO             PET1  PASS  Confirm that Field-read field matches original with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 397
+20260917 065902.603 INFO             PET1  PASS  Write a multi-tile Field with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 413
+20260917 065905.708 INFO             PET1  PASS  Read a multi-tile Field with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 426
+20260917 065905.708 INFO             PET1  PASS  Confirm that Field-read field matches original with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 449
+20260917 065905.708 INFO             PET1  Ending Test, file ESMF_IO_MultitileUTest.F90, line 462
+20260917 065905.708 INFO             PET1  Finalizing ESMF
+20260917 065835.234 INFO             PET2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260917 065835.246 INFO             PET2 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20260917 065835.246 INFO             PET2 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20260917 065835.246 INFO             PET2 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20260917 065835.246 INFO             PET2 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20260917 065835.246 INFO             PET2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260917 065835.246 INFO             PET2 Running with ESMF Version   : v9.0.0b18
+20260917 065835.246 INFO             PET2 ESMF library build date/time: "Sep 17 2026" "06:45:33"
+20260917 065835.246 INFO             PET2 ESMF library build location : /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpich_O_develop/esmf
+20260917 065835.246 INFO             PET2 ESMF_COMM                   : mpich
+20260917 065835.246 INFO             PET2 ESMF_MOAB                   : enabled
+20260917 065835.246 INFO             PET2 ESMF_LAPACK                 : enabled
+20260917 065835.246 INFO             PET2 ESMF_NETCDF                 : enabled
+20260917 065835.246 INFO             PET2 ESMF_PNETCDF                : disabled
+20260917 065835.246 INFO             PET2 ESMF_PIO                    : enabled
+20260917 065835.246 INFO             PET2 ESMF_YAMLCPP                : enabled
+20260917 065835.282 INFO             PET2  Beginning Test, file ESMF_IO_MultitileUTest.F90, line 116
+20260917 065835.282 INFO             PET2  NUMBER_OF_PROCESSORS           8
+20260917 065840.005 INFO             PET2  PASS  Create fields for multitile IO tests, ESMF_IO_MultitileUTest.F90, line 129
+20260917 065843.831 INFO             PET2  PASS  Write a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, line 138
+20260917 065846.292 INFO             PET2  PASS  Read a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, line 151
+20260917 065846.292 INFO             PET2  PASS  Confirm that simple FieldBundle-read fields match originals, ESMF_IO_MultitileUTest.F90, line 167
+20260917 065846.292 INFO             PET2  PASS  Confirm that FieldBundle-read field with ungridded dim matches original, ESMF_IO_MultitileUTest.F90, line 180
+20260917 065847.385 INFO             PET2  PASS  Write a multi-tile Field to existing files, ESMF_IO_MultitileUTest.F90, line 197
+20260917 065848.455 INFO             PET2  PASS  Rewrite an existing multi-tile Field to existing files, ESMF_IO_MultitileUTest.F90, line 213
+20260917 065849.267 INFO             PET2  PASS  Read a multi-tile Field, ESMF_IO_MultitileUTest.F90, line 226
+20260917 065849.267 INFO             PET2  PASS  Confirm that Field-read field matches original, ESMF_IO_MultitileUTest.F90, line 239
+20260917 065849.267 INFO             PET2  PASS  Create single-tile field for failure testing, ESMF_IO_MultitileUTest.F90, line 251
+20260917 065849.267 ERROR            PET2 ESMCI_IO.C:1614 ESMCI::IO::checkNtiles() Wrong data value  - New number of tiles (1) does not match previously-set number of tiles (6) for this IO object. All arrays handled by a given IO object must have the same number of tiles.
+20260917 065849.268 ERROR            PET2 ESMCI_IO.C:1566 ESMCI::IO::setOrCheckNtiles() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.268 ERROR            PET2 ESMCI_IO.C:1064 ESMCI::IO::addArray() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.268 ERROR            PET2 /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpich_O_develop/esmf/src/Infrastructure/Field/interface/ESMCI_Field_F.C:144 c_esmc_fieldioaddarray() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.268 ERROR            PET2 ESMF_FieldBundle.F90:17940 ESMF_FieldBundleWrite() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.268 INFO             PET2  PASS  Failure test: try to write fields with different tile counts, ESMF_IO_MultitileUTest.F90, line 260
+20260917 065849.268 INFO             PET2  PASS  Create arrays for multitile IO tests, ESMF_IO_MultitileUTest.F90, line 272
+20260917 065850.430 INFO             PET2  PASS  Write an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, line 281
+20260917 065851.278 INFO             PET2  PASS  Read an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, line 294
+20260917 065851.278 INFO             PET2  PASS  Confirm that ArrayBundle-read arrays match originals, ESMF_IO_MultitileUTest.F90, line 309
+20260917 065851.887 INFO             PET2  PASS  Write a multi-tile Array to existing files, ESMF_IO_MultitileUTest.F90, line 322
+20260917 065852.345 INFO             PET2  PASS  Read a multi-tile Array, ESMF_IO_MultitileUTest.F90, line 335
+20260917 065852.345 INFO             PET2  PASS  Confirm that Array-read array matches original, ESMF_IO_MultitileUTest.F90, line 348
+20260917 065855.853 INFO             PET2  PASS  Write a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 361
+20260917 065859.068 INFO             PET2  PASS  Read a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 374
+20260917 065859.068 INFO             PET2  PASS  Confirm that Field-read field matches original with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 397
+20260917 065902.607 INFO             PET2  PASS  Write a multi-tile Field with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 413
+20260917 065905.710 INFO             PET2  PASS  Read a multi-tile Field with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 426
+20260917 065905.710 INFO             PET2  PASS  Confirm that Field-read field matches original with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 449
+20260917 065905.710 INFO             PET2  Ending Test, file ESMF_IO_MultitileUTest.F90, line 462
+20260917 065905.710 INFO             PET2  Finalizing ESMF
+20260917 065835.241 INFO             PET3 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260917 065835.246 INFO             PET3 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20260917 065835.246 INFO             PET3 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20260917 065835.246 INFO             PET3 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20260917 065835.246 INFO             PET3 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20260917 065835.246 INFO             PET3 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260917 065835.246 INFO             PET3 Running with ESMF Version   : v9.0.0b18
+20260917 065835.246 INFO             PET3 ESMF library build date/time: "Sep 17 2026" "06:45:33"
+20260917 065835.246 INFO             PET3 ESMF library build location : /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpich_O_develop/esmf
+20260917 065835.246 INFO             PET3 ESMF_COMM                   : mpich
+20260917 065835.246 INFO             PET3 ESMF_MOAB                   : enabled
+20260917 065835.246 INFO             PET3 ESMF_LAPACK                 : enabled
+20260917 065835.246 INFO             PET3 ESMF_NETCDF                 : enabled
+20260917 065835.246 INFO             PET3 ESMF_PNETCDF                : disabled
+20260917 065835.246 INFO             PET3 ESMF_PIO                    : enabled
+20260917 065835.246 INFO             PET3 ESMF_YAMLCPP                : enabled
+20260917 065835.282 INFO             PET3  Beginning Test, file ESMF_IO_MultitileUTest.F90, line 116
+20260917 065835.282 INFO             PET3  NUMBER_OF_PROCESSORS           8
+20260917 065840.013 INFO             PET3  PASS  Create fields for multitile IO tests, ESMF_IO_MultitileUTest.F90, line 129
+20260917 065843.834 INFO             PET3  PASS  Write a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, line 138
+20260917 065846.305 INFO             PET3  PASS  Read a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, line 151
+20260917 065846.305 INFO             PET3  PASS  Confirm that simple FieldBundle-read fields match originals, ESMF_IO_MultitileUTest.F90, line 167
+20260917 065846.305 INFO             PET3  PASS  Confirm that FieldBundle-read field with ungridded dim matches original, ESMF_IO_MultitileUTest.F90, line 180
+20260917 065847.391 INFO             PET3  PASS  Write a multi-tile Field to existing files, ESMF_IO_MultitileUTest.F90, line 197
+20260917 065848.456 INFO             PET3  PASS  Rewrite an existing multi-tile Field to existing files, ESMF_IO_MultitileUTest.F90, line 213
+20260917 065849.272 INFO             PET3  PASS  Read a multi-tile Field, ESMF_IO_MultitileUTest.F90, line 226
+20260917 065849.272 INFO             PET3  PASS  Confirm that Field-read field matches original, ESMF_IO_MultitileUTest.F90, line 239
+20260917 065849.273 INFO             PET3  PASS  Create single-tile field for failure testing, ESMF_IO_MultitileUTest.F90, line 251
+20260917 065849.273 ERROR            PET3 ESMCI_IO.C:1614 ESMCI::IO::checkNtiles() Wrong data value  - New number of tiles (1) does not match previously-set number of tiles (6) for this IO object. All arrays handled by a given IO object must have the same number of tiles.
+20260917 065849.273 ERROR            PET3 ESMCI_IO.C:1566 ESMCI::IO::setOrCheckNtiles() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.273 ERROR            PET3 ESMCI_IO.C:1064 ESMCI::IO::addArray() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.273 ERROR            PET3 /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpich_O_develop/esmf/src/Infrastructure/Field/interface/ESMCI_Field_F.C:144 c_esmc_fieldioaddarray() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.273 ERROR            PET3 ESMF_FieldBundle.F90:17940 ESMF_FieldBundleWrite() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.273 INFO             PET3  PASS  Failure test: try to write fields with different tile counts, ESMF_IO_MultitileUTest.F90, line 260
+20260917 065849.274 INFO             PET3  PASS  Create arrays for multitile IO tests, ESMF_IO_MultitileUTest.F90, line 272
+20260917 065850.438 INFO             PET3  PASS  Write an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, line 281
+20260917 065851.278 INFO             PET3  PASS  Read an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, line 294
+20260917 065851.278 INFO             PET3  PASS  Confirm that ArrayBundle-read arrays match originals, ESMF_IO_MultitileUTest.F90, line 309
+20260917 065851.897 INFO             PET3  PASS  Write a multi-tile Array to existing files, ESMF_IO_MultitileUTest.F90, line 322
+20260917 065852.348 INFO             PET3  PASS  Read a multi-tile Array, ESMF_IO_MultitileUTest.F90, line 335
+20260917 065852.352 INFO             PET3  PASS  Confirm that Array-read array matches original, ESMF_IO_MultitileUTest.F90, line 348
+20260917 065855.853 INFO             PET3  PASS  Write a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 361
+20260917 065859.076 INFO             PET3  PASS  Read a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 374
+20260917 065859.076 INFO             PET3  PASS  Confirm that Field-read field matches original with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 397
+20260917 065902.610 INFO             PET3  PASS  Write a multi-tile Field with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 413
+20260917 065905.727 INFO             PET3  PASS  Read a multi-tile Field with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 426
+20260917 065905.727 INFO             PET3  PASS  Confirm that Field-read field matches original with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 449
+20260917 065905.727 INFO             PET3  Ending Test, file ESMF_IO_MultitileUTest.F90, line 462
+20260917 065905.727 INFO             PET3  Finalizing ESMF
+20260917 065835.233 INFO             PET4 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260917 065835.243 INFO             PET4 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20260917 065835.243 INFO             PET4 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20260917 065835.243 INFO             PET4 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20260917 065835.243 INFO             PET4 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20260917 065835.243 INFO             PET4 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260917 065835.243 INFO             PET4 Running with ESMF Version   : v9.0.0b18
+20260917 065835.243 INFO             PET4 ESMF library build date/time: "Sep 17 2026" "06:45:33"
+20260917 065835.243 INFO             PET4 ESMF library build location : /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpich_O_develop/esmf
+20260917 065835.243 INFO             PET4 ESMF_COMM                   : mpich
+20260917 065835.243 INFO             PET4 ESMF_MOAB                   : enabled
+20260917 065835.243 INFO             PET4 ESMF_LAPACK                 : enabled
+20260917 065835.243 INFO             PET4 ESMF_NETCDF                 : enabled
+20260917 065835.243 INFO             PET4 ESMF_PNETCDF                : disabled
+20260917 065835.243 INFO             PET4 ESMF_PIO                    : enabled
+20260917 065835.243 INFO             PET4 ESMF_YAMLCPP                : enabled
+20260917 065835.270 INFO             PET4  Beginning Test, file ESMF_IO_MultitileUTest.F90, line 116
+20260917 065835.270 INFO             PET4  NUMBER_OF_PROCESSORS           8
+20260917 065839.992 INFO             PET4  PASS  Create fields for multitile IO tests, ESMF_IO_MultitileUTest.F90, line 129
+20260917 065843.832 INFO             PET4  PASS  Write a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, line 138
+20260917 065846.294 INFO             PET4  PASS  Read a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, line 151
+20260917 065846.295 INFO             PET4  PASS  Confirm that simple FieldBundle-read fields match originals, ESMF_IO_MultitileUTest.F90, line 167
+20260917 065846.296 INFO             PET4  PASS  Confirm that FieldBundle-read field with ungridded dim matches original, ESMF_IO_MultitileUTest.F90, line 180
+20260917 065847.380 INFO             PET4  PASS  Write a multi-tile Field to existing files, ESMF_IO_MultitileUTest.F90, line 197
+20260917 065848.457 INFO             PET4  PASS  Rewrite an existing multi-tile Field to existing files, ESMF_IO_MultitileUTest.F90, line 213
+20260917 065849.266 INFO             PET4  PASS  Read a multi-tile Field, ESMF_IO_MultitileUTest.F90, line 226
+20260917 065849.266 INFO             PET4  PASS  Confirm that Field-read field matches original, ESMF_IO_MultitileUTest.F90, line 239
+20260917 065849.267 INFO             PET4  PASS  Create single-tile field for failure testing, ESMF_IO_MultitileUTest.F90, line 251
+20260917 065849.267 ERROR            PET4 ESMCI_IO.C:1614 ESMCI::IO::checkNtiles() Wrong data value  - New number of tiles (1) does not match previously-set number of tiles (6) for this IO object. All arrays handled by a given IO object must have the same number of tiles.
+20260917 065849.267 ERROR            PET4 ESMCI_IO.C:1566 ESMCI::IO::setOrCheckNtiles() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.267 ERROR            PET4 ESMCI_IO.C:1064 ESMCI::IO::addArray() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.267 ERROR            PET4 /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpich_O_develop/esmf/src/Infrastructure/Field/interface/ESMCI_Field_F.C:144 c_esmc_fieldioaddarray() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.267 ERROR            PET4 ESMF_FieldBundle.F90:17940 ESMF_FieldBundleWrite() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.267 INFO             PET4  PASS  Failure test: try to write fields with different tile counts, ESMF_IO_MultitileUTest.F90, line 260
+20260917 065849.267 INFO             PET4  PASS  Create arrays for multitile IO tests, ESMF_IO_MultitileUTest.F90, line 272
+20260917 065850.423 INFO             PET4  PASS  Write an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, line 281
+20260917 065851.276 INFO             PET4  PASS  Read an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, line 294
+20260917 065851.276 INFO             PET4  PASS  Confirm that ArrayBundle-read arrays match originals, ESMF_IO_MultitileUTest.F90, line 309
+20260917 065851.895 INFO             PET4  PASS  Write a multi-tile Array to existing files, ESMF_IO_MultitileUTest.F90, line 322
+20260917 065852.341 INFO             PET4  PASS  Read a multi-tile Array, ESMF_IO_MultitileUTest.F90, line 335
+20260917 065852.341 INFO             PET4  PASS  Confirm that Array-read array matches original, ESMF_IO_MultitileUTest.F90, line 348
+20260917 065855.863 INFO             PET4  PASS  Write a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 361
+20260917 065859.062 INFO             PET4  PASS  Read a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 374
+20260917 065859.062 INFO             PET4  PASS  Confirm that Field-read field matches original with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 397
+20260917 065902.608 INFO             PET4  PASS  Write a multi-tile Field with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 413
+20260917 065905.708 INFO             PET4  PASS  Read a multi-tile Field with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 426
+20260917 065905.708 INFO             PET4  PASS  Confirm that Field-read field matches original with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 449
+20260917 065905.708 INFO             PET4  Ending Test, file ESMF_IO_MultitileUTest.F90, line 462
+20260917 065905.708 INFO             PET4  Finalizing ESMF
+20260917 065835.236 INFO             PET5 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260917 065835.246 INFO             PET5 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20260917 065835.246 INFO             PET5 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20260917 065835.246 INFO             PET5 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20260917 065835.246 INFO             PET5 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20260917 065835.246 INFO             PET5 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260917 065835.246 INFO             PET5 Running with ESMF Version   : v9.0.0b18
+20260917 065835.246 INFO             PET5 ESMF library build date/time: "Sep 17 2026" "06:45:33"
+20260917 065835.246 INFO             PET5 ESMF library build location : /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpich_O_develop/esmf
+20260917 065835.246 INFO             PET5 ESMF_COMM                   : mpich
+20260917 065835.246 INFO             PET5 ESMF_MOAB                   : enabled
+20260917 065835.246 INFO             PET5 ESMF_LAPACK                 : enabled
+20260917 065835.247 INFO             PET5 ESMF_NETCDF                 : enabled
+20260917 065835.247 INFO             PET5 ESMF_PNETCDF                : disabled
+20260917 065835.247 INFO             PET5 ESMF_PIO                    : enabled
+20260917 065835.247 INFO             PET5 ESMF_YAMLCPP                : enabled
+20260917 065835.276 INFO             PET5  Beginning Test, file ESMF_IO_MultitileUTest.F90, line 116
+20260917 065835.279 INFO             PET5  NUMBER_OF_PROCESSORS           8
+20260917 065840.012 INFO             PET5  PASS  Create fields for multitile IO tests, ESMF_IO_MultitileUTest.F90, line 129
+20260917 065843.836 INFO             PET5  PASS  Write a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, line 138
+20260917 065846.300 INFO             PET5  PASS  Read a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, line 151
+20260917 065846.300 INFO             PET5  PASS  Confirm that simple FieldBundle-read fields match originals, ESMF_IO_MultitileUTest.F90, line 167
+20260917 065846.300 INFO             PET5  PASS  Confirm that FieldBundle-read field with ungridded dim matches original, ESMF_IO_MultitileUTest.F90, line 180
+20260917 065847.384 INFO             PET5  PASS  Write a multi-tile Field to existing files, ESMF_IO_MultitileUTest.F90, line 197
+20260917 065848.461 INFO             PET5  PASS  Rewrite an existing multi-tile Field to existing files, ESMF_IO_MultitileUTest.F90, line 213
+20260917 065849.266 INFO             PET5  PASS  Read a multi-tile Field, ESMF_IO_MultitileUTest.F90, line 226
+20260917 065849.266 INFO             PET5  PASS  Confirm that Field-read field matches original, ESMF_IO_MultitileUTest.F90, line 239
+20260917 065849.267 INFO             PET5  PASS  Create single-tile field for failure testing, ESMF_IO_MultitileUTest.F90, line 251
+20260917 065849.267 ERROR            PET5 ESMCI_IO.C:1614 ESMCI::IO::checkNtiles() Wrong data value  - New number of tiles (1) does not match previously-set number of tiles (6) for this IO object. All arrays handled by a given IO object must have the same number of tiles.
+20260917 065849.267 ERROR            PET5 ESMCI_IO.C:1566 ESMCI::IO::setOrCheckNtiles() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.267 ERROR            PET5 ESMCI_IO.C:1064 ESMCI::IO::addArray() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.267 ERROR            PET5 /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpich_O_develop/esmf/src/Infrastructure/Field/interface/ESMCI_Field_F.C:144 c_esmc_fieldioaddarray() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.267 ERROR            PET5 ESMF_FieldBundle.F90:17940 ESMF_FieldBundleWrite() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.267 INFO             PET5  PASS  Failure test: try to write fields with different tile counts, ESMF_IO_MultitileUTest.F90, line 260
+20260917 065849.267 INFO             PET5  PASS  Create arrays for multitile IO tests, ESMF_IO_MultitileUTest.F90, line 272
+20260917 065850.423 INFO             PET5  PASS  Write an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, line 281
+20260917 065851.276 INFO             PET5  PASS  Read an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, line 294
+20260917 065851.276 INFO             PET5  PASS  Confirm that ArrayBundle-read arrays match originals, ESMF_IO_MultitileUTest.F90, line 309
+20260917 065851.899 INFO             PET5  PASS  Write a multi-tile Array to existing files, ESMF_IO_MultitileUTest.F90, line 322
+20260917 065852.341 INFO             PET5  PASS  Read a multi-tile Array, ESMF_IO_MultitileUTest.F90, line 335
+20260917 065852.342 INFO             PET5  PASS  Confirm that Array-read array matches original, ESMF_IO_MultitileUTest.F90, line 348
+20260917 065855.867 INFO             PET5  PASS  Write a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 361
+20260917 065859.064 INFO             PET5  PASS  Read a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 374
+20260917 065859.064 INFO             PET5  PASS  Confirm that Field-read field matches original with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 397
+20260917 065902.609 INFO             PET5  PASS  Write a multi-tile Field with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 413
+20260917 065905.710 INFO             PET5  PASS  Read a multi-tile Field with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 426
+20260917 065905.710 INFO             PET5  PASS  Confirm that Field-read field matches original with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 449
+20260917 065905.710 INFO             PET5  Ending Test, file ESMF_IO_MultitileUTest.F90, line 462
+20260917 065905.710 INFO             PET5  Finalizing ESMF
+20260917 065835.242 INFO             PET6 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260917 065835.265 INFO             PET6 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20260917 065835.265 INFO             PET6 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20260917 065835.265 INFO             PET6 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20260917 065835.265 INFO             PET6 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20260917 065835.265 INFO             PET6 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260917 065835.265 INFO             PET6 Running with ESMF Version   : v9.0.0b18
+20260917 065835.265 INFO             PET6 ESMF library build date/time: "Sep 17 2026" "06:45:33"
+20260917 065835.265 INFO             PET6 ESMF library build location : /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpich_O_develop/esmf
+20260917 065835.265 INFO             PET6 ESMF_COMM                   : mpich
+20260917 065835.265 INFO             PET6 ESMF_MOAB                   : enabled
+20260917 065835.265 INFO             PET6 ESMF_LAPACK                 : enabled
+20260917 065835.265 INFO             PET6 ESMF_NETCDF                 : enabled
+20260917 065835.265 INFO             PET6 ESMF_PNETCDF                : disabled
+20260917 065835.265 INFO             PET6 ESMF_PIO                    : enabled
+20260917 065835.265 INFO             PET6 ESMF_YAMLCPP                : enabled
+20260917 065835.282 INFO             PET6  Beginning Test, file ESMF_IO_MultitileUTest.F90, line 116
+20260917 065835.282 INFO             PET6  NUMBER_OF_PROCESSORS           8
+20260917 065839.999 INFO             PET6  PASS  Create fields for multitile IO tests, ESMF_IO_MultitileUTest.F90, line 129
+20260917 065843.832 INFO             PET6  PASS  Write a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, line 138
+20260917 065846.294 INFO             PET6  PASS  Read a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, line 151
+20260917 065846.294 INFO             PET6  PASS  Confirm that simple FieldBundle-read fields match originals, ESMF_IO_MultitileUTest.F90, line 167
+20260917 065846.294 INFO             PET6  PASS  Confirm that FieldBundle-read field with ungridded dim matches original, ESMF_IO_MultitileUTest.F90, line 180
+20260917 065847.396 INFO             PET6  PASS  Write a multi-tile Field to existing files, ESMF_IO_MultitileUTest.F90, line 197
+20260917 065848.461 INFO             PET6  PASS  Rewrite an existing multi-tile Field to existing files, ESMF_IO_MultitileUTest.F90, line 213
+20260917 065849.277 INFO             PET6  PASS  Read a multi-tile Field, ESMF_IO_MultitileUTest.F90, line 226
+20260917 065849.279 INFO             PET6  PASS  Confirm that Field-read field matches original, ESMF_IO_MultitileUTest.F90, line 239
+20260917 065849.279 INFO             PET6  PASS  Create single-tile field for failure testing, ESMF_IO_MultitileUTest.F90, line 251
+20260917 065849.280 ERROR            PET6 ESMCI_IO.C:1614 ESMCI::IO::checkNtiles() Wrong data value  - New number of tiles (1) does not match previously-set number of tiles (6) for this IO object. All arrays handled by a given IO object must have the same number of tiles.
+20260917 065849.280 ERROR            PET6 ESMCI_IO.C:1566 ESMCI::IO::setOrCheckNtiles() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.280 ERROR            PET6 ESMCI_IO.C:1064 ESMCI::IO::addArray() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.280 ERROR            PET6 /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpich_O_develop/esmf/src/Infrastructure/Field/interface/ESMCI_Field_F.C:144 c_esmc_fieldioaddarray() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.280 ERROR            PET6 ESMF_FieldBundle.F90:17940 ESMF_FieldBundleWrite() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.280 INFO             PET6  PASS  Failure test: try to write fields with different tile counts, ESMF_IO_MultitileUTest.F90, line 260
+20260917 065849.280 INFO             PET6  PASS  Create arrays for multitile IO tests, ESMF_IO_MultitileUTest.F90, line 272
+20260917 065850.425 INFO             PET6  PASS  Write an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, line 281
+20260917 065851.276 INFO             PET6  PASS  Read an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, line 294
+20260917 065851.276 INFO             PET6  PASS  Confirm that ArrayBundle-read arrays match originals, ESMF_IO_MultitileUTest.F90, line 309
+20260917 065851.905 INFO             PET6  PASS  Write a multi-tile Array to existing files, ESMF_IO_MultitileUTest.F90, line 322
+20260917 065852.343 INFO             PET6  PASS  Read a multi-tile Array, ESMF_IO_MultitileUTest.F90, line 335
+20260917 065852.343 INFO             PET6  PASS  Confirm that Array-read array matches original, ESMF_IO_MultitileUTest.F90, line 348
+20260917 065855.870 INFO             PET6  PASS  Write a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 361
+20260917 065859.067 INFO             PET6  PASS  Read a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 374
+20260917 065859.067 INFO             PET6  PASS  Confirm that Field-read field matches original with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 397
+20260917 065902.614 INFO             PET6  PASS  Write a multi-tile Field with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 413
+20260917 065905.710 INFO             PET6  PASS  Read a multi-tile Field with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 426
+20260917 065905.710 INFO             PET6  PASS  Confirm that Field-read field matches original with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 449
+20260917 065905.710 INFO             PET6  Ending Test, file ESMF_IO_MultitileUTest.F90, line 462
+20260917 065905.710 INFO             PET6  Finalizing ESMF
+20260917 065835.256 INFO             PET7 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260917 065835.266 INFO             PET7 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20260917 065835.266 INFO             PET7 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20260917 065835.266 INFO             PET7 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20260917 065835.266 INFO             PET7 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20260917 065835.266 INFO             PET7 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20260917 065835.266 INFO             PET7 Running with ESMF Version   : v9.0.0b18
+20260917 065835.266 INFO             PET7 ESMF library build date/time: "Sep 17 2026" "06:45:33"
+20260917 065835.266 INFO             PET7 ESMF library build location : /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpich_O_develop/esmf
+20260917 065835.266 INFO             PET7 ESMF_COMM                   : mpich
+20260917 065835.266 INFO             PET7 ESMF_MOAB                   : enabled
+20260917 065835.266 INFO             PET7 ESMF_LAPACK                 : enabled
+20260917 065835.266 INFO             PET7 ESMF_NETCDF                 : enabled
+20260917 065835.266 INFO             PET7 ESMF_PNETCDF                : disabled
+20260917 065835.266 INFO             PET7 ESMF_PIO                    : enabled
+20260917 065835.266 INFO             PET7 ESMF_YAMLCPP                : enabled
+20260917 065835.291 INFO             PET7  Beginning Test, file ESMF_IO_MultitileUTest.F90, line 116
+20260917 065835.291 INFO             PET7  NUMBER_OF_PROCESSORS           8
+20260917 065840.012 INFO             PET7  PASS  Create fields for multitile IO tests, ESMF_IO_MultitileUTest.F90, line 129
+20260917 065843.840 INFO             PET7  PASS  Write a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, line 138
+20260917 065846.294 INFO             PET7  PASS  Read a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, line 151
+20260917 065846.294 INFO             PET7  PASS  Confirm that simple FieldBundle-read fields match originals, ESMF_IO_MultitileUTest.F90, line 167
+20260917 065846.294 INFO             PET7  PASS  Confirm that FieldBundle-read field with ungridded dim matches original, ESMF_IO_MultitileUTest.F90, line 180
+20260917 065847.398 INFO             PET7  PASS  Write a multi-tile Field to existing files, ESMF_IO_MultitileUTest.F90, line 197
+20260917 065848.461 INFO             PET7  PASS  Rewrite an existing multi-tile Field to existing files, ESMF_IO_MultitileUTest.F90, line 213
+20260917 065849.276 INFO             PET7  PASS  Read a multi-tile Field, ESMF_IO_MultitileUTest.F90, line 226
+20260917 065849.276 INFO             PET7  PASS  Confirm that Field-read field matches original, ESMF_IO_MultitileUTest.F90, line 239
+20260917 065849.277 INFO             PET7  PASS  Create single-tile field for failure testing, ESMF_IO_MultitileUTest.F90, line 251
+20260917 065849.277 ERROR            PET7 ESMCI_IO.C:1614 ESMCI::IO::checkNtiles() Wrong data value  - New number of tiles (1) does not match previously-set number of tiles (6) for this IO object. All arrays handled by a given IO object must have the same number of tiles.
+20260917 065849.277 ERROR            PET7 ESMCI_IO.C:1566 ESMCI::IO::setOrCheckNtiles() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.277 ERROR            PET7 ESMCI_IO.C:1064 ESMCI::IO::addArray() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.277 ERROR            PET7 /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpich_O_develop/esmf/src/Infrastructure/Field/interface/ESMCI_Field_F.C:144 c_esmc_fieldioaddarray() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.277 ERROR            PET7 ESMF_FieldBundle.F90:17940 ESMF_FieldBundleWrite() Wrong data value  - Internal subroutine call returned Error
+20260917 065849.277 INFO             PET7  PASS  Failure test: try to write fields with different tile counts, ESMF_IO_MultitileUTest.F90, line 260
+20260917 065849.277 INFO             PET7  PASS  Create arrays for multitile IO tests, ESMF_IO_MultitileUTest.F90, line 272
+20260917 065850.427 INFO             PET7  PASS  Write an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, line 281
+20260917 065851.276 INFO             PET7  PASS  Read an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, line 294
+20260917 065851.276 INFO             PET7  PASS  Confirm that ArrayBundle-read arrays match originals, ESMF_IO_MultitileUTest.F90, line 309
+20260917 065851.910 INFO             PET7  PASS  Write a multi-tile Array to existing files, ESMF_IO_MultitileUTest.F90, line 322
+20260917 065852.353 INFO             PET7  PASS  Read a multi-tile Array, ESMF_IO_MultitileUTest.F90, line 335
+20260917 065852.354 INFO             PET7  PASS  Confirm that Array-read array matches original, ESMF_IO_MultitileUTest.F90, line 348
+20260917 065855.870 INFO             PET7  PASS  Write a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 361
+20260917 065859.070 INFO             PET7  PASS  Read a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 374
+20260917 065859.070 INFO             PET7  PASS  Confirm that Field-read field matches original with uneven DEs per PET, ESMF_IO_MultitileUTest.F90, line 397
+20260917 065902.616 INFO             PET7  PASS  Write a multi-tile Field with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 413
+20260917 065905.710 INFO             PET7  PASS  Read a multi-tile Field with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 426
+20260917 065905.710 INFO             PET7  PASS  Confirm that Field-read field matches original with uneven DEs per PET and ungridded dims, ESMF_IO_MultitileUTest.F90, line 449
+20260917 065905.710 INFO             PET7  Ending Test, file ESMF_IO_MultitileUTest.F90, line 462
+20260917 065905.710 INFO             PET7  Finalizing ESMF

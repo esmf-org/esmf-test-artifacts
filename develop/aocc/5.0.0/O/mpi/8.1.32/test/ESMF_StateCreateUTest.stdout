@@ -1,4 +1,4 @@
-2026-09-14 04:49:03
+2026-09-18 04:44:51
   Beginning Test, file ESMF_StateCreateUTest.F90, line 108
   NUMBER_OF_PROCESSORS            4
   PASS  Creating an empty State Test, ESMF_StateCreateUTest.F90, line 119
@@ -124,7 +124,7 @@
   PASS  Removing user method from empty State Test, ESMF_StateCreateUTest.F90, line 240
   PASS  Removing non-existing user method from empty State Test, ESMF_StateCreateUTest.F90, line 250
  Hi from myUserMethod
- ESMF_StatePrint: (pet 1):
+ ESMF_StatePrint: (pet 2):
   State name: Atmosphere Import
      status: Import State, object count: 0
  Base name    = Atmosphere Import
@@ -147,7 +147,7 @@
   PASS  Removing user method from empty State Test, ESMF_StateCreateUTest.F90, line 240
   PASS  Removing non-existing user method from empty State Test, ESMF_StateCreateUTest.F90, line 250
  Hi from myUserMethod
- ESMF_StatePrint: (pet 2):
+ ESMF_StatePrint: (pet 1):
   State name: Atmosphere Import
      status: Import State, object count: 0
  Base name    = Atmosphere Import
@@ -160,10 +160,6 @@
       "NamedAliasCount": 0
     }
   }
-}  PASS  Executing user method in an empty State Test, ESMF_StateCreateUTest.F90, line 260
-  PASS  Destroying an empty State Test, ESMF_StateCreateUTest.F90, line 270
-  PASS  Container Create Test, ESMF_StateCreateUTest.F90, line 283
-  PASS  Container Add si Test, ESMF_StateCreateUTest.F90, line 297
 }  PASS  Printing an empty State Test, ESMF_StateCreateUTest.F90, line 184
   PASS  Logging an empty State Test, ESMF_StateCreateUTest.F90, line 193
  testName: Atmosphere Import
@@ -191,22 +187,26 @@
   PASS  Destroying an empty State Test, ESMF_StateCreateUTest.F90, line 270
   PASS  Container Create Test, ESMF_StateCreateUTest.F90, line 283
   PASS  Container Add si Test, ESMF_StateCreateUTest.F90, line 297
-Container::print() multipmap:item=0 key=testField1 value=0x564d89d6e570
-Container::print()      list:item=0 key=testField1 value=0x564d89d6e570
+Container::print() multipmap:item=0 key=testField1 value=0x55673a54aea0
+Container::print()      list:item=0 key=testField1 value=0x55673a54aea0
 }  PASS  Executing user method in an empty State Test, ESMF_StateCreateUTest.F90, line 260
   PASS  Destroying an empty State Test, ESMF_StateCreateUTest.F90, line 270
   PASS  Container Create Test, ESMF_StateCreateUTest.F90, line 283
   PASS  Container Add si Test, ESMF_StateCreateUTest.F90, line 297
-Container::print() multipmap:item=0 key=testField1 value=0x5607a9e47ce0
-Container::print()      list:item=0 key=testField1 value=0x5607a9e47ce0
+Container::print() multipmap:item=0 key=testField1 value=0x55e1f97c0740
+Container::print()      list:item=0 key=testField1 value=0x55e1f97c0740
 }  PASS  Executing user method in an empty State Test, ESMF_StateCreateUTest.F90, line 260
   PASS  Destroying an empty State Test, ESMF_StateCreateUTest.F90, line 270
   PASS  Container Create Test, ESMF_StateCreateUTest.F90, line 283
   PASS  Container Add si Test, ESMF_StateCreateUTest.F90, line 297
-Container::print() multipmap:item=0 key=testField1 value=0x561704f36570
-Container::print()      list:item=0 key=testField1 value=0x561704f36570
-Container::print() multipmap:item=0 key=testField1 value=0x5596eef5e780
-Container::print()      list:item=0 key=testField1 value=0x5596eef5e780
+Container::print() multipmap:item=0 key=testField1 value=0x561f81bd7530
+Container::print()      list:item=0 key=testField1 value=0x561f81bd7530
+}  PASS  Executing user method in an empty State Test, ESMF_StateCreateUTest.F90, line 260
+  PASS  Destroying an empty State Test, ESMF_StateCreateUTest.F90, line 270
+  PASS  Container Create Test, ESMF_StateCreateUTest.F90, line 283
+  PASS  Container Add si Test, ESMF_StateCreateUTest.F90, line 297
+Container::print() multipmap:item=0 key=testField1 value=0x5617d8ffd530
+Container::print()      list:item=0 key=testField1 value=0x5617d8ffd530
   PASS  Container Print Test, ESMF_StateCreateUTest.F90, line 304
   PASS  Container Get item Test, ESMF_StateCreateUTest.F90, line 312
  string in siwOut: 
@@ -338,12 +338,6 @@ Container::print()      list:item=0 key=testField1 value=0x5596eef5e780
  Status: Base = Ready,  object = Ready
  Proxy        = no
  Root Info (Attributes):
-{
-  "ESMF": {
-    "Instance": {
-      "NamedAliasCount": 0
-    }
-  }
 }     object: 1,name: AB1
             type: ArrayBundle
      object: 2,name: Surface pressure
@@ -365,6 +359,25 @@ Container::print()      list:item=0 key=testField1 value=0x5596eef5e780
       "NamedAliasCount": 0
     }
   }
+{
+  "ESMF": {
+    "Instance": {
+      "NamedAliasCount": 0
+    }
+  }
+}     object: 1,name: AB1
+            type: ArrayBundle
+     object: 2,name: Surface pressure
+            type: FieldBundle
+  PASS  Printing a State with 1 FieldBundle, ESMF_StateCreateUTest.F90, line 400
+  PASS  Logging a State with 1 FieldBundle Test, ESMF_StateCreateUTest.F90, line 409
+  PASS  Creating an empty bundle for State Test, ESMF_StateCreateUTest.F90, line 418
+  PASS  Adding a second FieldBundle to a State, ESMF_StateCreateUTest.F90, line 426
+ ESMF_StatePrint: (pet 1):
+  State name: Ocean Export
+     status: Export State, object count: 3
+ Base name    = Ocean Export
+ Status: Base = Ready,  object = Ready
 }     object: 1,name: AB1
             type: ArrayBundle
      object: 2,name: Surface pressure
@@ -386,19 +399,6 @@ Container::print()      list:item=0 key=testField1 value=0x5596eef5e780
       "NamedAliasCount": 0
     }
   }
-}     object: 1,name: AB1
-            type: ArrayBundle
-     object: 2,name: Surface pressure
-            type: FieldBundle
-  PASS  Printing a State with 1 FieldBundle, ESMF_StateCreateUTest.F90, line 400
-  PASS  Logging a State with 1 FieldBundle Test, ESMF_StateCreateUTest.F90, line 409
-  PASS  Creating an empty bundle for State Test, ESMF_StateCreateUTest.F90, line 418
-  PASS  Adding a second FieldBundle to a State, ESMF_StateCreateUTest.F90, line 426
- ESMF_StatePrint: (pet 1):
-  State name: Ocean Export
-     status: Export State, object count: 3
- Base name    = Ocean Export
- Status: Base = Ready,  object = Ready
  Proxy        = no
  Root Info (Attributes):
 {
@@ -478,7 +478,7 @@ Container::print()      list:item=0 key=testField1 value=0x5596eef5e780
   PASS  Add a second nested State into another State, ESMF_StateCreateUTest.F90, line 613
   PASS  Validating a nested State - single level, ESMF_StateCreateUTest.F90, line 621
   PASS  Validating a nested State - nested, ESMF_StateCreateUTest.F90, line 629
- ESMF_StatePrint: (pet 1):
+ ESMF_StatePrint: (pet 2):
   State name: Coupler Statelist
      status: Unspecified intent direction, object count: 2
  Base name    = Coupler Statelist
@@ -520,7 +520,7 @@ Container::print()      list:item=0 key=testField1 value=0x5596eef5e780
   PASS  Add a second nested State into another State, ESMF_StateCreateUTest.F90, line 613
   PASS  Validating a nested State - single level, ESMF_StateCreateUTest.F90, line 621
   PASS  Validating a nested State - nested, ESMF_StateCreateUTest.F90, line 629
- ESMF_StatePrint: (pet 2):
+ ESMF_StatePrint: (pet 1):
   State name: Coupler Statelist
      status: Unspecified intent direction, object count: 2
  Base name    = Coupler Statelist
@@ -597,12 +597,6 @@ Container::print()      list:item=0 key=testField1 value=0x5596eef5e780
  Status: Base = Ready,  object = Ready
  Proxy        = no
  Root Info (Attributes):
-{
-  "ESMF": {
-    "Instance": {
-      "NamedAliasCount": 0
-    }
-  }
 }     object: 1,name: Atmosphere Import
             type: State, proxy flag: no
      object: 2,name: Ocean Export
@@ -622,6 +616,26 @@ Container::print()      list:item=0 key=testField1 value=0x5596eef5e780
   State name: Coupler Statelist
      status: Unspecified intent direction, object count: 2
  Base name    = Coupler Statelist
+ Status: Base = Ready,  object = Ready
+ Proxy        = no
+ Root Info (Attributes):
+{
+  "ESMF": {
+    "Instance": {
+      "NamedAliasCount": 0
+    }
+  }
+{
+  "ESMF": {
+    "Instance": {
+      "NamedAliasCount": 0
+    }
+  }
+}     object: 1,name: Atmosphere Import
+            type: State, proxy flag: no
+ -> State name: Atmosphere Import
+ ->    status: Import State, object count: 1
+ -> Base name    = Atmosphere Import
  Status: Base = Ready,  object = Ready
  Proxy        = no
  Root Info (Attributes):
@@ -654,6 +668,29 @@ Container::print()      list:item=0 key=testField1 value=0x5596eef5e780
  -> Base name    = Ocean Export
  Status: Base = Ready,  object = Ready
  Proxy        = no
+ Root Info (Attributes):
+{
+  "ESMF": {
+    "Instance": {
+      "NamedAliasCount": 0
+    }
+  }
+} ->  ->  object: 1,name: Temperature
+ ->           type: FieldBundle, proxy flag: no
+     object: 2,name: Ocean Export
+            type: State, proxy flag: no
+ -> State name: Ocean Export
+ ->    status: Export State, object count: 0
+ -> Base name    = Ocean Export
+ Status: Base = Ready,  object = Ready
+ Proxy        = no
+ Root Info (Attributes):
+{
+  "ESMF": {
+    "Instance": {
+      "NamedAliasCount": 0
+    }
+  }
 }     object: 1,name: Atmosphere Import
             type: State, proxy flag: no
      object: 2,name: Ocean Export
@@ -687,45 +724,6 @@ Container::print()      list:item=0 key=testField1 value=0x5596eef5e780
  -> State name: Atmosphere Import
  ->    status: Import State, object count: 1
  -> Base name    = Atmosphere Import
- Status: Base = Ready,  object = Ready
- Proxy        = no
- Root Info (Attributes):
-{
-  "ESMF": {
-    "Instance": {
-      "NamedAliasCount": 0
-    }
-  }
-}     object: 1,name: Atmosphere Import
-            type: State, proxy flag: no
- -> State name: Atmosphere Import
- ->    status: Import State, object count: 1
- -> Base name    = Atmosphere Import
- Status: Base = Ready,  object = Ready
- Proxy        = no
- Root Info (Attributes):
-{
-  "ESMF": {
-    "Instance": {
-      "NamedAliasCount": 0
-    }
-  }
-} ->  ->  object: 1,name: Temperature
- ->           type: FieldBundle, proxy flag: no
-     object: 2,name: Ocean Export
-            type: State, proxy flag: no
- -> State name: Ocean Export
- ->    status: Export State, object count: 0
- -> Base name    = Ocean Export
- Status: Base = Ready,  object = Ready
- Proxy        = no
- Root Info (Attributes):
-{
-  "ESMF": {
-    "Instance": {
-      "NamedAliasCount": 0
-    }
-  }
 }     object: 1,name: Atmosphere Import
             type: State, proxy flag: no
      object: 2,name: Ocean Export
@@ -768,6 +766,15 @@ Container::print()      list:item=0 key=testField1 value=0x5596eef5e780
       "NamedAliasCount": 0
     }
   }
+ Status: Base = Ready,  object = Ready
+ Proxy        = no
+ Root Info (Attributes):
+{
+  "ESMF": {
+    "Instance": {
+      "NamedAliasCount": 0
+    }
+  }
 } ->  ->  object: 1,name: Temperature
  ->           type: FieldBundle, proxy flag: no
      object: 2,name: Ocean Export
@@ -784,13 +791,6 @@ Container::print()      list:item=0 key=testField1 value=0x5596eef5e780
       "NamedAliasCount": 0
     }
   }
- Root Info (Attributes):
-{
-  "ESMF": {
-    "Instance": {
-      "NamedAliasCount": 0
-    }
-  }
 } ->  ->  object: 1,name: Temperature
  ->           type: FieldBundle, proxy flag: no
      object: 2,name: Ocean Export
@@ -828,7 +828,7 @@ Container::print()      list:item=0 key=testField1 value=0x5596eef5e780
   PASS  Create a State, ESMF_StateCreateUTest.F90, line 846
   PASS  Destroying a State, ESMF_StateCreateUTest.F90, line 858
   Ending Test, file ESMF_StateCreateUTest.F90, line 871
-  PET            1  Test Elapsed Time     2.642785000000002       msec.
+  PET            2  Test Elapsed Time     2.739538000000000       msec.
 }  PASS  Printing a nested State - nested, ESMF_StateCreateUTest.F90, line 697
   PASS  Logging a State with with nested State - nested - Test, ESMF_StateCreateUTest.F90, line 706
  nested item count:             3
@@ -850,7 +850,7 @@ Container::print()      list:item=0 key=testField1 value=0x5596eef5e780
   PASS  Create a State, ESMF_StateCreateUTest.F90, line 846
   PASS  Destroying a State, ESMF_StateCreateUTest.F90, line 858
   Ending Test, file ESMF_StateCreateUTest.F90, line 871
-  PET            3  Test Elapsed Time     2.642655000000001       msec.
+  PET            1  Test Elapsed Time     2.771889000000003       msec.
 }  PASS  Printing a nested State - nested, ESMF_StateCreateUTest.F90, line 697
   PASS  Logging a State with with nested State - nested - Test, ESMF_StateCreateUTest.F90, line 706
  nested item count:             3
@@ -872,7 +872,7 @@ Container::print()      list:item=0 key=testField1 value=0x5596eef5e780
   PASS  Create a State, ESMF_StateCreateUTest.F90, line 846
   PASS  Destroying a State, ESMF_StateCreateUTest.F90, line 858
   Ending Test, file ESMF_StateCreateUTest.F90, line 871
-  PET            0  Test Elapsed Time     2.689272999999999       msec.
+  PET            3  Test Elapsed Time     2.771678999999999       msec.
 }  PASS  Printing a nested State - nested, ESMF_StateCreateUTest.F90, line 697
   PASS  Logging a State with with nested State - nested - Test, ESMF_StateCreateUTest.F90, line 706
  nested item count:             3
@@ -894,4 +894,4 @@ Container::print()      list:item=0 key=testField1 value=0x5596eef5e780
   PASS  Create a State, ESMF_StateCreateUTest.F90, line 846
   PASS  Destroying a State, ESMF_StateCreateUTest.F90, line 858
   Ending Test, file ESMF_StateCreateUTest.F90, line 871
-  PET            2  Test Elapsed Time     2.931556999999998       msec.
+  PET            0  Test Elapsed Time     3.021317000000002       msec.

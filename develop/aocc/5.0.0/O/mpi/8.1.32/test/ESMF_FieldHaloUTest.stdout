@@ -1,4 +1,4 @@
-2026-09-14 04:49:03
+2026-09-18 04:44:51
   Beginning Test, file ESMF_FieldHaloUTest.F90, line 71
   NUMBER_OF_PROCESSORS            4
   PASS  grid Create Test-1, ESMF_FieldHaloUTest.F90, line 96
@@ -26,6 +26,46 @@
 --- ESMCI::Array::print start ---
  Base name    = Array006
  Status: Base = Ready,  object = Ready
+ Proxy        = no
+ Root Info (Attributes):
+{
+  "ESMF": {
+    "Instance": {
+      "NamedAliasCount": 0
+    }
+  }
+}Array typekind/rank: Integer*4 / 2 
+~ lower class' values ~
+DistGrid dimCount = 2
+deCount = 4
+localDeCount = 1
+~ local data in LocalArray for DE 0 ~
+LocalArrayPrint: Array at address 0x562ba283b3f0:
+            rank = 2, typekind = 3, base_addr = 0x562ba283b730
+            dim[0] = 14  dim[1] = 9  
+  Integer, *4, Dim 2, Data values:
+(-1,-1) =  0
+( 0,-1) =  0
+( 1,-1) =  0
+( 2,-1) =  0
+( 3,-1) =  0
+( 4,-1) =  0
+( 5,-1) =  0
+( 6,-1) =  0
+( 7,-1) =  0
+( 8,-1) =  0
+  skipping to end ...
+( 3, 7) =  1
+( 4, 7) =  1
+( 5, 7) =  1
+( 6, 7) =  1
+( 7, 7) =  1
+( 8, 7) =  1
+( 9, 7) =  1
+(10, 7) =  1
+(11, 7) =  0
+(12, 7) =  0
+--- ESMCI::Array::print end ---
   Beginning Test, file ESMF_FieldHaloUTest.F90, line 71
   NUMBER_OF_PROCESSORS            4
   PASS  grid Create Test-1, ESMF_FieldHaloUTest.F90, line 96
@@ -67,8 +107,8 @@ DistGrid dimCount = 2
 deCount = 4
 localDeCount = 1
 ~ local data in LocalArray for DE 1 ~
-LocalArrayPrint: Array at address 0x55ef92d57ac0:
-            rank = 2, typekind = 3, base_addr = 0x55ef92d57e00
+LocalArrayPrint: Array at address 0x55bab885ea70:
+            rank = 2, typekind = 3, base_addr = 0x55bab885edb0
             dim[0] = 14  dim[1] = 9  
   Integer, *4, Dim 2, Data values:
 (-1,-1) =  1
@@ -134,8 +174,8 @@ DistGrid dimCount = 2
 deCount = 4
 localDeCount = 1
 ~ local data in LocalArray for DE 2 ~
-LocalArrayPrint: Array at address 0x5573454d4cd0:
-            rank = 2, typekind = 3, base_addr = 0x5573454d5010
+LocalArrayPrint: Array at address 0x5593d994aa70:
+            rank = 2, typekind = 3, base_addr = 0x5593d994adb0
             dim[0] = 14  dim[1] = 9  
   Integer, *4, Dim 2, Data values:
 (-1,-1) =  2
@@ -201,8 +241,8 @@ DistGrid dimCount = 2
 deCount = 4
 localDeCount = 1
 ~ local data in LocalArray for DE 3 ~
-LocalArrayPrint: Array at address 0x5573adc2fac0:
-            rank = 2, typekind = 3, base_addr = 0x5573adc2fe00
+LocalArrayPrint: Array at address 0x559aa5c76a70:
+            rank = 2, typekind = 3, base_addr = 0x559aa5c76db0
             dim[0] = 14  dim[1] = 9  
   Integer, *4, Dim 2, Data values:
 (-1,-1) =  3
@@ -226,46 +266,6 @@ LocalArrayPrint: Array at address 0x5573adc2fac0:
 (10, 7) =  3
 (11, 7) =  3
 (12, 7) =  3
---- ESMCI::Array::print end ---
- Proxy        = no
- Root Info (Attributes):
-{
-  "ESMF": {
-    "Instance": {
-      "NamedAliasCount": 0
-    }
-  }
-}Array typekind/rank: Integer*4 / 2 
-~ lower class' values ~
-DistGrid dimCount = 2
-deCount = 4
-localDeCount = 1
-~ local data in LocalArray for DE 0 ~
-LocalArrayPrint: Array at address 0x55ffe2263230:
-            rank = 2, typekind = 3, base_addr = 0x55ffe2263570
-            dim[0] = 14  dim[1] = 9  
-  Integer, *4, Dim 2, Data values:
-(-1,-1) =  0
-( 0,-1) =  0
-( 1,-1) =  0
-( 2,-1) =  0
-( 3,-1) =  0
-( 4,-1) =  0
-( 5,-1) =  0
-( 6,-1) =  0
-( 7,-1) =  0
-( 8,-1) =  0
-  skipping to end ...
-( 3, 7) =  1
-( 4, 7) =  1
-( 5, 7) =  1
-( 6, 7) =  1
-( 7, 7) =  1
-( 8, 7) =  1
-( 9, 7) =  1
-(10, 7) =  1
-(11, 7) =  0
-(12, 7) =  0
 --- ESMCI::Array::print end ---
  arrayrank =             2
  gridToFieldMap ungriddedLBound ungriddedUBound totalLWidth totalUWidth
@@ -307,6 +307,7 @@ LocalArrayPrint: Array at address 0x55ffe2263230:
  Base name    = Array013
  Status: Base = Ready,  object = Ready
  Proxy        = no
+ Root Info (Attributes):
  arrayrank =             2
  gridToFieldMap ungriddedLBound ungriddedUBound totalLWidth totalUWidth
             1           -1           -1                 2            2
@@ -360,8 +361,8 @@ DistGrid dimCount = 2
 deCount = 4
 localDeCount = 1
 ~ local data in LocalArray for DE 1 ~
-LocalArrayPrint: Array at address 0x55ef92d57ac0:
-            rank = 2, typekind = 3, base_addr = 0x55ef92d57e00
+LocalArrayPrint: Array at address 0x55bab885ea70:
+            rank = 2, typekind = 3, base_addr = 0x55bab885edb0
             dim[0] = 9  dim[1] = 14  
   Integer, *4, Dim 2, Data values:
 (-1,-1) =  1
@@ -439,8 +440,8 @@ DistGrid dimCount = 2
 deCount = 4
 localDeCount = 1
 ~ local data in LocalArray for DE 2 ~
-LocalArrayPrint: Array at address 0x5573454d4cd0:
-            rank = 2, typekind = 3, base_addr = 0x5573454d5010
+LocalArrayPrint: Array at address 0x5593d994aa70:
+            rank = 2, typekind = 3, base_addr = 0x5593d994adb0
             dim[0] = 9  dim[1] = 14  
   Integer, *4, Dim 2, Data values:
 (-1,-1) =  2
@@ -518,8 +519,8 @@ DistGrid dimCount = 2
 deCount = 4
 localDeCount = 1
 ~ local data in LocalArray for DE 3 ~
-LocalArrayPrint: Array at address 0x5573adc2fac0:
-            rank = 2, typekind = 3, base_addr = 0x5573adc2fe00
+LocalArrayPrint: Array at address 0x559aa5c76a70:
+            rank = 2, typekind = 3, base_addr = 0x559aa5c76db0
             dim[0] = 9  dim[1] = 14  
   Integer, *4, Dim 2, Data values:
 (-1,-1) =  0
@@ -544,7 +545,6 @@ LocalArrayPrint: Array at address 0x5573adc2fac0:
 ( 6,12) =  3
 ( 7,12) =  3
 --- ESMCI::Array::print end ---
- Root Info (Attributes):
 {
   "ESMF": {
     "Instance": {
@@ -557,8 +557,8 @@ DistGrid dimCount = 2
 deCount = 4
 localDeCount = 1
 ~ local data in LocalArray for DE 0 ~
-LocalArrayPrint: Array at address 0x55ffe2263230:
-            rank = 2, typekind = 3, base_addr = 0x55ffe2263570
+LocalArrayPrint: Array at address 0x562ba283b3f0:
+            rank = 2, typekind = 3, base_addr = 0x562ba283b730
             dim[0] = 9  dim[1] = 14  
   Integer, *4, Dim 2, Data values:
 (-1,-1) =  0
@@ -598,7 +598,7 @@ LocalArrayPrint: Array at address 0x55ffe2263230:
   PASS  Field Destroy Test-2, ESMF_FieldHaloUTest.F90, line 677
   PASS  Grid Destroy Test-2, ESMF_FieldHaloUTest.F90, line 684
   Ending Test, file ESMF_FieldHaloUTest.F90, line 692
-  PET            3  Test Elapsed Time     3.831624000000002       msec.
+  PET            3  Test Elapsed Time     3.739343999999999       msec.
  arrayrank =             2
  gridToFieldMap ungriddedLBound ungriddedUBound totalLWidth totalUWidth
             1           -1           -1                 2            2
@@ -614,7 +614,7 @@ LocalArrayPrint: Array at address 0x55ffe2263230:
   PASS  Field Destroy Test-2, ESMF_FieldHaloUTest.F90, line 677
   PASS  Grid Destroy Test-2, ESMF_FieldHaloUTest.F90, line 684
   Ending Test, file ESMF_FieldHaloUTest.F90, line 692
-  PET            1  Test Elapsed Time     3.910272000000000       msec.
+  PET            0  Test Elapsed Time     3.894174000000000       msec.
  arrayrank =             2
  gridToFieldMap ungriddedLBound ungriddedUBound totalLWidth totalUWidth
             1           -1           -1                 2            2
@@ -630,7 +630,7 @@ LocalArrayPrint: Array at address 0x55ffe2263230:
   PASS  Field Destroy Test-2, ESMF_FieldHaloUTest.F90, line 677
   PASS  Grid Destroy Test-2, ESMF_FieldHaloUTest.F90, line 684
   Ending Test, file ESMF_FieldHaloUTest.F90, line 692
-  PET            0  Test Elapsed Time     3.903619000000000       msec.
+  PET            2  Test Elapsed Time     3.894244999999998       msec.
  arrayrank =             2
  gridToFieldMap ungriddedLBound ungriddedUBound totalLWidth totalUWidth
             1           -1           -1                 2            2
@@ -646,4 +646,4 @@ LocalArrayPrint: Array at address 0x55ffe2263230:
   PASS  Field Destroy Test-2, ESMF_FieldHaloUTest.F90, line 677
   PASS  Grid Destroy Test-2, ESMF_FieldHaloUTest.F90, line 684
   Ending Test, file ESMF_FieldHaloUTest.F90, line 692
-  PET            2  Test Elapsed Time     4.156824000000000       msec.
+  PET            1  Test Elapsed Time     4.141949000000002       msec.

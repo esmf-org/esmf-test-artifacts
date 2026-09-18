@@ -1,4 +1,4 @@
-2026-09-14 04:49:03
+2026-09-18 04:44:51
   Beginning Test, file ESMF_FieldBundleUTest.F90, line 103
   NUMBER_OF_PROCESSORS            4
   PASS  Testing FieldBundle IsCreated for uncreated object, ESMF_FieldBundleUTest.F90, line 118
@@ -203,6 +203,9 @@
  Field Print Starts ====>
  Field base status = Ready
    Name = 'heat flux'
+ Base name    = heat flux
+ Status: Base = Ready,  object = Ready
+ Proxy        = no
  temperature                                                                                                                                                                                                                                                     
   PASS  Verifying Field count from a FieldBundle Test, ESMF_FieldBundleUTest.F90, line 1580
   PASS  Adding an uninitialized Field to an uncreated FieldBundle Test, ESMF_FieldBundleUTest.F90, line 1587
@@ -253,6 +256,36 @@
       "NamedAliasCount": 0
     }
   }
+ Root Info (Attributes):
+{
+  "ESMF": {
+    "Instance": {
+      "NamedAliasCount": 0
+    }
+  }
+} Field status =             2
+ gridToFieldMap ungriddedLBound ungriddedUBound totalLWidth totalUWidth
+           -1           -1           -1                -1           -1
+           -1           -1           -1                -1           -1
+           -1           -1           -1                -1           -1
+           -1           -1           -1                -1           -1
+           -1           -1           -1                -1           -1
+           -1           -1           -1                -1           -1
+           -1           -1           -1                -1           -1
+ Field Print Ends   ====>
+ Field Print Starts ====>
+ Field base status = Ready
+   Name = 'pressure'
+ Base name    = pressure
+ Status: Base = Ready,  object = Ready
+ Proxy        = no
+ Root Info (Attributes):
+{
+  "ESMF": {
+    "Instance": {
+      "NamedAliasCount": 0
+    }
+  }
  temperature                                                                                                                                                                                                                                                     
   PASS  Verifying Field count from a FieldBundle Test, ESMF_FieldBundleUTest.F90, line 1580
   PASS  Adding an uninitialized Field to an uncreated FieldBundle Test, ESMF_FieldBundleUTest.F90, line 1587
@@ -293,16 +326,6 @@
  Field Print Starts ====>
  Field base status = Ready
    Name = 'heat flux'
- Base name    = heat flux
- Status: Base = Ready,  object = Ready
- Proxy        = no
- Root Info (Attributes):
-{
-  "ESMF": {
-    "Instance": {
-      "NamedAliasCount": 0
-    }
-  }
  Base name    = heat flux
  Status: Base = Ready,  object = Ready
  Proxy        = no
@@ -414,29 +437,6 @@
            -1           -1           -1                -1           -1
            -1           -1           -1                -1           -1
            -1           -1           -1                -1           -1
-} Field status =             2
- gridToFieldMap ungriddedLBound ungriddedUBound totalLWidth totalUWidth
-           -1           -1           -1                -1           -1
-           -1           -1           -1                -1           -1
-           -1           -1           -1                -1           -1
-           -1           -1           -1                -1           -1
-           -1           -1           -1                -1           -1
-           -1           -1           -1                -1           -1
-           -1           -1           -1                -1           -1
- Field Print Ends   ====>
- Field Print Starts ====>
- Field base status = Ready
-   Name = 'pressure'
- Base name    = pressure
- Status: Base = Ready,  object = Ready
- Proxy        = no
- Root Info (Attributes):
-{
-  "ESMF": {
-    "Instance": {
-      "NamedAliasCount": 0
-    }
-  }
 } Field status =             2
  gridToFieldMap ungriddedLBound ungriddedUBound totalLWidth totalUWidth
            -1           -1           -1                -1           -1
@@ -798,7 +798,7 @@
   PASS  Test deserialization, ESMF_FieldBundleUTest.F90, line 2481
   PASS  Get fieldNameList from deserializated packed FieldBundle, ESMF_FieldBundleUTest.F90, line 2491
   Ending Test, file ESMF_FieldBundleUTest.F90, line 2510
-  PET            3  Test Elapsed Time     10.00846600000000       msec.
+  PET            0  Test Elapsed Time     9.979930000000001       msec.
   PASS  Getting Fields from a FieldBundle, ESMF_FieldBundleUTest.F90, line 2209
   PASS  Getting Names from Fields, ESMF_FieldBundleUTest.F90, line 2222
   PASS  Comparing two modes of BundleGet, ESMF_FieldBundleUTest.F90, line 2233
@@ -826,7 +826,7 @@
   PASS  Test deserialization, ESMF_FieldBundleUTest.F90, line 2481
   PASS  Get fieldNameList from deserializated packed FieldBundle, ESMF_FieldBundleUTest.F90, line 2491
   Ending Test, file ESMF_FieldBundleUTest.F90, line 2510
-  PET            0  Test Elapsed Time     9.912815999999998       msec.
+  PET            1  Test Elapsed Time     9.981112000000000       msec.
   PASS  Getting Fields from a FieldBundle, ESMF_FieldBundleUTest.F90, line 2209
   PASS  Getting Names from Fields, ESMF_FieldBundleUTest.F90, line 2222
   PASS  Comparing two modes of BundleGet, ESMF_FieldBundleUTest.F90, line 2233
@@ -854,7 +854,7 @@
   PASS  Test deserialization, ESMF_FieldBundleUTest.F90, line 2481
   PASS  Get fieldNameList from deserializated packed FieldBundle, ESMF_FieldBundleUTest.F90, line 2491
   Ending Test, file ESMF_FieldBundleUTest.F90, line 2510
-  PET            2  Test Elapsed Time     10.09489800000000       msec.
+  PET            2  Test Elapsed Time     9.881584000000002       msec.
   PASS  Getting Fields from a FieldBundle, ESMF_FieldBundleUTest.F90, line 2209
   PASS  Getting Names from Fields, ESMF_FieldBundleUTest.F90, line 2222
   PASS  Comparing two modes of BundleGet, ESMF_FieldBundleUTest.F90, line 2233
@@ -882,4 +882,4 @@
   PASS  Test deserialization, ESMF_FieldBundleUTest.F90, line 2481
   PASS  Get fieldNameList from deserializated packed FieldBundle, ESMF_FieldBundleUTest.F90, line 2491
   Ending Test, file ESMF_FieldBundleUTest.F90, line 2510
-  PET            1  Test Elapsed Time     10.35517600000000       msec.
+  PET            3  Test Elapsed Time     10.25605700000000       msec.

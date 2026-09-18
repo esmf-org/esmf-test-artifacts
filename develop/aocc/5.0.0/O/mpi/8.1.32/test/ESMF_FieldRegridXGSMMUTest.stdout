@@ -1,4 +1,4 @@
-2026-09-14 04:49:03
+2026-09-18 04:44:51
   Beginning Test, file ESMF_FieldRegridXGSMMUTest.F90, line 51
   NUMBER_OF_PROCESSORS            2
   PASS  Create xgrid and regrid through xgrid, const src flux, ESMF_FieldRegridXGSMMUTest.F90, line 60
@@ -188,13 +188,6 @@ DistGrid-VM: petCount = 2, CurrentVM: petCount = 2
  Base name    = Array069
  Status: Base = Ready,  object = Ready
  Proxy        = no
- Root Info (Attributes):
-{
-  "ESMF": {
-    "Instance": {
-      "NamedAliasCount": 0
-    }
-  }
  Field Print Starts ====>
  Field base status = Ready
    Name = 'Field068'
@@ -208,24 +201,6 @@ DistGrid-VM: petCount = 2, CurrentVM: petCount = 2
       "NamedAliasCount": 0
     }
   }
-}Array typekind/rank: Real*8 / 1 
-~ lower class' values ~
-DistGrid dimCount = 1
-deCount = 2
-localDeCount = 1
-~ local data in LocalArray for DE 0 ~
-LocalArrayPrint: Array at address 0x5605a6f81d40:
-            rank = 1, typekind = 6, base_addr = 0x5605a726ee90
-            dim[0] = 7  
-  Real, *8, Dim 1, Data values:
-( 1) =  0
-( 2) =  0
-( 3) =  0
-( 4) =  0
-( 5) =  0
-( 6) =  0
-( 7) =  0
---- ESMCI::Array::print end ---
 } Field status =             4
  gridrank =             1
 --- ESMCI::Array::print start ---
@@ -244,9 +219,34 @@ LocalArrayPrint: Array at address 0x5605a6f81d40:
 DistGrid dimCount = 1
 deCount = 2
 localDeCount = 1
+~ local data in LocalArray for DE 0 ~
+LocalArrayPrint: Array at address 0x55cb5aae5f60:
+            rank = 1, typekind = 6, base_addr = 0x55cb5add3130
+            dim[0] = 7  
+  Real, *8, Dim 1, Data values:
+( 1) =  0
+( 2) =  0
+( 3) =  0
+( 4) =  0
+( 5) =  0
+( 6) =  0
+( 7) =  0
+--- ESMCI::Array::print end ---
+ Root Info (Attributes):
+{
+  "ESMF": {
+    "Instance": {
+      "NamedAliasCount": 0
+    }
+  }
+}Array typekind/rank: Real*8 / 1 
+~ lower class' values ~
+DistGrid dimCount = 1
+deCount = 2
+localDeCount = 1
 ~ local data in LocalArray for DE 1 ~
-LocalArrayPrint: Array at address 0x55a9bb463750:
-            rank = 1, typekind = 6, base_addr = 0x55a9bb750720
+LocalArrayPrint: Array at address 0x557c400ed760:
+            rank = 1, typekind = 6, base_addr = 0x557c403da750
             dim[0] = 5  
   Real, *8, Dim 1, Data values:
 ( 1) =  0
@@ -1364,7 +1364,7 @@ DistGrid-VM: petCount = 2, CurrentVM: petCount = 2
     2.000000000000000         1.999999999999997         2.000000000000001     
   PASS  Regrid then create xgrid and regrid through xgrid, overlapping cut, ESMF_FieldRegridXGSMMUTest.F90, line 102
   Ending Test, file ESMF_FieldRegridXGSMMUTest.F90, line 112
-  PET            1  Test Elapsed Time     94.22233900000001       msec.
+  PET            1  Test Elapsed Time     94.51238500000001       msec.
             0    2.000000000000000         1.999999999999999      
     2.000000000000000         1.999999999999999         2.000000000000000      
     2.000000000000001         1.999999999999997         1.999999999999998      
@@ -1400,4 +1400,4 @@ DistGrid-VM: petCount = 2, CurrentVM: petCount = 2
     2.000000000000003         2.000000000000000         1.999999999999997     
   PASS  Regrid then create xgrid and regrid through xgrid, overlapping cut, ESMF_FieldRegridXGSMMUTest.F90, line 102
   Ending Test, file ESMF_FieldRegridXGSMMUTest.F90, line 112
-  PET            0  Test Elapsed Time     94.53854100000000       msec.
+  PET            0  Test Elapsed Time     95.73196200000001       msec.

@@ -1,0 +1,67 @@
+2026-09-18 07:56:02
+  Beginning Test, file ESMF_DELayoutWorkQueueUTest.F90, line 170
+  Beginning Test, file ESMF_DELayoutWorkQueueUTest.F90, line 170
+  NUMBER_OF_PROCESSORS           4
+  Beginning Test, file ESMF_DELayoutWorkQueueUTest.F90, line 170
+  Beginning Test, file ESMF_DELayoutWorkQueueUTest.F90, line 170
+  NUMBER_OF_PROCESSORS           4
+  NUMBER_OF_PROCESSORS           4
+  NUMBER_OF_PROCESSORS           4
+  PASS  GridCompCreate() - round 1, ESMF_DELayoutWorkQueueUTest.F90, line 187
+  PASS  GridCompCreate() - round 1, ESMF_DELayoutWorkQueueUTest.F90, line 187
+  PASS  GridCompCreate() - round 1, ESMF_DELayoutWorkQueueUTest.F90, line 187
+  PASS  GridCompCreate() - round 1, ESMF_DELayoutWorkQueueUTest.F90, line 187
+  PASS  GridCompSetServices() - round 1, ESMF_DELayoutWorkQueueUTest.F90, line 193
+  PASS  GridCompSetServices() - round 1, ESMF_DELayoutWorkQueueUTest.F90, line 193
+  PASS  GridCompSetServices() - round 1, ESMF_DELayoutWorkQueueUTest.F90, line 193
+  PASS  GridCompSetServices() - round 1, ESMF_DELayoutWorkQueueUTest.F90, line 193
+  PASS  Run work queue - round 1, ESMF_DELayoutWorkQueueUTest.F90, line 201
+ <round 1> PET            3  time:    6.3999999952102371E-005
+  PASS  GridCompDestroy() - round 1, ESMF_DELayoutWorkQueueUTest.F90, line 209
+  PASS  Run work queue - round 1, ESMF_DELayoutWorkQueueUTest.F90, line 201
+ <round 1> PET            0  time:    6.7000000001371518E-005
+  PASS  GridCompDestroy() - round 1, ESMF_DELayoutWorkQueueUTest.F90, line 209
+  PASS  Run work queue - round 1, ESMF_DELayoutWorkQueueUTest.F90, line 201
+ <round 1> PET            1  time:    4.0163129999999683     
+  PASS  GridCompDestroy() - round 1, ESMF_DELayoutWorkQueueUTest.F90, line 209
+  PASS  Run work queue - round 1, ESMF_DELayoutWorkQueueUTest.F90, line 201
+ <round 1> PET            2  time:    6.0156379999999672     
+  PASS  GridCompDestroy() - round 1, ESMF_DELayoutWorkQueueUTest.F90, line 209
+  PASS  GridCompCreate() - round 2, ESMF_DELayoutWorkQueueUTest.F90, line 217
+  PASS  GridCompCreate() - round 2, ESMF_DELayoutWorkQueueUTest.F90, line 217
+  PASS  GridCompCreate() - round 2, ESMF_DELayoutWorkQueueUTest.F90, line 217
+ *** hi from mygcomp_setvm_withthreads ***
+  PASS  GridCompSetVM() - round 2, ESMF_DELayoutWorkQueueUTest.F90, line 227
+ *** hi from mygcomp_setvm_withthreads ***
+  PASS  GridCompSetVM() - round 2, ESMF_DELayoutWorkQueueUTest.F90, line 227
+ *** hi from mygcomp_setvm_withthreads ***
+  PASS  GridCompSetVM() - round 2, ESMF_DELayoutWorkQueueUTest.F90, line 227
+  PASS  GridCompCreate() - round 2, ESMF_DELayoutWorkQueueUTest.F90, line 217
+ *** hi from mygcomp_setvm_withthreads ***
+  PASS  GridCompSetVM() - round 2, ESMF_DELayoutWorkQueueUTest.F90, line 227
+
+Program received signal SIGSEGV: Segmentation fault - invalid memory reference.
+
+Backtrace for this error:
+  PASS  GridCompSetServices() - round 2, ESMF_DELayoutWorkQueueUTest.F90, line 233
+  PASS  GridCompSetServices() - round 2, ESMF_DELayoutWorkQueueUTest.F90, line 233
+#0  0x1013da0af
+#1  0x1013d9103
+#2  0x1958c4623
+#3  0x104edd8df
+#4  0x104edd8df
+#5  0x104edb03f
+#6  0x105305933
+#7  0x105305b2b
+#8  0x19588ac0b
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 44497 RUNNING AT cgdm-fairy
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+YOUR APPLICATION TERMINATED WITH THE EXIT STRING: Segmentation fault: 11 (signal 11)
+This typically refers to a problem with your application.
+Please see the FAQ page for debugging suggestions

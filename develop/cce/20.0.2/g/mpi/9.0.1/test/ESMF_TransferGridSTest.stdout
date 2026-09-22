@@ -1,4 +1,4 @@
-2026-09-21 04:37:24
+2026-09-22 04:46:59
  --------------------------------------- 
  Start of  System Test ESMF_TransferGridSTest
  --------------------------------------- 
@@ -113,8 +113,8 @@ DistGrid dimCount = 2
 deCount = 2
 localDeCount = 2
 ~ local data in LocalArray for DE 0 ~
-LocalArrayPrint: Array at address 0xb6bb70:
-            rank = 2, typekind = 6, base_addr = 0xc58980
+LocalArrayPrint: Array at address 0xada450:
+            rank = 2, typekind = 6, base_addr = 0xb3c3c0
             dim[0] = 50  dim[1] = 150  
   Real, *8, Dim 2, Data values:
 ( 1, 1) =  0
@@ -139,8 +139,8 @@ LocalArrayPrint: Array at address 0xb6bb70:
 (49,150) =  0.0816692
 (50,150) =  0.0409127
 ~ local data in LocalArray for DE 1 ~
-LocalArrayPrint: Array at address 0xc675b0:
-            rank = 2, typekind = 6, base_addr = 0xb72080
+LocalArrayPrint: Array at address 0xb85170:
+            rank = 2, typekind = 6, base_addr = 0xb6ce00
             dim[0] = 50  dim[1] = 150  
   Real, *8, Dim 2, Data values:
 (51, 1) =  -4.65376e-06
@@ -275,7 +275,7 @@ LocalArrayPrint: Array at address 0xc675b0:
   System Test ESMF_TransferGridSTest                                                                                                                                                                                                                              complete.
  ------------------------------------------------------------
  ------------------------------------------------------------
- Test finished, localPet =  5
+ Test finished, localPet =  3
  ------------------------------------------------------------
  ------------------------------------------------------------
   PASS  System Test ESMF_TransferGridSTest, ESMF_TransferGridSTest.F90, line 447
@@ -324,7 +324,7 @@ LocalArrayPrint: Array at address 0xc675b0:
   System Test ESMF_TransferGridSTest                                                                                                                                                                                                                              complete.
  ------------------------------------------------------------
  ------------------------------------------------------------
- Test finished, localPet =  3
+ Test finished, localPet =  5
  ------------------------------------------------------------
  ------------------------------------------------------------
   PASS  System Test ESMF_TransferGridSTest, ESMF_TransferGridSTest.F90, line 447
@@ -390,6 +390,33 @@ LocalArrayPrint: Array at address 0xc675b0:
  ------------------------------------------------------------
  ------------------------------------------------------------
   PASS  System Test ESMF_TransferGridSTest, ESMF_TransferGridSTest.F90, line 447
+ arrayrank =  2
+ gridToFieldMap ungriddedLBound ungriddedUBound totalLWidth totalUWidth
+ 1,  2*-1      2*0
+ 2,  2*-1      2*0
+ 3*-1      2*-1
+ 3*-1      2*-1
+ 3*-1      2*-1
+ 3*-1      2*-1
+ 3*-1      2*-1
+ Field Print Ends   ====>
+ User Comp2 Run returning
+ Comp 2 Run returned, rc = 0
+ User Coupler Final starting
+ User Coupler Final returning
+ Coupler Finalize finished, rc = 2*0
+ Comp 1 Finalize finished, rc = 2*0
+ User Comp2 Final starting
+ User Comp2 Final returning
+ Comp 2 Finalize finished, rc = 2*0
+ All Destroy routines done
+  System Test ESMF_TransferGridSTest                                                                                                                                                                                                                              complete.
+ ------------------------------------------------------------
+ ------------------------------------------------------------
+ Test finished, localPet =  4
+ ------------------------------------------------------------
+ ------------------------------------------------------------
+  PASS  System Test ESMF_TransferGridSTest, ESMF_TransferGridSTest.F90, line 447
  --------------------------------------- 
  Start of  System Test ESMF_TransferGridSTest
  --------------------------------------- 
@@ -449,33 +476,6 @@ LocalArrayPrint: Array at address 0xc675b0:
  ------------------------------------------------------------
  ------------------------------------------------------------
  Test finished, localPet =  2
- ------------------------------------------------------------
- ------------------------------------------------------------
-  PASS  System Test ESMF_TransferGridSTest, ESMF_TransferGridSTest.F90, line 447
- arrayrank =  2
- gridToFieldMap ungriddedLBound ungriddedUBound totalLWidth totalUWidth
- 1,  2*-1      2*0
- 2,  2*-1      2*0
- 3*-1      2*-1
- 3*-1      2*-1
- 3*-1      2*-1
- 3*-1      2*-1
- 3*-1      2*-1
- Field Print Ends   ====>
- User Comp2 Run returning
- Comp 2 Run returned, rc = 0
- User Coupler Final starting
- User Coupler Final returning
- Coupler Finalize finished, rc = 2*0
- Comp 1 Finalize finished, rc = 2*0
- User Comp2 Final starting
- User Comp2 Final returning
- Comp 2 Finalize finished, rc = 2*0
- All Destroy routines done
-  System Test ESMF_TransferGridSTest                                                                                                                                                                                                                              complete.
- ------------------------------------------------------------
- ------------------------------------------------------------
- Test finished, localPet =  4
  ------------------------------------------------------------
  ------------------------------------------------------------
   PASS  System Test ESMF_TransferGridSTest, ESMF_TransferGridSTest.F90, line 447

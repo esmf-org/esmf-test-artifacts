@@ -1,4 +1,4 @@
-2026-09-22 04:57:33
+2026-10-06 05:05:46
 Beginning Test, file ESMC_FieldUTest.c, line 76
 Beginning Test, file ESMC_FieldUTest.c, line 76NUMBER_OF_PROCESSORS 1
 PASS MeshCreate, ESMC_FieldUTest.c, line 88
@@ -47,14 +47,14 @@ DistGrid dimCount = 1
 deCount = 1
 localDeCount = 1
 ~ local data in LocalArray for DE 0 ~
-LocalArrayPrint: Array at address 0x5596db8f15f0:
-            rank = 1, typekind = 3, base_addr = 0x5596db8f1930
+LocalArrayPrint: Array at address 0x5579190175d0:
+            rank = 1, typekind = 3, base_addr = 0x557919017910
             dim[0] = 372  
   Integer, *4, Dim 1, Data values:
-( 1) =  -611378928
-( 2) =  21910
-( 3) =  -611378928
-( 4) =  21910
+( 1) =  419526896
+( 2) =  21881
+( 3) =  419526896
+( 4) =  21881
 ( 5) =  1234
 ( 6) =  1236
 ( 7) =  1238
@@ -77,6 +77,7 @@ PASS Print an ESMC_Field object, ESMC_FieldUTest.c, line 237
 PASS Destroy ESMC_Field object, ESMC_FieldUTest.c, line 245
 PASS Get an ESMC_Mesh object from ESMC_Field object, ESMC_FieldUTest.c, line 253
 PASS Get an ESMC_Array object from ESMC_Field object, ESMC_FieldUTest.c, line 261
+PASS Get a void * C pointer to data from ESMC_Field object, ESMC_FieldUTest.c, line 269
  arrayrank =             1
  gridToFieldMap ungriddedLBound ungriddedUBound totalLWidth totalUWidth
             1           -1           -1                 0            0
@@ -90,7 +91,6 @@ PASS Get an ESMC_Array object from ESMC_Field object, ESMC_FieldUTest.c, line 26
  Field Print Starts ====>
  Field base status = Ready
    Name = 'field2'
-PASS Get a void * C pointer to data from ESMC_Field object, ESMC_FieldUTest.c, line 269
  Base name    = field2
  Status: Base = Ready,  object = Ready
  Proxy        = no
@@ -120,8 +120,8 @@ DistGrid dimCount = 1
 deCount = 1
 localDeCount = 1
 ~ local data in LocalArray for DE 0 ~
-LocalArrayPrint: Array at address 0x5596db8f5ed0:
-            rank = 1, typekind = 6, base_addr = 0x5596db8f8600
+LocalArrayPrint: Array at address 0x55791901beb0:
+            rank = 1, typekind = 6, base_addr = 0x55791901e5e0
             dim[0] = 608  
   Real, *8, Dim 1, Data values:
 ( 1) =  0
@@ -172,4 +172,4 @@ Ending Test, file ESMC_FieldUTest.c, line 507
            -1           -1           -1                -1           -1
            -1           -1           -1                -1           -1
  Field Print Ends   ====>
-Ending Test, file ESMC_FieldUTest.c, line 507 PET 0 Test Elapsed Time 5.149 msec.
+Ending Test, file ESMC_FieldUTest.c, line 507 PET 0 Test Elapsed Time 5.207 msec.

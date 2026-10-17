@@ -1,4 +1,4 @@
-2026-10-16 04:40:07
+2026-10-17 04:34:05
   Beginning Test, file ESMF_DistGridCreateGetUTest.F90, line 101
   NUMBER_OF_PROCESSORS 4
   PASS  Testing DistGrid IsCreated for uncreated object, ESMF_DistGridCreateGetUTest.F90, line 117
@@ -692,6 +692,23 @@ Member on this PET appears to be an actual member.
 DistGrid-VM: localPet = 0, CurrentVM: localPet = 0
 DistGrid-VM: petCount = 4, CurrentVM: petCount = 4
 --- ESMCI::DistGrid::print end ---
+  PASS  DistGridPrint(), ESMF_DistGridCreateGetUTest.F90, line 855
+  PASS  DistGridDestroy(), ESMF_DistGridCreateGetUTest.F90, line 862
+  PASS  DistGridCreate() - 1D Single Tile Default - no multiple of 4, ESMF_DistGridCreateGetUTest.F90, line 870
+--- ESMCI::DistGrid::print start ---
+indexTK: Integer*4
+dimCount = 1
+tileCount = 1
+elementCountPTile: 90 
+regDecomp = YES
+tileListPDe: 1 1 1 1 
+elementCountPDe: 23 20 19 28 
+contigFlagPDimPDe (dims separated by / ):
+ for DE 0: 1 / 
+ for DE 1: 1 / 
+ for DE 2: 1 / 
+ for DE 3: 1 / 
+(min,max)IndexPDimPDe (dims separated by / ):
  451, 452, 453, 454, 455, 456, 457, 458, 459, 460, 461, 462, 463, 464, 465, 466, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499, 500) /
 diffCollocationCount = 1
 collocationPDim:	1
@@ -761,9 +778,6 @@ Member on this PET appears to be an actual member.
 DistGrid-VM: localPet = 1, CurrentVM: localPet = 1
 DistGrid-VM: petCount = 4, CurrentVM: petCount = 4
 --- ESMCI::DistGrid::print end ---
-  PASS  DistGridPrint(), ESMF_DistGridCreateGetUTest.F90, line 855
-  PASS  DistGridDestroy(), ESMF_DistGridCreateGetUTest.F90, line 862
-  PASS  DistGridCreate() - 1D Single Tile Default - no multiple of 4, ESMF_DistGridCreateGetUTest.F90, line 870
  701, 702, 703, 704, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 720, 721, 722, 723, 724, 725, 726, 727, 728, 729, 730, 731, 732, 733, 734, 735, 736, 737, 738, 739, 740, 741, 742, 743, 744, 745, 746, 747, 748, 749, 750) /
 diffCollocationCount = 1
 collocationPDim:	1
@@ -907,23 +921,6 @@ DistGrid-VM: petCount = 4, CurrentVM: petCount = 4
 --- ESMCI::DistGrid::print end ---
   PASS  DistGridPrint(), ESMF_DistGridCreateGetUTest.F90, line 855
   PASS  DistGridDestroy(), ESMF_DistGridCreateGetUTest.F90, line 862
-  PASS  DistGridPrint(), ESMF_DistGridCreateGetUTest.F90, line 855
-  PASS  DistGridDestroy(), ESMF_DistGridCreateGetUTest.F90, line 862
-  PASS  DistGridCreate() - 1D Single Tile Default - no multiple of 4, ESMF_DistGridCreateGetUTest.F90, line 870
---- ESMCI::DistGrid::print start ---
-indexTK: Integer*4
-dimCount = 1
-tileCount = 1
-elementCountPTile: 90 
-regDecomp = YES
-tileListPDe: 1 1 1 1 
-elementCountPDe: 23 20 19 28 
-contigFlagPDimPDe (dims separated by / ):
- for DE 0: 1 / 
- for DE 1: 1 / 
- for DE 2: 1 / 
- for DE 3: 1 / 
-(min,max)IndexPDimPDe (dims separated by / ):
  for DE 0: (1, 23) / 
  for DE 1: (24, 43) / 
  for DE 2: (44, 62) / 
@@ -941,6 +938,9 @@ Member on this PET appears to be an actual member.
 DistGrid-VM: localPet = 0, CurrentVM: localPet = 0
 DistGrid-VM: petCount = 4, CurrentVM: petCount = 4
 --- ESMCI::DistGrid::print end ---
+  PASS  DistGridPrint(), ESMF_DistGridCreateGetUTest.F90, line 855
+  PASS  DistGridDestroy(), ESMF_DistGridCreateGetUTest.F90, line 862
+  PASS  DistGridCreate() - 1D Single Tile Default - no multiple of 4, ESMF_DistGridCreateGetUTest.F90, line 870
 --- ESMCI::DistGrid::print start ---
 indexTK: Integer*4
 dimCount = 1
@@ -1035,5 +1035,5 @@ Member on this PET appears to be an actual member.
 DistGrid-VM: localPet = 3, CurrentVM: localPet = 3
 DistGrid-VM: petCount = 4, CurrentVM: petCount = 4
 --- ESMCI::DistGrid::print end ---
-srun: error: c5n0330: tasks 0-3: Segmentation fault
-srun: Terminating StepId=135863937.71
+srun: error: c5n0478: tasks 0-3: Segmentation fault
+srun: Terminating StepId=135864369.71

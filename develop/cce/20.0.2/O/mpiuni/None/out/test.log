@@ -214,8 +214,8 @@ ESMF_F90ESMFPRELOADLINKLIBS=-lesmf -lesmftrace_preload -lpioc -lnetcdff -lnetcdf
 
 
 --------------------------------------------------------------
-Compiling on Fri Oct 16 04:41:25 AM EDT 2026 on c5n0327
-Machine characteristics: Linux c5n0327 6.4.0-150600.23.125_15.0.26-cray_shasta_c #1 SMP Fri Jul 24 01:32:47 UTC 2026 (fa05198) x86_64 x86_64 x86_64 GNU/Linux
+Compiling on Sat Oct 17 04:34:31 AM EDT 2026 on c5n0452
+Machine characteristics: Linux c5n0452 6.4.0-150600.23.125_15.0.26-cray_shasta_c #1 SMP Fri Jul 24 01:32:47 UTC 2026 (fa05198) x86_64 x86_64 x86_64 GNU/Linux
 ==============================================================
  
 make[1]: Entering directory '/tmp/cce_20.0.2_mpiuni_O_develop/esmf'
@@ -19275,6 +19275,7 @@ PASS: mpiuni/O: src/Infrastructure/DELayout/tests/ESMF_DELayoutUTest.F90
 PASS: mpiuni/O: src/Infrastructure/DELayout/tests/ESMF_DELayoutWorkQueueUTest.F90
 PASS: mpiuni/O: src/Infrastructure/DistGrid/tests/ESMC_DistGridUTest.c
 PASS: mpiuni/O: src/Infrastructure/DistGrid/tests/ESMF_DistGridCreateGetUTest.F90
+PASS: mpiuni/O: src/Infrastructure/Field/tests/ESMC_FieldRegridDynMaskPredefVoteUTest.c
 PASS: mpiuni/O: src/Infrastructure/Field/tests/ESMC_FieldSMMFromFileUTest.c
 PASS: mpiuni/O: src/Infrastructure/Field/tests/ESMC_FieldUTest.c
 PASS: mpiuni/O: src/Infrastructure/Field/tests/ESMF_FieldArbGridUTest.F90
@@ -19425,9 +19426,11 @@ PASS: mpiuni/O: src/prologue/tests/ESMF_WordsizeUTest.F90
 The following unit test files failed to build, failed to execute or crashed during execution:
 
 CRASHED: mpiuni/O: src/Infrastructure/Field/tests/ESMC_FieldGridGridRegridCsrvUTest.c
+CRASHED: mpiuni/O: src/Infrastructure/Field/tests/ESMC_FieldGridGridRegridUTest.c
+CRASHED: mpiuni/O: src/Infrastructure/Field/tests/ESMC_FieldGridRegrid2UTest.c
+CRASHED: mpiuni/O: src/Infrastructure/Field/tests/ESMC_FieldGridRegridUTest.c
 CRASHED: mpiuni/O: src/Infrastructure/Field/tests/ESMC_FieldRegridCsrvUTest.c
 CRASHED: mpiuni/O: src/Infrastructure/Field/tests/ESMC_FieldRegridDynMaskPredefSrcUTest.c
-CRASHED: mpiuni/O: src/Infrastructure/Field/tests/ESMC_FieldRegridDynMaskPredefVoteUTest.c
 CRASHED: mpiuni/O: src/Infrastructure/Route/tests/ESMC_RouteHandleUTest.c
 CRASHED: mpiuni/O: src/Infrastructure/VM/tests/ESMF_VMComponentUTest.F90
 CRASHED: mpiuni/O: src/Superstructure/Component/tests/ESMC_ComponentUTest.c
@@ -19435,11 +19438,8 @@ CRASHED: mpiuni/O: src/Superstructure/Component/tests/ESMC_ComponentUTest.c
 
 The following unit test files had failed unit tests:
 
-FAIL: mpiuni/O: src/Infrastructure/Field/tests/ESMC_FieldGridGridRegridUTest.c
-FAIL: mpiuni/O: src/Infrastructure/Field/tests/ESMC_FieldGridRegrid2UTest.c
 FAIL: mpiuni/O: src/Infrastructure/Field/tests/ESMC_FieldGridRegridCsrv2UTest.c
 FAIL: mpiuni/O: src/Infrastructure/Field/tests/ESMC_FieldGridRegridCsrvUTest.c
-FAIL: mpiuni/O: src/Infrastructure/Field/tests/ESMC_FieldGridRegridUTest.c
 FAIL: mpiuni/O: src/Infrastructure/Field/tests/ESMC_FieldRegridUTest.c
 FAIL: mpiuni/O: src/Infrastructure/Field/tests/ESMF_FieldRegridCSUTest.F90
 FAIL: mpiuni/O: src/Infrastructure/Grid/tests/ESMF_GridCreateUTest.F90
@@ -19447,12 +19447,9 @@ FAIL: mpiuni/O: src/Infrastructure/Grid/tests/ESMF_GridCreateUTest.F90
 
 The following individual unit tests fail:
 
-   FAIL: mpiuni/O:  Execute ESMC_FieldRegrid(), ESMC_FieldGridGridRegridUTest.c, line 420: Did not return ESMF_SUCCESS
-   FAIL: mpiuni/O:  Execute ESMC_FieldRegrid(), ESMC_FieldGridRegrid2UTest.c, line 455: Did not return ESMF_SUCCESS
    FAIL: mpiuni/O:  Execute ESMC_FieldRegrid(), ESMC_FieldGridRegridCsrv2UTest.c, line 546: Did not return ESMF_SUCCESS
    FAIL: mpiuni/O:  Regridding Validation, ESMC_FieldGridRegridCsrv2UTest.c, line 648: Did not have acceptable accuracy
    FAIL: mpiuni/O:  Execute ESMC_FieldRegrid(), ESMC_FieldGridRegridCsrvUTest.c, line 518: Did not return ESMF_SUCCESS
-   FAIL: mpiuni/O:  Execute ESMC_FieldRegrid(), ESMC_FieldGridRegridUTest.c, line 416: Did not return ESMF_SUCCESS
    FAIL: mpiuni/O:  Execute ESMC_FieldRegrid(), ESMC_FieldRegridUTest.c, line 373: Did not return ESMF_SUCCESS
    FAIL: mpiuni/O:  Execute ESMC_FieldRegrid(), ESMC_FieldRegridUTest.c, line 583: Did not return ESMF_SUCCESS
    FAIL: mpiuni/O:   Bilinear regrid a cubed sphere Mesh, ESMF_FieldRegridCSUTest.F90, line 196:  Test unsuccessful
@@ -19471,7 +19468,7 @@ The log and stdout files for the unit tests can be found at:
 /tmp/cce_20.0.2_mpiuni_O_develop/esmf/test/testO/Unicos.cce.64.mpiuni.default
 
 
-Found 12697 exhaustive single processor unit tests, 12603 passed and 94 failed.
+Found 12697 exhaustive single processor unit tests, 12588 passed and 109 failed.
 
 make[2]: Leaving directory '/tmp/cce_20.0.2_mpiuni_O_develop/esmf'
 make[2]: Entering directory '/tmp/cce_20.0.2_mpiuni_O_develop/esmf/src/system_tests'
@@ -29619,6 +29616,6 @@ Found 43 single processor examples, 43 passed and 0 failed.
 
 
 UNIT TESTS SUMMARY
-Found 12697 exhaustive single processor unit tests, 12603 passed and 94 failed.
+Found 12697 exhaustive single processor unit tests, 12588 passed and 109 failed.
 
 make[1]: Leaving directory '/tmp/cce_20.0.2_mpiuni_O_develop/esmf'

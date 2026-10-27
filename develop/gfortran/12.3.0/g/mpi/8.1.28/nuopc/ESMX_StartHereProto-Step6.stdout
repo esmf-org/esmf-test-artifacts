@@ -1,0 +1,100 @@
+2026-10-27 04:29:12
+[2026-10-27T14:14:08.486] error: couldn't chdir to `/tmp/gfortran_12.3.0_mpi_g_develop/nuopc-app-prototypes/ESMX_StartHereProto': No such file or directory: going to /tmp instead
+
+Program received signal SIGFPE: Floating-point exception - erroneous arithmetic operation.
+
+Backtrace for this error:
+#0  0x146b3a94b25e in ???
+#1  0x146b3a94a245 in ???
+#2  0x146b39fdf97f in ???
+#3  0x146b39db2a60 in ???
+#4  0x146b39d2c996 in ???
+#5  0x146b39dd21f1 in ???
+#6  0x146b39aebfa1 in ???
+#7  0x146b39b92d44 in ???
+#8  0x146b3d715b85 in ???
+#9  0x146b3d715b9a in ???
+#10  0x146b3d721abc in ???
+#11  0x146b3d6ab2b3 in ???
+#12  0x146b3d6af343 in ???
+#13  0x146b3d6ae944 in ???
+#14  0x146b3d6ae8fd in ???
+#15  0x4e0340 in PIOc_createfile_int
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Infrastructure/IO/PIO/ParallelIO/src/clib/pioc_support.c:2166
+#16  0x4da703 in PIOc_createfile
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Infrastructure/IO/PIO/ParallelIO/src/clib/pio_file.c:161
+#17  0x146b3ecb4ac1 in _ZN5ESMCI11PIO_Handler15openOneTileFileEibPi
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Infrastructure/IO/src/ESMCI_PIO_Handler.C:1377
+#18  0x146b3ea3632e in _ZN5ESMCI10IO_Handler4openERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE20ESMC_FileStatus_FlagbbPi
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Infrastructure/IO/src/ESMCI_IO_Handler.C:743
+#19  0x146b3ea40d1c in _ZN5ESMCI2IO4openERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE20ESMC_FileStatus_Flag15ESMC_IOFmt_Flagbb
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Infrastructure/IO/src/ESMCI_IO.C:873
+#20  0x146b3ea3fa5b in _ZN5ESMCI2IO5writeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE15ESMC_IOFmt_Flagb20ESMC_FileStatus_FlagPi
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Infrastructure/IO/src/ESMCI_IO.C:495
+#21  0x146b3ea33daf in c_esmc_iowrite_
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Infrastructure/IO/interface/ESMCI_IO_F.C:169
+#22  0x146b3f8a0c7d in __esmf_iomod_MOD_esmf_iowrite
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Infrastructure/IO/interface/ESMF_IO.F90:521
+#23  0x146b3f60271a in __esmf_fieldwrmod_MOD_esmf_fieldwrite
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Infrastructure/Field/src/ESMF_FieldWr.F90:277
+#24  0x146b3fde4b07 in __nuopc_auxiliary_MOD_nuopc_fieldwrite
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/addon/NUOPC/src/NUOPC_Auxiliary.F90:288
+#25  0x146b3fde3e22 in __nuopc_auxiliary_MOD_nuopc_statewrite
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/addon/NUOPC/src/NUOPC_Auxiliary.F90:498
+#26  0x458109 in datainitialize
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/DEFAULTINSTALLDIR/include/ESMX/Comps/ESMX_Data/ESMX_Data.F90:1854
+#27  0x146b3ec6cd85 in _ZNK5ESMCI13MethodElement7executeEPvPi
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Superstructure/Component/src/ESMCI_MethodTable.C:377
+#28  0x146b3ec6dc84 in _ZN5ESMCI11MethodTable7executeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPvPiPb
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Superstructure/Component/src/ESMCI_MethodTable.C:563
+#29  0x146b3ec6cc21 in c_esmc_methodtableexecuteef_
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Superstructure/Component/src/ESMCI_MethodTable.C:347
+#30  0x146b3efb0769 in __esmf_attachmethodsmod_MOD_esmf_methodgridcompexecute
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Superstructure/AttachMethods/src/ESMF_AttachMethods.F90:1281
+#31  0x146b4000cc04 in initializeipdvxp08
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/addon/NUOPC/src/NUOPC_ModelBase.F90:1410
+#32  0x146b3e942e27 in _ZN5ESMCI6FTable12callVFuncPtrEPKcPNS_2VMEPi
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Superstructure/Component/src/ESMCI_FTable.C:2192
+#33  0x146b3e940095 in ESMCI_FTableCallEntryPointVMHop
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Superstructure/Component/src/ESMCI_FTable.C:849
+#34  0x146b3ed9edcb in _ZN5ESMCI3VMK5enterEPNS_7VMKPlanEPvS3_
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Infrastructure/VM/src/ESMCI_VMKernel.C:2740
+#35  0x146b3edbd7b9 in _ZN5ESMCI2VM5enterEPNS_6VMPlanEPvS3_
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Infrastructure/VM/src/ESMCI_VM.C:1365
+#36  0x146b3e940524 in c_esmc_ftablecallentrypointvm_
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Superstructure/Component/src/ESMCI_FTable.C:1006
+#37  0x146b3f17bb51 in __esmf_compmod_MOD_esmf_compexecute
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Superstructure/Component/src/ESMF_Comp.F90:1274
+#38  0x146b3f66cf29 in __esmf_gridcompmod_MOD_esmf_gridcompinitialize
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Superstructure/Component/src/ESMF_GridComp.F90:1567
+#39  0x146b3ffa9692 in loopmodelcompss
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/addon/NUOPC/src/NUOPC_Driver.F90:2770
+#40  0x146b3ffac502 in initializeipdv02p5data
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/addon/NUOPC/src/NUOPC_Driver.F90:2719
+#41  0x146b3ffb0b9d in initializeipdv02p5
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/addon/NUOPC/src/NUOPC_Driver.F90:2229
+#42  0x146b3ffdf450 in initializegeneric
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/addon/NUOPC/src/NUOPC_Driver.F90:432
+#43  0x146b3e942e27 in _ZN5ESMCI6FTable12callVFuncPtrEPKcPNS_2VMEPi
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Superstructure/Component/src/ESMCI_FTable.C:2192
+#44  0x146b3e940095 in ESMCI_FTableCallEntryPointVMHop
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Superstructure/Component/src/ESMCI_FTable.C:849
+#45  0x146b3ed9edcb in _ZN5ESMCI3VMK5enterEPNS_7VMKPlanEPvS3_
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Infrastructure/VM/src/ESMCI_VMKernel.C:2740
+#46  0x146b3edbd7b9 in _ZN5ESMCI2VM5enterEPNS_6VMPlanEPvS3_
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Infrastructure/VM/src/ESMCI_VM.C:1365
+#47  0x146b3e940524 in c_esmc_ftablecallentrypointvm_
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Superstructure/Component/src/ESMCI_FTable.C:1006
+#48  0x146b3f17bb51 in __esmf_compmod_MOD_esmf_compexecute
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Superstructure/Component/src/ESMF_Comp.F90:1274
+#49  0x146b3f66cf29 in __esmf_gridcompmod_MOD_esmf_gridcompinitialize
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/src/Superstructure/Component/src/ESMF_GridComp.F90:1567
+#50  0x40e5e7 in esmx_app
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:385
+#51  0x40ecc6 in main
+	at /tmp/gfortran_12.3.0_mpi_g_develop/esmf/DEFAULTINSTALLDIR/include/ESMX/ESMX_App.F90:14
+srun: error: nid005976: task 0: Floating point exception
+srun: Terminating StepId=60360202.409
+[2026-10-27T14:14:10.748] error: *** STEP 60360202.409 ON nid005976 CANCELLED AT 2026-10-27T14:14:10 DUE TO TASK FAILURE ***
+srun: error: nid005976: tasks 1-3: Terminated
+srun: Force Terminated StepId=60360202.409

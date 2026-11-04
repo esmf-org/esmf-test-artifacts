@@ -217,7 +217,7 @@ ESMF_F90ESMFPRELOADLINKLIBS=-lesmf -lesmftrace_preload -lpioc -lnetcdf -lnetcdff
 
 
 --------------------------------------------------------------
-Compiling on Tue Nov 3 02:37:49 MST 2026 on bighorn.cgd.ucar.edu
+Compiling on Wed Nov 4 02:38:02 MST 2026 on bighorn.cgd.ucar.edu
 Machine characteristics: Linux bighorn.cgd.ucar.edu 4.18.0-553.179.1.el8_10.x86_64 #1 SMP Mon Oct 26 04:04:50 EDT 2026 x86_64 x86_64 x86_64 GNU/Linux
 ==============================================================
  
@@ -575,6 +575,7 @@ gcc    -L/project/esmf/ESMF-Nightly-Testing-Bighorn/nag_7.0_mpiuni_O_develop/esm
 rm -rf -f *.o *.mod
 nagfor -c -O0  -pic -DESMF_NAG_UNIX_MODULE -dusty -thread_safe -I/project/esmf/ESMF-Nightly-Testing-Bighorn/nag_7.0_mpiuni_O_develop/esmf/src/Infrastructure/VM/tests -I/project/esmf/ESMF-Nightly-Testing-Bighorn/nag_7.0_mpiuni_O_develop/esmf/build_config/Linux.nag.default -I/project/esmf/ESMF-Nightly-Testing-Bighorn/nag_7.0_mpiuni_O_develop/esmf/src/Infrastructure -I/project/esmf/ESMF-Nightly-Testing-Bighorn/nag_7.0_mpiuni_O_develop/esmf/src/Superstructure -I/project/esmf/ESMF-Nightly-Testing-Bighorn/nag_7.0_mpiuni_O_develop/esmf/mod/modO/Linux.nag.64.mpiuni.default -I/project/esmf/ESMF-Nightly-Testing-Bighorn/nag_7.0_mpiuni_O_develop/esmf/src/include -I/usr/local/netcdf-c-4.6.1-f-4.4.4-gcc-g++-8.1.0-nag-6.2/include -I/usr/local/netcdf-c-4.6.1-f-4.4.4-gcc-g++-8.1.0-nag-6.2/include  -DESMF_NO_INTEGER_1_BYTE -DESMF_NO_INTEGER_2_BYTE -DESMF_VERSION_STRING_GIT='"develop+g89e784e0c3"' -DESMF_MPIUNI -I/project/esmf/ESMF-Nightly-Testing-Bighorn/nag_7.0_mpiuni_O_develop/esmf/src/Infrastructure/stubs/mpiuni -DESMF_MOAB=1 -DESMF_LAPACK=1 -DESMF_LAPACK_INTERNAL=1 -DESMF_NO_ACC_SOFTWARE_STACK=1 -DESMF_PIO=1 -DESMF_NETCDF=1 -DYAML=ESMF_YAML -DESMF_YAMLCPP=1 -DESMF_NO_OPENMP -DESMF_NO_OPENACC -DESMF_TESTEXHAUSTIVE -DESMF_BOPT_O -DESMF_TESTPERFORMANCE -DESMF_TESTCOMPTUNNEL -DESMF_TESTWITHTHREADS -DS64=1 -DESMF_OS_Linux=1 -DESMF_COMM=mpiuni -DESMF_DIR=/project/esmf/ESMF-Nightly-Testing-Bighorn/nag_7.0_mpiuni_O_develop/esmf ESMF_VMUTest.F90 -o ESMF_VMUTest.o
 NAG Fortran Compiler Release 7.0(Yurakucho) Build 7005
+do_ypcall: clnt_call: RPC: Timed out
 Warning: ESMF_VMUTest.F90, line 1493: Local variable BASE is default initialised but never used
 Warning: ESMF_VMUTest.F90, line 71: Internal file WRITE to FAILMSG in thread-safe procedure TEST_VM_CURRENT
 Warning: ESMF_VMUTest.F90, line 72: Internal file WRITE to NAME in thread-safe procedure TEST_VM_CURRENT

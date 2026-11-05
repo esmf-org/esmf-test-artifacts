@@ -1,4 +1,4 @@
-2026-11-03 03:48:49
+2026-11-04 03:48:04
   Beginning Test, file ESMF_LocalArrayDataUTest.F90, line 75
   NUMBER_OF_PROCESSORS            4
   PASS  Creating a LocalArray from an allocated F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 91
@@ -436,8 +436,8 @@ LocalArrayPrint: Array at address 0x4ddb50:
   PASS  Verifying that original data was overridden by reference, ESMF_LocalArrayDataUTest.F90, line 468
   PASS  Destroying LocalArray created from an allocated F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 477
   PASS  Creating a LocalArray from an allocated F90 array pointer slice (:,:), ESMF_LocalArrayDataUTest.F90, line 491
-LocalArrayPrint: Array at address 0x4dd5f0:
-            rank = 2, typekind = 3, base_addr = 0x4dfe50
+LocalArrayPrint: Array at address 0x4dd3e0:
+            rank = 2, typekind = 3, base_addr = 0x4dfc40
             dim[0] = 100  dim[1] = 1  
   Integer, *4, Dim 2, Data values:
 ( 1, 1) =  20058
@@ -469,8 +469,8 @@ LocalArrayPrint: Array at address 0x4dd5f0:
   PASS  Verifying that original data was overridden by reference, ESMF_LocalArrayDataUTest.F90, line 468
   PASS  Destroying LocalArray created from an allocated F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 477
   PASS  Creating a LocalArray from an allocated F90 array pointer slice (:,:), ESMF_LocalArrayDataUTest.F90, line 491
-LocalArrayPrint: Array at address 0x4dd3e0:
-            rank = 2, typekind = 3, base_addr = 0x4dfc40
+LocalArrayPrint: Array at address 0x4dd5f0:
+            rank = 2, typekind = 3, base_addr = 0x4dfe50
             dim[0] = 100  dim[1] = 1  
   Integer, *4, Dim 2, Data values:
 ( 1, 1) =  20058
@@ -568,6 +568,39 @@ LocalArrayPrint: Array at address 0x4ddb50:
   PASS  Verifying that original data was overridden by reference, ESMF_LocalArrayDataUTest.F90, line 563
   PASS  Destroying LocalArray created from an allocated F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 572
   PASS  Creating a LocalArray from an allocated F90 array pointer slice (:,:), ESMF_LocalArrayDataUTest.F90, line 585
+LocalArrayPrint: Array at address 0x4dd3e0:
+            rank = 2, typekind = 3, base_addr = 0x4dee30
+            dim[0] = 100  dim[1] = 15  
+  Integer, *4, Dim 2, Data values:
+( 1, 1) =  11058
+( 2, 1) =  11059
+( 3, 1) =  11060
+( 4, 1) =  11061
+( 5, 1) =  11062
+( 6, 1) =  11063
+( 7, 1) =  11064
+( 8, 1) =  11065
+( 9, 1) =  11066
+(10, 1) =  11067
+  skipping to end ...
+(91,15) =  25148
+(92,15) =  25149
+(93,15) =  25150
+(94,15) =  25151
+(95,15) =  25152
+(96,15) =  25153
+(97,15) =  25154
+(98,15) =  25155
+(99,15) =  25156
+(100,15) =  25157
+  PASS  Printing LocalArray created from allocated F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 499
+  PASS  Obtaining access to data in LocalArray via F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 507
+  PASS  Verifying data in LocalArray via F90 array pointer access, ESMF_LocalArrayDataUTest.F90, line 520
+  PASS  Obtaining access to data in LocalArray via F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 537
+  PASS  Verifying data in LocalArray via F90 array pointer access, ESMF_LocalArrayDataUTest.F90, line 550
+  PASS  Verifying that original data was overridden by reference, ESMF_LocalArrayDataUTest.F90, line 563
+  PASS  Destroying LocalArray created from an allocated F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 572
+  PASS  Creating a LocalArray from an allocated F90 array pointer slice (:,:), ESMF_LocalArrayDataUTest.F90, line 585
 LocalArrayPrint: Array at address 0x4dd5f0:
             rank = 2, typekind = 3, base_addr = 0x4df040
             dim[0] = 100  dim[1] = 15  
@@ -626,39 +659,6 @@ LocalArrayPrint: Array at address 0x4dd3e0:
 (98,15) =  25155
 (99,15) =  25156
 (100,15) =  25157
-  PASS  Printing LocalArray created from allocated F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 499
-  PASS  Obtaining access to data in LocalArray via F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 507
-  PASS  Verifying data in LocalArray via F90 array pointer access, ESMF_LocalArrayDataUTest.F90, line 520
-  PASS  Obtaining access to data in LocalArray via F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 537
-  PASS  Verifying data in LocalArray via F90 array pointer access, ESMF_LocalArrayDataUTest.F90, line 550
-  PASS  Verifying that original data was overridden by reference, ESMF_LocalArrayDataUTest.F90, line 563
-  PASS  Destroying LocalArray created from an allocated F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 572
-  PASS  Creating a LocalArray from an allocated F90 array pointer slice (:,:), ESMF_LocalArrayDataUTest.F90, line 585
-LocalArrayPrint: Array at address 0x4dd3e0:
-            rank = 2, typekind = 3, base_addr = 0x4dee30
-            dim[0] = 100  dim[1] = 15  
-  Integer, *4, Dim 2, Data values:
-( 1, 1) =  11058
-( 2, 1) =  11059
-( 3, 1) =  11060
-( 4, 1) =  11061
-( 5, 1) =  11062
-( 6, 1) =  11063
-( 7, 1) =  11064
-( 8, 1) =  11065
-( 9, 1) =  11066
-(10, 1) =  11067
-  skipping to end ...
-(91,15) =  25148
-(92,15) =  25149
-(93,15) =  25150
-(94,15) =  25151
-(95,15) =  25152
-(96,15) =  25153
-(97,15) =  25154
-(98,15) =  25155
-(99,15) =  25156
-(100,15) =  25157
   PASS  Printing LocalArray created from allocated F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 593
   PASS  Obtaining access to data in LocalArray via F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 601
   PASS  Verifying data in LocalArray via F90 array pointer access, ESMF_LocalArrayDataUTest.F90, line 614
@@ -667,7 +667,7 @@ LocalArrayPrint: Array at address 0x4dd3e0:
   PASS  Verifying that original data was overridden by reference, ESMF_LocalArrayDataUTest.F90, line 657
   PASS  Destroying LocalArray created from an allocated F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 666
   Ending Test, file ESMF_LocalArrayDataUTest.F90, line 673
-  PET            0  Test Elapsed Time     1.513004302978516       msec.
+  PET            1  Test Elapsed Time     1.484155654907227       msec.
   PASS  Printing LocalArray created from allocated F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 593
   PASS  Obtaining access to data in LocalArray via F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 601
   PASS  Verifying data in LocalArray via F90 array pointer access, ESMF_LocalArrayDataUTest.F90, line 614
@@ -676,7 +676,7 @@ LocalArrayPrint: Array at address 0x4dd3e0:
   PASS  Verifying that original data was overridden by reference, ESMF_LocalArrayDataUTest.F90, line 657
   PASS  Destroying LocalArray created from an allocated F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 666
   Ending Test, file ESMF_LocalArrayDataUTest.F90, line 673
-  PET            1  Test Elapsed Time     1.540184020996094       msec.
+  PET            2  Test Elapsed Time     1.420021057128906       msec.
   PASS  Printing LocalArray created from allocated F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 593
   PASS  Obtaining access to data in LocalArray via F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 601
   PASS  Verifying data in LocalArray via F90 array pointer access, ESMF_LocalArrayDataUTest.F90, line 614
@@ -685,7 +685,7 @@ LocalArrayPrint: Array at address 0x4dd3e0:
   PASS  Verifying that original data was overridden by reference, ESMF_LocalArrayDataUTest.F90, line 657
   PASS  Destroying LocalArray created from an allocated F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 666
   Ending Test, file ESMF_LocalArrayDataUTest.F90, line 673
-  PET            3  Test Elapsed Time     1.540184020996094       msec.
+  PET            3  Test Elapsed Time     1.484155654907227       msec.
   PASS  Printing LocalArray created from allocated F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 593
   PASS  Obtaining access to data in LocalArray via F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 601
   PASS  Verifying data in LocalArray via F90 array pointer access, ESMF_LocalArrayDataUTest.F90, line 614
@@ -694,4 +694,4 @@ LocalArrayPrint: Array at address 0x4dd3e0:
   PASS  Verifying that original data was overridden by reference, ESMF_LocalArrayDataUTest.F90, line 657
   PASS  Destroying LocalArray created from an allocated F90 array pointer, ESMF_LocalArrayDataUTest.F90, line 666
   Ending Test, file ESMF_LocalArrayDataUTest.F90, line 673
-  PET            2  Test Elapsed Time     1.773118972778320       msec.
+  PET            0  Test Elapsed Time     1.701116561889648       msec.

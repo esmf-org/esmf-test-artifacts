@@ -1,11 +1,11 @@
-2026-11-03 22:41:21
+2026-11-05 22:43:22
   Beginning Test, file ESMF_VMComponentUTest.F90, line 287
   Beginning Test, file ESMF_VMComponentUTest.F90, line 287
   NUMBER_OF_PROCESSORS           4
   Beginning Test, file ESMF_VMComponentUTest.F90, line 287
   NUMBER_OF_PROCESSORS           4
-  NUMBER_OF_PROCESSORS           4
   Beginning Test, file ESMF_VMComponentUTest.F90, line 287
+  NUMBER_OF_PROCESSORS           4
   NUMBER_OF_PROCESSORS           4
  stdout before ESMF_GridCompSetVM() j,i=           1           1
  stdout before ESMF_GridCompSetVM() j,i=           1           1
@@ -27,6 +27,7 @@
  stdout after ESMF_GridCompSetServices() j,i=           1           1
  stdout after ESMF_GridCompSetServices() j,i=           1           1
  stdout after ESMF_GridCompSetServices() j,i=           1           1
+ stdout before ESMF_GridCompSetVM() j,i=           1           2
  stdout before ESMF_GridCompSetVM() j,i=           1           2
  stdout before ESMF_GridCompSetVM() j,i=           1           2
  stdout before ESMF_GridCompSetVM() j,i=           1           2
@@ -36,7 +37,6 @@
  stdout inside mygcomp_setvm()
  stdout between ESMF_GridCompSetVM() and ESMF_GridCompSetServices() j,i=
            1           2
- stdout before ESMF_GridCompSetVM() j,i=           1           2
  stdout inside mygcomp_setvm()
  stdout between ESMF_GridCompSetVM() and ESMF_GridCompSetServices() j,i=
            1           2
@@ -53,14 +53,14 @@
  ponentUTest.F90, line 362
   PASS  Component Create/SetServices/Destroy Test, ESMF_VMComponentUTest.F90, li
  ne 356
-  PASS  Component Create/SetServices/Destroy Test, ESMF_VMComponentUTest.F90, li
- ne 356
-  PASS  Check petCount for Component Create/SetServices/Destroy Test, ESMF_VMCom
- ponentUTest.F90, line 362
   PASS  Check petCount for Component Create/SetServices/Destroy Test, ESMF_VMCom
  ponentUTest.F90, line 362
   PASS  Component Create/SetServices/Destroy Test, ESMF_VMComponentUTest.F90, li
  ne 356
+  PASS  Component Create/SetServices/Destroy Test, ESMF_VMComponentUTest.F90, li
+ ne 356
+  PASS  Check petCount for Component Create/SetServices/Destroy Test, ESMF_VMCom
+ ponentUTest.F90, line 362
   PASS  Check petCount for Component Create/SetServices/Destroy Test, ESMF_VMCom
  ponentUTest.F90, line 362
  stdout inside mygcomp_setvmForcePthreads()
@@ -121,10 +121,10 @@
  stdout inside mygcomp_setvmForcePthreads()
   PASS  Component Create/SetServices/Destroy ForcePthreads with petList Test, ES
  MF_VMComponentUTest.F90, line 554
-  PASS  Check petCount for Component Create/SetServices/Destroy ForcePthreads wi
- th petList Test, ESMF_VMComponentUTest.F90, line 563
   PASS  Component Create/SetServices/Destroy ForcePthreads with petList Test, ES
  MF_VMComponentUTest.F90, line 554
+  PASS  Check petCount for Component Create/SetServices/Destroy ForcePthreads wi
+ th petList Test, ESMF_VMComponentUTest.F90, line 563
   PASS  Check petCount for Component Create/SetServices/Destroy ForcePthreads wi
  th petList Test, ESMF_VMComponentUTest.F90, line 563
   PASS  Component Create/SetServices/Destroy ForcePthreads with petList Test, ES
@@ -151,14 +151,14 @@
  ponentUTest.F90, line 624
   PASS  Component Create/SetServices/Destroy with empty petList Test, ESMF_VMCom
  ponentUTest.F90, line 624
+  PASS  Check petCount for Component Create/SetServices/Destroy with empty petLi
+ st Test, ESMF_VMComponentUTest.F90, line 630
   PASS  Component Create/SetServices/Destroy with empty petList Test, ESMF_VMCom
  ponentUTest.F90, line 624
   PASS  Check petCount for Component Create/SetServices/Destroy with empty petLi
  st Test, ESMF_VMComponentUTest.F90, line 630
   PASS  Check petCount for Component Create/SetServices/Destroy with empty petLi
  st Test, ESMF_VMComponentUTest.F90, line 630
-  PASS  Check petCount for Component Create/SetServices/Destroy with empty petLi
- st Test, ESMF_VMComponentUTest.F90, line 630
  stdout inside mygcomp_setvmForcePthreads()
  stdout inside mygcomp_setvmForcePthreads()
  stdout inside mygcomp_setvmForcePthreads()
@@ -177,8 +177,16 @@
  ne 710
   PASS  Component Create/SetServices/Destroy ForcePthreads with empty petList Te
  st, ESMF_VMComponentUTest.F90, line 687
+  PASS  Check petCount for Component Create/SetServices/Destroy ForcePthreads wi
+ th empty petList Test, ESMF_VMComponentUTest.F90, line 693
   PASS  Component Create/SetServices/Destroy ForcePthreads with empty petList Te
  st, ESMF_VMComponentUTest.F90, line 687
+  PASS  Testing VM IsCreated for uncreated object, ESMF_VMComponentUTest.F90, li
+ ne 703
+  PASS  Component Create/SetServices/Destroy ForcePthreads with empty petList Te
+ st, ESMF_VMComponentUTest.F90, line 687
+  PASS  Testing VM IsCreated for uncreated object, ESMF_VMComponentUTest.F90, li
+ ne 710
   PASS  Check petCount for Component Create/SetServices/Destroy ForcePthreads wi
  th empty petList Test, ESMF_VMComponentUTest.F90, line 693
   PASS  Check petCount for Component Create/SetServices/Destroy ForcePthreads wi
@@ -189,14 +197,6 @@
  ne 703
   PASS  Testing VM IsCreated for uncreated object, ESMF_VMComponentUTest.F90, li
  ne 710
-  PASS  Testing VM IsCreated for uncreated object, ESMF_VMComponentUTest.F90, li
- ne 710
-  PASS  Component Create/SetServices/Destroy ForcePthreads with empty petList Te
- st, ESMF_VMComponentUTest.F90, line 687
-  PASS  Check petCount for Component Create/SetServices/Destroy ForcePthreads wi
- th empty petList Test, ESMF_VMComponentUTest.F90, line 693
-  PASS  Testing VM IsCreated for uncreated object, ESMF_VMComponentUTest.F90, li
- ne 703
   PASS  Testing VM IsCreated for uncreated object, ESMF_VMComponentUTest.F90, li
  ne 710
   PASS  Create test VM for IsCreated, ESMF_VMComponentUTest.F90, line 718
@@ -208,27 +208,27 @@
   PASS  Testing SetVMStdRedirect(), ESMF_VMComponentUTest.F90, line 727
   PASS  Testing SetVMStdRedirect(), ESMF_VMComponentUTest.F90, line 727
   PASS  Set test VM for IsCreated, ESMF_VMComponentUTest.F90, line 736
-  PASS  Set test VM for IsCreated, ESMF_VMComponentUTest.F90, line 736
-  PASS  Get test VM for IsCreated, ESMF_VMComponentUTest.F90, line 744
-  PASS  Get test VM for IsCreated, ESMF_VMComponentUTest.F90, line 744
-  PASS  Set test VM for IsCreated, ESMF_VMComponentUTest.F90, line 736
-  PASS  Testing VM IsCreated for created object, ESMF_VMComponentUTest.F90, line
-  752
-  PASS  Testing VM IsCreated for created object, ESMF_VMComponentUTest.F90, line
-  759
   PASS  Get test VM for IsCreated, ESMF_VMComponentUTest.F90, line 744
   PASS  Testing VM IsCreated for created object, ESMF_VMComponentUTest.F90, line
   752
   PASS  Testing VM IsCreated for created object, ESMF_VMComponentUTest.F90, line
   759
+  PASS  Destroy test VM for IsCreated, ESMF_VMComponentUTest.F90, line 767
+  PASS  Set test VM for IsCreated, ESMF_VMComponentUTest.F90, line 736
+  PASS  Get test VM for IsCreated, ESMF_VMComponentUTest.F90, line 744
   PASS  Testing VM IsCreated for created object, ESMF_VMComponentUTest.F90, line
   752
-  PASS  Destroy test VM for IsCreated, ESMF_VMComponentUTest.F90, line 767
-  PASS  Destroy test VM for IsCreated, ESMF_VMComponentUTest.F90, line 767
   PASS  Testing VM IsCreated for created object, ESMF_VMComponentUTest.F90, line
   759
   PASS  Destroy test VM for IsCreated, ESMF_VMComponentUTest.F90, line 767
   PASS  Set test VM for IsCreated, ESMF_VMComponentUTest.F90, line 736
+  PASS  Get test VM for IsCreated, ESMF_VMComponentUTest.F90, line 744
+  PASS  Testing VM IsCreated for created object, ESMF_VMComponentUTest.F90, line
+  752
+  PASS  Testing VM IsCreated for created object, ESMF_VMComponentUTest.F90, line
+  759
+  PASS  Set test VM for IsCreated, ESMF_VMComponentUTest.F90, line 736
+  PASS  Destroy test VM for IsCreated, ESMF_VMComponentUTest.F90, line 767
   PASS  Get test VM for IsCreated, ESMF_VMComponentUTest.F90, line 744
   PASS  Testing VM IsCreated for created object, ESMF_VMComponentUTest.F90, line
   752
@@ -32251,11 +32251,11 @@
   Ending Test, file ESMF_VMComponentUTest.F90, line 875
   PASS  Exhaustive Component Create/SetServices/Destroy ForcePthreads Test, ESMF
  _VMComponentUTest.F90, line 871
-  Ending Test, file ESMF_VMComponentUTest.F90, line 875
   PASS  Exhaustive Component Create/SetServices/Destroy ForcePthreads Test, ESMF
  _VMComponentUTest.F90, line 871
   Ending Test, file ESMF_VMComponentUTest.F90, line 875
-  PET           3  Test Elapsed Time    13688.7580000000       msec.
-  PET           1  Test Elapsed Time    13959.0200000000       msec.
-  PET           2  Test Elapsed Time    13930.9240000000       msec.
-  PET           0  Test Elapsed Time    13759.2590000000       msec.
+  Ending Test, file ESMF_VMComponentUTest.F90, line 875
+  PET           1  Test Elapsed Time    14136.2260000000       msec.
+  PET           3  Test Elapsed Time    13662.4170000000       msec.
+  PET           2  Test Elapsed Time    14141.2710000000       msec.
+  PET           0  Test Elapsed Time    13693.4430000000       msec.

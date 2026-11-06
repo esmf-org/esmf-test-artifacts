@@ -1,7 +1,4 @@
-2026-11-03 22:41:21
-  Beginning Test, file ESMF_IO_MultitileUTest.F90, line 116
-  Beginning Test, file ESMF_IO_MultitileUTest.F90, line 116
-  NUMBER_OF_PROCESSORS           8
+2026-11-05 22:43:22
   Beginning Test, file ESMF_IO_MultitileUTest.F90, line 116
   NUMBER_OF_PROCESSORS           8
   Beginning Test, file ESMF_IO_MultitileUTest.F90, line 116
@@ -10,6 +7,9 @@
   NUMBER_OF_PROCESSORS           8
   Beginning Test, file ESMF_IO_MultitileUTest.F90, line 116
   NUMBER_OF_PROCESSORS           8
+  Beginning Test, file ESMF_IO_MultitileUTest.F90, line 116
+  NUMBER_OF_PROCESSORS           8
+  Beginning Test, file ESMF_IO_MultitileUTest.F90, line 116
   NUMBER_OF_PROCESSORS           8
   Beginning Test, file ESMF_IO_MultitileUTest.F90, line 116
   NUMBER_OF_PROCESSORS           8
@@ -55,8 +55,12 @@
  titileUTest.F90, line 167
   PASS  Read a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, l
  ine 151
-  PASS  Confirm that simple FieldBundle-read fields match originals, ESMF_IO_Mul
- titileUTest.F90, line 167
+  PASS  Read a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, l
+ ine 151
+  PASS  Read a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, l
+ ine 151
+  PASS  Confirm that FieldBundle-read field with ungridded dim matches original,
+  ESMF_IO_MultitileUTest.F90, line 180
   PASS  Confirm that simple FieldBundle-read fields match originals, ESMF_IO_Mul
  titileUTest.F90, line 167
   PASS  Confirm that FieldBundle-read field with ungridded dim matches original,
@@ -79,20 +83,16 @@
  titileUTest.F90, line 167
   PASS  Confirm that FieldBundle-read field with ungridded dim matches original,
   ESMF_IO_MultitileUTest.F90, line 180
-  PASS  Read a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, l
- ine 151
   PASS  Confirm that simple FieldBundle-read fields match originals, ESMF_IO_Mul
  titileUTest.F90, line 167
   PASS  Confirm that FieldBundle-read field with ungridded dim matches original,
   ESMF_IO_MultitileUTest.F90, line 180
-  PASS  Read a FieldBundle with multi-tile fields, ESMF_IO_MultitileUTest.F90, l
- ine 151
   PASS  Confirm that simple FieldBundle-read fields match originals, ESMF_IO_Mul
  titileUTest.F90, line 167
   PASS  Confirm that FieldBundle-read field with ungridded dim matches original,
   ESMF_IO_MultitileUTest.F90, line 180
-  PASS  Confirm that FieldBundle-read field with ungridded dim matches original,
-  ESMF_IO_MultitileUTest.F90, line 180
+  PASS  Confirm that simple FieldBundle-read fields match originals, ESMF_IO_Mul
+ titileUTest.F90, line 167
   PASS  Confirm that FieldBundle-read field with ungridded dim matches original,
   ESMF_IO_MultitileUTest.F90, line 180
   PASS  Write a multi-tile Field to existing files, ESMF_IO_MultitileUTest.F90, 
@@ -131,10 +131,6 @@
   PASS  Read a multi-tile Field, ESMF_IO_MultitileUTest.F90, line 226
   PASS  Read a multi-tile Field, ESMF_IO_MultitileUTest.F90, line 226
   PASS  Confirm that Field-read field matches original, ESMF_IO_MultitileUTest.F
- 90, line 239
-  PASS  Read a multi-tile Field, ESMF_IO_MultitileUTest.F90, line 226
-  PASS  Confirm that Field-read field matches original, ESMF_IO_MultitileUTest.F
- 90, line 239
   PASS  Read a multi-tile Field, ESMF_IO_MultitileUTest.F90, line 226
   PASS  Confirm that Field-read field matches original, ESMF_IO_MultitileUTest.F
  90, line 239
@@ -147,9 +143,13 @@
   PASS  Read a multi-tile Field, ESMF_IO_MultitileUTest.F90, line 226
   PASS  Confirm that Field-read field matches original, ESMF_IO_MultitileUTest.F
  90, line 239
+  PASS  Read a multi-tile Field, ESMF_IO_MultitileUTest.F90, line 226
   PASS  Confirm that Field-read field matches original, ESMF_IO_MultitileUTest.F
  90, line 239
   PASS  Confirm that Field-read field matches original, ESMF_IO_MultitileUTest.F
+ 90, line 239
+  PASS  Confirm that Field-read field matches original, ESMF_IO_MultitileUTest.F
+ 90, line 239
  90, line 239
   PASS  Create single-tile field for failure testing, ESMF_IO_MultitileUTest.F90
  , line 251
@@ -215,8 +215,6 @@
   line 281
   PASS  Write an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90,
   line 281
-  PASS  Read an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, 
- line 294
   PASS  Read an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, 
  line 294
   PASS  Read an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, 
@@ -235,6 +233,8 @@
  line 294
   PASS  Confirm that ArrayBundle-read arrays match originals, ESMF_IO_MultitileU
  Test.F90, line 309
+  PASS  Read an ArrayBundle with multi-tile arrays, ESMF_IO_MultitileUTest.F90, 
+ line 294
   PASS  Confirm that ArrayBundle-read arrays match originals, ESMF_IO_MultitileU
  Test.F90, line 309
   PASS  Confirm that ArrayBundle-read arrays match originals, ESMF_IO_MultitileU
@@ -313,14 +313,16 @@
  F90, line 374
   PASS  Read a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.
  F90, line 374
-  PASS  Read a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.
- F90, line 374
-  PASS  Read a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.
- F90, line 374
   PASS  Confirm that Field-read field matches original with uneven DEs per PET, 
  ESMF_IO_MultitileUTest.F90, line 397
   PASS  Read a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.
  F90, line 374
+  PASS  Read a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.
+ F90, line 374
+  PASS  Confirm that Field-read field matches original with uneven DEs per PET, 
+ ESMF_IO_MultitileUTest.F90, line 397
+  PASS  Read a multi-tile Field with uneven DEs per PET, ESMF_IO_MultitileUTest.
+ F90, line 374
   PASS  Confirm that Field-read field matches original with uneven DEs per PET, 
  ESMF_IO_MultitileUTest.F90, line 397
   PASS  Confirm that Field-read field matches original with uneven DEs per PET, 
@@ -333,8 +335,6 @@
  ESMF_IO_MultitileUTest.F90, line 397
   PASS  Confirm that Field-read field matches original with uneven DEs per PET, 
  ESMF_IO_MultitileUTest.F90, line 397
-  PASS  Confirm that Field-read field matches original with uneven DEs per PET, 
- ESMF_IO_MultitileUTest.F90, line 397
   PASS  Write a multi-tile Field with uneven DEs per PET and ungridded dims, ESM
  F_IO_MultitileUTest.F90, line 413
   PASS  Write a multi-tile Field with uneven DEs per PET and ungridded dims, ESM
@@ -376,7 +376,6 @@
  _IO_MultitileUTest.F90, line 426
   PASS  Confirm that Field-read field matches original with uneven DEs per PET a
  nd ungridded dims, ESMF_IO_MultitileUTest.F90, line 449
-  Ending Test, file ESMF_IO_MultitileUTest.F90, line 462
   PASS  Confirm that Field-read field matches original with uneven DEs per PET a
  nd ungridded dims, ESMF_IO_MultitileUTest.F90, line 449
   Ending Test, file ESMF_IO_MultitileUTest.F90, line 462
@@ -391,11 +390,12 @@
   Ending Test, file ESMF_IO_MultitileUTest.F90, line 462
   Ending Test, file ESMF_IO_MultitileUTest.F90, line 462
   Ending Test, file ESMF_IO_MultitileUTest.F90, line 462
-  PET           0  Test Elapsed Time    141.403000000000       msec.
-  PET           2  Test Elapsed Time    398.555000000000       msec.
-  PET           3  Test Elapsed Time    398.335000000000       msec.
-  PET           5  Test Elapsed Time    397.995000000000       msec.
-  PET           6  Test Elapsed Time    396.989000000000       msec.
-  PET           7  Test Elapsed Time    398.354000000000       msec.
-  PET           1  Test Elapsed Time    398.563000000000       msec.
-  PET           4  Test Elapsed Time    398.501000000000       msec.
+  Ending Test, file ESMF_IO_MultitileUTest.F90, line 462
+  PET           3  Test Elapsed Time    232.621000000000       msec.
+  PET           4  Test Elapsed Time    232.128000000000       msec.
+  PET           0  Test Elapsed Time    137.735000000000       msec.
+  PET           1  Test Elapsed Time    233.080000000000       msec.
+  PET           2  Test Elapsed Time    232.758000000000       msec.
+  PET           5  Test Elapsed Time    232.431000000000       msec.
+  PET           6  Test Elapsed Time    233.072000000000       msec.
+  PET           7  Test Elapsed Time    233.327000000000       msec.

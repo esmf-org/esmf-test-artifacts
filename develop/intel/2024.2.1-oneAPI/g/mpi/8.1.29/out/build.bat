@@ -15,16 +15,16 @@ module load netcdf/4.9.3
 
 set -x
 export ESMF_MPIRUN=mpiexec
-export ESMF_DIR=/glade/derecho/scratch/sacks/esmf-testing/intel_2024.2.1-oneAPI_mpi_g_develop/esmf
+export ESMF_DIR=/glade/derecho/scratch/oehmke/ESMF_TEST_RUN/intel_2024.2.1-oneAPI_mpi_g_develop/esmf
 export ESMF_COMPILER=intel
 export ESMF_COMM=mpi
 export ESMF_NETCDF=nc-config
 export ESMF_BOPT='g'
 export ESMF_TESTEXHAUSTIVE='ON'
 export ESMF_TESTWITHTHREADS='ON'
-module list >& /glade/derecho/scratch/sacks/esmf-testing/intel_2024.2.1-oneAPI_mpi_g_develop/module-build.log
-export WORK_ROOT=/glade/derecho/scratch/sacks/esmf-testing/intel_2024.2.1-oneAPI_mpi_g_develop
-export TEMP_ROOT=/glade/derecho/scratch/sacks/esmf-testing/intel_2024.2.1-oneAPI_mpi_g_develop
+module list >& /glade/derecho/scratch/oehmke/ESMF_TEST_RUN/intel_2024.2.1-oneAPI_mpi_g_develop/module-build.log
+export WORK_ROOT=/glade/derecho/scratch/oehmke/ESMF_TEST_RUN/intel_2024.2.1-oneAPI_mpi_g_develop
+export TEMP_ROOT=/glade/derecho/scratch/oehmke/ESMF_TEST_RUN/intel_2024.2.1-oneAPI_mpi_g_develop
 cd $TEMP_ROOT/esmf
 export ESMF_DIR=`pwd`
 set -o pipefail

@@ -1,0 +1,211 @@
+2026-11-14 08:09:25
+============================= test session starts ==============================
+platform darwin -- Python 3.11.11, pytest-8.3.4, pluggy-1.6.0 -- /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpiuni_g_develop/esmpy_venv/bin/python3
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.11', 'Platform': 'macOS-26.6.2-arm64-arm-64bit', 'Packages': {'pytest': '8.3.4', 'pluggy': '1.6.0'}, 'Plugins': {'json-report': '1.5.0', 'metadata': '3.1.1'}}
+rootdir: /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpiuni_g_develop/esmf/src/addon/esmpy
+configfile: pyproject.toml
+testpaths: src/esmpy/test/test_build_utils, src/esmpy/test/test_interface, src/esmpy/test/test_api, examples/test_examples.py, src/esmpy/test/regrid_from_file/test_regrid_from_file.py
+plugins: json-report-1.5.0, metadata-3.1.1
+collecting ... Reading control file...
+collected 201 items
+
+src/esmpy/test/test_build_utils/test_version.py::TestVersion::test_search_macros_line_for_version_found PASSED
+src/esmpy/test/test_build_utils/test_version.py::TestVersion::test_search_macros_line_for_version_not_found PASSED
+src/esmpy/test/test_interface/test_cbindings.py::TestCbindings::test_interfaceint PASSED
+src/esmpy/test/test_interface/test_cbindings.py::TestCbindings::test_interfaceint2 XFAIL
+src/esmpy/test/test_interface/test_cbindings.py::TestCbindings::test_interfaceint3 XFAIL
+src/esmpy/test/test_interface/test_cbindings.py::TestCbindings::test_log PASSED
+src/esmpy/test/test_interface/test_cbindings.py::TestCbindings::test_vm 
+local_pet = 0
+
+
+pet_count = 1
+
+PASSED
+src/esmpy/test/test_interface/test_loadESMF_helpers.py::TestLoadESMFHelpers::test_check_version_beta_vs_release PASSED
+src/esmpy/test/test_interface/test_loadESMF_helpers.py::TestLoadESMFHelpers::test_check_version_betas_from_different_version PASSED
+src/esmpy/test/test_interface/test_loadESMF_helpers.py::TestLoadESMFHelpers::test_check_version_betas_from_same_version PASSED
+src/esmpy/test/test_interface/test_loadESMF_helpers.py::TestLoadESMFHelpers::test_check_version_equal PASSED
+src/esmpy/test/test_interface/test_loadESMF_helpers.py::TestLoadESMFHelpers::test_check_version_major_differs PASSED
+src/esmpy/test/test_interface/test_loadESMF_helpers.py::TestLoadESMFHelpers::test_check_version_minor_differs PASSED
+src/esmpy/test/test_interface/test_loadESMF_helpers.py::TestLoadESMFHelpers::test_check_version_patch_differs PASSED
+src/esmpy/test/test_interface/test_loadESMF_helpers.py::TestLoadESMFHelpers::test_check_version_release_vs_beta PASSED
+src/esmpy/test/test_api/test_array.py::TestMaskedArray::test_copy PASSED
+src/esmpy/test/test_api/test_array.py::TestMaskedArray::test_del PASSED
+src/esmpy/test/test_api/test_array.py::TestMaskedArray::test_doublebuffer PASSED
+src/esmpy/test/test_api/test_array.py::TestMaskedArray::test_mul PASSED
+src/esmpy/test/test_api/test_array.py::TestMaskedArray::test_new PASSED
+src/esmpy/test/test_api/test_array.py::TestMaskedArray::test_ownership PASSED
+src/esmpy/test/test_api/test_array.py::TestMaskedArray::test_reshape PASSED
+src/esmpy/test/test_api/test_array.py::TestMaskedArray::test_slice PASSED
+src/esmpy/test/test_api/test_array.py::TestMaskedArray::test_slice2 PASSED
+src/esmpy/test/test_api/test_array.py::TestMaskedArray::test_stress PASSED
+src/esmpy/test/test_api/test_field.py::TestField::test_field_area PASSED
+src/esmpy/test/test_api/test_field.py::TestField::test_field_create_from_gridfield PASSED
+src/esmpy/test/test_api/test_field.py::TestField::test_field_extradims_grid PASSED
+src/esmpy/test/test_api/test_field.py::TestField::test_field_extradims_mesh PASSED
+src/esmpy/test/test_api/test_field.py::TestField::test_field_grid_copy PASSED
+src/esmpy/test/test_api/test_field.py::TestField::test_field_grid_to_field_map PASSED
+src/esmpy/test/test_api/test_field.py::TestField::test_field_locstream_mask Field:
+    name = None
+    type = <TypeKind.R8: 6>
+    rank = 1
+    extra dimensions = 0
+    staggerloc = <StaggerLoc.CENTER: 0>
+    lower bounds = [array([0], dtype=int32)]
+    upper bounds = [array([5], dtype=int32)]
+    extra bounds = None
+    data = [array([7., 7., 7., 7., 7.])]
+    grid = 
+LocStream:
+    name = 'Test LocStream' 
+    lower_bounds = array([0], dtype=int32) 
+    upper_bounds = array([5], dtype=int32) 
+    keys = dict_items([('ESMF:X', array([1, 2, 3, 4, 5])), ('ESMF:Y', array([7, 7, 7, 7, 7])), ('ESMF:Mask', array([0, 0, 1, 1, 1]))]) 
+
+)
+PASSED
+src/esmpy/test/test_api/test_field.py::TestField::test_field_reshape PASSED
+src/esmpy/test/test_api/test_field.py::TestField::test_field_slice_grid PASSED
+src/esmpy/test/test_api/test_field.py::TestField::test_field_slice_grid_extraindices PASSED
+src/esmpy/test/test_api/test_field.py::TestField::test_field_slice_mesh PASSED
+src/esmpy/test/test_api/test_field.py::TestField::test_field_switchedindices_grid PASSED
+src/esmpy/test/test_api/test_field.py::TestField::test_field_uniqueness PASSED
+src/esmpy/test/test_api/test_field.py::TestField::test_meta_del PASSED
+src/esmpy/test/test_api/test_field.py::TestField::test_numpy_funcs PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_area PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_area_3D PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_attributes_2d PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_attributes_3d PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_coords Grid Bounds:
+    exclusiveLBounds = [0 0]
+<class 'numpy.ndarray'>
+    exclusiveUBounds = [12 20]
+int32
+PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_coords_3D Grid Bounds:
+    exclusiveLBounds = [0 0 0]
+<class 'numpy.ndarray'>
+    exclusiveUBounds = [10 20 30]
+int32
+PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_copy PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_2d SKIPPED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_3d SKIPPED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_cubed_sphere PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_cubed_sphere_reg_decomp_p_tile PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_from_file_gridspec1D PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_from_file_scrip PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_from_file_scrip_decomp_balanced_balanced PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_from_file_scrip_decomp_balanced_cyclic XFAIL
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_from_file_scrip_decomp_balanced_restfirst PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_from_file_scrip_decomp_balanced_restlast PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_from_file_scrip_decomp_cyclic_balanced XFAIL
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_from_file_scrip_decomp_cyclic_cyclic XFAIL
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_from_file_scrip_decomp_cyclic_restfirst XFAIL
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_from_file_scrip_decomp_cyclic_restlast XFAIL
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_from_file_scrip_decomp_restfirst_balanced PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_from_file_scrip_decomp_restfirst_cyclic XFAIL
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_from_file_scrip_decomp_restfirst_restfirst PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_from_file_scrip_decomp_restfirst_restlast PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_from_file_scrip_decomp_restlast_balanced PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_from_file_scrip_decomp_restlast_cyclic XFAIL
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_from_file_scrip_decomp_restlast_restfirst PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_create_from_file_scrip_decomp_restlast_restlast PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_mask PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_mask_3D PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_periodic PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_slice_2d PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_slice_2d_corners PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_slice_3d PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_slice_3d_corners PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_slice_periodic PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_grid_with_multiple_des_per_pet PASSED
+src/esmpy/test/test_api/test_grid.py::TestGrid::test_slice_grid_created_from_file_scrip PASSED
+src/esmpy/test/test_api/test_locstream.py::TestLocStream::test_copy PASSED
+src/esmpy/test/test_api/test_locstream.py::TestLocStream::test_create LocStream:
+    name = 'Test LocStream' 
+    lower_bounds = array([0], dtype=int32) 
+    upper_bounds = array([5], dtype=int32) 
+    keys = dict_items([('ESMF:X', array([1, 2, 3, 4, 5])), ('ESMF:Y', array([7, 7, 7, 7, 7])), ('ESMF:Mask', array([0, 0, 1, 1, 1]))]) 
+
+PASSED
+src/esmpy/test/test_api/test_locstream.py::TestLocStream::test_create_sph_deg LocStream:
+    name = 'Test LocStream Spherical' 
+    lower_bounds = array([0], dtype=int32) 
+    upper_bounds = array([5], dtype=int32) 
+    keys = dict_items([('ESMF:Lon', array([1, 2, 3, 4, 5])), ('ESMF:Lat', array([7, 7, 7, 7, 7])), ('ESMF:Mask', array([0, 0, 1, 1, 1]))]) 
+
+PASSED
+src/esmpy/test/test_api/test_locstream.py::TestLocStream::test_create_sph_rad_3d LocStream:
+    name = 'Test LocStream Spherical 3D' 
+    lower_bounds = array([0], dtype=int32) 
+    upper_bounds = array([5], dtype=int32) 
+    keys = dict_items([('ESMF:Lon', array([1, 2, 3, 4, 5])), ('ESMF:Lat', array([7, 7, 7, 7, 7])), ('ESMF:Radius', array([4, 4, 4, 4, 4])), ('ESMF:Mask', array([0, 0, 1, 1, 1]))]) 
+
+PASSED
+src/esmpy/test/test_api/test_locstream.py::TestLocStream::test_mask PASSED
+src/esmpy/test/test_api/test_locstream.py::TestLocStream::test_pickle XFAIL
+src/esmpy/test/test_api/test_locstream.py::TestLocStream::test_slice PASSED
+src/esmpy/test/test_api/test_mesh.py::test_add_nodes_with_mask[None] PASSED
+src/esmpy/test/test_api/test_mesh.py::test_add_nodes_with_mask[mask_value1] PASSED
+src/esmpy/test/test_api/test_mesh.py::test_add_nodes_with_mask[mask_value2] PASSED
+src/esmpy/test/test_api/test_mesh.py::test_add_nodes_with_mask_bad PASSED
+src/esmpy/test/test_api/test_mesh.py::TestMesh::test_mesh_10 FAILED
+src/esmpy/test/test_api/test_mesh.py::TestMesh::test_mesh_5 FAILED
+src/esmpy/test/test_api/test_mesh.py::TestMesh::test_mesh_50 FAILED
+src/esmpy/test/test_api/test_mesh.py::TestMesh::test_mesh_50_mask_area FAILED
+src/esmpy/test/test_api/test_mesh.py::TestMesh::test_mesh_50_moab FAILED
+src/esmpy/test/test_api/test_mesh.py::TestMesh::test_mesh_50_ngons FAILED
+src/esmpy/test/test_api/test_mesh.py::TestMesh::test_mesh_copy FAILED
+src/esmpy/test/test_api/test_mesh.py::TestMesh::test_mesh_create_from_file_esmfmesh FAILED
+src/esmpy/test/test_api/test_mesh.py::TestMesh::test_mesh_create_from_file_scrip FAILED
+src/esmpy/test/test_api/test_mesh.py::TestMesh::test_mesh_slicing FAILED
+src/esmpy/test/test_api/test_mesh.py::TestMesh::test_slice_mesh_created_from_file_elem_coords FAILED
+src/esmpy/test/test_api/test_mesh.py::TestMesh::test_slice_mesh_created_from_file_esmfmesh FAILED
+src/esmpy/test/test_api/test_mesh.py::TestMesh::test_slice_mesh_created_from_file_scrip FAILED
+src/esmpy/test/test_api/test_pytest.py::TestPyTest::test_pytest_singlecorefailure SKIPPED
+src/esmpy/test/test_api/test_regrid.py::test_regrid_with_const_node_mask[RegridMethod.BILINEAR-None] Assertion failed: (valid_tag_handle( tag_handle )), function tag_get_data, file Core.cpp, line 2035.
+Fatal Python error: Aborted
+
+Current thread 0x00000001f9d7a180 (most recent call first):
+  File "/usr/local/esmf/esmf-testing/gfortran_14.2.0_mpiuni_g_develop/esmf/src/addon/esmpy/src/esmpy/interface/cbindings.py", line 2169 in ESMP_FieldRegridStore
+  File "/usr/local/esmf/esmf-testing/gfortran_14.2.0_mpiuni_g_develop/esmf/src/addon/esmpy/src/esmpy/api/regrid.py", line 196 in __init__
+  File "/usr/local/esmf/esmf-testing/gfortran_14.2.0_mpiuni_g_develop/esmf/src/addon/esmpy/src/esmpy/util/decorators.py", line 59 in new_func
+  File "/usr/local/esmf/esmf-testing/gfortran_14.2.0_mpiuni_g_develop/esmf/src/addon/esmpy/src/esmpy/test/test_api/test_regrid.py", line 130 in test_regrid_with_const_node_mask
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/_pytest/python.py", line 159 in pytest_pyfunc_call
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/pluggy/_callers.py", line 121 in _multicall
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/pluggy/_manager.py", line 120 in _hookexec
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/pluggy/_hooks.py", line 512 in __call__
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/_pytest/python.py", line 1627 in runtest
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/_pytest/runner.py", line 174 in pytest_runtest_call
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/pluggy/_callers.py", line 121 in _multicall
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/pluggy/_manager.py", line 120 in _hookexec
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/pluggy/_hooks.py", line 512 in __call__
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/_pytest/runner.py", line 242 in <lambda>
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/_pytest/runner.py", line 341 in from_call
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/_pytest/runner.py", line 241 in call_and_report
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/_pytest/runner.py", line 132 in runtestprotocol
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/_pytest/runner.py", line 113 in pytest_runtest_protocol
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/pluggy/_callers.py", line 121 in _multicall
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/pluggy/_manager.py", line 120 in _hookexec
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/pluggy/_hooks.py", line 512 in __call__
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/_pytest/main.py", line 362 in pytest_runtestloop
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/pluggy/_callers.py", line 121 in _multicall
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/pluggy/_manager.py", line 120 in _hookexec
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/pluggy/_hooks.py", line 512 in __call__
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/_pytest/main.py", line 337 in _main
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/_pytest/main.py", line 283 in wrap_session
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/_pytest/main.py", line 330 in pytest_cmdline_main
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/pluggy/_callers.py", line 121 in _multicall
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/pluggy/_manager.py", line 120 in _hookexec
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/pluggy/_hooks.py", line 512 in __call__
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/_pytest/config/__init__.py", line 175 in main
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/_pytest/config/__init__.py", line 201 in console_main
+  File "/usr/local/esmf/esmf-testing/conda_environments/esmf-test-scripts-environment-python3.11-numpy1.26/lib/python3.11/site-packages/pytest/__main__.py", line 9 in <module>
+  File "<frozen runpy>", line 88 in _run_code
+  File "<frozen runpy>", line 198 in _run_module_as_main
+
+Extension modules: numpy.core._multiarray_umath, numpy.core._multiarray_tests, numpy.linalg._umath_linalg, numpy.fft._pocketfft_internal, numpy.random._common, numpy.random.bit_generator, numpy.random._bounded_integers, numpy.random._mt19937, numpy.random.mtrand, numpy.random._philox, numpy.random._pcg64, numpy.random._sfc64, numpy.random._generator (total: 13)
+/usr/local/esmf/esmf-testing/gfortran_14.2.0_mpiuni_g_develop/esmf/src/Infrastructure/stubs/mpiuni/mpirun: line 46: 88799 Abort trap: 6           $progname $*

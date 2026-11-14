@@ -1,0 +1,131 @@
+2026-11-14 07:39:59
+20261114 074815.066 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.066 INFO             PET0 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20261114 074815.066 INFO             PET0 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20261114 074815.066 INFO             PET0 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20261114 074815.066 INFO             PET0 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20261114 074815.066 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.066 INFO             PET0 Running with ESMF Version   : develop+gf46a6385c9
+20261114 074815.066 INFO             PET0 ESMF library build date/time: "Nov 14 2026" "07:38:38"
+20261114 074815.066 INFO             PET0 ESMF library build location : /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpiuni_O_develop/esmf
+20261114 074815.066 INFO             PET0 ESMF_COMM                   : mpiuni
+20261114 074815.066 INFO             PET0 ESMF_MOAB                   : enabled
+20261114 074815.066 INFO             PET0 ESMF_LAPACK                 : enabled
+20261114 074815.066 INFO             PET0 ESMF_NETCDF                 : enabled
+20261114 074815.066 INFO             PET0 ESMF_PNETCDF                : disabled
+20261114 074815.066 INFO             PET0 ESMF_PIO                    : enabled
+20261114 074815.066 INFO             PET0 ESMF_YAMLCPP                : enabled
+20261114 074815.066 INFO             PET0  Beginning Test, file ESMF_MeshUTest.F90, line 110
+20261114 074815.066 INFO             PET0  NUMBER_OF_PROCESSORS           1
+20261114 074815.066 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.066 INFO             PET0 !!!        MOAB turned OFF            !!!
+20261114 074815.066 INFO             PET0 !!! Meshes now created using native   !!!
+20261114 074815.066 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.066 INFO             PET0  PASS  Testing Mesh IsCreated for uncreated object, ESMF_MeshUTest.F90, line 134
+20261114 074815.066 INFO             PET0  PASS  Testing Mesh IsCreated for uncreated object, ESMF_MeshUTest.F90, line 142
+20261114 074815.066 INFO             PET0  PASS  Create test Mesh for IsCreated, ESMF_MeshUTest.F90, line 151
+20261114 074815.066 INFO             PET0  PASS  Testing Mesh IsCreated for created object, ESMF_MeshUTest.F90, line 159
+20261114 074815.066 INFO             PET0  PASS  Testing Mesh IsCreated for created object, ESMF_MeshUTest.F90, line 167
+20261114 074815.066 INFO             PET0  PASS  Testing MeshGet, accessing name, ESMF_MeshUTest.F90, line 175
+20261114 074815.066 INFO             PET0 meshName=bigbadmeshname
+20261114 074815.067 INFO             PET0  PASS  Destroy test Mesh for IsCreated, ESMF_MeshUTest.F90, line 184
+20261114 074815.067 INFO             PET0  PASS  Testing Mesh IsCreated for destroyed object, ESMF_MeshUTest.F90, line 192
+20261114 074815.067 INFO             PET0  PASS  Testing Mesh IsCreated for destroyed object, ESMF_MeshUTest.F90, line 200
+20261114 074815.067 INFO             PET0  PASS  Test creating a small 2x2 2D QUAD Mesh in 3 steps on 1 proc, ESMF_MeshUTest.F90, line 343
+20261114 074815.067 INFO             PET0  PASS  Mesh equality before assignment Test, ESMF_MeshUTest.F90, line 361
+20261114 074815.067 INFO             PET0  PASS  Mesh assignment and equality Test, ESMF_MeshUTest.F90, line 380
+20261114 074815.067 INFO             PET0  PASS  MeshDestroy Test, ESMF_MeshUTest.F90, line 398
+20261114 074815.067 INFO             PET0  PASS  Mesh equality after destroy Test, ESMF_MeshUTest.F90, line 417
+20261114 074815.067 INFO             PET0  PASS  Mesh non-equality after destroy Test, ESMF_MeshUTest.F90, line 436
+20261114 074815.067 INFO             PET0  PASS  Test creating a small 2x2 2D QUAD Mesh in 1 step on 4 procs and MeshGet, ESMF_MeshUTest.F90, line 738
+20261114 074815.067 INFO             PET0  PASS  Test ESMF_MeshFreeMemory(), ESMF_MeshUTest.F90, line 779
+20261114 074815.067 ERROR            PET0 ESMF_Mesh.F90:884 ESMF_MeshAddElements() Wrong object specified  - - MeshAddNodes() should be called before this
+20261114 074815.067 ERROR            PET0 ESMF_Mesh.F90:1100 ESMF_MeshAddNodes() Wrong object specified  - - MeshCreate() should be called before this
+20261114 074815.067 ERROR            PET0 ESMF_Mesh.F90:5237 ESMF_MeshGet Wrong object specified  - - the mesh has not been fully created
+20261114 074815.067 ERROR            PET0 /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpiuni_O_develop/esmf/src/Infrastructure/Mesh/src/ESMCI_Mesh_Glue.C:842 ESMCI_meshaddelements() Value unrecognized or out of range  - element connectivity list doesn't contain the right number of entries
+20261114 074815.067 ERROR            PET0 /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpiuni_O_develop/esmf/src/Infrastructure/Mesh/src/ESMCI_Mesh_Glue.C:1692 ESMCI_meshaddelements() Value unrecognized or out of range  - Internal subroutine call returned Error
+20261114 074815.067 ERROR            PET0 ESMCI_MeshCap.C:623 MeshCap::meshaddelements() Value unrecognized or out of range  - Internal subroutine call returned Error
+20261114 074815.067 ERROR            PET0 ESMF_Mesh.F90:959 ESMF_MeshAddElements() Value unrecognized or out of range  - Internal subroutine call returned Error
+20261114 074815.067 ERROR            PET0 /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpiuni_O_develop/esmf/src/Infrastructure/Mesh/src/ESMCI_Mesh_Glue.C:1049 ESMCI_meshaddelements() Value unrecognized or out of range  - - there are nodes on this PET that were not used in the element connectivity list
+20261114 074815.067 ERROR            PET0 /usr/local/esmf/esmf-testing/gfortran_14.2.0_mpiuni_O_develop/esmf/src/Infrastructure/Mesh/src/ESMCI_Mesh_Glue.C:1692 ESMCI_meshaddelements() Value unrecognized or out of range  - Internal subroutine call returned Error
+20261114 074815.067 ERROR            PET0 ESMCI_MeshCap.C:623 MeshCap::meshaddelements() Value unrecognized or out of range  - Internal subroutine call returned Error
+20261114 074815.067 ERROR            PET0 ESMF_Mesh.F90:959 ESMF_MeshAddElements() Value unrecognized or out of range  - Internal subroutine call returned Error
+20261114 074815.067 INFO             PET0  PASS  Test error checking, ESMF_MeshUTest.F90, line 906
+20261114 074815.067 INFO             PET0  PASS  Test Mesh Serialize/Deserialize, ESMF_MeshUTest.F90, line 998
+20261114 074815.067 INFO             PET0  PASS  Test Mesh Find Point, ESMF_MeshUTest.F90, line 1080
+20261114 074815.068 INFO             PET0  PASS  Test setting and getting area of Mesh, ESMF_MeshUTest.F90, line 1229
+20261114 074815.068 INFO             PET0  PASS  Test Mesh Create Redist, ESMF_MeshUTest.F90, line 1332
+20261114 074815.068 INFO             PET0  PASS  Test Mesh Create Redist: Different Location Node Element, ESMF_MeshUTest.F90, line 1441
+20261114 074815.068 INFO             PET0  PASS  Test Mesh Create Redist with just element distgrid, ESMF_MeshUTest.F90, line 1521
+20261114 074815.068 INFO             PET0  PASS  Test Mesh Create Redist with just node distgrid, ESMF_MeshUTest.F90, line 1620
+20261114 074815.068 INFO             PET0  PASS  Test Mesh Create Redist with just node distgrid and >4 sided elements, ESMF_MeshUTest.F90, line 1702
+20261114 074815.069 INFO             PET0  PASS  Test Mesh Create Redist with no distgrids, ESMF_MeshUTest.F90, line 1748
+20261114 074815.069 INFO             PET0  PASS  Test Mesh Create Redist: >1 localDECount Distgrid, ESMF_MeshUTest.F90, line 1861
+20261114 074815.069 INFO             PET0  PASS  Test Mesh Create >1 localDECount Distgrid, ESMF_MeshUTest.F90, line 1876
+20261114 074815.069 INFO             PET0  PASS  Test Mesh Create with coordSys ESMF_COORDSYS_SPH_DEG, ESMF_MeshUTest.F90, line 1967
+20261114 074815.069 INFO             PET0  PASS  Mesh Create with a pentagon and hexagon element, ESMF_MeshUTest.F90, line 2029
+20261114 074815.069 INFO             PET0  PASS  Mesh Create with C shaped element, ESMF_MeshUTest.F90, line 2070
+20261114 074815.069 INFO             PET0  PASS  Mesh Create Dual with a pentagon and hexagon element, ESMF_MeshUTest.F90, line 2100
+20261114 074815.070 INFO             PET0  PASS  Mesh create dual with element coords and masking, ESMF_MeshUTest.F90, line 2117
+20261114 074815.070 INFO             PET0  PASS  Mesh get element information with >4 sided elements, ESMF_MeshUTest.F90, line 2134
+20261114 074815.070 INFO             PET0  PASS  Mesh Create and then Redist with a pentagon and hexagon element, ESMF_MeshUTest.F90, line 2207
+20261114 074815.070 INFO             PET0  PASS  Mesh Create Dual, ESMF_MeshUTest.F90, line 2244
+20261114 074815.070 INFO             PET0  PASS  Mesh create dual from src mesh with centers in a crescent., ESMF_MeshUTest.F90, line 2281
+20261114 074815.070 INFO             PET0  PASS  Mesh Create with a multipart element, ESMF_MeshUTest.F90, line 2304
+20261114 074815.070 INFO             PET0  PASS  Mesh create easy elems, ESMF_MeshUTest.F90, line 2320
+20261114 074815.070 INFO             PET0  PASS  Mesh create easy elems 1 type, ESMF_MeshUTest.F90, line 2335
+20261114 074815.070 INFO             PET0  PASS  Test Mesh Empty Create, ESMF_MeshUTest.F90, line 2493
+20261114 074815.070 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.070 INFO             PET0 !!!        MOAB turned ON             !!!
+20261114 074815.070 INFO             PET0 !!! Meshes now created using MOAB     !!!
+20261114 074815.070 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.070 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.070 INFO             PET0 !!!        MOAB turned OFF            !!!
+20261114 074815.071 INFO             PET0 !!! Meshes now created using native   !!!
+20261114 074815.071 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.071 INFO             PET0  PASS  Test creating a MOAB Mesh, ESMF_MeshUTest.F90, line 2622
+20261114 074815.071 INFO             PET0  PASS  Test get of element mask and area info, ESMF_MeshUTest.F90, line 2731
+20261114 074815.071 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.071 INFO             PET0 !!!        MOAB turned ON             !!!
+20261114 074815.071 INFO             PET0 !!! Meshes now created using MOAB     !!!
+20261114 074815.071 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.071 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.071 INFO             PET0 !!!        MOAB turned OFF            !!!
+20261114 074815.071 INFO             PET0 !!! Meshes now created using native   !!!
+20261114 074815.071 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.071 INFO             PET0  PASS  Test MOAB get of element mask and area info, ESMF_MeshUTest.F90, line 2855
+20261114 074815.071 INFO             PET0  PASS  Test Mesh Create from Grid with 1 width DE, ESMF_MeshUTest.F90, line 2871
+20261114 074815.072 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.072 INFO             PET0 !!!        MOAB turned ON             !!!
+20261114 074815.072 INFO             PET0 !!! Meshes now created using MOAB     !!!
+20261114 074815.072 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.074 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.074 INFO             PET0 !!!        MOAB turned OFF            !!!
+20261114 074815.074 INFO             PET0 !!! Meshes now created using native   !!!
+20261114 074815.074 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.074 INFO             PET0  PASS  Test MOAB Mesh Create from Grid, ESMF_MeshUTest.F90, line 2894
+20261114 074815.074 INFO             PET0  PASS  Mesh get/set of creation info (elementConn, etc.), ESMF_MeshUTest.F90, line 2908
+20261114 074815.074 INFO             PET0  PASS  Mesh set of >4 sided, ESMF_MeshUTest.F90, line 2922
+20261114 074815.074 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.074 INFO             PET0 !!!        MOAB turned ON             !!!
+20261114 074815.074 INFO             PET0 !!! Meshes now created using MOAB     !!!
+20261114 074815.074 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.074 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.074 INFO             PET0 !!!        MOAB turned OFF            !!!
+20261114 074815.074 INFO             PET0 !!! Meshes now created using native   !!!
+20261114 074815.074 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.074 INFO             PET0  PASS  MOAB Mesh Create with a pentagon and hexagon element, ESMF_MeshUTest.F90, line 2958
+20261114 074815.074 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.074 INFO             PET0 !!!        MOAB turned ON             !!!
+20261114 074815.074 INFO             PET0 !!! Meshes now created using MOAB     !!!
+20261114 074815.074 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.074 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.074 INFO             PET0 !!!        MOAB turned OFF            !!!
+20261114 074815.074 INFO             PET0 !!! Meshes now created using native   !!!
+20261114 074815.074 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261114 074815.074 INFO             PET0  PASS  Mesh Set/Get MOAB, ESMF_MeshUTest.F90, line 2998
+20261114 074815.075 INFO             PET0  PASS  Optional nodeOwners, ESMF_MeshUTest.F90, line 3012
+20261114 074815.075 INFO             PET0  PASS  Test ESMF_MeshWriteVTK() on Mesh with >4 elements., ESMF_MeshUTest.F90, line 3027
+20261114 074815.075 INFO             PET0  PASS  Test creating a Mesh with edges in 3 steps, ESMF_MeshUTest.F90, line 3040
+20261114 074815.075 INFO             PET0  Ending Test, file ESMF_MeshUTest.F90, line 3046
+20261114 074815.075 INFO             PET0  Finalizing ESMF

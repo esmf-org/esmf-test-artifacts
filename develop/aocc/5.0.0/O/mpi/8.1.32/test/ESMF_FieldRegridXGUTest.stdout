@@ -1,4 +1,4 @@
-2026-11-15 03:32:16
+2026-11-16 03:37:55
   Beginning Test, file ESMF_FieldRegridXGUTest.F90, line 51
   NUMBER_OF_PROCESSORS            4
   PASS  Regrid then create xgrid online and regrid through xgrid, overlapping cut, ESMF_FieldRegridXGUTest.F90, line 62
@@ -89,7 +89,7 @@ Total src flux:  0.1500000972E+00
     1.000000000000000     
   src flux and area sub:    0.3544348983050953        0.7055999559402473      
     1.000000000000000     
-  dst flux and area from direct Regrid:    0.3544348983050952      
+  dst flux and area from direct Regrid:    0.3544348983050953      
    0.7055999559402473        0.7055999559402473     
   recomputed src flux and area from direct Regrid:    0.3334605418271849      
    0.7055999559402473         1.000000000000000     
@@ -97,7 +97,7 @@ Total src flux:  0.1500000972E+00
    0.7055999559402473     
   dst flux and area:    0.3544348983050952        0.7055999559402473      
    0.7055999559402473     
-Verify:   0.3544348983E+00  0.3544348983E+00  0.0000000000E+00
+Verify:   0.3544348983E+00  0.3544348983E+00  0.3132375028E-15
   recomputed xgrid flux and area:    0.3544348983050952      
    0.7055999559402473        0.7055999559402473     
   recomputed src flux and area:    0.4432523918866066      
@@ -782,7 +782,7 @@ init_src_sph bounds:     1   24   46    1   90
 init_src_sph bounds:     1   24   46    1   90
   PASS  Regrid then create xgrid and regrid through xgrid, full spherical grids, ESMF_FieldRegridXGUTest.F90, line 233
   Ending Test, file ESMF_FieldRegridXGUTest.F90, line 235
-  PET            1  Test Elapsed Time     2738.645068000000       msec.
+  PET            1  Test Elapsed Time     2800.632871000000       msec.
 init_src_sph bounds:     3   46   60    1   60
 init_src_sph bounds:     3   46   60    1   60
   PASS  Regrid then create xgrid and regrid through xgrid, full spherical grids, ESMF_FieldRegridXGUTest.F90, line 224
@@ -802,7 +802,27 @@ init_src_sph bounds:     3   69   90    1   90
 init_src_sph bounds:     3   69   90    1   90
   PASS  Regrid then create xgrid and regrid through xgrid, full spherical grids, ESMF_FieldRegridXGUTest.F90, line 233
   Ending Test, file ESMF_FieldRegridXGUTest.F90, line 235
-  PET            3  Test Elapsed Time     2739.501334000000       msec.
+  PET            3  Test Elapsed Time     2801.752874000000       msec.
+init_src_sph bounds:     2   31   45    1   60
+init_src_sph bounds:     2   31   45    1   60
+  PASS  Regrid then create xgrid and regrid through xgrid, full spherical grids, ESMF_FieldRegridXGUTest.F90, line 224
+ startx:     0.000000000000000                47           68 coordX:  
+    186.0000000000000         190.0000000000000         194.0000000000000      
+    198.0000000000000         202.0000000000000         206.0000000000000      
+    210.0000000000000         214.0000000000000         218.0000000000000      
+    222.0000000000000         226.0000000000000         230.0000000000000      
+    234.0000000000000         238.0000000000000         242.0000000000000      
+    246.0000000000000         250.0000000000000         254.0000000000000      
+    258.0000000000000         262.0000000000000         266.0000000000000      
+    270.0000000000000     
+ eleCount =          6836 size(fptr) =          6836
+init_src_sph bounds:     2   47   68    1   90
+init_src_sph bounds:     2   47   68    1   90
+init_src_sph bounds:     2   47   68    1   90
+init_src_sph bounds:     2   47   68    1   90
+  PASS  Regrid then create xgrid and regrid through xgrid, full spherical grids, ESMF_FieldRegridXGUTest.F90, line 233
+  Ending Test, file ESMF_FieldRegridXGUTest.F90, line 235
+  PET            2  Test Elapsed Time     2800.944792000000       msec.
     14.00000000000000         18.00000000000000         22.00000000000000      
     26.00000000000000         30.00000000000000         34.00000000000000      
     38.00000000000000         42.00000000000000         46.00000000000000      
@@ -834,24 +854,4 @@ Verify:   0.2513274123E+02  0.2513274123E+02  0.1413579858E-15  0.8481479151E-15
 init_src_sph bounds:     0    1   23    1   90
   PASS  Regrid then create xgrid and regrid through xgrid, full spherical grids, ESMF_FieldRegridXGUTest.F90, line 233
   Ending Test, file ESMF_FieldRegridXGUTest.F90, line 235
-  PET            0  Test Elapsed Time     2741.775998000000       msec.
-init_src_sph bounds:     2   31   45    1   60
-init_src_sph bounds:     2   31   45    1   60
-  PASS  Regrid then create xgrid and regrid through xgrid, full spherical grids, ESMF_FieldRegridXGUTest.F90, line 224
- startx:     0.000000000000000                47           68 coordX:  
-    186.0000000000000         190.0000000000000         194.0000000000000      
-    198.0000000000000         202.0000000000000         206.0000000000000      
-    210.0000000000000         214.0000000000000         218.0000000000000      
-    222.0000000000000         226.0000000000000         230.0000000000000      
-    234.0000000000000         238.0000000000000         242.0000000000000      
-    246.0000000000000         250.0000000000000         254.0000000000000      
-    258.0000000000000         262.0000000000000         266.0000000000000      
-    270.0000000000000     
- eleCount =          6836 size(fptr) =          6836
-init_src_sph bounds:     2   47   68    1   90
-init_src_sph bounds:     2   47   68    1   90
-init_src_sph bounds:     2   47   68    1   90
-init_src_sph bounds:     2   47   68    1   90
-  PASS  Regrid then create xgrid and regrid through xgrid, full spherical grids, ESMF_FieldRegridXGUTest.F90, line 233
-  Ending Test, file ESMF_FieldRegridXGUTest.F90, line 235
-  PET            2  Test Elapsed Time     2739.703537000000       msec.
+  PET            0  Test Elapsed Time     2805.128494000000       msec.

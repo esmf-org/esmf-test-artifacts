@@ -1,4 +1,4 @@
-2026-11-17 03:31:41
+2026-11-18 03:37:29
   Beginning Test, file ESMF_VMUTest.F90, line 1118
   NUMBER_OF_PROCESSORS 4
   PASS  VM Get before initialization Test, ESMF_VMUTest.F90, line 1127
@@ -153,13 +153,13 @@ ncores = 4
   PASS  VM equality Test, ESMF_VMUTest.F90, line 134
   PASS  VM non-equality after destroy Test, ESMF_VMUTest.F90, line 142
   PASS  VM Time 5 Second Delay Test, ESMF_VMUTest.F90, line 159
- init_sec = 37
- end_sec = 42
+ init_sec = 3
+ end_sec = 8
  delay_time = 5
  delay_time = 5
   PASS  Verify delay was 5 or 6 Seconds Test, ESMF_VMUTest.F90, line 174
   PASS  VM Time Prec. Test, ESMF_VMUTest.F90, line 181
- vm_prec =  1.79999915417283773E-7
+ vm_prec =  1.70999982174180332E-7
   PASS  VM Time Prec. Value Test, ESMF_VMUTest.F90, line 188
   PASS  VM Reduce ESMF_REDUCE_SUM Test: integer, ESMF_VMUTest.F90, line 217
  Global sum:
@@ -228,13 +228,13 @@ ncores = 4
   PASS  VM equality Test, ESMF_VMUTest.F90, line 134
   PASS  VM non-equality after destroy Test, ESMF_VMUTest.F90, line 142
   PASS  VM Time 5 Second Delay Test, ESMF_VMUTest.F90, line 159
- init_sec = 37
- end_sec = 42
+ init_sec = 3
+ end_sec = 8
  delay_time = 5
  delay_time = 5
   PASS  Verify delay was 5 or 6 Seconds Test, ESMF_VMUTest.F90, line 174
   PASS  VM Time Prec. Test, ESMF_VMUTest.F90, line 181
- vm_prec =  1.79999915417283773E-7
+ vm_prec =  2.20999993416626239E-7
   PASS  VM Time Prec. Value Test, ESMF_VMUTest.F90, line 188
   PASS  VM Reduce ESMF_REDUCE_SUM Test: integer, ESMF_VMUTest.F90, line 217
  Global sum:
@@ -302,13 +302,13 @@ ncores = 4
   PASS  VM equality Test, ESMF_VMUTest.F90, line 134
   PASS  VM non-equality after destroy Test, ESMF_VMUTest.F90, line 142
   PASS  VM Time 5 Second Delay Test, ESMF_VMUTest.F90, line 159
- init_sec = 37
- end_sec = 42
+ init_sec = 3
+ end_sec = 8
  delay_time = 5
  delay_time = 5
   PASS  Verify delay was 5 or 6 Seconds Test, ESMF_VMUTest.F90, line 174
   PASS  VM Time Prec. Test, ESMF_VMUTest.F90, line 181
- vm_prec =  3.90999957744497806E-7
+ vm_prec =  1.8100001852872083E-7
   PASS  VM Time Prec. Value Test, ESMF_VMUTest.F90, line 188
   PASS  VM Reduce ESMF_REDUCE_SUM Test: integer, ESMF_VMUTest.F90, line 217
  Global sum:
@@ -362,6 +362,7 @@ ncores = 4
  2  farray1(1):  201.  farray1(2): 202.
   PASS  Verify Reduce ESMF_REDUCE_MINResults Test: ESMF_KIND_R8, ESMF_VMUTest.F90, line 394
   PASS  VM Reduce ESMF_REDUCE_MINTest: ESMF_KIND_R4, ESMF_VMUTest.F90, line 409
+ Global min:
   PASS  VM print Test, ESMF_VMUTest.F90, line 1167
   PASS  VMLog w/ prefix, ESMF_VMUTest.F90, line 1174
   PASS  VMLogSystem w/ prefix, ESMF_VMUTest.F90, line 1181
@@ -376,13 +377,13 @@ ncores = 4
   PASS  VM equality Test, ESMF_VMUTest.F90, line 134
   PASS  VM non-equality after destroy Test, ESMF_VMUTest.F90, line 142
   PASS  VM Time 5 Second Delay Test, ESMF_VMUTest.F90, line 159
- init_sec = 37
- end_sec = 42
+ init_sec = 3
+ end_sec = 8
  delay_time = 5
  delay_time = 5
   PASS  Verify delay was 5 or 6 Seconds Test, ESMF_VMUTest.F90, line 174
   PASS  VM Time Prec. Test, ESMF_VMUTest.F90, line 181
- vm_prec =  3.59999830834567547E-7
+ vm_prec =  2.60999996726241079E-7
   PASS  VM Time Prec. Value Test, ESMF_VMUTest.F90, line 188
   PASS  VM Reduce ESMF_REDUCE_SUM Test: integer, ESMF_VMUTest.F90, line 217
  Global sum:
@@ -563,7 +564,6 @@ ncores = 4
   PASS  VM All Reduce ESMF_REDUCE_MAXTest: ESMF_KIND_R4, ESMF_VMUTest.F90, line 1044
  1 f4array3( 1 )= 301. f4array3_soln( 1 )= 301.
  1 f4array3( 2 )= 302. f4array3_soln( 2 )= 302.
- Global min:
  2  f4array4(1):  50.  f4array4(2): 50.
  2  f4array1(1):  201.  f4array1(2): 202.
   PASS  Verify Reduce ESMF_REDUCE_MINResults Test: ESMF_KIND_R4, ESMF_VMUTest.F90, line 430
@@ -743,6 +743,8 @@ ncores = 4
   PASS  Create a Grid object, ESMF_VMUTest.F90, line 1393
  Object has been CREATED
  Base name    = Grid
+ Status: Base = Ready,  object = Ready
+ Proxy        = no
   PASS  VMId print test values Test, ESMF_VMUTest.F90, line 1323
   PASS  VMId Compare Test, ESMF_VMUTest.F90, line 1330
   PASS  VMId Set test values Test, ESMF_VMUTest.F90, line 1337
@@ -764,8 +766,6 @@ ncores = 4
   localID = 0
 --- ESMCI::VMId::print() end ---
  Root Info (Attributes):
- Status: Base = Ready,  object = Ready
- Proxy        = no
  Base ID = 2, vmID:
 --- ESMCI::VMId::print() start ---
   vmKeyWidth = 1
@@ -834,13 +834,6 @@ ncores = 4
   vmKeyWidth = 1
   vmKey=0x00000000
   localID = 0
---- ESMCI::VMId::print() end ---
-{
-  "ESMF": {
-    "Instance": {
-      "NamedAliasCount": 0
-    }
-  }
 }  PASS  Access Base of Grid, ESMF_VMUTest.F90, line 1405
  Grids Base ID = 2
   PASS  Create temporary VMId, ESMF_VMUTest.F90, line 1417
@@ -855,6 +848,20 @@ ncores = 4
       "NamedAliasCount": 0
     }
   }
+--- ESMCI::VMId::print() end ---
+{
+  "ESMF": {
+    "Instance": {
+      "NamedAliasCount": 0
+    }
+  }
+  PASS  Destroy VMId, ESMF_VMUTest.F90, line 1429
+  PASS  Access Base ID and VMId, ESMF_VMUTest.F90, line 1440
+--- ESMCI::VMId::print() start ---
+  vmKeyWidth = 1
+  vmKey=0xF0000000
+  localID = 0
+--- ESMCI::VMId::print() end ---
   PASS  Destroy VMId, ESMF_VMUTest.F90, line 1429
   PASS  Access Base ID and VMId, ESMF_VMUTest.F90, line 1440
 --- ESMCI::VMId::print() start ---
@@ -870,13 +877,6 @@ ncores = 4
   vmKey=0x00000000
   localID = 0
 --- ESMCI::VMId::print() end ---
-  PASS  Destroy VMId, ESMF_VMUTest.F90, line 1429
-  PASS  Access Base ID and VMId, ESMF_VMUTest.F90, line 1440
---- ESMCI::VMId::print() start ---
-  vmKeyWidth = 1
-  vmKey=0xF0000000
-  localID = 0
---- ESMCI::VMId::print() end ---
 }  PASS  Access Base of Grid, ESMF_VMUTest.F90, line 1405
  Grids Base ID = 2
   PASS  Create temporary VMId, ESMF_VMUTest.F90, line 1417
@@ -889,9 +889,6 @@ ncores = 4
   PASS  Access Base ID and VMId, ESMF_VMUTest.F90, line 1440
 --- ESMCI::VMId::print() start ---
   vmKeyWidth = 1
-  vmKey=0xF0000000
-  localID = 0
---- ESMCI::VMId::print() end ---
   PASS  Destroy VMId, ESMF_VMUTest.F90, line 1429
   PASS  Access Base ID and VMId, ESMF_VMUTest.F90, line 1440
 --- ESMCI::VMId::print() start ---
@@ -899,27 +896,30 @@ ncores = 4
   vmKey=0xF0000000
   localID = 0
 --- ESMCI::VMId::print() end ---
+  vmKey=0xF0000000
+  localID = 0
+--- ESMCI::VMId::print() end ---
   PASS  Write VMLogMemInfo into the default log w/o prefix, ESMF_VMUTest.F90, line 1451
   PASS  Write VMLogMemInfo into the default log w/ prefix, ESMF_VMUTest.F90, line 1461
   PASS  Write VMLogMemInfo into custom log w/o prefix, ESMF_VMUTest.F90, line 1475
   PASS  Write VMLogMemInfo into custom log w/ prefix, ESMF_VMUTest.F90, line 1485
   Ending Test, file ESMF_VMUTest.F90, line 1491
-  PET 2  Test Elapsed Time  4999.1660000000002  msec.
+  PET 1  Test Elapsed Time  5006.0990000000002  msec.
   PASS  Write VMLogMemInfo into the default log w/o prefix, ESMF_VMUTest.F90, line 1451
   PASS  Write VMLogMemInfo into the default log w/ prefix, ESMF_VMUTest.F90, line 1461
   PASS  Write VMLogMemInfo into custom log w/o prefix, ESMF_VMUTest.F90, line 1475
   PASS  Write VMLogMemInfo into custom log w/ prefix, ESMF_VMUTest.F90, line 1485
   Ending Test, file ESMF_VMUTest.F90, line 1491
-  PET 1  Test Elapsed Time  4996.0740000000005  msec.
+  PET 3  Test Elapsed Time  5004.0600000000004  msec.
   PASS  Write VMLogMemInfo into the default log w/o prefix, ESMF_VMUTest.F90, line 1451
   PASS  Write VMLogMemInfo into the default log w/ prefix, ESMF_VMUTest.F90, line 1461
   PASS  Write VMLogMemInfo into custom log w/o prefix, ESMF_VMUTest.F90, line 1475
   PASS  Write VMLogMemInfo into custom log w/ prefix, ESMF_VMUTest.F90, line 1485
   Ending Test, file ESMF_VMUTest.F90, line 1491
-  PET 3  Test Elapsed Time  4999.9859999999999  msec.
+  PET 0  Test Elapsed Time  5003.7110000000002  msec.
   PASS  Write VMLogMemInfo into the default log w/o prefix, ESMF_VMUTest.F90, line 1451
   PASS  Write VMLogMemInfo into the default log w/ prefix, ESMF_VMUTest.F90, line 1461
   PASS  Write VMLogMemInfo into custom log w/o prefix, ESMF_VMUTest.F90, line 1475
   PASS  Write VMLogMemInfo into custom log w/ prefix, ESMF_VMUTest.F90, line 1485
   Ending Test, file ESMF_VMUTest.F90, line 1491
-  PET 0  Test Elapsed Time  5003.6990000000005  msec.
+  PET 2  Test Elapsed Time  5006.3670000000002  msec.

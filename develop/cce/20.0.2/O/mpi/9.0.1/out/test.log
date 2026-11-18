@@ -215,8 +215,8 @@ ESMF_F90ESMFPRELOADLINKLIBS=-lesmf -lesmftrace_preload -lpioc -lnetcdff -lnetcdf
 
 
 --------------------------------------------------------------
-Compiling on Tue Nov 17 03:34:40 AM EST 2026 on c5n0124
-Machine characteristics: Linux c5n0124 6.4.0-150600.23.125_15.0.26-cray_shasta_c #1 SMP Fri Jul 24 01:32:47 UTC 2026 (fa05198) x86_64 x86_64 x86_64 GNU/Linux
+Compiling on Wed Nov 18 03:41:26 AM EST 2026 on c5n0111
+Machine characteristics: Linux c5n0111 6.4.0-150600.23.125_15.0.26-cray_shasta_c #1 SMP Fri Jul 24 01:32:47 UTC 2026 (fa05198) x86_64 x86_64 x86_64 GNU/Linux
 ==============================================================
  
 make[1]: Entering directory '/tmp/cce_20.0.2_mpi_O_develop/esmf'
@@ -19451,6 +19451,8 @@ PASS: mpi/O: src/Infrastructure/Container/tests/ESMF_ContainerUTest.F90
 PASS: mpi/O: src/Infrastructure/DELayout/tests/ESMF_DELayoutUTest.F90
 PASS: mpi/O: src/Infrastructure/DistGrid/tests/ESMC_DistGridUTest.c
 PASS: mpi/O: src/Infrastructure/DistGrid/tests/ESMF_DistGridCreateGetUTest.F90
+PASS: mpi/O: src/Infrastructure/Field/tests/ESMC_FieldRegridDynMaskPredefSrcUTest.c
+PASS: mpi/O: src/Infrastructure/Field/tests/ESMC_FieldRegridDynMaskPredefVoteUTest.c
 PASS: mpi/O: src/Infrastructure/Field/tests/ESMC_FieldSMMFromFileUTest.c
 PASS: mpi/O: src/Infrastructure/Field/tests/ESMC_FieldUTest.c
 PASS: mpi/O: src/Infrastructure/Field/tests/ESMF_FieldArbGridUTest.F90
@@ -19631,13 +19633,9 @@ The following unit test files failed to build, failed to execute or crashed duri
 CRASHED: mpi/O: src/Infrastructure/DELayout/tests/ESMF_DELayoutWorkQueueUTest.F90
 CRASHED: mpi/O: src/Infrastructure/Field/tests/ESMC_FieldGridGridRegridCsrvUTest.c
 CRASHED: mpi/O: src/Infrastructure/Field/tests/ESMC_FieldGridGridRegridUTest.c
-CRASHED: mpi/O: src/Infrastructure/Field/tests/ESMC_FieldGridRegrid2UTest.c
-CRASHED: mpi/O: src/Infrastructure/Field/tests/ESMC_FieldGridRegridCsrv2UTest.c
-CRASHED: mpi/O: src/Infrastructure/Field/tests/ESMC_FieldGridRegridCsrvUTest.c
 CRASHED: mpi/O: src/Infrastructure/Field/tests/ESMC_FieldGridRegridParUTest.c
 CRASHED: mpi/O: src/Infrastructure/Field/tests/ESMC_FieldGridRegridUTest.c
-CRASHED: mpi/O: src/Infrastructure/Field/tests/ESMC_FieldRegridDynMaskPredefSrcUTest.c
-CRASHED: mpi/O: src/Infrastructure/Field/tests/ESMC_FieldRegridDynMaskPredefVoteUTest.c
+CRASHED: mpi/O: src/Infrastructure/Field/tests/ESMC_FieldRegridCsrvUTest.c
 CRASHED: mpi/O: src/Infrastructure/Field/tests/ESMC_FieldRegridUTest.c
 CRASHED: mpi/O: src/Infrastructure/Grid/tests/ESMF_GridCreateUTest.F90
 CRASHED: mpi/O: src/Infrastructure/Route/tests/ESMC_RouteHandleUTest.c
@@ -19647,13 +19645,18 @@ CRASHED: mpi/O: src/Superstructure/Component/tests/ESMC_ComponentUTest.c
 
 The following unit test files had failed unit tests:
 
-FAIL: mpi/O: src/Infrastructure/Field/tests/ESMC_FieldRegridCsrvUTest.c
+FAIL: mpi/O: src/Infrastructure/Field/tests/ESMC_FieldGridRegrid2UTest.c
+FAIL: mpi/O: src/Infrastructure/Field/tests/ESMC_FieldGridRegridCsrv2UTest.c
+FAIL: mpi/O: src/Infrastructure/Field/tests/ESMC_FieldGridRegridCsrvUTest.c
 FAIL: mpi/O: src/Infrastructure/Field/tests/ESMF_FieldRegridCSUTest.F90
 
 
 The following individual unit tests fail:
 
-   FAIL: mpi/O:  Execute ESMC_FieldRegrid(), ESMC_FieldRegridCsrvUTest.c, line 371: Did not return ESMF_SUCCESS
+   FAIL: mpi/O:  Execute ESMC_FieldRegrid(), ESMC_FieldGridRegrid2UTest.c, line 455: Did not return ESMF_SUCCESS
+   FAIL: mpi/O:  Execute ESMC_FieldRegrid(), ESMC_FieldGridRegridCsrv2UTest.c, line 546: Did not return ESMF_SUCCESS
+   FAIL: mpi/O:  Regridding Validation, ESMC_FieldGridRegridCsrv2UTest.c, line 648: Did not have acceptable accuracy
+   FAIL: mpi/O:  Execute ESMC_FieldRegrid(), ESMC_FieldGridRegridCsrvUTest.c, line 518: Did not return ESMF_SUCCESS
    FAIL: mpi/O:   Bilinear regrid a cubed sphere Mesh, ESMF_FieldRegridCSUTest.F90, line 196:  Test unsuccessful
    FAIL: mpi/O:   Patch regrid a cubed sphere Mesh, ESMF_FieldRegridCSUTest.F90, line 212:  Test unsuccessful
    FAIL: mpi/O:   Nearest neighbor regrid a cubed sphere Mesh, ESMF_FieldRegridCSUTest.F90, line 231:  Test unsuccessful
@@ -19669,7 +19672,7 @@ The log and stdout files for the unit tests can be found at:
 /tmp/cce_20.0.2_mpi_O_develop/esmf/test/testO/Unicos.cce.64.mpi.default
 
 
-Found 14377 exhaustive multi-processor unit tests, 14233 passed and 144 failed.
+Found 14377 exhaustive multi-processor unit tests, 14249 passed and 128 failed.
 
 make[2]: Leaving directory '/tmp/cce_20.0.2_mpi_O_develop/esmf'
 make[2]: Entering directory '/tmp/cce_20.0.2_mpi_O_develop/esmf/src/system_tests'
@@ -30213,6 +30216,6 @@ Found 81 multi-processor examples, 80 passed and 1 failed.
 
 
 UNIT TESTS SUMMARY
-Found 14377 exhaustive multi-processor unit tests, 14233 passed and 144 failed.
+Found 14377 exhaustive multi-processor unit tests, 14249 passed and 128 failed.
 
 make[1]: Leaving directory '/tmp/cce_20.0.2_mpi_O_develop/esmf'

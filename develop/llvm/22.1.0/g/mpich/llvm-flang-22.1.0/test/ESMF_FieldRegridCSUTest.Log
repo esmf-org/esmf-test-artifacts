@@ -1,0 +1,189 @@
+2026-11-18 01:19:38
+20261118 094523.513 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261118 094523.513 INFO             PET0 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20261118 094523.513 INFO             PET0 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20261118 094523.513 INFO             PET0 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20261118 094523.513 INFO             PET0 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20261118 094523.513 INFO             PET0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261118 094523.513 INFO             PET0 Running with ESMF Version   : develop+g5a881c9ad5
+20261118 094523.513 INFO             PET0 ESMF library build date/time: "Nov 18 2026" "01:16:10"
+20261118 094523.513 INFO             PET0 ESMF library build location : /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/llvm_22.1.0_mpich_g_develop/esmf
+20261118 094523.513 INFO             PET0 ESMF_COMM                   : mpich
+20261118 094523.513 INFO             PET0 ESMF_MOAB                   : enabled
+20261118 094523.513 INFO             PET0 ESMF_LAPACK                 : enabled
+20261118 094523.513 INFO             PET0 ESMF_NETCDF                 : disabled
+20261118 094523.513 INFO             PET0 ESMF_PNETCDF                : disabled
+20261118 094523.513 INFO             PET0 ESMF_PIO                    : disabled
+20261118 094523.513 INFO             PET0 ESMF_YAMLCPP                : enabled
+20261118 094523.514 INFO             PET0  Beginning Test, file ./ESMF_FieldRegridCSUTest.F90, line 60
+20261118 094523.514 INFO             PET0  NUMBER_OF_PROCESSORS 4
+20261118 094523.732 INFO             PET0  PASS  Bilinear regrid a cubed sphere Grid with regular decomposition, ./ESMF_FieldRegridCSUTest.F90, line 80
+20261118 094523.903 INFO             PET0  PASS  Bilinear regrid a cubed sphere Grid with irregular decomposition, ./ESMF_FieldRegridCSUTest.F90, line 96
+20261118 094524.100 INFO             PET0  PASS  Bilinear regrid a cubed sphere Grid with ESMF_COORDSYS_SPH_RAD, ./ESMF_FieldRegridCSUTest.F90, line 112
+20261118 094525.774 INFO             PET0  PASS  Patch regrid a cubed sphere Grid, ./ESMF_FieldRegridCSUTest.F90, line 133
+20261118 094525.861 INFO             PET0  PASS  Nearest neighbor regrid a cubed sphere Grid, ./ESMF_FieldRegridCSUTest.F90, line 148
+20261118 094526.258 INFO             PET0  PASS  Conservative regrid a cubed sphere Grid with regular decomposition, ./ESMF_FieldRegridCSUTest.F90, line 164
+20261118 094526.636 INFO             PET0  PASS  Conservative regrid a cubed sphere Grid with irregular decomposition, ./ESMF_FieldRegridCSUTest.F90, line 180
+20261118 094527.412 INFO             PET0  PASS  Bilinear regrid a cubed sphere Mesh, ./ESMF_FieldRegridCSUTest.F90, line 196
+20261118 094530.070 INFO             PET0  PASS  Patch regrid a cubed sphere Mesh, ./ESMF_FieldRegridCSUTest.F90, line 216
+20261118 094530.518 INFO             PET0  PASS  Nearest neighbor regrid a cubed sphere Mesh, ./ESMF_FieldRegridCSUTest.F90, line 231
+20261118 094531.470 INFO             PET0  PASS  Conservative regrid a cubed sphere Mesh, ./ESMF_FieldRegridCSUTest.F90, line 246
+20261118 094531.470 ERROR            PET0 ESMF_IOGridmosaic.F90:429 ESMF_GridspecReadMosaic Library needed by ESMF not present  - - ESMF_NETCDF not defined when lib was compiled
+20261118 094531.471 ERROR            PET0 ESMF_Grid.F90:15953 ESMF_GridCreateMosaicReg() Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.471 ERROR            PET0 ./ESMF_FieldRegridCSUTest.F90:4195 test_bilinear_regrid_csgrid Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.471 INFO             PET0  PASS  Bilinear regrid a regularly decomposed cubed sphere Grid defined in GRIDSPEC Mosaic file, ./ESMF_FieldRegridCSUTest.F90, line 266
+20261118 094531.471 ERROR            PET0 ESMF_IOGridmosaic.F90:429 ESMF_GridspecReadMosaic Library needed by ESMF not present  - - ESMF_NETCDF not defined when lib was compiled
+20261118 094531.471 ERROR            PET0 ESMF_Grid.F90:16492 ESMF_GridCreateMosaicIReg() Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.471 ERROR            PET0 ./ESMF_FieldRegridCSUTest.F90:4212 test_bilinear_regrid_csgrid Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.471 INFO             PET0  PASS  Bilinear regrid an irregularly decomposed cubed sphere Grid defined in GRIDSPEC Mosaic file, ./ESMF_FieldRegridCSUTest.F90, line 286
+20261118 094531.471 ERROR            PET0 ESMF_IOGridmosaic.F90:429 ESMF_GridspecReadMosaic Library needed by ESMF not present  - - ESMF_NETCDF not defined when lib was compiled
+20261118 094531.471 ERROR            PET0 ESMF_Grid.F90:15953 ESMF_GridCreateMosaicReg() Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.471 ERROR            PET0 ./ESMF_FieldRegridCSUTest.F90:4623 test_conserve_regrid_csmosaic Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.471 INFO             PET0  PASS  Conservative regrid a regularly decomposed cubed sphere Grid defined in a GRIDSPEC Mosaic file, ./ESMF_FieldRegridCSUTest.F90, line 306
+20261118 094531.471 ERROR            PET0 ESMF_IOGridmosaic.F90:429 ESMF_GridspecReadMosaic Library needed by ESMF not present  - - ESMF_NETCDF not defined when lib was compiled
+20261118 094531.471 ERROR            PET0 ESMF_Grid.F90:16492 ESMF_GridCreateMosaicIReg() Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.471 ERROR            PET0 ./ESMF_FieldRegridCSUTest.F90:4640 test_conserve_regrid_csmosaic Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.471 INFO             PET0  PASS  Conservative regrid a irregularly decomposed cubed sphere Grid defined in a GRIDSPEC Mosaic file, ./ESMF_FieldRegridCSUTest.F90, line 331
+20261118 094531.471 INFO             PET0  Ending Test, file ./ESMF_FieldRegridCSUTest.F90, line 332
+20261118 094531.471 INFO             PET0  Finalizing ESMF
+20261118 094523.513 INFO             PET1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261118 094523.513 INFO             PET1 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20261118 094523.513 INFO             PET1 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20261118 094523.513 INFO             PET1 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20261118 094523.513 INFO             PET1 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20261118 094523.513 INFO             PET1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261118 094523.513 INFO             PET1 Running with ESMF Version   : develop+g5a881c9ad5
+20261118 094523.513 INFO             PET1 ESMF library build date/time: "Nov 18 2026" "01:16:10"
+20261118 094523.513 INFO             PET1 ESMF library build location : /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/llvm_22.1.0_mpich_g_develop/esmf
+20261118 094523.513 INFO             PET1 ESMF_COMM                   : mpich
+20261118 094523.513 INFO             PET1 ESMF_MOAB                   : enabled
+20261118 094523.513 INFO             PET1 ESMF_LAPACK                 : enabled
+20261118 094523.513 INFO             PET1 ESMF_NETCDF                 : disabled
+20261118 094523.513 INFO             PET1 ESMF_PNETCDF                : disabled
+20261118 094523.513 INFO             PET1 ESMF_PIO                    : disabled
+20261118 094523.513 INFO             PET1 ESMF_YAMLCPP                : enabled
+20261118 094523.514 INFO             PET1  Beginning Test, file ./ESMF_FieldRegridCSUTest.F90, line 60
+20261118 094523.514 INFO             PET1  NUMBER_OF_PROCESSORS 4
+20261118 094523.732 INFO             PET1  PASS  Bilinear regrid a cubed sphere Grid with regular decomposition, ./ESMF_FieldRegridCSUTest.F90, line 80
+20261118 094523.903 INFO             PET1  PASS  Bilinear regrid a cubed sphere Grid with irregular decomposition, ./ESMF_FieldRegridCSUTest.F90, line 96
+20261118 094524.100 INFO             PET1  PASS  Bilinear regrid a cubed sphere Grid with ESMF_COORDSYS_SPH_RAD, ./ESMF_FieldRegridCSUTest.F90, line 112
+20261118 094525.774 INFO             PET1  PASS  Patch regrid a cubed sphere Grid, ./ESMF_FieldRegridCSUTest.F90, line 133
+20261118 094525.861 INFO             PET1  PASS  Nearest neighbor regrid a cubed sphere Grid, ./ESMF_FieldRegridCSUTest.F90, line 148
+20261118 094526.258 INFO             PET1  PASS  Conservative regrid a cubed sphere Grid with regular decomposition, ./ESMF_FieldRegridCSUTest.F90, line 164
+20261118 094526.636 INFO             PET1  PASS  Conservative regrid a cubed sphere Grid with irregular decomposition, ./ESMF_FieldRegridCSUTest.F90, line 180
+20261118 094527.412 INFO             PET1  PASS  Bilinear regrid a cubed sphere Mesh, ./ESMF_FieldRegridCSUTest.F90, line 196
+20261118 094530.070 INFO             PET1  PASS  Patch regrid a cubed sphere Mesh, ./ESMF_FieldRegridCSUTest.F90, line 216
+20261118 094530.518 INFO             PET1  PASS  Nearest neighbor regrid a cubed sphere Mesh, ./ESMF_FieldRegridCSUTest.F90, line 231
+20261118 094531.470 INFO             PET1  PASS  Conservative regrid a cubed sphere Mesh, ./ESMF_FieldRegridCSUTest.F90, line 246
+20261118 094531.471 ERROR            PET1 ESMF_IOGridmosaic.F90:429 ESMF_GridspecReadMosaic Library needed by ESMF not present  - - ESMF_NETCDF not defined when lib was compiled
+20261118 094531.471 ERROR            PET1 ESMF_Grid.F90:15953 ESMF_GridCreateMosaicReg() Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.471 ERROR            PET1 ./ESMF_FieldRegridCSUTest.F90:4195 test_bilinear_regrid_csgrid Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.471 INFO             PET1  PASS  Bilinear regrid a regularly decomposed cubed sphere Grid defined in GRIDSPEC Mosaic file, ./ESMF_FieldRegridCSUTest.F90, line 266
+20261118 094531.471 ERROR            PET1 ESMF_IOGridmosaic.F90:429 ESMF_GridspecReadMosaic Library needed by ESMF not present  - - ESMF_NETCDF not defined when lib was compiled
+20261118 094531.471 ERROR            PET1 ESMF_Grid.F90:16492 ESMF_GridCreateMosaicIReg() Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.471 ERROR            PET1 ./ESMF_FieldRegridCSUTest.F90:4212 test_bilinear_regrid_csgrid Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.471 INFO             PET1  PASS  Bilinear regrid an irregularly decomposed cubed sphere Grid defined in GRIDSPEC Mosaic file, ./ESMF_FieldRegridCSUTest.F90, line 286
+20261118 094531.471 ERROR            PET1 ESMF_IOGridmosaic.F90:429 ESMF_GridspecReadMosaic Library needed by ESMF not present  - - ESMF_NETCDF not defined when lib was compiled
+20261118 094531.471 ERROR            PET1 ESMF_Grid.F90:15953 ESMF_GridCreateMosaicReg() Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.471 ERROR            PET1 ./ESMF_FieldRegridCSUTest.F90:4623 test_conserve_regrid_csmosaic Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.471 INFO             PET1  PASS  Conservative regrid a regularly decomposed cubed sphere Grid defined in a GRIDSPEC Mosaic file, ./ESMF_FieldRegridCSUTest.F90, line 306
+20261118 094531.471 ERROR            PET1 ESMF_IOGridmosaic.F90:429 ESMF_GridspecReadMosaic Library needed by ESMF not present  - - ESMF_NETCDF not defined when lib was compiled
+20261118 094531.471 ERROR            PET1 ESMF_Grid.F90:16492 ESMF_GridCreateMosaicIReg() Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.471 ERROR            PET1 ./ESMF_FieldRegridCSUTest.F90:4640 test_conserve_regrid_csmosaic Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.471 INFO             PET1  PASS  Conservative regrid a irregularly decomposed cubed sphere Grid defined in a GRIDSPEC Mosaic file, ./ESMF_FieldRegridCSUTest.F90, line 331
+20261118 094531.471 INFO             PET1  Ending Test, file ./ESMF_FieldRegridCSUTest.F90, line 332
+20261118 094531.471 INFO             PET1  Finalizing ESMF
+20261118 094523.513 INFO             PET2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261118 094523.513 INFO             PET2 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20261118 094523.513 INFO             PET2 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20261118 094523.513 INFO             PET2 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20261118 094523.513 INFO             PET2 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20261118 094523.513 INFO             PET2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261118 094523.513 INFO             PET2 Running with ESMF Version   : develop+g5a881c9ad5
+20261118 094523.513 INFO             PET2 ESMF library build date/time: "Nov 18 2026" "01:16:10"
+20261118 094523.513 INFO             PET2 ESMF library build location : /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/llvm_22.1.0_mpich_g_develop/esmf
+20261118 094523.513 INFO             PET2 ESMF_COMM                   : mpich
+20261118 094523.513 INFO             PET2 ESMF_MOAB                   : enabled
+20261118 094523.513 INFO             PET2 ESMF_LAPACK                 : enabled
+20261118 094523.513 INFO             PET2 ESMF_NETCDF                 : disabled
+20261118 094523.513 INFO             PET2 ESMF_PNETCDF                : disabled
+20261118 094523.513 INFO             PET2 ESMF_PIO                    : disabled
+20261118 094523.513 INFO             PET2 ESMF_YAMLCPP                : enabled
+20261118 094523.514 INFO             PET2  Beginning Test, file ./ESMF_FieldRegridCSUTest.F90, line 60
+20261118 094523.514 INFO             PET2  NUMBER_OF_PROCESSORS 4
+20261118 094523.732 INFO             PET2  PASS  Bilinear regrid a cubed sphere Grid with regular decomposition, ./ESMF_FieldRegridCSUTest.F90, line 80
+20261118 094523.903 INFO             PET2  PASS  Bilinear regrid a cubed sphere Grid with irregular decomposition, ./ESMF_FieldRegridCSUTest.F90, line 96
+20261118 094524.100 INFO             PET2  PASS  Bilinear regrid a cubed sphere Grid with ESMF_COORDSYS_SPH_RAD, ./ESMF_FieldRegridCSUTest.F90, line 112
+20261118 094525.774 INFO             PET2  PASS  Patch regrid a cubed sphere Grid, ./ESMF_FieldRegridCSUTest.F90, line 133
+20261118 094525.860 INFO             PET2  PASS  Nearest neighbor regrid a cubed sphere Grid, ./ESMF_FieldRegridCSUTest.F90, line 148
+20261118 094526.258 INFO             PET2  PASS  Conservative regrid a cubed sphere Grid with regular decomposition, ./ESMF_FieldRegridCSUTest.F90, line 164
+20261118 094526.636 INFO             PET2  PASS  Conservative regrid a cubed sphere Grid with irregular decomposition, ./ESMF_FieldRegridCSUTest.F90, line 180
+20261118 094527.411 INFO             PET2  PASS  Bilinear regrid a cubed sphere Mesh, ./ESMF_FieldRegridCSUTest.F90, line 196
+20261118 094530.068 INFO             PET2  PASS  Patch regrid a cubed sphere Mesh, ./ESMF_FieldRegridCSUTest.F90, line 216
+20261118 094530.516 INFO             PET2  PASS  Nearest neighbor regrid a cubed sphere Mesh, ./ESMF_FieldRegridCSUTest.F90, line 231
+20261118 094531.469 INFO             PET2  PASS  Conservative regrid a cubed sphere Mesh, ./ESMF_FieldRegridCSUTest.F90, line 246
+20261118 094531.469 ERROR            PET2 ESMF_IOGridmosaic.F90:429 ESMF_GridspecReadMosaic Library needed by ESMF not present  - - ESMF_NETCDF not defined when lib was compiled
+20261118 094531.469 ERROR            PET2 ESMF_Grid.F90:15953 ESMF_GridCreateMosaicReg() Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.469 ERROR            PET2 ./ESMF_FieldRegridCSUTest.F90:4195 test_bilinear_regrid_csgrid Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.469 INFO             PET2  PASS  Bilinear regrid a regularly decomposed cubed sphere Grid defined in GRIDSPEC Mosaic file, ./ESMF_FieldRegridCSUTest.F90, line 266
+20261118 094531.469 ERROR            PET2 ESMF_IOGridmosaic.F90:429 ESMF_GridspecReadMosaic Library needed by ESMF not present  - - ESMF_NETCDF not defined when lib was compiled
+20261118 094531.469 ERROR            PET2 ESMF_Grid.F90:16492 ESMF_GridCreateMosaicIReg() Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.469 ERROR            PET2 ./ESMF_FieldRegridCSUTest.F90:4212 test_bilinear_regrid_csgrid Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.469 INFO             PET2  PASS  Bilinear regrid an irregularly decomposed cubed sphere Grid defined in GRIDSPEC Mosaic file, ./ESMF_FieldRegridCSUTest.F90, line 286
+20261118 094531.470 ERROR            PET2 ESMF_IOGridmosaic.F90:429 ESMF_GridspecReadMosaic Library needed by ESMF not present  - - ESMF_NETCDF not defined when lib was compiled
+20261118 094531.470 ERROR            PET2 ESMF_Grid.F90:15953 ESMF_GridCreateMosaicReg() Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.470 ERROR            PET2 ./ESMF_FieldRegridCSUTest.F90:4623 test_conserve_regrid_csmosaic Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.470 INFO             PET2  PASS  Conservative regrid a regularly decomposed cubed sphere Grid defined in a GRIDSPEC Mosaic file, ./ESMF_FieldRegridCSUTest.F90, line 306
+20261118 094531.470 ERROR            PET2 ESMF_IOGridmosaic.F90:429 ESMF_GridspecReadMosaic Library needed by ESMF not present  - - ESMF_NETCDF not defined when lib was compiled
+20261118 094531.470 ERROR            PET2 ESMF_Grid.F90:16492 ESMF_GridCreateMosaicIReg() Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.470 ERROR            PET2 ./ESMF_FieldRegridCSUTest.F90:4640 test_conserve_regrid_csmosaic Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.470 INFO             PET2  PASS  Conservative regrid a irregularly decomposed cubed sphere Grid defined in a GRIDSPEC Mosaic file, ./ESMF_FieldRegridCSUTest.F90, line 331
+20261118 094531.470 INFO             PET2  Ending Test, file ./ESMF_FieldRegridCSUTest.F90, line 332
+20261118 094531.470 INFO             PET2  Finalizing ESMF
+20261118 094523.513 INFO             PET3 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261118 094523.513 INFO             PET3 !!! THE ESMF_LOG IS SET TO OUTPUT ALL LOG MESSAGES !!!
+20261118 094523.513 INFO             PET3 !!!     THIS MAY CAUSE SLOWDOWN IN PERFORMANCE     !!!
+20261118 094523.513 INFO             PET3 !!! FOR PRODUCTION RUNS, USE:                      !!!
+20261118 094523.513 INFO             PET3 !!!                   ESMF_LOGKIND_Multi_On_Error  !!!
+20261118 094523.513 INFO             PET3 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+20261118 094523.513 INFO             PET3 Running with ESMF Version   : develop+g5a881c9ad5
+20261118 094523.513 INFO             PET3 ESMF library build date/time: "Nov 18 2026" "01:16:10"
+20261118 094523.513 INFO             PET3 ESMF library build location : /discover/nobackup/projects/gmao/SIteam/ESMF_Testing/llvm_22.1.0_mpich_g_develop/esmf
+20261118 094523.513 INFO             PET3 ESMF_COMM                   : mpich
+20261118 094523.514 INFO             PET3 ESMF_MOAB                   : enabled
+20261118 094523.514 INFO             PET3 ESMF_LAPACK                 : enabled
+20261118 094523.514 INFO             PET3 ESMF_NETCDF                 : disabled
+20261118 094523.514 INFO             PET3 ESMF_PNETCDF                : disabled
+20261118 094523.514 INFO             PET3 ESMF_PIO                    : disabled
+20261118 094523.514 INFO             PET3 ESMF_YAMLCPP                : enabled
+20261118 094523.514 INFO             PET3  Beginning Test, file ./ESMF_FieldRegridCSUTest.F90, line 60
+20261118 094523.514 INFO             PET3  NUMBER_OF_PROCESSORS 4
+20261118 094523.732 INFO             PET3  PASS  Bilinear regrid a cubed sphere Grid with regular decomposition, ./ESMF_FieldRegridCSUTest.F90, line 80
+20261118 094523.903 INFO             PET3  PASS  Bilinear regrid a cubed sphere Grid with irregular decomposition, ./ESMF_FieldRegridCSUTest.F90, line 96
+20261118 094524.100 INFO             PET3  PASS  Bilinear regrid a cubed sphere Grid with ESMF_COORDSYS_SPH_RAD, ./ESMF_FieldRegridCSUTest.F90, line 112
+20261118 094525.774 INFO             PET3  PASS  Patch regrid a cubed sphere Grid, ./ESMF_FieldRegridCSUTest.F90, line 133
+20261118 094525.860 INFO             PET3  PASS  Nearest neighbor regrid a cubed sphere Grid, ./ESMF_FieldRegridCSUTest.F90, line 148
+20261118 094526.258 INFO             PET3  PASS  Conservative regrid a cubed sphere Grid with regular decomposition, ./ESMF_FieldRegridCSUTest.F90, line 164
+20261118 094526.636 INFO             PET3  PASS  Conservative regrid a cubed sphere Grid with irregular decomposition, ./ESMF_FieldRegridCSUTest.F90, line 180
+20261118 094527.411 INFO             PET3  PASS  Bilinear regrid a cubed sphere Mesh, ./ESMF_FieldRegridCSUTest.F90, line 196
+20261118 094530.069 INFO             PET3  PASS  Patch regrid a cubed sphere Mesh, ./ESMF_FieldRegridCSUTest.F90, line 216
+20261118 094530.516 INFO             PET3  PASS  Nearest neighbor regrid a cubed sphere Mesh, ./ESMF_FieldRegridCSUTest.F90, line 231
+20261118 094531.469 INFO             PET3  PASS  Conservative regrid a cubed sphere Mesh, ./ESMF_FieldRegridCSUTest.F90, line 246
+20261118 094531.469 ERROR            PET3 ESMF_IOGridmosaic.F90:429 ESMF_GridspecReadMosaic Library needed by ESMF not present  - - ESMF_NETCDF not defined when lib was compiled
+20261118 094531.469 ERROR            PET3 ESMF_Grid.F90:15953 ESMF_GridCreateMosaicReg() Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.469 ERROR            PET3 ./ESMF_FieldRegridCSUTest.F90:4195 test_bilinear_regrid_csgrid Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.469 INFO             PET3  PASS  Bilinear regrid a regularly decomposed cubed sphere Grid defined in GRIDSPEC Mosaic file, ./ESMF_FieldRegridCSUTest.F90, line 266
+20261118 094531.469 ERROR            PET3 ESMF_IOGridmosaic.F90:429 ESMF_GridspecReadMosaic Library needed by ESMF not present  - - ESMF_NETCDF not defined when lib was compiled
+20261118 094531.469 ERROR            PET3 ESMF_Grid.F90:16492 ESMF_GridCreateMosaicIReg() Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.469 ERROR            PET3 ./ESMF_FieldRegridCSUTest.F90:4212 test_bilinear_regrid_csgrid Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.469 INFO             PET3  PASS  Bilinear regrid an irregularly decomposed cubed sphere Grid defined in GRIDSPEC Mosaic file, ./ESMF_FieldRegridCSUTest.F90, line 286
+20261118 094531.470 ERROR            PET3 ESMF_IOGridmosaic.F90:429 ESMF_GridspecReadMosaic Library needed by ESMF not present  - - ESMF_NETCDF not defined when lib was compiled
+20261118 094531.470 ERROR            PET3 ESMF_Grid.F90:15953 ESMF_GridCreateMosaicReg() Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.470 ERROR            PET3 ./ESMF_FieldRegridCSUTest.F90:4623 test_conserve_regrid_csmosaic Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.470 INFO             PET3  PASS  Conservative regrid a regularly decomposed cubed sphere Grid defined in a GRIDSPEC Mosaic file, ./ESMF_FieldRegridCSUTest.F90, line 306
+20261118 094531.470 ERROR            PET3 ESMF_IOGridmosaic.F90:429 ESMF_GridspecReadMosaic Library needed by ESMF not present  - - ESMF_NETCDF not defined when lib was compiled
+20261118 094531.470 ERROR            PET3 ESMF_Grid.F90:16492 ESMF_GridCreateMosaicIReg() Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.470 ERROR            PET3 ./ESMF_FieldRegridCSUTest.F90:4640 test_conserve_regrid_csmosaic Library needed by ESMF not present  - Internal subroutine call returned Error
+20261118 094531.470 INFO             PET3  PASS  Conservative regrid a irregularly decomposed cubed sphere Grid defined in a GRIDSPEC Mosaic file, ./ESMF_FieldRegridCSUTest.F90, line 331
+20261118 094531.470 INFO             PET3  Ending Test, file ./ESMF_FieldRegridCSUTest.F90, line 332
+20261118 094531.470 INFO             PET3  Finalizing ESMF

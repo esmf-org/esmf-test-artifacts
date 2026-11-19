@@ -1,4 +1,4 @@
-2026-11-18 03:37:00
+2026-11-19 03:46:17
   Beginning Test, file ESMF_FieldRegridXGUTest.F90, line 51
   NUMBER_OF_PROCESSORS 1
  !------------------------------------
@@ -10,12 +10,12 @@ Total src flux:  0.4500006338E+01
   src flux and area:  2.7760790735523355,  5.760000457763681,  9.
   src flux and area sub:  2.7760790735523355,  5.760000457763681,  9.
   dst flux and area from direct Regrid:  2.7760790735523351,  2*5.760000457763681
-  recomputed src flux and area from direct Regrid:  2.2274927791450541,  5.760000457763681,  9.
+  recomputed src flux and area from direct Regrid:  2.2274927791450545,  5.760000457763681,  9.
   xgrid flux and area:  2.7760790735523351,  2*5.760000457763681
   dst flux and area:  2.7760790735523351,  2*5.760000457763681
 Verify:   0.2776079074E+01  0.2776079074E+01  0.0000000000E+00
   recomputed xgrid flux and area:  2.7760790735523351,  2*5.760000457763681
-  recomputed src flux and area:  2.7760790735523355,  5.760000457763681,  9.
+  recomputed src flux and area:  2.776079073552336,  5.760000457763681,  9.
   PASS  Regrid then create xgrid online and regrid through xgrid, overlapping cut, ESMF_FieldRegridXGUTest.F90, line 62
  !------------------------------------
  !reverse small test
@@ -57,11 +57,11 @@ Total # of XGrid cells:  225
 Total src flux:  0.5000001173E+00
   src flux and area:  0.17999998437878603,  0.35999995708465704,  1.
   src flux and area sub:  0.17999998437878603,  0.35999995708465704,  1.
-  dst flux and area from direct Regrid:  0.17999998437878603,  2*0.35999995708465704
+  dst flux and area from direct Regrid:  0.179999984378786,  2*0.35999995708465704
   recomputed src flux and area from direct Regrid:  0.17999994894109517,  0.35999995708465704,  1.
   xgrid flux and area:  0.17999998437878603,  2*0.35999995708465704
   dst flux and area:  0.179999984378786,  2*0.35999995708465704
-Verify:   0.1799999844E+00  0.1799999844E+00  0.1541976557E-15
+Verify:   0.1799999844E+00  0.1799999844E+00  0.0000000000E+00
   recomputed xgrid flux and area:  0.179999984378786,  2*0.35999995708465704
   recomputed src flux and area:  0.50000006356087956,  0.35999995708465704,  1.
   PASS  Regrid then create xgrid online and regrid through xgrid, overlapping cut, ESMF_FieldRegridXGUTest.F90, line 86
@@ -271,8 +271,8 @@ init_src_sph bounds:     0    1   10    1   20
   xgrid flux and area:  9.28645408731618022E-2,  2*4.64322704365809011E-2
   dst flux and area:  9.28645408731617744E-2,  4.64322704365808872E-2,  5.57201147751996903E-2
 Verify:   0.9286454087E-01  0.9286454087E-01  0.0000000000E+00  0.2121956769E-04
-  recomputed xgrid flux and area:  9.03858598684079695E-2,  2*4.64322704365809011E-2
-  recomputed src flux and area:  9.0385859868408025E-2,  4.64322704365808595E-2,  4.64332557301938148E-2
+  recomputed xgrid flux and area:  9.03858598684079834E-2,  2*4.64322704365809011E-2
+  recomputed src flux and area:  9.03858598684080111E-2,  4.64322704365808595E-2,  4.64332557301938148E-2
 init_src_sph bounds:     0    1   10    1   20
   PASS  Regrid then create xgrid and regrid through xgrid, spherical grids, ESMF_FieldRegridXGUTest.F90, line 182
  !------------------------------------
@@ -329,7 +329,7 @@ init_src_sph bounds:     0    1   45    1   45
   dst flux and area:  25.132741228718348,  12.566370614359176,  12.566370614359178
 Verify:   0.2513274123E+02  0.2513274123E+02  0.1413579858E-15  0.1300493470E-13
   recomputed xgrid flux and area:  25.132741228718054,  2*12.566370614359048
-  recomputed src flux and area:  25.132741228718356,  12.566370614359197,  12.566370614359212
+  recomputed src flux and area:  25.132741228718352,  12.566370614359197,  12.566370614359212
 init_src_sph bounds:     0    1   45    1   45
   PASS  Regrid then create xgrid and regrid through xgrid, full spherical grids, ESMF_FieldRegridXGUTest.F90, line 207
  !------------------------------------
@@ -390,4 +390,4 @@ Verify:   0.2513274123E+02  0.2513274123E+02  0.0000000000E+00  0.9188269080E-14
 init_src_sph bounds:     0    1   90    1   90
   PASS  Regrid then create xgrid and regrid through xgrid, full spherical grids, ESMF_FieldRegridXGUTest.F90, line 233
   Ending Test, file ESMF_FieldRegridXGUTest.F90, line 235
-  PET 0  Test Elapsed Time  34412.227999999996  msec.
+  PET 0  Test Elapsed Time  34484.248999999996  msec.

@@ -1,4 +1,4 @@
-2026-11-18 03:38:09
+2026-11-19 03:47:31
 Beginning Test, file ESMC_FieldRegridCsrvUTest.c, line 56
 Beginning Test, file ESMC_FieldRegridCsrvUTest.c, line 56NUMBER_OF_PROCESSORS 1
 PASS MeshCreate, ESMC_FieldRegridCsrvUTest.c, line 114
@@ -17,5 +17,14 @@ PASS Get a void * C pointer to data from ESMC_Field object, ESMC_FieldRegridCsrv
 PASS Get a void * C pointer to data from ESMC_Field object, ESMC_FieldRegridCsrvUTest.c, line 318
 PASS Create an InterArray for maskValues in ESMC_FieldRegridStore(), ESMC_FieldRegridCsrvUTest.c, line 333
 PASS Create an ESMC_RouteHandle via ESMC_FieldRegridStore(), ESMC_FieldRegridCsrvUTest.c, line 363
-srun: error: c5n0111: task 0: Segmentation fault
-srun: Terminating StepId=135879338.128
+FAIL Execute ESMC_FieldRegrid(), ESMC_FieldRegridCsrvUTest.c, line 371: Did not return ESMF_SUCCESS
+PASS Release an ESMC_RouteHandle via ESMC_FieldRegridRelease(), ESMC_FieldRegridCsrvUTest.c, line 379
+PASS Execute ESMC_FieldRegridGetArea() - source, ESMC_FieldRegridCsrvUTest.c, line 401
+PASS Execute ESMC_FieldRegridGetArea() - destination, ESMC_FieldRegridCsrvUTest.c, line 423
+PASS Validate regridding, ESMC_FieldRegridCsrvUTest.c, line 462
+PASS Destroy ESMC_Field object, ESMC_FieldRegridCsrvUTest.c, line 472
+PASS Destroy ESMC_Field object, ESMC_FieldRegridCsrvUTest.c, line 480
+PASS Destroy ESMC_Mesh object, ESMC_FieldRegridCsrvUTest.c, line 488
+PASS Destroy ESMC_Mesh object, ESMC_FieldRegridCsrvUTest.c, line 496
+Ending Test, file ESMC_FieldRegridCsrvUTest.c, line 500
+Ending Test, file ESMC_FieldRegridCsrvUTest.c, line 500 PET 0 Test Elapsed Time 3.495 msec.

@@ -1,4 +1,4 @@
-2026-11-18 03:38:09
+2026-11-19 03:47:31
  --------------------------------------- 
  Start of  System Test ESMF_ArrayRedistOpenMPSTest
  --------------------------------------- 
@@ -26,10 +26,10 @@
   localID = 0
 --- ESMCI::VMId::print() end ---
 --- VMK::print() start ---
-vm located at: 0x8e7890
+vm located at: 0x8e7aa0
 npets = 4, mypet=0
-  pth_mutex =		 0x8ee490
-  pth_finish_count =	 0x8edbf0
+  pth_mutex =		 0x8ee6c0
+  pth_finish_count =	 0x8ee090
 MPI_Comm_size: 4
 MPI_Comm_rank in local MPI communicator: 0
 MPI_Comm_rank in MPI_COMM_WORLD: 0
@@ -75,6 +75,9 @@ ncores = 8
 --- ESMCI::VM::print() start ---
 --- ESMCI::VMId::print() start ---
   vmKeyWidth = 1
+  vmKey=0xF0000000
+  localID = 0
+--- ESMCI::VMId::print() end ---
  --------------------------------------- 
  Start of  System Test ESMF_ArrayRedistOpenMPSTest
  --------------------------------------- 
@@ -101,14 +104,11 @@ ncores = 8
   vmKey=0xF0000000
   localID = 0
 --- ESMCI::VMId::print() end ---
-  vmKey=0xF0000000
-  localID = 0
---- ESMCI::VMId::print() end ---
 --- VMK::print() start ---
 vm located at: 0x8e6a80
 npets = 4, mypet=3
   pth_mutex =		 0x8eca70
-  pth_finish_count =	 0x8ec720
+  pth_finish_count =	 0x8ecff0
 MPI_Comm_size: 4
 MPI_Comm_rank in local MPI communicator: 3
 MPI_Comm_rank in MPI_COMM_WORLD: 3
@@ -131,33 +131,6 @@ ncores = 8
   cpuid[7]=7, ssiid[7]=0
 --- VMK::print() end ---
 --- ESMCI::VM::print() end ---
---- VMK::print() start ---
-vm located at: 0x8e6a80
-npets = 4, mypet=1
-  pth_mutex =		 0x8eca70
-  pth_finish_count =	 0x8ec740
-MPI_Comm_size: 4
-MPI_Comm_rank in local MPI communicator: 1
-MPI_Comm_rank in MPI_COMM_WORLD: 1
-MPI thread level support: 3
-mpi_mutex_flag: 0
-mpionly: 1
-threadsflag: 0
-  lpid[0]=0, tid[0]=0, vas[0]=0, ncpet[0]=2, nadevs[0]=0, cid[0][0]=0, cid[0][1]=4
-  lpid[1]=1, tid[1]=0, vas[1]=1, ncpet[1]=2, nadevs[1]=0, cid[1][0]=1, cid[1][1]=5
-  lpid[2]=2, tid[2]=0, vas[2]=2, ncpet[2]=2, nadevs[2]=0, cid[2][0]=2, cid[2][1]=6
-  lpid[3]=3, tid[3]=0, vas[3]=3, ncpet[3]=2, nadevs[3]=0, cid[3][0]=3, cid[3][1]=7
-ncores = 8
-  cpuid[0]=0, ssiid[0]=0
-  cpuid[1]=1, ssiid[1]=0
-  cpuid[2]=2, ssiid[2]=0
-  cpuid[3]=3, ssiid[3]=0
-  cpuid[4]=4, ssiid[4]=0
-  cpuid[5]=5, ssiid[5]=0
-  cpuid[6]=6, ssiid[6]=0
-  cpuid[7]=7, ssiid[7]=0
---- VMK::print() end ---
---- ESMCI::VM::print() end ---
  --------------------------------------- 
  Start of  System Test ESMF_ArrayRedistOpenMPSTest
  --------------------------------------- 
@@ -185,10 +158,37 @@ ncores = 8
   localID = 0
 --- ESMCI::VMId::print() end ---
 --- VMK::print() start ---
+vm located at: 0x8e6a80
+npets = 4, mypet=1
+  pth_mutex =		 0x8eca70
+  pth_finish_count =	 0x8ecd20
+MPI_Comm_size: 4
+MPI_Comm_rank in local MPI communicator: 1
+MPI_Comm_rank in MPI_COMM_WORLD: 1
+MPI thread level support: 3
+mpi_mutex_flag: 0
+mpionly: 1
+threadsflag: 0
+  lpid[0]=0, tid[0]=0, vas[0]=0, ncpet[0]=2, nadevs[0]=0, cid[0][0]=0, cid[0][1]=4
+  lpid[1]=1, tid[1]=0, vas[1]=1, ncpet[1]=2, nadevs[1]=0, cid[1][0]=1, cid[1][1]=5
+  lpid[2]=2, tid[2]=0, vas[2]=2, ncpet[2]=2, nadevs[2]=0, cid[2][0]=2, cid[2][1]=6
+  lpid[3]=3, tid[3]=0, vas[3]=3, ncpet[3]=2, nadevs[3]=0, cid[3][0]=3, cid[3][1]=7
+ncores = 8
+  cpuid[0]=0, ssiid[0]=0
+  cpuid[1]=1, ssiid[1]=0
+  cpuid[2]=2, ssiid[2]=0
+  cpuid[3]=3, ssiid[3]=0
+  cpuid[4]=4, ssiid[4]=0
+  cpuid[5]=5, ssiid[5]=0
+  cpuid[6]=6, ssiid[6]=0
+  cpuid[7]=7, ssiid[7]=0
+--- VMK::print() end ---
+--- ESMCI::VM::print() end ---
+--- VMK::print() start ---
 vm located at: 0x8e6c20
 npets = 4, mypet=2
-  pth_mutex =		 0x8ece50
-  pth_finish_count =	 0x8ed100
+  pth_mutex =		 0x8ecc40
+  pth_finish_count =	 0x8ec8f0
 MPI_Comm_size: 4
 MPI_Comm_rank in local MPI communicator: 2
 MPI_Comm_rank in MPI_COMM_WORLD: 2
@@ -4007,10 +4007,6 @@ ncores = 8
  user_model1.run(): tid =  0  is working on column j =  257
  user_model1.run(): tid =  0  is working on column j =  258
  user_model1.run(): tid =  0  is working on column j =  259
- 
-  System Test ESMF_ArrayRedistOpenMPSTest
-  SUCCESS:  System Test ESMF_ArrayRedistOpenMPSTest finished correctly.
- 
  user_model1.run(): tid =  0  is working on column j =  192
  user_model1.run(): tid =  0  is working on column j =  193
  user_model1.run(): tid =  0  is working on column j =  194
@@ -4351,10 +4347,6 @@ ncores = 8
  user_model1.run(): tid =  0  is working on column j =  325
  user_model1.run(): tid =  0  is working on column j =  326
  user_model1.run(): tid =  0  is working on column j =  327
- 
-  System Test ESMF_ArrayRedistOpenMPSTest
-  SUCCESS:  System Test ESMF_ArrayRedistOpenMPSTest finished correctly.
- 
  user_model1.run(): tid =  0  is working on column j =  192
  user_model1.run(): tid =  0  is working on column j =  193
  user_model1.run(): tid =  0  is working on column j =  194
@@ -4599,6 +4591,14 @@ ncores = 8
   System Test ESMF_ArrayRedistOpenMPSTest
   SUCCESS:  System Test ESMF_ArrayRedistOpenMPSTest finished correctly.
  
+ 
+  System Test ESMF_ArrayRedistOpenMPSTest
+  SUCCESS:  System Test ESMF_ArrayRedistOpenMPSTest finished correctly.
+ 
+ 
+  System Test ESMF_ArrayRedistOpenMPSTest
+  SUCCESS:  System Test ESMF_ArrayRedistOpenMPSTest finished correctly.
+ 
  --------------------------------------- 
  Start of  System Test ESMF_ArrayRedistOpenMPSTest
  --------------------------------------- 
@@ -4635,7 +4635,7 @@ ncores = 8
   System Test ESMF_ArrayRedistOpenMPSTest                                                                                                                                                                                                                         complete.
  ------------------------------------------------------------
  ------------------------------------------------------------
- Test finished, localPet =  6
+ Test finished, localPet =  7
  ------------------------------------------------------------
  ------------------------------------------------------------
   PASS  System Test ESMF_ArrayRedistOpenMPSTest, ESMF_ArrayRedistOpenMPSTest.F90, line 391
@@ -4707,278 +4707,6 @@ ncores = 8
  user_model1.run(): tid =  0  is working on column j =  397
  user_model1.run(): tid =  0  is working on column j =  398
  user_model1.run(): tid =  0  is working on column j =  399
- user_model1.run(): tid =  0  is working on column j =  332
- user_model1.run(): tid =  0  is working on column j =  333
- user_model1.run(): tid =  0  is working on column j =  334
- user_model1.run(): tid =  0  is working on column j =  335
- user_model1.run(): tid =  0  is working on column j =  336
- user_model1.run(): tid =  0  is working on column j =  337
- user_model1.run(): tid =  0  is working on column j =  338
- user_model1.run(): tid =  0  is working on column j =  339
- user_model1.run(): tid =  0  is working on column j =  340
- user_model1.run(): tid =  0  is working on column j =  341
- user_model1.run(): tid =  0  is working on column j =  342
- user_model1.run(): tid =  0  is working on column j =  343
- user_model1.run(): tid =  0  is working on column j =  344
- user_model1.run(): tid =  0  is working on column j =  345
- user_model1.run(): tid =  0  is working on column j =  346
- user_model1.run(): tid =  0  is working on column j =  347
- user_model1.run(): tid =  0  is working on column j =  348
- user_model1.run(): tid =  0  is working on column j =  349
- user_model1.run(): tid =  0  is working on column j =  350
- user_model1.run(): tid =  0  is working on column j =  351
- user_model1.run(): tid =  0  is working on column j =  352
- user_model1.run(): tid =  0  is working on column j =  353
- user_model1.run(): tid =  0  is working on column j =  354
- user_model1.run(): tid =  0  is working on column j =  355
- user_model1.run(): tid =  0  is working on column j =  356
- user_model1.run(): tid =  0  is working on column j =  357
- user_model1.run(): tid =  0  is working on column j =  358
- user_model1.run(): tid =  0  is working on column j =  359
- user_model1.run(): tid =  0  is working on column j =  360
- user_model1.run(): tid =  0  is working on column j =  361
- user_model1.run(): tid =  0  is working on column j =  362
- user_model1.run(): tid =  0  is working on column j =  363
- user_model1.run(): tid =  0  is working on column j =  364
- user_model1.run(): tid =  0  is working on column j =  365
- user_model1.run(): tid =  0  is working on column j =  366
- user_model1.run(): tid =  0  is working on column j =  367
- user_model1.run(): tid =  0  is working on column j =  368
- user_model1.run(): tid =  0  is working on column j =  369
- user_model1.run(): tid =  0  is working on column j =  370
- user_model1.run(): tid =  0  is working on column j =  371
- user_model1.run(): tid =  0  is working on column j =  372
- user_model1.run(): tid =  0  is working on column j =  373
- user_model1.run(): tid =  0  is working on column j =  374
- user_model1.run(): tid =  0  is working on column j =  375
- user_model1.run(): tid =  0  is working on column j =  376
- user_model1.run(): tid =  0  is working on column j =  377
- user_model1.run(): tid =  0  is working on column j =  378
- user_model1.run(): tid =  0  is working on column j =  379
- user_model1.run(): tid =  0  is working on column j =  380
- user_model1.run(): tid =  0  is working on column j =  381
- user_model1.run(): tid =  0  is working on column j =  382
- user_model1.run(): tid =  0  is working on column j =  383
- user_model1.run(): tid =  0  is working on column j =  384
- user_model1.run(): tid =  0  is working on column j =  385
- user_model1.run(): tid =  0  is working on column j =  386
- user_model1.run(): tid =  0  is working on column j =  387
- user_model1.run(): tid =  0  is working on column j =  388
- user_model1.run(): tid =  0  is working on column j =  389
- user_model1.run(): tid =  0  is working on column j =  390
- user_model1.run(): tid =  0  is working on column j =  391
- user_model1.run(): tid =  0  is working on column j =  392
- user_model1.run(): tid =  0  is working on column j =  393
- user_model1.run(): tid =  0  is working on column j =  394
- user_model1.run(): tid =  0  is working on column j =  395
- user_model1.run(): tid =  0  is working on column j =  396
- user_model1.run(): tid =  0  is working on column j =  397
- user_model1.run(): tid =  0  is working on column j =  398
- user_model1.run(): tid =  0  is working on column j =  399
- user_model1.run(): tid =  0  is working on column j =  400
- user_model1.run(): tid =  0  is working on column j =  401
- user_model1.run(): tid =  0  is working on column j =  402
- user_model1.run(): tid =  0  is working on column j =  403
- user_model1.run(): tid =  0  is working on column j =  404
- user_model1.run(): tid =  0  is working on column j =  405
- user_model1.run(): tid =  0  is working on column j =  406
- user_model1.run(): tid =  0  is working on column j =  407
- user_model1.run(): tid =  0  is working on column j =  408
- user_model1.run(): tid =  0  is working on column j =  409
- user_model1.run(): tid =  0  is working on column j =  410
- user_model1.run(): tid =  0  is working on column j =  411
- user_model1.run(): tid =  0  is working on column j =  412
- user_model1.run(): tid =  0  is working on column j =  413
- user_model1.run(): tid =  0  is working on column j =  414
- user_model1.run(): tid =  0  is working on column j =  415
- user_model1.run(): tid =  0  is working on column j =  416
- user_model1.run(): tid =  0  is working on column j =  417
- user_model1.run(): tid =  0  is working on column j =  418
- user_model1.run(): tid =  0  is working on column j =  419
- user_model1.run(): tid =  0  is working on column j =  420
- user_model1.run(): tid =  0  is working on column j =  421
- user_model1.run(): tid =  0  is working on column j =  422
- user_model1.run(): tid =  0  is working on column j =  423
- user_model1.run(): tid =  0  is working on column j =  424
- user_model1.run(): tid =  0  is working on column j =  425
- user_model1.run(): tid =  0  is working on column j =  426
- user_model1.run(): tid =  0  is working on column j =  427
- user_model1.run(): tid =  0  is working on column j =  428
- user_model1.run(): tid =  0  is working on column j =  429
- user_model1.run(): tid =  0  is working on column j =  430
- user_model1.run(): tid =  0  is working on column j =  431
- user_model1.run(): tid =  0  is working on column j =  432
- user_model1.run(): tid =  0  is working on column j =  433
- user_model1.run(): tid =  0  is working on column j =  434
- user_model1.run(): tid =  0  is working on column j =  435
- user_model1.run(): tid =  0  is working on column j =  436
- user_model1.run(): tid =  0  is working on column j =  437
- user_model1.run(): tid =  0  is working on column j =  438
- user_model1.run(): tid =  0  is working on column j =  439
- user_model1.run(): tid =  0  is working on column j =  440
- user_model1.run(): tid =  0  is working on column j =  441
- user_model1.run(): tid =  0  is working on column j =  442
- user_model1.run(): tid =  0  is working on column j =  443
- user_model1.run(): tid =  0  is working on column j =  444
- user_model1.run(): tid =  0  is working on column j =  445
- user_model1.run(): tid =  0  is working on column j =  446
- user_model1.run(): tid =  0  is working on column j =  447
- user_model1.run(): tid =  0  is working on column j =  448
- user_model1.run(): tid =  0  is working on column j =  449
- user_model1.run(): tid =  0  is working on column j =  450
- user_model1.run(): tid =  0  is working on column j =  451
- user_model1.run(): tid =  0  is working on column j =  452
- user_model1.run(): tid =  0  is working on column j =  453
- user_model1.run(): tid =  0  is working on column j =  454
- user_model1.run(): tid =  0  is working on column j =  455
- user_model1.run(): tid =  0  is working on column j =  456
- user_model1.run(): tid =  0  is working on column j =  457
- user_model1.run(): tid =  0  is working on column j =  458
- user_model1.run(): tid =  0  is working on column j =  459
- user_model1.run(): tid =  0  is working on column j =  460
- user_model1.run(): tid =  0  is working on column j =  461
- user_model1.run(): tid =  0  is working on column j =  462
- user_model1.run(): tid =  0  is working on column j =  463
- user_model1.run(): tid =  0  is working on column j =  464
- user_model1.run(): tid =  0  is working on column j =  465
- user_model1.run(): tid =  0  is working on column j =  466
- user_model1.run(): tid =  0  is working on column j =  467
- user_model1.run(): tid =  0  is working on column j =  332
- user_model1.run(): tid =  0  is working on column j =  333
- user_model1.run(): tid =  0  is working on column j =  334
- user_model1.run(): tid =  0  is working on column j =  335
- user_model1.run(): tid =  0  is working on column j =  336
- user_model1.run(): tid =  0  is working on column j =  337
- user_model1.run(): tid =  0  is working on column j =  338
- user_model1.run(): tid =  0  is working on column j =  339
- user_model1.run(): tid =  0  is working on column j =  340
- user_model1.run(): tid =  0  is working on column j =  341
- user_model1.run(): tid =  0  is working on column j =  342
- user_model1.run(): tid =  0  is working on column j =  343
- user_model1.run(): tid =  0  is working on column j =  344
- user_model1.run(): tid =  0  is working on column j =  345
- user_model1.run(): tid =  0  is working on column j =  346
- user_model1.run(): tid =  0  is working on column j =  347
- user_model1.run(): tid =  0  is working on column j =  348
- user_model1.run(): tid =  0  is working on column j =  349
- user_model1.run(): tid =  0  is working on column j =  350
- user_model1.run(): tid =  0  is working on column j =  351
- user_model1.run(): tid =  0  is working on column j =  352
- user_model1.run(): tid =  0  is working on column j =  353
- user_model1.run(): tid =  0  is working on column j =  354
- user_model1.run(): tid =  0  is working on column j =  355
- user_model1.run(): tid =  0  is working on column j =  356
- user_model1.run(): tid =  0  is working on column j =  357
- user_model1.run(): tid =  0  is working on column j =  358
- user_model1.run(): tid =  0  is working on column j =  359
- user_model1.run(): tid =  0  is working on column j =  360
- user_model1.run(): tid =  0  is working on column j =  361
- user_model1.run(): tid =  0  is working on column j =  362
- user_model1.run(): tid =  0  is working on column j =  363
- user_model1.run(): tid =  0  is working on column j =  364
- user_model1.run(): tid =  0  is working on column j =  365
- user_model1.run(): tid =  0  is working on column j =  366
- user_model1.run(): tid =  0  is working on column j =  367
- user_model1.run(): tid =  0  is working on column j =  368
- user_model1.run(): tid =  0  is working on column j =  369
- user_model1.run(): tid =  0  is working on column j =  370
- user_model1.run(): tid =  0  is working on column j =  371
- user_model1.run(): tid =  0  is working on column j =  372
- user_model1.run(): tid =  0  is working on column j =  373
- user_model1.run(): tid =  0  is working on column j =  374
- user_model1.run(): tid =  0  is working on column j =  375
- user_model1.run(): tid =  0  is working on column j =  376
- user_model1.run(): tid =  0  is working on column j =  377
- user_model1.run(): tid =  0  is working on column j =  378
- user_model1.run(): tid =  0  is working on column j =  379
- user_model1.run(): tid =  0  is working on column j =  380
- user_model1.run(): tid =  0  is working on column j =  381
- user_model1.run(): tid =  0  is working on column j =  382
- user_model1.run(): tid =  0  is working on column j =  383
- user_model1.run(): tid =  0  is working on column j =  384
- user_model1.run(): tid =  0  is working on column j =  385
- user_model1.run(): tid =  0  is working on column j =  386
- user_model1.run(): tid =  0  is working on column j =  387
- user_model1.run(): tid =  0  is working on column j =  388
- user_model1.run(): tid =  0  is working on column j =  389
- user_model1.run(): tid =  0  is working on column j =  390
- user_model1.run(): tid =  0  is working on column j =  391
- user_model1.run(): tid =  0  is working on column j =  392
- user_model1.run(): tid =  0  is working on column j =  393
- user_model1.run(): tid =  0  is working on column j =  394
- user_model1.run(): tid =  0  is working on column j =  395
- user_model1.run(): tid =  0  is working on column j =  396
- user_model1.run(): tid =  0  is working on column j =  397
- user_model1.run(): tid =  0  is working on column j =  398
- user_model1.run(): tid =  0  is working on column j =  399
- user_model1.run(): tid =  0  is working on column j =  400
- user_model1.run(): tid =  0  is working on column j =  401
- user_model1.run(): tid =  0  is working on column j =  402
- user_model1.run(): tid =  0  is working on column j =  403
- user_model1.run(): tid =  0  is working on column j =  404
- user_model1.run(): tid =  0  is working on column j =  405
- user_model1.run(): tid =  0  is working on column j =  406
- user_model1.run(): tid =  0  is working on column j =  407
- user_model1.run(): tid =  0  is working on column j =  408
- user_model1.run(): tid =  0  is working on column j =  409
- user_model1.run(): tid =  0  is working on column j =  410
- user_model1.run(): tid =  0  is working on column j =  411
- user_model1.run(): tid =  0  is working on column j =  412
- user_model1.run(): tid =  0  is working on column j =  413
- user_model1.run(): tid =  0  is working on column j =  414
- user_model1.run(): tid =  0  is working on column j =  415
- user_model1.run(): tid =  0  is working on column j =  416
- user_model1.run(): tid =  0  is working on column j =  417
- user_model1.run(): tid =  0  is working on column j =  418
- user_model1.run(): tid =  0  is working on column j =  419
- user_model1.run(): tid =  0  is working on column j =  420
- user_model1.run(): tid =  0  is working on column j =  421
- user_model1.run(): tid =  0  is working on column j =  422
- user_model1.run(): tid =  0  is working on column j =  423
- user_model1.run(): tid =  0  is working on column j =  424
- user_model1.run(): tid =  0  is working on column j =  425
- user_model1.run(): tid =  0  is working on column j =  426
- user_model1.run(): tid =  0  is working on column j =  427
- user_model1.run(): tid =  0  is working on column j =  428
- user_model1.run(): tid =  0  is working on column j =  429
- user_model1.run(): tid =  0  is working on column j =  430
- user_model1.run(): tid =  0  is working on column j =  431
- user_model1.run(): tid =  0  is working on column j =  432
- user_model1.run(): tid =  0  is working on column j =  433
- user_model1.run(): tid =  0  is working on column j =  434
- user_model1.run(): tid =  0  is working on column j =  435
- user_model1.run(): tid =  0  is working on column j =  436
- user_model1.run(): tid =  0  is working on column j =  437
- user_model1.run(): tid =  0  is working on column j =  438
- user_model1.run(): tid =  0  is working on column j =  439
- user_model1.run(): tid =  0  is working on column j =  440
- user_model1.run(): tid =  0  is working on column j =  441
- user_model1.run(): tid =  0  is working on column j =  442
- user_model1.run(): tid =  0  is working on column j =  443
- user_model1.run(): tid =  0  is working on column j =  444
- user_model1.run(): tid =  0  is working on column j =  445
- user_model1.run(): tid =  0  is working on column j =  446
- user_model1.run(): tid =  0  is working on column j =  447
- user_model1.run(): tid =  0  is working on column j =  448
- user_model1.run(): tid =  0  is working on column j =  449
- user_model1.run(): tid =  0  is working on column j =  450
- user_model1.run(): tid =  0  is working on column j =  451
- user_model1.run(): tid =  0  is working on column j =  452
- user_model1.run(): tid =  0  is working on column j =  453
- user_model1.run(): tid =  0  is working on column j =  454
- user_model1.run(): tid =  0  is working on column j =  455
- user_model1.run(): tid =  0  is working on column j =  456
- user_model1.run(): tid =  0  is working on column j =  457
- user_model1.run(): tid =  0  is working on column j =  458
- user_model1.run(): tid =  0  is working on column j =  459
- user_model1.run(): tid =  0  is working on column j =  460
- user_model1.run(): tid =  0  is working on column j =  461
- user_model1.run(): tid =  0  is working on column j =  462
- user_model1.run(): tid =  0  is working on column j =  463
- user_model1.run(): tid =  0  is working on column j =  464
- user_model1.run(): tid =  0  is working on column j =  465
- user_model1.run(): tid =  0  is working on column j =  466
- user_model1.run(): tid =  0  is working on column j =  467
  user_model1.run(): tid =  0  is working on column j =  332
  user_model1.run(): tid =  0  is working on column j =  333
  user_model1.run(): tid =  0  is working on column j =  334
@@ -5132,78 +4860,10 @@ ncores = 8
   System Test ESMF_ArrayRedistOpenMPSTest                                                                                                                                                                                                                         complete.
  ------------------------------------------------------------
  ------------------------------------------------------------
- Test finished, localPet =  7
+ Test finished, localPet =  6
  ------------------------------------------------------------
  ------------------------------------------------------------
   PASS  System Test ESMF_ArrayRedistOpenMPSTest, ESMF_ArrayRedistOpenMPSTest.F90, line 391
- user_model1.run(): tid =  0  is working on column j =  468
- user_model1.run(): tid =  0  is working on column j =  469
- user_model1.run(): tid =  0  is working on column j =  470
- user_model1.run(): tid =  0  is working on column j =  471
- user_model1.run(): tid =  0  is working on column j =  472
- user_model1.run(): tid =  0  is working on column j =  473
- user_model1.run(): tid =  0  is working on column j =  474
- user_model1.run(): tid =  0  is working on column j =  475
- user_model1.run(): tid =  0  is working on column j =  476
- user_model1.run(): tid =  0  is working on column j =  477
- user_model1.run(): tid =  0  is working on column j =  478
- user_model1.run(): tid =  0  is working on column j =  479
- user_model1.run(): tid =  0  is working on column j =  480
- user_model1.run(): tid =  0  is working on column j =  481
- user_model1.run(): tid =  0  is working on column j =  482
- user_model1.run(): tid =  0  is working on column j =  483
- user_model1.run(): tid =  0  is working on column j =  484
- user_model1.run(): tid =  0  is working on column j =  485
- user_model1.run(): tid =  0  is working on column j =  486
- user_model1.run(): tid =  0  is working on column j =  487
- user_model1.run(): tid =  0  is working on column j =  488
- user_model1.run(): tid =  0  is working on column j =  489
- user_model1.run(): tid =  0  is working on column j =  490
- user_model1.run(): tid =  0  is working on column j =  491
- user_model1.run(): tid =  0  is working on column j =  492
- user_model1.run(): tid =  0  is working on column j =  493
- user_model1.run(): tid =  0  is working on column j =  494
- user_model1.run(): tid =  0  is working on column j =  495
- user_model1.run(): tid =  0  is working on column j =  496
- user_model1.run(): tid =  0  is working on column j =  497
- user_model1.run(): tid =  0  is working on column j =  498
- user_model1.run(): tid =  0  is working on column j =  499
- user_model1.run(): tid =  0  is working on column j =  500
- user_model1.run(): tid =  0  is working on column j =  501
- user_model1.run(): tid =  0  is working on column j =  502
- user_model1.run(): tid =  0  is working on column j =  503
- user_model1.run(): tid =  0  is working on column j =  504
- user_model1.run(): tid =  0  is working on column j =  505
- user_model1.run(): tid =  0  is working on column j =  506
- user_model1.run(): tid =  0  is working on column j =  507
- user_model1.run(): tid =  0  is working on column j =  508
- user_model1.run(): tid =  0  is working on column j =  509
- user_model1.run(): tid =  0  is working on column j =  510
- user_model1.run(): tid =  0  is working on column j =  511
- user_model1.run(): tid =  0  is working on column j =  512
- user_model1.run(): tid =  0  is working on column j =  513
- user_model1.run(): tid =  0  is working on column j =  514
- user_model1.run(): tid =  0  is working on column j =  515
- user_model1.run(): tid =  0  is working on column j =  516
- user_model1.run(): tid =  0  is working on column j =  517
- user_model1.run(): tid =  0  is working on column j =  518
- user_model1.run(): tid =  0  is working on column j =  519
- user_model1.run(): tid =  0  is working on column j =  520
- user_model1.run(): tid =  0  is working on column j =  521
- user_model1.run(): tid =  0  is working on column j =  522
- user_model1.run(): tid =  0  is working on column j =  523
- user_model1.run(): tid =  0  is working on column j =  524
- user_model1.run(): tid =  0  is working on column j =  525
- user_model1.run(): tid =  0  is working on column j =  526
- user_model1.run(): tid =  0  is working on column j =  527
- user_model1.run(): tid =  0  is working on column j =  528
- user_model1.run(): tid =  0  is working on column j =  529
- user_model1.run(): tid =  0  is working on column j =  530
- user_model1.run(): tid =  0  is working on column j =  531
- user_model1.run(): tid =  0  is working on column j =  532
- user_model1.run(): tid =  0  is working on column j =  533
- user_model1.run(): tid =  0  is working on column j =  534
- user_model1.run(): tid =  0  is working on column j =  535
  user_model1.run(): tid =  0  is working on column j =  400
  user_model1.run(): tid =  0  is working on column j =  401
  user_model1.run(): tid =  0  is working on column j =  402
@@ -5272,74 +4932,74 @@ ncores = 8
  user_model1.run(): tid =  0  is working on column j =  465
  user_model1.run(): tid =  0  is working on column j =  466
  user_model1.run(): tid =  0  is working on column j =  467
- user_model1.run(): tid =  0  is working on column j =  468
- user_model1.run(): tid =  0  is working on column j =  469
- user_model1.run(): tid =  0  is working on column j =  470
- user_model1.run(): tid =  0  is working on column j =  471
- user_model1.run(): tid =  0  is working on column j =  472
- user_model1.run(): tid =  0  is working on column j =  473
- user_model1.run(): tid =  0  is working on column j =  474
- user_model1.run(): tid =  0  is working on column j =  475
- user_model1.run(): tid =  0  is working on column j =  476
- user_model1.run(): tid =  0  is working on column j =  477
- user_model1.run(): tid =  0  is working on column j =  478
- user_model1.run(): tid =  0  is working on column j =  479
- user_model1.run(): tid =  0  is working on column j =  480
- user_model1.run(): tid =  0  is working on column j =  481
- user_model1.run(): tid =  0  is working on column j =  482
- user_model1.run(): tid =  0  is working on column j =  483
- user_model1.run(): tid =  0  is working on column j =  484
- user_model1.run(): tid =  0  is working on column j =  485
- user_model1.run(): tid =  0  is working on column j =  486
- user_model1.run(): tid =  0  is working on column j =  487
- user_model1.run(): tid =  0  is working on column j =  488
- user_model1.run(): tid =  0  is working on column j =  489
- user_model1.run(): tid =  0  is working on column j =  490
- user_model1.run(): tid =  0  is working on column j =  491
- user_model1.run(): tid =  0  is working on column j =  492
- user_model1.run(): tid =  0  is working on column j =  493
- user_model1.run(): tid =  0  is working on column j =  494
- user_model1.run(): tid =  0  is working on column j =  495
- user_model1.run(): tid =  0  is working on column j =  496
- user_model1.run(): tid =  0  is working on column j =  497
- user_model1.run(): tid =  0  is working on column j =  498
- user_model1.run(): tid =  0  is working on column j =  499
- user_model1.run(): tid =  0  is working on column j =  500
- user_model1.run(): tid =  0  is working on column j =  501
- user_model1.run(): tid =  0  is working on column j =  502
- user_model1.run(): tid =  0  is working on column j =  503
- user_model1.run(): tid =  0  is working on column j =  504
- user_model1.run(): tid =  0  is working on column j =  505
- user_model1.run(): tid =  0  is working on column j =  506
- user_model1.run(): tid =  0  is working on column j =  507
- user_model1.run(): tid =  0  is working on column j =  508
- user_model1.run(): tid =  0  is working on column j =  509
- user_model1.run(): tid =  0  is working on column j =  510
- user_model1.run(): tid =  0  is working on column j =  511
- user_model1.run(): tid =  0  is working on column j =  512
- user_model1.run(): tid =  0  is working on column j =  513
- user_model1.run(): tid =  0  is working on column j =  514
- user_model1.run(): tid =  0  is working on column j =  515
- user_model1.run(): tid =  0  is working on column j =  516
- user_model1.run(): tid =  0  is working on column j =  517
- user_model1.run(): tid =  0  is working on column j =  518
- user_model1.run(): tid =  0  is working on column j =  519
- user_model1.run(): tid =  0  is working on column j =  520
- user_model1.run(): tid =  0  is working on column j =  521
- user_model1.run(): tid =  0  is working on column j =  522
- user_model1.run(): tid =  0  is working on column j =  523
- user_model1.run(): tid =  0  is working on column j =  524
- user_model1.run(): tid =  0  is working on column j =  525
- user_model1.run(): tid =  0  is working on column j =  526
- user_model1.run(): tid =  0  is working on column j =  527
- user_model1.run(): tid =  0  is working on column j =  528
- user_model1.run(): tid =  0  is working on column j =  529
- user_model1.run(): tid =  0  is working on column j =  530
- user_model1.run(): tid =  0  is working on column j =  531
- user_model1.run(): tid =  0  is working on column j =  532
- user_model1.run(): tid =  0  is working on column j =  533
- user_model1.run(): tid =  0  is working on column j =  534
- user_model1.run(): tid =  0  is working on column j =  535
+ user_model1.run(): tid =  0  is working on column j =  332
+ user_model1.run(): tid =  0  is working on column j =  333
+ user_model1.run(): tid =  0  is working on column j =  334
+ user_model1.run(): tid =  0  is working on column j =  335
+ user_model1.run(): tid =  0  is working on column j =  336
+ user_model1.run(): tid =  0  is working on column j =  337
+ user_model1.run(): tid =  0  is working on column j =  338
+ user_model1.run(): tid =  0  is working on column j =  339
+ user_model1.run(): tid =  0  is working on column j =  340
+ user_model1.run(): tid =  0  is working on column j =  341
+ user_model1.run(): tid =  0  is working on column j =  342
+ user_model1.run(): tid =  0  is working on column j =  343
+ user_model1.run(): tid =  0  is working on column j =  344
+ user_model1.run(): tid =  0  is working on column j =  345
+ user_model1.run(): tid =  0  is working on column j =  346
+ user_model1.run(): tid =  0  is working on column j =  347
+ user_model1.run(): tid =  0  is working on column j =  348
+ user_model1.run(): tid =  0  is working on column j =  349
+ user_model1.run(): tid =  0  is working on column j =  350
+ user_model1.run(): tid =  0  is working on column j =  351
+ user_model1.run(): tid =  0  is working on column j =  352
+ user_model1.run(): tid =  0  is working on column j =  353
+ user_model1.run(): tid =  0  is working on column j =  354
+ user_model1.run(): tid =  0  is working on column j =  355
+ user_model1.run(): tid =  0  is working on column j =  356
+ user_model1.run(): tid =  0  is working on column j =  357
+ user_model1.run(): tid =  0  is working on column j =  358
+ user_model1.run(): tid =  0  is working on column j =  359
+ user_model1.run(): tid =  0  is working on column j =  360
+ user_model1.run(): tid =  0  is working on column j =  361
+ user_model1.run(): tid =  0  is working on column j =  362
+ user_model1.run(): tid =  0  is working on column j =  363
+ user_model1.run(): tid =  0  is working on column j =  364
+ user_model1.run(): tid =  0  is working on column j =  365
+ user_model1.run(): tid =  0  is working on column j =  366
+ user_model1.run(): tid =  0  is working on column j =  367
+ user_model1.run(): tid =  0  is working on column j =  368
+ user_model1.run(): tid =  0  is working on column j =  369
+ user_model1.run(): tid =  0  is working on column j =  370
+ user_model1.run(): tid =  0  is working on column j =  371
+ user_model1.run(): tid =  0  is working on column j =  372
+ user_model1.run(): tid =  0  is working on column j =  373
+ user_model1.run(): tid =  0  is working on column j =  374
+ user_model1.run(): tid =  0  is working on column j =  375
+ user_model1.run(): tid =  0  is working on column j =  376
+ user_model1.run(): tid =  0  is working on column j =  377
+ user_model1.run(): tid =  0  is working on column j =  378
+ user_model1.run(): tid =  0  is working on column j =  379
+ user_model1.run(): tid =  0  is working on column j =  380
+ user_model1.run(): tid =  0  is working on column j =  381
+ user_model1.run(): tid =  0  is working on column j =  382
+ user_model1.run(): tid =  0  is working on column j =  383
+ user_model1.run(): tid =  0  is working on column j =  384
+ user_model1.run(): tid =  0  is working on column j =  385
+ user_model1.run(): tid =  0  is working on column j =  386
+ user_model1.run(): tid =  0  is working on column j =  387
+ user_model1.run(): tid =  0  is working on column j =  388
+ user_model1.run(): tid =  0  is working on column j =  389
+ user_model1.run(): tid =  0  is working on column j =  390
+ user_model1.run(): tid =  0  is working on column j =  391
+ user_model1.run(): tid =  0  is working on column j =  392
+ user_model1.run(): tid =  0  is working on column j =  393
+ user_model1.run(): tid =  0  is working on column j =  394
+ user_model1.run(): tid =  0  is working on column j =  395
+ user_model1.run(): tid =  0  is working on column j =  396
+ user_model1.run(): tid =  0  is working on column j =  397
+ user_model1.run(): tid =  0  is working on column j =  398
+ user_model1.run(): tid =  0  is working on column j =  399
  user_model1.run(): tid =  0  is working on column j =  400
  user_model1.run(): tid =  0  is working on column j =  401
  user_model1.run(): tid =  0  is working on column j =  402
@@ -5408,822 +5068,6 @@ ncores = 8
  user_model1.run(): tid =  0  is working on column j =  465
  user_model1.run(): tid =  0  is working on column j =  466
  user_model1.run(): tid =  0  is working on column j =  467
- user_model1.run(): tid =  0  is working on column j =  536
- user_model1.run(): tid =  0  is working on column j =  537
- user_model1.run(): tid =  0  is working on column j =  538
- user_model1.run(): tid =  0  is working on column j =  539
- user_model1.run(): tid =  0  is working on column j =  540
- user_model1.run(): tid =  0  is working on column j =  541
- user_model1.run(): tid =  0  is working on column j =  542
- user_model1.run(): tid =  0  is working on column j =  543
- user_model1.run(): tid =  0  is working on column j =  544
- user_model1.run(): tid =  0  is working on column j =  545
- user_model1.run(): tid =  0  is working on column j =  546
- user_model1.run(): tid =  0  is working on column j =  547
- user_model1.run(): tid =  0  is working on column j =  548
- user_model1.run(): tid =  0  is working on column j =  549
- user_model1.run(): tid =  0  is working on column j =  550
- user_model1.run(): tid =  0  is working on column j =  551
- user_model1.run(): tid =  0  is working on column j =  552
- user_model1.run(): tid =  0  is working on column j =  553
- user_model1.run(): tid =  0  is working on column j =  554
- user_model1.run(): tid =  0  is working on column j =  555
- user_model1.run(): tid =  0  is working on column j =  556
- user_model1.run(): tid =  0  is working on column j =  557
- user_model1.run(): tid =  0  is working on column j =  558
- user_model1.run(): tid =  0  is working on column j =  559
- user_model1.run(): tid =  0  is working on column j =  560
- user_model1.run(): tid =  0  is working on column j =  561
- user_model1.run(): tid =  0  is working on column j =  562
- user_model1.run(): tid =  0  is working on column j =  563
- user_model1.run(): tid =  0  is working on column j =  564
- user_model1.run(): tid =  0  is working on column j =  565
- user_model1.run(): tid =  0  is working on column j =  566
- user_model1.run(): tid =  0  is working on column j =  567
- user_model1.run(): tid =  0  is working on column j =  568
- user_model1.run(): tid =  0  is working on column j =  569
- user_model1.run(): tid =  0  is working on column j =  570
- user_model1.run(): tid =  0  is working on column j =  571
- user_model1.run(): tid =  0  is working on column j =  572
- user_model1.run(): tid =  0  is working on column j =  573
- user_model1.run(): tid =  0  is working on column j =  574
- user_model1.run(): tid =  0  is working on column j =  575
- user_model1.run(): tid =  0  is working on column j =  576
- user_model1.run(): tid =  0  is working on column j =  577
- user_model1.run(): tid =  0  is working on column j =  578
- user_model1.run(): tid =  0  is working on column j =  579
- user_model1.run(): tid =  0  is working on column j =  580
- user_model1.run(): tid =  0  is working on column j =  581
- user_model1.run(): tid =  0  is working on column j =  582
- user_model1.run(): tid =  0  is working on column j =  583
- user_model1.run(): tid =  0  is working on column j =  584
- user_model1.run(): tid =  0  is working on column j =  585
- user_model1.run(): tid =  0  is working on column j =  586
- user_model1.run(): tid =  0  is working on column j =  587
- user_model1.run(): tid =  0  is working on column j =  588
- user_model1.run(): tid =  0  is working on column j =  589
- user_model1.run(): tid =  0  is working on column j =  590
- user_model1.run(): tid =  0  is working on column j =  591
- user_model1.run(): tid =  0  is working on column j =  592
- user_model1.run(): tid =  0  is working on column j =  593
- user_model1.run(): tid =  0  is working on column j =  594
- user_model1.run(): tid =  0  is working on column j =  595
- user_model1.run(): tid =  0  is working on column j =  596
- user_model1.run(): tid =  0  is working on column j =  597
- user_model1.run(): tid =  0  is working on column j =  598
- user_model1.run(): tid =  0  is working on column j =  599
- user_model1.run(): tid =  0  is working on column j =  600
- user_model1.run(): tid =  0  is working on column j =  601
- user_model1.run(): tid =  0  is working on column j =  602
- user_model1.run(): tid =  0  is working on column j =  603
- user_model1.run(): tid =  0  is working on column j =  468
- user_model1.run(): tid =  0  is working on column j =  469
- user_model1.run(): tid =  0  is working on column j =  470
- user_model1.run(): tid =  0  is working on column j =  471
- user_model1.run(): tid =  0  is working on column j =  472
- user_model1.run(): tid =  0  is working on column j =  473
- user_model1.run(): tid =  0  is working on column j =  474
- user_model1.run(): tid =  0  is working on column j =  475
- user_model1.run(): tid =  0  is working on column j =  476
- user_model1.run(): tid =  0  is working on column j =  477
- user_model1.run(): tid =  0  is working on column j =  478
- user_model1.run(): tid =  0  is working on column j =  479
- user_model1.run(): tid =  0  is working on column j =  480
- user_model1.run(): tid =  0  is working on column j =  481
- user_model1.run(): tid =  0  is working on column j =  482
- user_model1.run(): tid =  0  is working on column j =  483
- user_model1.run(): tid =  0  is working on column j =  484
- user_model1.run(): tid =  0  is working on column j =  485
- user_model1.run(): tid =  0  is working on column j =  486
- user_model1.run(): tid =  0  is working on column j =  487
- user_model1.run(): tid =  0  is working on column j =  488
- user_model1.run(): tid =  0  is working on column j =  489
- user_model1.run(): tid =  0  is working on column j =  490
- user_model1.run(): tid =  0  is working on column j =  491
- user_model1.run(): tid =  0  is working on column j =  492
- user_model1.run(): tid =  0  is working on column j =  493
- user_model1.run(): tid =  0  is working on column j =  494
- user_model1.run(): tid =  0  is working on column j =  495
- user_model1.run(): tid =  0  is working on column j =  496
- user_model1.run(): tid =  0  is working on column j =  497
- user_model1.run(): tid =  0  is working on column j =  498
- user_model1.run(): tid =  0  is working on column j =  499
- user_model1.run(): tid =  0  is working on column j =  500
- user_model1.run(): tid =  0  is working on column j =  501
- user_model1.run(): tid =  0  is working on column j =  502
- user_model1.run(): tid =  0  is working on column j =  503
- user_model1.run(): tid =  0  is working on column j =  504
- user_model1.run(): tid =  0  is working on column j =  505
- user_model1.run(): tid =  0  is working on column j =  506
- user_model1.run(): tid =  0  is working on column j =  507
- user_model1.run(): tid =  0  is working on column j =  508
- user_model1.run(): tid =  0  is working on column j =  509
- user_model1.run(): tid =  0  is working on column j =  510
- user_model1.run(): tid =  0  is working on column j =  511
- user_model1.run(): tid =  0  is working on column j =  512
- user_model1.run(): tid =  0  is working on column j =  513
- user_model1.run(): tid =  0  is working on column j =  514
- user_model1.run(): tid =  0  is working on column j =  515
- user_model1.run(): tid =  0  is working on column j =  516
- user_model1.run(): tid =  0  is working on column j =  517
- user_model1.run(): tid =  0  is working on column j =  518
- user_model1.run(): tid =  0  is working on column j =  519
- user_model1.run(): tid =  0  is working on column j =  520
- user_model1.run(): tid =  0  is working on column j =  521
- user_model1.run(): tid =  0  is working on column j =  522
- user_model1.run(): tid =  0  is working on column j =  523
- user_model1.run(): tid =  0  is working on column j =  524
- user_model1.run(): tid =  0  is working on column j =  525
- user_model1.run(): tid =  0  is working on column j =  526
- user_model1.run(): tid =  0  is working on column j =  527
- user_model1.run(): tid =  0  is working on column j =  528
- user_model1.run(): tid =  0  is working on column j =  529
- user_model1.run(): tid =  0  is working on column j =  530
- user_model1.run(): tid =  0  is working on column j =  531
- user_model1.run(): tid =  0  is working on column j =  532
- user_model1.run(): tid =  0  is working on column j =  533
- user_model1.run(): tid =  0  is working on column j =  534
- user_model1.run(): tid =  0  is working on column j =  535
- user_model1.run(): tid =  0  is working on column j =  536
- user_model1.run(): tid =  0  is working on column j =  537
- user_model1.run(): tid =  0  is working on column j =  538
- user_model1.run(): tid =  0  is working on column j =  539
- user_model1.run(): tid =  0  is working on column j =  540
- user_model1.run(): tid =  0  is working on column j =  541
- user_model1.run(): tid =  0  is working on column j =  542
- user_model1.run(): tid =  0  is working on column j =  543
- user_model1.run(): tid =  0  is working on column j =  544
- user_model1.run(): tid =  0  is working on column j =  545
- user_model1.run(): tid =  0  is working on column j =  546
- user_model1.run(): tid =  0  is working on column j =  547
- user_model1.run(): tid =  0  is working on column j =  548
- user_model1.run(): tid =  0  is working on column j =  549
- user_model1.run(): tid =  0  is working on column j =  550
- user_model1.run(): tid =  0  is working on column j =  551
- user_model1.run(): tid =  0  is working on column j =  552
- user_model1.run(): tid =  0  is working on column j =  553
- user_model1.run(): tid =  0  is working on column j =  554
- user_model1.run(): tid =  0  is working on column j =  555
- user_model1.run(): tid =  0  is working on column j =  556
- user_model1.run(): tid =  0  is working on column j =  557
- user_model1.run(): tid =  0  is working on column j =  558
- user_model1.run(): tid =  0  is working on column j =  559
- user_model1.run(): tid =  0  is working on column j =  560
- user_model1.run(): tid =  0  is working on column j =  561
- user_model1.run(): tid =  0  is working on column j =  562
- user_model1.run(): tid =  0  is working on column j =  563
- user_model1.run(): tid =  0  is working on column j =  564
- user_model1.run(): tid =  0  is working on column j =  565
- user_model1.run(): tid =  0  is working on column j =  566
- user_model1.run(): tid =  0  is working on column j =  567
- user_model1.run(): tid =  0  is working on column j =  568
- user_model1.run(): tid =  0  is working on column j =  569
- user_model1.run(): tid =  0  is working on column j =  570
- user_model1.run(): tid =  0  is working on column j =  571
- user_model1.run(): tid =  0  is working on column j =  572
- user_model1.run(): tid =  0  is working on column j =  573
- user_model1.run(): tid =  0  is working on column j =  574
- user_model1.run(): tid =  0  is working on column j =  575
- user_model1.run(): tid =  0  is working on column j =  576
- user_model1.run(): tid =  0  is working on column j =  577
- user_model1.run(): tid =  0  is working on column j =  578
- user_model1.run(): tid =  0  is working on column j =  579
- user_model1.run(): tid =  0  is working on column j =  580
- user_model1.run(): tid =  0  is working on column j =  581
- user_model1.run(): tid =  0  is working on column j =  582
- user_model1.run(): tid =  0  is working on column j =  583
- user_model1.run(): tid =  0  is working on column j =  584
- user_model1.run(): tid =  0  is working on column j =  585
- user_model1.run(): tid =  0  is working on column j =  586
- user_model1.run(): tid =  0  is working on column j =  587
- user_model1.run(): tid =  0  is working on column j =  588
- user_model1.run(): tid =  0  is working on column j =  589
- user_model1.run(): tid =  0  is working on column j =  590
- user_model1.run(): tid =  0  is working on column j =  591
- user_model1.run(): tid =  0  is working on column j =  592
- user_model1.run(): tid =  0  is working on column j =  593
- user_model1.run(): tid =  0  is working on column j =  594
- user_model1.run(): tid =  0  is working on column j =  595
- user_model1.run(): tid =  0  is working on column j =  596
- user_model1.run(): tid =  0  is working on column j =  597
- user_model1.run(): tid =  0  is working on column j =  598
- user_model1.run(): tid =  0  is working on column j =  599
- user_model1.run(): tid =  0  is working on column j =  600
- user_model1.run(): tid =  0  is working on column j =  601
- user_model1.run(): tid =  0  is working on column j =  602
- user_model1.run(): tid =  0  is working on column j =  603
- user_model1.run(): tid =  0  is working on column j =  468
- user_model1.run(): tid =  0  is working on column j =  469
- user_model1.run(): tid =  0  is working on column j =  470
- user_model1.run(): tid =  0  is working on column j =  471
- user_model1.run(): tid =  0  is working on column j =  472
- user_model1.run(): tid =  0  is working on column j =  473
- user_model1.run(): tid =  0  is working on column j =  474
- user_model1.run(): tid =  0  is working on column j =  475
- user_model1.run(): tid =  0  is working on column j =  476
- user_model1.run(): tid =  0  is working on column j =  477
- user_model1.run(): tid =  0  is working on column j =  478
- user_model1.run(): tid =  0  is working on column j =  479
- user_model1.run(): tid =  0  is working on column j =  480
- user_model1.run(): tid =  0  is working on column j =  481
- user_model1.run(): tid =  0  is working on column j =  482
- user_model1.run(): tid =  0  is working on column j =  483
- user_model1.run(): tid =  0  is working on column j =  484
- user_model1.run(): tid =  0  is working on column j =  485
- user_model1.run(): tid =  0  is working on column j =  486
- user_model1.run(): tid =  0  is working on column j =  487
- user_model1.run(): tid =  0  is working on column j =  488
- user_model1.run(): tid =  0  is working on column j =  489
- user_model1.run(): tid =  0  is working on column j =  490
- user_model1.run(): tid =  0  is working on column j =  491
- user_model1.run(): tid =  0  is working on column j =  492
- user_model1.run(): tid =  0  is working on column j =  493
- user_model1.run(): tid =  0  is working on column j =  494
- user_model1.run(): tid =  0  is working on column j =  495
- user_model1.run(): tid =  0  is working on column j =  496
- user_model1.run(): tid =  0  is working on column j =  497
- user_model1.run(): tid =  0  is working on column j =  498
- user_model1.run(): tid =  0  is working on column j =  499
- user_model1.run(): tid =  0  is working on column j =  500
- user_model1.run(): tid =  0  is working on column j =  501
- user_model1.run(): tid =  0  is working on column j =  502
- user_model1.run(): tid =  0  is working on column j =  503
- user_model1.run(): tid =  0  is working on column j =  504
- user_model1.run(): tid =  0  is working on column j =  505
- user_model1.run(): tid =  0  is working on column j =  506
- user_model1.run(): tid =  0  is working on column j =  507
- user_model1.run(): tid =  0  is working on column j =  508
- user_model1.run(): tid =  0  is working on column j =  509
- user_model1.run(): tid =  0  is working on column j =  510
- user_model1.run(): tid =  0  is working on column j =  511
- user_model1.run(): tid =  0  is working on column j =  512
- user_model1.run(): tid =  0  is working on column j =  513
- user_model1.run(): tid =  0  is working on column j =  514
- user_model1.run(): tid =  0  is working on column j =  515
- user_model1.run(): tid =  0  is working on column j =  516
- user_model1.run(): tid =  0  is working on column j =  517
- user_model1.run(): tid =  0  is working on column j =  518
- user_model1.run(): tid =  0  is working on column j =  519
- user_model1.run(): tid =  0  is working on column j =  520
- user_model1.run(): tid =  0  is working on column j =  521
- user_model1.run(): tid =  0  is working on column j =  522
- user_model1.run(): tid =  0  is working on column j =  523
- user_model1.run(): tid =  0  is working on column j =  524
- user_model1.run(): tid =  0  is working on column j =  525
- user_model1.run(): tid =  0  is working on column j =  526
- user_model1.run(): tid =  0  is working on column j =  527
- user_model1.run(): tid =  0  is working on column j =  528
- user_model1.run(): tid =  0  is working on column j =  529
- user_model1.run(): tid =  0  is working on column j =  530
- user_model1.run(): tid =  0  is working on column j =  531
- user_model1.run(): tid =  0  is working on column j =  532
- user_model1.run(): tid =  0  is working on column j =  533
- user_model1.run(): tid =  0  is working on column j =  534
- user_model1.run(): tid =  0  is working on column j =  535
- user_model1.run(): tid =  0  is working on column j =  604
- user_model1.run(): tid =  0  is working on column j =  605
- user_model1.run(): tid =  0  is working on column j =  606
- user_model1.run(): tid =  0  is working on column j =  607
- user_model1.run(): tid =  0  is working on column j =  608
- user_model1.run(): tid =  0  is working on column j =  609
- user_model1.run(): tid =  0  is working on column j =  610
- user_model1.run(): tid =  0  is working on column j =  611
- user_model1.run(): tid =  0  is working on column j =  612
- user_model1.run(): tid =  0  is working on column j =  613
- user_model1.run(): tid =  0  is working on column j =  614
- user_model1.run(): tid =  0  is working on column j =  615
- user_model1.run(): tid =  0  is working on column j =  616
- user_model1.run(): tid =  0  is working on column j =  617
- user_model1.run(): tid =  0  is working on column j =  618
- user_model1.run(): tid =  0  is working on column j =  619
- user_model1.run(): tid =  0  is working on column j =  620
- user_model1.run(): tid =  0  is working on column j =  621
- user_model1.run(): tid =  0  is working on column j =  622
- user_model1.run(): tid =  0  is working on column j =  623
- user_model1.run(): tid =  0  is working on column j =  624
- user_model1.run(): tid =  0  is working on column j =  625
- user_model1.run(): tid =  0  is working on column j =  626
- user_model1.run(): tid =  0  is working on column j =  627
- user_model1.run(): tid =  0  is working on column j =  628
- user_model1.run(): tid =  0  is working on column j =  629
- user_model1.run(): tid =  0  is working on column j =  630
- user_model1.run(): tid =  0  is working on column j =  631
- user_model1.run(): tid =  0  is working on column j =  632
- user_model1.run(): tid =  0  is working on column j =  633
- user_model1.run(): tid =  0  is working on column j =  634
- user_model1.run(): tid =  0  is working on column j =  635
- user_model1.run(): tid =  0  is working on column j =  636
- user_model1.run(): tid =  0  is working on column j =  637
- user_model1.run(): tid =  0  is working on column j =  638
- user_model1.run(): tid =  0  is working on column j =  639
- user_model1.run(): tid =  0  is working on column j =  640
- user_model1.run(): tid =  0  is working on column j =  641
- user_model1.run(): tid =  0  is working on column j =  642
- user_model1.run(): tid =  0  is working on column j =  643
- user_model1.run(): tid =  0  is working on column j =  644
- user_model1.run(): tid =  0  is working on column j =  645
- user_model1.run(): tid =  0  is working on column j =  646
- user_model1.run(): tid =  0  is working on column j =  647
- user_model1.run(): tid =  0  is working on column j =  648
- user_model1.run(): tid =  0  is working on column j =  649
- user_model1.run(): tid =  0  is working on column j =  650
- user_model1.run(): tid =  0  is working on column j =  651
- user_model1.run(): tid =  0  is working on column j =  652
- user_model1.run(): tid =  0  is working on column j =  653
- user_model1.run(): tid =  0  is working on column j =  654
- user_model1.run(): tid =  0  is working on column j =  655
- user_model1.run(): tid =  0  is working on column j =  656
- user_model1.run(): tid =  0  is working on column j =  657
- user_model1.run(): tid =  0  is working on column j =  658
- user_model1.run(): tid =  0  is working on column j =  659
- user_model1.run(): tid =  0  is working on column j =  660
- user_model1.run(): tid =  0  is working on column j =  661
- user_model1.run(): tid =  0  is working on column j =  662
- user_model1.run(): tid =  0  is working on column j =  663
- user_model1.run(): tid =  0  is working on column j =  664
- user_model1.run(): tid =  0  is working on column j =  665
- user_model1.run(): tid =  0  is working on column j =  666
- user_model1.run(): tid =  0  is working on column j =  667
- user_model1.run(): tid =  0  is working on column j =  668
- user_model1.run(): tid =  0  is working on column j =  669
- user_model1.run(): tid =  0  is working on column j =  670
- user_model1.run(): tid =  0  is working on column j =  671
- user_model1.run(): tid =  0  is working on column j =  536
- user_model1.run(): tid =  0  is working on column j =  537
- user_model1.run(): tid =  0  is working on column j =  538
- user_model1.run(): tid =  0  is working on column j =  539
- user_model1.run(): tid =  0  is working on column j =  540
- user_model1.run(): tid =  0  is working on column j =  541
- user_model1.run(): tid =  0  is working on column j =  542
- user_model1.run(): tid =  0  is working on column j =  543
- user_model1.run(): tid =  0  is working on column j =  544
- user_model1.run(): tid =  0  is working on column j =  545
- user_model1.run(): tid =  0  is working on column j =  546
- user_model1.run(): tid =  0  is working on column j =  547
- user_model1.run(): tid =  0  is working on column j =  548
- user_model1.run(): tid =  0  is working on column j =  549
- user_model1.run(): tid =  0  is working on column j =  550
- user_model1.run(): tid =  0  is working on column j =  551
- user_model1.run(): tid =  0  is working on column j =  552
- user_model1.run(): tid =  0  is working on column j =  553
- user_model1.run(): tid =  0  is working on column j =  554
- user_model1.run(): tid =  0  is working on column j =  555
- user_model1.run(): tid =  0  is working on column j =  556
- user_model1.run(): tid =  0  is working on column j =  557
- user_model1.run(): tid =  0  is working on column j =  558
- user_model1.run(): tid =  0  is working on column j =  559
- user_model1.run(): tid =  0  is working on column j =  560
- user_model1.run(): tid =  0  is working on column j =  561
- user_model1.run(): tid =  0  is working on column j =  562
- user_model1.run(): tid =  0  is working on column j =  563
- user_model1.run(): tid =  0  is working on column j =  564
- user_model1.run(): tid =  0  is working on column j =  565
- user_model1.run(): tid =  0  is working on column j =  566
- user_model1.run(): tid =  0  is working on column j =  567
- user_model1.run(): tid =  0  is working on column j =  568
- user_model1.run(): tid =  0  is working on column j =  569
- user_model1.run(): tid =  0  is working on column j =  570
- user_model1.run(): tid =  0  is working on column j =  571
- user_model1.run(): tid =  0  is working on column j =  572
- user_model1.run(): tid =  0  is working on column j =  573
- user_model1.run(): tid =  0  is working on column j =  574
- user_model1.run(): tid =  0  is working on column j =  575
- user_model1.run(): tid =  0  is working on column j =  576
- user_model1.run(): tid =  0  is working on column j =  577
- user_model1.run(): tid =  0  is working on column j =  578
- user_model1.run(): tid =  0  is working on column j =  579
- user_model1.run(): tid =  0  is working on column j =  580
- user_model1.run(): tid =  0  is working on column j =  581
- user_model1.run(): tid =  0  is working on column j =  582
- user_model1.run(): tid =  0  is working on column j =  583
- user_model1.run(): tid =  0  is working on column j =  584
- user_model1.run(): tid =  0  is working on column j =  585
- user_model1.run(): tid =  0  is working on column j =  586
- user_model1.run(): tid =  0  is working on column j =  587
- user_model1.run(): tid =  0  is working on column j =  588
- user_model1.run(): tid =  0  is working on column j =  589
- user_model1.run(): tid =  0  is working on column j =  590
- user_model1.run(): tid =  0  is working on column j =  591
- user_model1.run(): tid =  0  is working on column j =  592
- user_model1.run(): tid =  0  is working on column j =  593
- user_model1.run(): tid =  0  is working on column j =  594
- user_model1.run(): tid =  0  is working on column j =  595
- user_model1.run(): tid =  0  is working on column j =  596
- user_model1.run(): tid =  0  is working on column j =  597
- user_model1.run(): tid =  0  is working on column j =  598
- user_model1.run(): tid =  0  is working on column j =  599
- user_model1.run(): tid =  0  is working on column j =  600
- user_model1.run(): tid =  0  is working on column j =  601
- user_model1.run(): tid =  0  is working on column j =  602
- user_model1.run(): tid =  0  is working on column j =  603
- user_model1.run(): tid =  0  is working on column j =  604
- user_model1.run(): tid =  0  is working on column j =  605
- user_model1.run(): tid =  0  is working on column j =  606
- user_model1.run(): tid =  0  is working on column j =  607
- user_model1.run(): tid =  0  is working on column j =  608
- user_model1.run(): tid =  0  is working on column j =  609
- user_model1.run(): tid =  0  is working on column j =  610
- user_model1.run(): tid =  0  is working on column j =  611
- user_model1.run(): tid =  0  is working on column j =  612
- user_model1.run(): tid =  0  is working on column j =  613
- user_model1.run(): tid =  0  is working on column j =  614
- user_model1.run(): tid =  0  is working on column j =  615
- user_model1.run(): tid =  0  is working on column j =  616
- user_model1.run(): tid =  0  is working on column j =  617
- user_model1.run(): tid =  0  is working on column j =  618
- user_model1.run(): tid =  0  is working on column j =  619
- user_model1.run(): tid =  0  is working on column j =  620
- user_model1.run(): tid =  0  is working on column j =  621
- user_model1.run(): tid =  0  is working on column j =  622
- user_model1.run(): tid =  0  is working on column j =  623
- user_model1.run(): tid =  0  is working on column j =  624
- user_model1.run(): tid =  0  is working on column j =  625
- user_model1.run(): tid =  0  is working on column j =  626
- user_model1.run(): tid =  0  is working on column j =  627
- user_model1.run(): tid =  0  is working on column j =  628
- user_model1.run(): tid =  0  is working on column j =  629
- user_model1.run(): tid =  0  is working on column j =  630
- user_model1.run(): tid =  0  is working on column j =  631
- user_model1.run(): tid =  0  is working on column j =  632
- user_model1.run(): tid =  0  is working on column j =  633
- user_model1.run(): tid =  0  is working on column j =  634
- user_model1.run(): tid =  0  is working on column j =  635
- user_model1.run(): tid =  0  is working on column j =  636
- user_model1.run(): tid =  0  is working on column j =  637
- user_model1.run(): tid =  0  is working on column j =  638
- user_model1.run(): tid =  0  is working on column j =  639
- user_model1.run(): tid =  0  is working on column j =  640
- user_model1.run(): tid =  0  is working on column j =  641
- user_model1.run(): tid =  0  is working on column j =  642
- user_model1.run(): tid =  0  is working on column j =  643
- user_model1.run(): tid =  0  is working on column j =  644
- user_model1.run(): tid =  0  is working on column j =  645
- user_model1.run(): tid =  0  is working on column j =  646
- user_model1.run(): tid =  0  is working on column j =  647
- user_model1.run(): tid =  0  is working on column j =  648
- user_model1.run(): tid =  0  is working on column j =  649
- user_model1.run(): tid =  0  is working on column j =  650
- user_model1.run(): tid =  0  is working on column j =  651
- user_model1.run(): tid =  0  is working on column j =  652
- user_model1.run(): tid =  0  is working on column j =  653
- user_model1.run(): tid =  0  is working on column j =  654
- user_model1.run(): tid =  0  is working on column j =  655
- user_model1.run(): tid =  0  is working on column j =  656
- user_model1.run(): tid =  0  is working on column j =  657
- user_model1.run(): tid =  0  is working on column j =  658
- user_model1.run(): tid =  0  is working on column j =  659
- user_model1.run(): tid =  0  is working on column j =  660
- user_model1.run(): tid =  0  is working on column j =  661
- user_model1.run(): tid =  0  is working on column j =  662
- user_model1.run(): tid =  0  is working on column j =  663
- user_model1.run(): tid =  0  is working on column j =  664
- user_model1.run(): tid =  0  is working on column j =  665
- user_model1.run(): tid =  0  is working on column j =  666
- user_model1.run(): tid =  0  is working on column j =  667
- user_model1.run(): tid =  0  is working on column j =  668
- user_model1.run(): tid =  0  is working on column j =  669
- user_model1.run(): tid =  0  is working on column j =  670
- user_model1.run(): tid =  0  is working on column j =  671
- user_model1.run(): tid =  0  is working on column j =  536
- user_model1.run(): tid =  0  is working on column j =  537
- user_model1.run(): tid =  0  is working on column j =  538
- user_model1.run(): tid =  0  is working on column j =  539
- user_model1.run(): tid =  0  is working on column j =  540
- user_model1.run(): tid =  0  is working on column j =  541
- user_model1.run(): tid =  0  is working on column j =  542
- user_model1.run(): tid =  0  is working on column j =  543
- user_model1.run(): tid =  0  is working on column j =  544
- user_model1.run(): tid =  0  is working on column j =  545
- user_model1.run(): tid =  0  is working on column j =  546
- user_model1.run(): tid =  0  is working on column j =  547
- user_model1.run(): tid =  0  is working on column j =  548
- user_model1.run(): tid =  0  is working on column j =  549
- user_model1.run(): tid =  0  is working on column j =  550
- user_model1.run(): tid =  0  is working on column j =  551
- user_model1.run(): tid =  0  is working on column j =  552
- user_model1.run(): tid =  0  is working on column j =  553
- user_model1.run(): tid =  0  is working on column j =  554
- user_model1.run(): tid =  0  is working on column j =  555
- user_model1.run(): tid =  0  is working on column j =  556
- user_model1.run(): tid =  0  is working on column j =  557
- user_model1.run(): tid =  0  is working on column j =  558
- user_model1.run(): tid =  0  is working on column j =  559
- user_model1.run(): tid =  0  is working on column j =  560
- user_model1.run(): tid =  0  is working on column j =  561
- user_model1.run(): tid =  0  is working on column j =  562
- user_model1.run(): tid =  0  is working on column j =  563
- user_model1.run(): tid =  0  is working on column j =  564
- user_model1.run(): tid =  0  is working on column j =  565
- user_model1.run(): tid =  0  is working on column j =  566
- user_model1.run(): tid =  0  is working on column j =  567
- user_model1.run(): tid =  0  is working on column j =  568
- user_model1.run(): tid =  0  is working on column j =  569
- user_model1.run(): tid =  0  is working on column j =  570
- user_model1.run(): tid =  0  is working on column j =  571
- user_model1.run(): tid =  0  is working on column j =  572
- user_model1.run(): tid =  0  is working on column j =  573
- user_model1.run(): tid =  0  is working on column j =  574
- user_model1.run(): tid =  0  is working on column j =  575
- user_model1.run(): tid =  0  is working on column j =  576
- user_model1.run(): tid =  0  is working on column j =  577
- user_model1.run(): tid =  0  is working on column j =  578
- user_model1.run(): tid =  0  is working on column j =  579
- user_model1.run(): tid =  0  is working on column j =  580
- user_model1.run(): tid =  0  is working on column j =  581
- user_model1.run(): tid =  0  is working on column j =  582
- user_model1.run(): tid =  0  is working on column j =  583
- user_model1.run(): tid =  0  is working on column j =  584
- user_model1.run(): tid =  0  is working on column j =  585
- user_model1.run(): tid =  0  is working on column j =  586
- user_model1.run(): tid =  0  is working on column j =  587
- user_model1.run(): tid =  0  is working on column j =  588
- user_model1.run(): tid =  0  is working on column j =  589
- user_model1.run(): tid =  0  is working on column j =  590
- user_model1.run(): tid =  0  is working on column j =  591
- user_model1.run(): tid =  0  is working on column j =  592
- user_model1.run(): tid =  0  is working on column j =  593
- user_model1.run(): tid =  0  is working on column j =  594
- user_model1.run(): tid =  0  is working on column j =  595
- user_model1.run(): tid =  0  is working on column j =  596
- user_model1.run(): tid =  0  is working on column j =  597
- user_model1.run(): tid =  0  is working on column j =  598
- user_model1.run(): tid =  0  is working on column j =  599
- user_model1.run(): tid =  0  is working on column j =  600
- user_model1.run(): tid =  0  is working on column j =  601
- user_model1.run(): tid =  0  is working on column j =  602
- user_model1.run(): tid =  0  is working on column j =  603
- user_model1.run(): tid =  0  is working on column j =  672
- user_model1.run(): tid =  0  is working on column j =  673
- user_model1.run(): tid =  0  is working on column j =  674
- user_model1.run(): tid =  0  is working on column j =  675
- user_model1.run(): tid =  0  is working on column j =  676
- user_model1.run(): tid =  0  is working on column j =  677
- user_model1.run(): tid =  0  is working on column j =  678
- user_model1.run(): tid =  0  is working on column j =  679
- user_model1.run(): tid =  0  is working on column j =  680
- user_model1.run(): tid =  0  is working on column j =  681
- user_model1.run(): tid =  0  is working on column j =  682
- user_model1.run(): tid =  0  is working on column j =  683
- user_model1.run(): tid =  0  is working on column j =  684
- user_model1.run(): tid =  0  is working on column j =  685
- user_model1.run(): tid =  0  is working on column j =  686
- user_model1.run(): tid =  0  is working on column j =  687
- user_model1.run(): tid =  0  is working on column j =  688
- user_model1.run(): tid =  0  is working on column j =  689
- user_model1.run(): tid =  0  is working on column j =  690
- user_model1.run(): tid =  0  is working on column j =  691
- user_model1.run(): tid =  0  is working on column j =  692
- user_model1.run(): tid =  0  is working on column j =  693
- user_model1.run(): tid =  0  is working on column j =  694
- user_model1.run(): tid =  0  is working on column j =  695
- user_model1.run(): tid =  0  is working on column j =  696
- user_model1.run(): tid =  0  is working on column j =  697
- user_model1.run(): tid =  0  is working on column j =  698
- user_model1.run(): tid =  0  is working on column j =  699
- user_model1.run(): tid =  0  is working on column j =  700
- user_model1.run(): tid =  0  is working on column j =  701
- user_model1.run(): tid =  0  is working on column j =  702
- user_model1.run(): tid =  0  is working on column j =  703
- user_model1.run(): tid =  0  is working on column j =  704
- user_model1.run(): tid =  0  is working on column j =  705
- user_model1.run(): tid =  0  is working on column j =  706
- user_model1.run(): tid =  0  is working on column j =  707
- user_model1.run(): tid =  0  is working on column j =  708
- user_model1.run(): tid =  0  is working on column j =  709
- user_model1.run(): tid =  0  is working on column j =  710
- user_model1.run(): tid =  0  is working on column j =  711
- user_model1.run(): tid =  0  is working on column j =  712
- user_model1.run(): tid =  0  is working on column j =  713
- user_model1.run(): tid =  0  is working on column j =  714
- user_model1.run(): tid =  0  is working on column j =  715
- user_model1.run(): tid =  0  is working on column j =  716
- user_model1.run(): tid =  0  is working on column j =  717
- user_model1.run(): tid =  0  is working on column j =  718
- user_model1.run(): tid =  0  is working on column j =  719
- user_model1.run(): tid =  0  is working on column j =  720
- user_model1.run(): tid =  0  is working on column j =  721
- user_model1.run(): tid =  0  is working on column j =  722
- user_model1.run(): tid =  0  is working on column j =  723
- user_model1.run(): tid =  0  is working on column j =  724
- user_model1.run(): tid =  0  is working on column j =  725
- user_model1.run(): tid =  0  is working on column j =  726
- user_model1.run(): tid =  0  is working on column j =  727
- user_model1.run(): tid =  0  is working on column j =  728
- user_model1.run(): tid =  0  is working on column j =  729
- user_model1.run(): tid =  0  is working on column j =  730
- user_model1.run(): tid =  0  is working on column j =  731
- user_model1.run(): tid =  0  is working on column j =  732
- user_model1.run(): tid =  0  is working on column j =  733
- user_model1.run(): tid =  0  is working on column j =  734
- user_model1.run(): tid =  0  is working on column j =  735
- user_model1.run(): tid =  0  is working on column j =  736
- user_model1.run(): tid =  0  is working on column j =  737
- user_model1.run(): tid =  0  is working on column j =  738
- user_model1.run(): tid =  0  is working on column j =  739
- user_model1.run(): tid =  0  is working on column j =  604
- user_model1.run(): tid =  0  is working on column j =  605
- user_model1.run(): tid =  0  is working on column j =  606
- user_model1.run(): tid =  0  is working on column j =  607
- user_model1.run(): tid =  0  is working on column j =  608
- user_model1.run(): tid =  0  is working on column j =  609
- user_model1.run(): tid =  0  is working on column j =  610
- user_model1.run(): tid =  0  is working on column j =  611
- user_model1.run(): tid =  0  is working on column j =  612
- user_model1.run(): tid =  0  is working on column j =  613
- user_model1.run(): tid =  0  is working on column j =  614
- user_model1.run(): tid =  0  is working on column j =  615
- user_model1.run(): tid =  0  is working on column j =  616
- user_model1.run(): tid =  0  is working on column j =  617
- user_model1.run(): tid =  0  is working on column j =  618
- user_model1.run(): tid =  0  is working on column j =  619
- user_model1.run(): tid =  0  is working on column j =  620
- user_model1.run(): tid =  0  is working on column j =  621
- user_model1.run(): tid =  0  is working on column j =  622
- user_model1.run(): tid =  0  is working on column j =  623
- user_model1.run(): tid =  0  is working on column j =  624
- user_model1.run(): tid =  0  is working on column j =  625
- user_model1.run(): tid =  0  is working on column j =  626
- user_model1.run(): tid =  0  is working on column j =  627
- user_model1.run(): tid =  0  is working on column j =  628
- user_model1.run(): tid =  0  is working on column j =  629
- user_model1.run(): tid =  0  is working on column j =  630
- user_model1.run(): tid =  0  is working on column j =  631
- user_model1.run(): tid =  0  is working on column j =  632
- user_model1.run(): tid =  0  is working on column j =  633
- user_model1.run(): tid =  0  is working on column j =  634
- user_model1.run(): tid =  0  is working on column j =  635
- user_model1.run(): tid =  0  is working on column j =  636
- user_model1.run(): tid =  0  is working on column j =  637
- user_model1.run(): tid =  0  is working on column j =  638
- user_model1.run(): tid =  0  is working on column j =  639
- user_model1.run(): tid =  0  is working on column j =  640
- user_model1.run(): tid =  0  is working on column j =  641
- user_model1.run(): tid =  0  is working on column j =  642
- user_model1.run(): tid =  0  is working on column j =  643
- user_model1.run(): tid =  0  is working on column j =  644
- user_model1.run(): tid =  0  is working on column j =  645
- user_model1.run(): tid =  0  is working on column j =  646
- user_model1.run(): tid =  0  is working on column j =  647
- user_model1.run(): tid =  0  is working on column j =  648
- user_model1.run(): tid =  0  is working on column j =  649
- user_model1.run(): tid =  0  is working on column j =  650
- user_model1.run(): tid =  0  is working on column j =  651
- user_model1.run(): tid =  0  is working on column j =  652
- user_model1.run(): tid =  0  is working on column j =  653
- user_model1.run(): tid =  0  is working on column j =  654
- user_model1.run(): tid =  0  is working on column j =  655
- user_model1.run(): tid =  0  is working on column j =  656
- user_model1.run(): tid =  0  is working on column j =  657
- user_model1.run(): tid =  0  is working on column j =  658
- user_model1.run(): tid =  0  is working on column j =  659
- user_model1.run(): tid =  0  is working on column j =  660
- user_model1.run(): tid =  0  is working on column j =  661
- user_model1.run(): tid =  0  is working on column j =  662
- user_model1.run(): tid =  0  is working on column j =  663
- user_model1.run(): tid =  0  is working on column j =  664
- user_model1.run(): tid =  0  is working on column j =  665
- user_model1.run(): tid =  0  is working on column j =  666
- user_model1.run(): tid =  0  is working on column j =  667
- user_model1.run(): tid =  0  is working on column j =  668
- user_model1.run(): tid =  0  is working on column j =  669
- user_model1.run(): tid =  0  is working on column j =  670
- user_model1.run(): tid =  0  is working on column j =  671
- user_model1.run(): tid =  0  is working on column j =  672
- user_model1.run(): tid =  0  is working on column j =  673
- user_model1.run(): tid =  0  is working on column j =  674
- user_model1.run(): tid =  0  is working on column j =  675
- user_model1.run(): tid =  0  is working on column j =  676
- user_model1.run(): tid =  0  is working on column j =  677
- user_model1.run(): tid =  0  is working on column j =  678
- user_model1.run(): tid =  0  is working on column j =  679
- user_model1.run(): tid =  0  is working on column j =  680
- user_model1.run(): tid =  0  is working on column j =  681
- user_model1.run(): tid =  0  is working on column j =  682
- user_model1.run(): tid =  0  is working on column j =  683
- user_model1.run(): tid =  0  is working on column j =  684
- user_model1.run(): tid =  0  is working on column j =  685
- user_model1.run(): tid =  0  is working on column j =  686
- user_model1.run(): tid =  0  is working on column j =  687
- user_model1.run(): tid =  0  is working on column j =  688
- user_model1.run(): tid =  0  is working on column j =  689
- user_model1.run(): tid =  0  is working on column j =  690
- user_model1.run(): tid =  0  is working on column j =  691
- user_model1.run(): tid =  0  is working on column j =  692
- user_model1.run(): tid =  0  is working on column j =  693
- user_model1.run(): tid =  0  is working on column j =  694
- user_model1.run(): tid =  0  is working on column j =  695
- user_model1.run(): tid =  0  is working on column j =  696
- user_model1.run(): tid =  0  is working on column j =  697
- user_model1.run(): tid =  0  is working on column j =  698
- user_model1.run(): tid =  0  is working on column j =  699
- user_model1.run(): tid =  0  is working on column j =  700
- user_model1.run(): tid =  0  is working on column j =  701
- user_model1.run(): tid =  0  is working on column j =  702
- user_model1.run(): tid =  0  is working on column j =  703
- user_model1.run(): tid =  0  is working on column j =  704
- user_model1.run(): tid =  0  is working on column j =  705
- user_model1.run(): tid =  0  is working on column j =  706
- user_model1.run(): tid =  0  is working on column j =  707
- user_model1.run(): tid =  0  is working on column j =  708
- user_model1.run(): tid =  0  is working on column j =  709
- user_model1.run(): tid =  0  is working on column j =  710
- user_model1.run(): tid =  0  is working on column j =  711
- user_model1.run(): tid =  0  is working on column j =  712
- user_model1.run(): tid =  0  is working on column j =  713
- user_model1.run(): tid =  0  is working on column j =  714
- user_model1.run(): tid =  0  is working on column j =  715
- user_model1.run(): tid =  0  is working on column j =  716
- user_model1.run(): tid =  0  is working on column j =  717
- user_model1.run(): tid =  0  is working on column j =  718
- user_model1.run(): tid =  0  is working on column j =  719
- user_model1.run(): tid =  0  is working on column j =  720
- user_model1.run(): tid =  0  is working on column j =  721
- user_model1.run(): tid =  0  is working on column j =  722
- user_model1.run(): tid =  0  is working on column j =  723
- user_model1.run(): tid =  0  is working on column j =  724
- user_model1.run(): tid =  0  is working on column j =  725
- user_model1.run(): tid =  0  is working on column j =  726
- user_model1.run(): tid =  0  is working on column j =  727
- user_model1.run(): tid =  0  is working on column j =  728
- user_model1.run(): tid =  0  is working on column j =  729
- user_model1.run(): tid =  0  is working on column j =  730
- user_model1.run(): tid =  0  is working on column j =  731
- user_model1.run(): tid =  0  is working on column j =  732
- user_model1.run(): tid =  0  is working on column j =  733
- user_model1.run(): tid =  0  is working on column j =  734
- user_model1.run(): tid =  0  is working on column j =  735
- user_model1.run(): tid =  0  is working on column j =  736
- user_model1.run(): tid =  0  is working on column j =  737
- user_model1.run(): tid =  0  is working on column j =  738
- user_model1.run(): tid =  0  is working on column j =  739
- user_model1.run(): tid =  0  is working on column j =  604
- user_model1.run(): tid =  0  is working on column j =  605
- user_model1.run(): tid =  0  is working on column j =  606
- user_model1.run(): tid =  0  is working on column j =  607
- user_model1.run(): tid =  0  is working on column j =  608
- user_model1.run(): tid =  0  is working on column j =  609
- user_model1.run(): tid =  0  is working on column j =  610
- user_model1.run(): tid =  0  is working on column j =  611
- user_model1.run(): tid =  0  is working on column j =  612
- user_model1.run(): tid =  0  is working on column j =  613
- user_model1.run(): tid =  0  is working on column j =  614
- user_model1.run(): tid =  0  is working on column j =  615
- user_model1.run(): tid =  0  is working on column j =  616
- user_model1.run(): tid =  0  is working on column j =  617
- user_model1.run(): tid =  0  is working on column j =  618
- user_model1.run(): tid =  0  is working on column j =  619
- user_model1.run(): tid =  0  is working on column j =  620
- user_model1.run(): tid =  0  is working on column j =  621
- user_model1.run(): tid =  0  is working on column j =  622
- user_model1.run(): tid =  0  is working on column j =  623
- user_model1.run(): tid =  0  is working on column j =  624
- user_model1.run(): tid =  0  is working on column j =  625
- user_model1.run(): tid =  0  is working on column j =  626
- user_model1.run(): tid =  0  is working on column j =  627
- user_model1.run(): tid =  0  is working on column j =  628
- user_model1.run(): tid =  0  is working on column j =  629
- user_model1.run(): tid =  0  is working on column j =  630
- user_model1.run(): tid =  0  is working on column j =  631
- user_model1.run(): tid =  0  is working on column j =  632
- user_model1.run(): tid =  0  is working on column j =  633
- user_model1.run(): tid =  0  is working on column j =  634
- user_model1.run(): tid =  0  is working on column j =  635
- user_model1.run(): tid =  0  is working on column j =  636
- user_model1.run(): tid =  0  is working on column j =  637
- user_model1.run(): tid =  0  is working on column j =  638
- user_model1.run(): tid =  0  is working on column j =  639
- user_model1.run(): tid =  0  is working on column j =  640
- user_model1.run(): tid =  0  is working on column j =  641
- user_model1.run(): tid =  0  is working on column j =  642
- user_model1.run(): tid =  0  is working on column j =  643
- user_model1.run(): tid =  0  is working on column j =  644
- user_model1.run(): tid =  0  is working on column j =  645
- user_model1.run(): tid =  0  is working on column j =  646
- user_model1.run(): tid =  0  is working on column j =  647
- user_model1.run(): tid =  0  is working on column j =  648
- user_model1.run(): tid =  0  is working on column j =  649
- user_model1.run(): tid =  0  is working on column j =  650
- user_model1.run(): tid =  0  is working on column j =  651
- user_model1.run(): tid =  0  is working on column j =  652
- user_model1.run(): tid =  0  is working on column j =  653
- user_model1.run(): tid =  0  is working on column j =  654
- user_model1.run(): tid =  0  is working on column j =  655
- user_model1.run(): tid =  0  is working on column j =  656
- user_model1.run(): tid =  0  is working on column j =  657
- user_model1.run(): tid =  0  is working on column j =  658
- user_model1.run(): tid =  0  is working on column j =  659
- user_model1.run(): tid =  0  is working on column j =  660
- user_model1.run(): tid =  0  is working on column j =  661
- user_model1.run(): tid =  0  is working on column j =  662
- user_model1.run(): tid =  0  is working on column j =  663
- user_model1.run(): tid =  0  is working on column j =  664
- user_model1.run(): tid =  0  is working on column j =  665
- user_model1.run(): tid =  0  is working on column j =  666
- user_model1.run(): tid =  0  is working on column j =  667
- user_model1.run(): tid =  0  is working on column j =  668
- user_model1.run(): tid =  0  is working on column j =  669
- user_model1.run(): tid =  0  is working on column j =  670
- user_model1.run(): tid =  0  is working on column j =  671
  --------------------------------------- 
  Start of  System Test ESMF_ArrayRedistOpenMPSTest
  --------------------------------------- 
@@ -6273,38 +5117,618 @@ ncores = 8
  ------------------------------------------------------------
  ------------------------------------------------------------
   PASS  System Test ESMF_ArrayRedistOpenMPSTest, ESMF_ArrayRedistOpenMPSTest.F90, line 391
- user_model1.run(): tid =  0  is working on column j =  740
- user_model1.run(): tid =  0  is working on column j =  741
- user_model1.run(): tid =  0  is working on column j =  742
- user_model1.run(): tid =  0  is working on column j =  743
- user_model1.run(): tid =  0  is working on column j =  744
- user_model1.run(): tid =  0  is working on column j =  745
- user_model1.run(): tid =  0  is working on column j =  746
- user_model1.run(): tid =  0  is working on column j =  747
- user_model1.run(): tid =  0  is working on column j =  748
- user_model1.run(): tid =  0  is working on column j =  749
- user_model1.run(): tid =  0  is working on column j =  750
- User Comp1 Run returning
- Comp 1 Run returned, rc = 2*0
- User Coupler Run starting
- User Coupler Run returning
- Coupler Run returned, rc = 2*0
- Comp 2 Run returned, rc = 2*0
- User Coupler Final starting
- User Coupler Final returning
- Coupler Finalize finished, rc = 2*0
- User Comp1 Final starting
- User Comp1 Final returning
- Comp 1 Finalize finished, rc = 2*0
- Comp 2 Finalize finished, rc = 2*0
- All Destroy routines done
-  System Test ESMF_ArrayRedistOpenMPSTest                                                                                                                                                                                                                         complete.
- ------------------------------------------------------------
- ------------------------------------------------------------
- Test finished, localPet =  0
- ------------------------------------------------------------
- ------------------------------------------------------------
-  PASS  System Test ESMF_ArrayRedistOpenMPSTest, ESMF_ArrayRedistOpenMPSTest.F90, line 391
+ user_model1.run(): tid =  0  is working on column j =  468
+ user_model1.run(): tid =  0  is working on column j =  469
+ user_model1.run(): tid =  0  is working on column j =  470
+ user_model1.run(): tid =  0  is working on column j =  471
+ user_model1.run(): tid =  0  is working on column j =  472
+ user_model1.run(): tid =  0  is working on column j =  473
+ user_model1.run(): tid =  0  is working on column j =  474
+ user_model1.run(): tid =  0  is working on column j =  475
+ user_model1.run(): tid =  0  is working on column j =  476
+ user_model1.run(): tid =  0  is working on column j =  477
+ user_model1.run(): tid =  0  is working on column j =  478
+ user_model1.run(): tid =  0  is working on column j =  479
+ user_model1.run(): tid =  0  is working on column j =  480
+ user_model1.run(): tid =  0  is working on column j =  481
+ user_model1.run(): tid =  0  is working on column j =  482
+ user_model1.run(): tid =  0  is working on column j =  483
+ user_model1.run(): tid =  0  is working on column j =  484
+ user_model1.run(): tid =  0  is working on column j =  485
+ user_model1.run(): tid =  0  is working on column j =  486
+ user_model1.run(): tid =  0  is working on column j =  487
+ user_model1.run(): tid =  0  is working on column j =  488
+ user_model1.run(): tid =  0  is working on column j =  489
+ user_model1.run(): tid =  0  is working on column j =  490
+ user_model1.run(): tid =  0  is working on column j =  491
+ user_model1.run(): tid =  0  is working on column j =  492
+ user_model1.run(): tid =  0  is working on column j =  493
+ user_model1.run(): tid =  0  is working on column j =  494
+ user_model1.run(): tid =  0  is working on column j =  495
+ user_model1.run(): tid =  0  is working on column j =  496
+ user_model1.run(): tid =  0  is working on column j =  497
+ user_model1.run(): tid =  0  is working on column j =  498
+ user_model1.run(): tid =  0  is working on column j =  499
+ user_model1.run(): tid =  0  is working on column j =  500
+ user_model1.run(): tid =  0  is working on column j =  501
+ user_model1.run(): tid =  0  is working on column j =  502
+ user_model1.run(): tid =  0  is working on column j =  503
+ user_model1.run(): tid =  0  is working on column j =  504
+ user_model1.run(): tid =  0  is working on column j =  505
+ user_model1.run(): tid =  0  is working on column j =  506
+ user_model1.run(): tid =  0  is working on column j =  507
+ user_model1.run(): tid =  0  is working on column j =  508
+ user_model1.run(): tid =  0  is working on column j =  509
+ user_model1.run(): tid =  0  is working on column j =  510
+ user_model1.run(): tid =  0  is working on column j =  511
+ user_model1.run(): tid =  0  is working on column j =  512
+ user_model1.run(): tid =  0  is working on column j =  513
+ user_model1.run(): tid =  0  is working on column j =  514
+ user_model1.run(): tid =  0  is working on column j =  515
+ user_model1.run(): tid =  0  is working on column j =  516
+ user_model1.run(): tid =  0  is working on column j =  517
+ user_model1.run(): tid =  0  is working on column j =  518
+ user_model1.run(): tid =  0  is working on column j =  519
+ user_model1.run(): tid =  0  is working on column j =  520
+ user_model1.run(): tid =  0  is working on column j =  521
+ user_model1.run(): tid =  0  is working on column j =  522
+ user_model1.run(): tid =  0  is working on column j =  523
+ user_model1.run(): tid =  0  is working on column j =  524
+ user_model1.run(): tid =  0  is working on column j =  525
+ user_model1.run(): tid =  0  is working on column j =  526
+ user_model1.run(): tid =  0  is working on column j =  527
+ user_model1.run(): tid =  0  is working on column j =  528
+ user_model1.run(): tid =  0  is working on column j =  529
+ user_model1.run(): tid =  0  is working on column j =  530
+ user_model1.run(): tid =  0  is working on column j =  531
+ user_model1.run(): tid =  0  is working on column j =  532
+ user_model1.run(): tid =  0  is working on column j =  533
+ user_model1.run(): tid =  0  is working on column j =  534
+ user_model1.run(): tid =  0  is working on column j =  535
+ user_model1.run(): tid =  0  is working on column j =  400
+ user_model1.run(): tid =  0  is working on column j =  401
+ user_model1.run(): tid =  0  is working on column j =  402
+ user_model1.run(): tid =  0  is working on column j =  403
+ user_model1.run(): tid =  0  is working on column j =  404
+ user_model1.run(): tid =  0  is working on column j =  405
+ user_model1.run(): tid =  0  is working on column j =  406
+ user_model1.run(): tid =  0  is working on column j =  407
+ user_model1.run(): tid =  0  is working on column j =  408
+ user_model1.run(): tid =  0  is working on column j =  409
+ user_model1.run(): tid =  0  is working on column j =  410
+ user_model1.run(): tid =  0  is working on column j =  411
+ user_model1.run(): tid =  0  is working on column j =  412
+ user_model1.run(): tid =  0  is working on column j =  413
+ user_model1.run(): tid =  0  is working on column j =  414
+ user_model1.run(): tid =  0  is working on column j =  415
+ user_model1.run(): tid =  0  is working on column j =  416
+ user_model1.run(): tid =  0  is working on column j =  417
+ user_model1.run(): tid =  0  is working on column j =  418
+ user_model1.run(): tid =  0  is working on column j =  419
+ user_model1.run(): tid =  0  is working on column j =  420
+ user_model1.run(): tid =  0  is working on column j =  421
+ user_model1.run(): tid =  0  is working on column j =  422
+ user_model1.run(): tid =  0  is working on column j =  423
+ user_model1.run(): tid =  0  is working on column j =  424
+ user_model1.run(): tid =  0  is working on column j =  425
+ user_model1.run(): tid =  0  is working on column j =  426
+ user_model1.run(): tid =  0  is working on column j =  427
+ user_model1.run(): tid =  0  is working on column j =  428
+ user_model1.run(): tid =  0  is working on column j =  429
+ user_model1.run(): tid =  0  is working on column j =  430
+ user_model1.run(): tid =  0  is working on column j =  431
+ user_model1.run(): tid =  0  is working on column j =  432
+ user_model1.run(): tid =  0  is working on column j =  433
+ user_model1.run(): tid =  0  is working on column j =  434
+ user_model1.run(): tid =  0  is working on column j =  435
+ user_model1.run(): tid =  0  is working on column j =  436
+ user_model1.run(): tid =  0  is working on column j =  437
+ user_model1.run(): tid =  0  is working on column j =  438
+ user_model1.run(): tid =  0  is working on column j =  439
+ user_model1.run(): tid =  0  is working on column j =  440
+ user_model1.run(): tid =  0  is working on column j =  441
+ user_model1.run(): tid =  0  is working on column j =  442
+ user_model1.run(): tid =  0  is working on column j =  443
+ user_model1.run(): tid =  0  is working on column j =  444
+ user_model1.run(): tid =  0  is working on column j =  445
+ user_model1.run(): tid =  0  is working on column j =  446
+ user_model1.run(): tid =  0  is working on column j =  447
+ user_model1.run(): tid =  0  is working on column j =  448
+ user_model1.run(): tid =  0  is working on column j =  449
+ user_model1.run(): tid =  0  is working on column j =  450
+ user_model1.run(): tid =  0  is working on column j =  451
+ user_model1.run(): tid =  0  is working on column j =  452
+ user_model1.run(): tid =  0  is working on column j =  453
+ user_model1.run(): tid =  0  is working on column j =  454
+ user_model1.run(): tid =  0  is working on column j =  455
+ user_model1.run(): tid =  0  is working on column j =  456
+ user_model1.run(): tid =  0  is working on column j =  457
+ user_model1.run(): tid =  0  is working on column j =  458
+ user_model1.run(): tid =  0  is working on column j =  459
+ user_model1.run(): tid =  0  is working on column j =  460
+ user_model1.run(): tid =  0  is working on column j =  461
+ user_model1.run(): tid =  0  is working on column j =  462
+ user_model1.run(): tid =  0  is working on column j =  463
+ user_model1.run(): tid =  0  is working on column j =  464
+ user_model1.run(): tid =  0  is working on column j =  465
+ user_model1.run(): tid =  0  is working on column j =  466
+ user_model1.run(): tid =  0  is working on column j =  467
+ user_model1.run(): tid =  0  is working on column j =  468
+ user_model1.run(): tid =  0  is working on column j =  469
+ user_model1.run(): tid =  0  is working on column j =  470
+ user_model1.run(): tid =  0  is working on column j =  471
+ user_model1.run(): tid =  0  is working on column j =  472
+ user_model1.run(): tid =  0  is working on column j =  473
+ user_model1.run(): tid =  0  is working on column j =  474
+ user_model1.run(): tid =  0  is working on column j =  475
+ user_model1.run(): tid =  0  is working on column j =  476
+ user_model1.run(): tid =  0  is working on column j =  477
+ user_model1.run(): tid =  0  is working on column j =  478
+ user_model1.run(): tid =  0  is working on column j =  479
+ user_model1.run(): tid =  0  is working on column j =  480
+ user_model1.run(): tid =  0  is working on column j =  481
+ user_model1.run(): tid =  0  is working on column j =  482
+ user_model1.run(): tid =  0  is working on column j =  483
+ user_model1.run(): tid =  0  is working on column j =  484
+ user_model1.run(): tid =  0  is working on column j =  485
+ user_model1.run(): tid =  0  is working on column j =  486
+ user_model1.run(): tid =  0  is working on column j =  487
+ user_model1.run(): tid =  0  is working on column j =  488
+ user_model1.run(): tid =  0  is working on column j =  489
+ user_model1.run(): tid =  0  is working on column j =  490
+ user_model1.run(): tid =  0  is working on column j =  491
+ user_model1.run(): tid =  0  is working on column j =  492
+ user_model1.run(): tid =  0  is working on column j =  493
+ user_model1.run(): tid =  0  is working on column j =  494
+ user_model1.run(): tid =  0  is working on column j =  495
+ user_model1.run(): tid =  0  is working on column j =  496
+ user_model1.run(): tid =  0  is working on column j =  497
+ user_model1.run(): tid =  0  is working on column j =  498
+ user_model1.run(): tid =  0  is working on column j =  499
+ user_model1.run(): tid =  0  is working on column j =  500
+ user_model1.run(): tid =  0  is working on column j =  501
+ user_model1.run(): tid =  0  is working on column j =  502
+ user_model1.run(): tid =  0  is working on column j =  503
+ user_model1.run(): tid =  0  is working on column j =  504
+ user_model1.run(): tid =  0  is working on column j =  505
+ user_model1.run(): tid =  0  is working on column j =  506
+ user_model1.run(): tid =  0  is working on column j =  507
+ user_model1.run(): tid =  0  is working on column j =  508
+ user_model1.run(): tid =  0  is working on column j =  509
+ user_model1.run(): tid =  0  is working on column j =  510
+ user_model1.run(): tid =  0  is working on column j =  511
+ user_model1.run(): tid =  0  is working on column j =  512
+ user_model1.run(): tid =  0  is working on column j =  513
+ user_model1.run(): tid =  0  is working on column j =  514
+ user_model1.run(): tid =  0  is working on column j =  515
+ user_model1.run(): tid =  0  is working on column j =  516
+ user_model1.run(): tid =  0  is working on column j =  517
+ user_model1.run(): tid =  0  is working on column j =  518
+ user_model1.run(): tid =  0  is working on column j =  519
+ user_model1.run(): tid =  0  is working on column j =  520
+ user_model1.run(): tid =  0  is working on column j =  521
+ user_model1.run(): tid =  0  is working on column j =  522
+ user_model1.run(): tid =  0  is working on column j =  523
+ user_model1.run(): tid =  0  is working on column j =  524
+ user_model1.run(): tid =  0  is working on column j =  525
+ user_model1.run(): tid =  0  is working on column j =  526
+ user_model1.run(): tid =  0  is working on column j =  527
+ user_model1.run(): tid =  0  is working on column j =  528
+ user_model1.run(): tid =  0  is working on column j =  529
+ user_model1.run(): tid =  0  is working on column j =  530
+ user_model1.run(): tid =  0  is working on column j =  531
+ user_model1.run(): tid =  0  is working on column j =  532
+ user_model1.run(): tid =  0  is working on column j =  533
+ user_model1.run(): tid =  0  is working on column j =  534
+ user_model1.run(): tid =  0  is working on column j =  535
+ user_model1.run(): tid =  0  is working on column j =  536
+ user_model1.run(): tid =  0  is working on column j =  537
+ user_model1.run(): tid =  0  is working on column j =  538
+ user_model1.run(): tid =  0  is working on column j =  539
+ user_model1.run(): tid =  0  is working on column j =  540
+ user_model1.run(): tid =  0  is working on column j =  541
+ user_model1.run(): tid =  0  is working on column j =  542
+ user_model1.run(): tid =  0  is working on column j =  543
+ user_model1.run(): tid =  0  is working on column j =  544
+ user_model1.run(): tid =  0  is working on column j =  545
+ user_model1.run(): tid =  0  is working on column j =  546
+ user_model1.run(): tid =  0  is working on column j =  547
+ user_model1.run(): tid =  0  is working on column j =  548
+ user_model1.run(): tid =  0  is working on column j =  549
+ user_model1.run(): tid =  0  is working on column j =  550
+ user_model1.run(): tid =  0  is working on column j =  551
+ user_model1.run(): tid =  0  is working on column j =  552
+ user_model1.run(): tid =  0  is working on column j =  553
+ user_model1.run(): tid =  0  is working on column j =  554
+ user_model1.run(): tid =  0  is working on column j =  555
+ user_model1.run(): tid =  0  is working on column j =  556
+ user_model1.run(): tid =  0  is working on column j =  557
+ user_model1.run(): tid =  0  is working on column j =  558
+ user_model1.run(): tid =  0  is working on column j =  559
+ user_model1.run(): tid =  0  is working on column j =  560
+ user_model1.run(): tid =  0  is working on column j =  561
+ user_model1.run(): tid =  0  is working on column j =  562
+ user_model1.run(): tid =  0  is working on column j =  563
+ user_model1.run(): tid =  0  is working on column j =  564
+ user_model1.run(): tid =  0  is working on column j =  565
+ user_model1.run(): tid =  0  is working on column j =  566
+ user_model1.run(): tid =  0  is working on column j =  567
+ user_model1.run(): tid =  0  is working on column j =  568
+ user_model1.run(): tid =  0  is working on column j =  569
+ user_model1.run(): tid =  0  is working on column j =  570
+ user_model1.run(): tid =  0  is working on column j =  571
+ user_model1.run(): tid =  0  is working on column j =  572
+ user_model1.run(): tid =  0  is working on column j =  573
+ user_model1.run(): tid =  0  is working on column j =  574
+ user_model1.run(): tid =  0  is working on column j =  575
+ user_model1.run(): tid =  0  is working on column j =  576
+ user_model1.run(): tid =  0  is working on column j =  577
+ user_model1.run(): tid =  0  is working on column j =  578
+ user_model1.run(): tid =  0  is working on column j =  579
+ user_model1.run(): tid =  0  is working on column j =  580
+ user_model1.run(): tid =  0  is working on column j =  581
+ user_model1.run(): tid =  0  is working on column j =  582
+ user_model1.run(): tid =  0  is working on column j =  583
+ user_model1.run(): tid =  0  is working on column j =  584
+ user_model1.run(): tid =  0  is working on column j =  585
+ user_model1.run(): tid =  0  is working on column j =  586
+ user_model1.run(): tid =  0  is working on column j =  587
+ user_model1.run(): tid =  0  is working on column j =  588
+ user_model1.run(): tid =  0  is working on column j =  589
+ user_model1.run(): tid =  0  is working on column j =  590
+ user_model1.run(): tid =  0  is working on column j =  591
+ user_model1.run(): tid =  0  is working on column j =  592
+ user_model1.run(): tid =  0  is working on column j =  593
+ user_model1.run(): tid =  0  is working on column j =  594
+ user_model1.run(): tid =  0  is working on column j =  595
+ user_model1.run(): tid =  0  is working on column j =  596
+ user_model1.run(): tid =  0  is working on column j =  597
+ user_model1.run(): tid =  0  is working on column j =  598
+ user_model1.run(): tid =  0  is working on column j =  599
+ user_model1.run(): tid =  0  is working on column j =  600
+ user_model1.run(): tid =  0  is working on column j =  601
+ user_model1.run(): tid =  0  is working on column j =  602
+ user_model1.run(): tid =  0  is working on column j =  603
+ user_model1.run(): tid =  0  is working on column j =  468
+ user_model1.run(): tid =  0  is working on column j =  469
+ user_model1.run(): tid =  0  is working on column j =  470
+ user_model1.run(): tid =  0  is working on column j =  471
+ user_model1.run(): tid =  0  is working on column j =  472
+ user_model1.run(): tid =  0  is working on column j =  473
+ user_model1.run(): tid =  0  is working on column j =  474
+ user_model1.run(): tid =  0  is working on column j =  475
+ user_model1.run(): tid =  0  is working on column j =  476
+ user_model1.run(): tid =  0  is working on column j =  477
+ user_model1.run(): tid =  0  is working on column j =  478
+ user_model1.run(): tid =  0  is working on column j =  479
+ user_model1.run(): tid =  0  is working on column j =  480
+ user_model1.run(): tid =  0  is working on column j =  481
+ user_model1.run(): tid =  0  is working on column j =  482
+ user_model1.run(): tid =  0  is working on column j =  483
+ user_model1.run(): tid =  0  is working on column j =  484
+ user_model1.run(): tid =  0  is working on column j =  485
+ user_model1.run(): tid =  0  is working on column j =  486
+ user_model1.run(): tid =  0  is working on column j =  487
+ user_model1.run(): tid =  0  is working on column j =  488
+ user_model1.run(): tid =  0  is working on column j =  489
+ user_model1.run(): tid =  0  is working on column j =  490
+ user_model1.run(): tid =  0  is working on column j =  491
+ user_model1.run(): tid =  0  is working on column j =  492
+ user_model1.run(): tid =  0  is working on column j =  493
+ user_model1.run(): tid =  0  is working on column j =  494
+ user_model1.run(): tid =  0  is working on column j =  495
+ user_model1.run(): tid =  0  is working on column j =  496
+ user_model1.run(): tid =  0  is working on column j =  497
+ user_model1.run(): tid =  0  is working on column j =  498
+ user_model1.run(): tid =  0  is working on column j =  499
+ user_model1.run(): tid =  0  is working on column j =  500
+ user_model1.run(): tid =  0  is working on column j =  501
+ user_model1.run(): tid =  0  is working on column j =  502
+ user_model1.run(): tid =  0  is working on column j =  503
+ user_model1.run(): tid =  0  is working on column j =  504
+ user_model1.run(): tid =  0  is working on column j =  505
+ user_model1.run(): tid =  0  is working on column j =  506
+ user_model1.run(): tid =  0  is working on column j =  507
+ user_model1.run(): tid =  0  is working on column j =  508
+ user_model1.run(): tid =  0  is working on column j =  509
+ user_model1.run(): tid =  0  is working on column j =  510
+ user_model1.run(): tid =  0  is working on column j =  511
+ user_model1.run(): tid =  0  is working on column j =  512
+ user_model1.run(): tid =  0  is working on column j =  513
+ user_model1.run(): tid =  0  is working on column j =  514
+ user_model1.run(): tid =  0  is working on column j =  515
+ user_model1.run(): tid =  0  is working on column j =  516
+ user_model1.run(): tid =  0  is working on column j =  517
+ user_model1.run(): tid =  0  is working on column j =  518
+ user_model1.run(): tid =  0  is working on column j =  519
+ user_model1.run(): tid =  0  is working on column j =  520
+ user_model1.run(): tid =  0  is working on column j =  521
+ user_model1.run(): tid =  0  is working on column j =  522
+ user_model1.run(): tid =  0  is working on column j =  523
+ user_model1.run(): tid =  0  is working on column j =  524
+ user_model1.run(): tid =  0  is working on column j =  525
+ user_model1.run(): tid =  0  is working on column j =  526
+ user_model1.run(): tid =  0  is working on column j =  527
+ user_model1.run(): tid =  0  is working on column j =  528
+ user_model1.run(): tid =  0  is working on column j =  529
+ user_model1.run(): tid =  0  is working on column j =  530
+ user_model1.run(): tid =  0  is working on column j =  531
+ user_model1.run(): tid =  0  is working on column j =  532
+ user_model1.run(): tid =  0  is working on column j =  533
+ user_model1.run(): tid =  0  is working on column j =  534
+ user_model1.run(): tid =  0  is working on column j =  535
+ user_model1.run(): tid =  0  is working on column j =  536
+ user_model1.run(): tid =  0  is working on column j =  537
+ user_model1.run(): tid =  0  is working on column j =  538
+ user_model1.run(): tid =  0  is working on column j =  539
+ user_model1.run(): tid =  0  is working on column j =  540
+ user_model1.run(): tid =  0  is working on column j =  541
+ user_model1.run(): tid =  0  is working on column j =  542
+ user_model1.run(): tid =  0  is working on column j =  543
+ user_model1.run(): tid =  0  is working on column j =  544
+ user_model1.run(): tid =  0  is working on column j =  545
+ user_model1.run(): tid =  0  is working on column j =  546
+ user_model1.run(): tid =  0  is working on column j =  547
+ user_model1.run(): tid =  0  is working on column j =  548
+ user_model1.run(): tid =  0  is working on column j =  549
+ user_model1.run(): tid =  0  is working on column j =  550
+ user_model1.run(): tid =  0  is working on column j =  551
+ user_model1.run(): tid =  0  is working on column j =  552
+ user_model1.run(): tid =  0  is working on column j =  553
+ user_model1.run(): tid =  0  is working on column j =  554
+ user_model1.run(): tid =  0  is working on column j =  555
+ user_model1.run(): tid =  0  is working on column j =  556
+ user_model1.run(): tid =  0  is working on column j =  557
+ user_model1.run(): tid =  0  is working on column j =  558
+ user_model1.run(): tid =  0  is working on column j =  559
+ user_model1.run(): tid =  0  is working on column j =  560
+ user_model1.run(): tid =  0  is working on column j =  561
+ user_model1.run(): tid =  0  is working on column j =  562
+ user_model1.run(): tid =  0  is working on column j =  563
+ user_model1.run(): tid =  0  is working on column j =  564
+ user_model1.run(): tid =  0  is working on column j =  565
+ user_model1.run(): tid =  0  is working on column j =  566
+ user_model1.run(): tid =  0  is working on column j =  567
+ user_model1.run(): tid =  0  is working on column j =  568
+ user_model1.run(): tid =  0  is working on column j =  569
+ user_model1.run(): tid =  0  is working on column j =  570
+ user_model1.run(): tid =  0  is working on column j =  571
+ user_model1.run(): tid =  0  is working on column j =  572
+ user_model1.run(): tid =  0  is working on column j =  573
+ user_model1.run(): tid =  0  is working on column j =  574
+ user_model1.run(): tid =  0  is working on column j =  575
+ user_model1.run(): tid =  0  is working on column j =  576
+ user_model1.run(): tid =  0  is working on column j =  577
+ user_model1.run(): tid =  0  is working on column j =  578
+ user_model1.run(): tid =  0  is working on column j =  579
+ user_model1.run(): tid =  0  is working on column j =  580
+ user_model1.run(): tid =  0  is working on column j =  581
+ user_model1.run(): tid =  0  is working on column j =  582
+ user_model1.run(): tid =  0  is working on column j =  583
+ user_model1.run(): tid =  0  is working on column j =  584
+ user_model1.run(): tid =  0  is working on column j =  585
+ user_model1.run(): tid =  0  is working on column j =  586
+ user_model1.run(): tid =  0  is working on column j =  587
+ user_model1.run(): tid =  0  is working on column j =  588
+ user_model1.run(): tid =  0  is working on column j =  589
+ user_model1.run(): tid =  0  is working on column j =  590
+ user_model1.run(): tid =  0  is working on column j =  591
+ user_model1.run(): tid =  0  is working on column j =  592
+ user_model1.run(): tid =  0  is working on column j =  593
+ user_model1.run(): tid =  0  is working on column j =  594
+ user_model1.run(): tid =  0  is working on column j =  595
+ user_model1.run(): tid =  0  is working on column j =  596
+ user_model1.run(): tid =  0  is working on column j =  597
+ user_model1.run(): tid =  0  is working on column j =  598
+ user_model1.run(): tid =  0  is working on column j =  599
+ user_model1.run(): tid =  0  is working on column j =  600
+ user_model1.run(): tid =  0  is working on column j =  601
+ user_model1.run(): tid =  0  is working on column j =  602
+ user_model1.run(): tid =  0  is working on column j =  603
+ user_model1.run(): tid =  0  is working on column j =  604
+ user_model1.run(): tid =  0  is working on column j =  605
+ user_model1.run(): tid =  0  is working on column j =  606
+ user_model1.run(): tid =  0  is working on column j =  607
+ user_model1.run(): tid =  0  is working on column j =  608
+ user_model1.run(): tid =  0  is working on column j =  609
+ user_model1.run(): tid =  0  is working on column j =  610
+ user_model1.run(): tid =  0  is working on column j =  611
+ user_model1.run(): tid =  0  is working on column j =  612
+ user_model1.run(): tid =  0  is working on column j =  613
+ user_model1.run(): tid =  0  is working on column j =  614
+ user_model1.run(): tid =  0  is working on column j =  615
+ user_model1.run(): tid =  0  is working on column j =  616
+ user_model1.run(): tid =  0  is working on column j =  617
+ user_model1.run(): tid =  0  is working on column j =  618
+ user_model1.run(): tid =  0  is working on column j =  619
+ user_model1.run(): tid =  0  is working on column j =  620
+ user_model1.run(): tid =  0  is working on column j =  621
+ user_model1.run(): tid =  0  is working on column j =  622
+ user_model1.run(): tid =  0  is working on column j =  623
+ user_model1.run(): tid =  0  is working on column j =  624
+ user_model1.run(): tid =  0  is working on column j =  625
+ user_model1.run(): tid =  0  is working on column j =  626
+ user_model1.run(): tid =  0  is working on column j =  627
+ user_model1.run(): tid =  0  is working on column j =  628
+ user_model1.run(): tid =  0  is working on column j =  629
+ user_model1.run(): tid =  0  is working on column j =  630
+ user_model1.run(): tid =  0  is working on column j =  631
+ user_model1.run(): tid =  0  is working on column j =  632
+ user_model1.run(): tid =  0  is working on column j =  633
+ user_model1.run(): tid =  0  is working on column j =  634
+ user_model1.run(): tid =  0  is working on column j =  635
+ user_model1.run(): tid =  0  is working on column j =  636
+ user_model1.run(): tid =  0  is working on column j =  637
+ user_model1.run(): tid =  0  is working on column j =  638
+ user_model1.run(): tid =  0  is working on column j =  639
+ user_model1.run(): tid =  0  is working on column j =  640
+ user_model1.run(): tid =  0  is working on column j =  641
+ user_model1.run(): tid =  0  is working on column j =  642
+ user_model1.run(): tid =  0  is working on column j =  643
+ user_model1.run(): tid =  0  is working on column j =  644
+ user_model1.run(): tid =  0  is working on column j =  645
+ user_model1.run(): tid =  0  is working on column j =  646
+ user_model1.run(): tid =  0  is working on column j =  647
+ user_model1.run(): tid =  0  is working on column j =  648
+ user_model1.run(): tid =  0  is working on column j =  649
+ user_model1.run(): tid =  0  is working on column j =  650
+ user_model1.run(): tid =  0  is working on column j =  651
+ user_model1.run(): tid =  0  is working on column j =  652
+ user_model1.run(): tid =  0  is working on column j =  653
+ user_model1.run(): tid =  0  is working on column j =  654
+ user_model1.run(): tid =  0  is working on column j =  655
+ user_model1.run(): tid =  0  is working on column j =  656
+ user_model1.run(): tid =  0  is working on column j =  657
+ user_model1.run(): tid =  0  is working on column j =  658
+ user_model1.run(): tid =  0  is working on column j =  659
+ user_model1.run(): tid =  0  is working on column j =  660
+ user_model1.run(): tid =  0  is working on column j =  661
+ user_model1.run(): tid =  0  is working on column j =  662
+ user_model1.run(): tid =  0  is working on column j =  663
+ user_model1.run(): tid =  0  is working on column j =  664
+ user_model1.run(): tid =  0  is working on column j =  665
+ user_model1.run(): tid =  0  is working on column j =  666
+ user_model1.run(): tid =  0  is working on column j =  667
+ user_model1.run(): tid =  0  is working on column j =  668
+ user_model1.run(): tid =  0  is working on column j =  669
+ user_model1.run(): tid =  0  is working on column j =  670
+ user_model1.run(): tid =  0  is working on column j =  671
+ user_model1.run(): tid =  0  is working on column j =  536
+ user_model1.run(): tid =  0  is working on column j =  537
+ user_model1.run(): tid =  0  is working on column j =  538
+ user_model1.run(): tid =  0  is working on column j =  539
+ user_model1.run(): tid =  0  is working on column j =  540
+ user_model1.run(): tid =  0  is working on column j =  541
+ user_model1.run(): tid =  0  is working on column j =  542
+ user_model1.run(): tid =  0  is working on column j =  543
+ user_model1.run(): tid =  0  is working on column j =  544
+ user_model1.run(): tid =  0  is working on column j =  545
+ user_model1.run(): tid =  0  is working on column j =  546
+ user_model1.run(): tid =  0  is working on column j =  547
+ user_model1.run(): tid =  0  is working on column j =  548
+ user_model1.run(): tid =  0  is working on column j =  549
+ user_model1.run(): tid =  0  is working on column j =  550
+ user_model1.run(): tid =  0  is working on column j =  551
+ user_model1.run(): tid =  0  is working on column j =  552
+ user_model1.run(): tid =  0  is working on column j =  553
+ user_model1.run(): tid =  0  is working on column j =  554
+ user_model1.run(): tid =  0  is working on column j =  555
+ user_model1.run(): tid =  0  is working on column j =  556
+ user_model1.run(): tid =  0  is working on column j =  557
+ user_model1.run(): tid =  0  is working on column j =  558
+ user_model1.run(): tid =  0  is working on column j =  559
+ user_model1.run(): tid =  0  is working on column j =  560
+ user_model1.run(): tid =  0  is working on column j =  561
+ user_model1.run(): tid =  0  is working on column j =  562
+ user_model1.run(): tid =  0  is working on column j =  563
+ user_model1.run(): tid =  0  is working on column j =  564
+ user_model1.run(): tid =  0  is working on column j =  565
+ user_model1.run(): tid =  0  is working on column j =  566
+ user_model1.run(): tid =  0  is working on column j =  567
+ user_model1.run(): tid =  0  is working on column j =  568
+ user_model1.run(): tid =  0  is working on column j =  569
+ user_model1.run(): tid =  0  is working on column j =  570
+ user_model1.run(): tid =  0  is working on column j =  571
+ user_model1.run(): tid =  0  is working on column j =  572
+ user_model1.run(): tid =  0  is working on column j =  573
+ user_model1.run(): tid =  0  is working on column j =  574
+ user_model1.run(): tid =  0  is working on column j =  575
+ user_model1.run(): tid =  0  is working on column j =  576
+ user_model1.run(): tid =  0  is working on column j =  577
+ user_model1.run(): tid =  0  is working on column j =  578
+ user_model1.run(): tid =  0  is working on column j =  579
+ user_model1.run(): tid =  0  is working on column j =  580
+ user_model1.run(): tid =  0  is working on column j =  581
+ user_model1.run(): tid =  0  is working on column j =  582
+ user_model1.run(): tid =  0  is working on column j =  583
+ user_model1.run(): tid =  0  is working on column j =  584
+ user_model1.run(): tid =  0  is working on column j =  585
+ user_model1.run(): tid =  0  is working on column j =  586
+ user_model1.run(): tid =  0  is working on column j =  587
+ user_model1.run(): tid =  0  is working on column j =  588
+ user_model1.run(): tid =  0  is working on column j =  589
+ user_model1.run(): tid =  0  is working on column j =  590
+ user_model1.run(): tid =  0  is working on column j =  591
+ user_model1.run(): tid =  0  is working on column j =  592
+ user_model1.run(): tid =  0  is working on column j =  593
+ user_model1.run(): tid =  0  is working on column j =  594
+ user_model1.run(): tid =  0  is working on column j =  595
+ user_model1.run(): tid =  0  is working on column j =  596
+ user_model1.run(): tid =  0  is working on column j =  597
+ user_model1.run(): tid =  0  is working on column j =  598
+ user_model1.run(): tid =  0  is working on column j =  599
+ user_model1.run(): tid =  0  is working on column j =  600
+ user_model1.run(): tid =  0  is working on column j =  601
+ user_model1.run(): tid =  0  is working on column j =  602
+ user_model1.run(): tid =  0  is working on column j =  603
+ user_model1.run(): tid =  0  is working on column j =  604
+ user_model1.run(): tid =  0  is working on column j =  605
+ user_model1.run(): tid =  0  is working on column j =  606
+ user_model1.run(): tid =  0  is working on column j =  607
+ user_model1.run(): tid =  0  is working on column j =  608
+ user_model1.run(): tid =  0  is working on column j =  609
+ user_model1.run(): tid =  0  is working on column j =  610
+ user_model1.run(): tid =  0  is working on column j =  611
+ user_model1.run(): tid =  0  is working on column j =  612
+ user_model1.run(): tid =  0  is working on column j =  613
+ user_model1.run(): tid =  0  is working on column j =  614
+ user_model1.run(): tid =  0  is working on column j =  615
+ user_model1.run(): tid =  0  is working on column j =  616
+ user_model1.run(): tid =  0  is working on column j =  617
+ user_model1.run(): tid =  0  is working on column j =  618
+ user_model1.run(): tid =  0  is working on column j =  619
+ user_model1.run(): tid =  0  is working on column j =  620
+ user_model1.run(): tid =  0  is working on column j =  621
+ user_model1.run(): tid =  0  is working on column j =  622
+ user_model1.run(): tid =  0  is working on column j =  623
+ user_model1.run(): tid =  0  is working on column j =  624
+ user_model1.run(): tid =  0  is working on column j =  625
+ user_model1.run(): tid =  0  is working on column j =  626
+ user_model1.run(): tid =  0  is working on column j =  627
+ user_model1.run(): tid =  0  is working on column j =  628
+ user_model1.run(): tid =  0  is working on column j =  629
+ user_model1.run(): tid =  0  is working on column j =  630
+ user_model1.run(): tid =  0  is working on column j =  631
+ user_model1.run(): tid =  0  is working on column j =  632
+ user_model1.run(): tid =  0  is working on column j =  633
+ user_model1.run(): tid =  0  is working on column j =  634
+ user_model1.run(): tid =  0  is working on column j =  635
+ user_model1.run(): tid =  0  is working on column j =  636
+ user_model1.run(): tid =  0  is working on column j =  637
+ user_model1.run(): tid =  0  is working on column j =  638
+ user_model1.run(): tid =  0  is working on column j =  639
+ user_model1.run(): tid =  0  is working on column j =  640
+ user_model1.run(): tid =  0  is working on column j =  641
+ user_model1.run(): tid =  0  is working on column j =  642
+ user_model1.run(): tid =  0  is working on column j =  643
+ user_model1.run(): tid =  0  is working on column j =  644
+ user_model1.run(): tid =  0  is working on column j =  645
+ user_model1.run(): tid =  0  is working on column j =  646
+ user_model1.run(): tid =  0  is working on column j =  647
+ user_model1.run(): tid =  0  is working on column j =  648
+ user_model1.run(): tid =  0  is working on column j =  649
+ user_model1.run(): tid =  0  is working on column j =  650
+ user_model1.run(): tid =  0  is working on column j =  651
+ user_model1.run(): tid =  0  is working on column j =  652
+ user_model1.run(): tid =  0  is working on column j =  653
+ user_model1.run(): tid =  0  is working on column j =  654
+ user_model1.run(): tid =  0  is working on column j =  655
+ user_model1.run(): tid =  0  is working on column j =  656
+ user_model1.run(): tid =  0  is working on column j =  657
+ user_model1.run(): tid =  0  is working on column j =  658
+ user_model1.run(): tid =  0  is working on column j =  659
+ user_model1.run(): tid =  0  is working on column j =  660
+ user_model1.run(): tid =  0  is working on column j =  661
+ user_model1.run(): tid =  0  is working on column j =  662
+ user_model1.run(): tid =  0  is working on column j =  663
+ user_model1.run(): tid =  0  is working on column j =  664
+ user_model1.run(): tid =  0  is working on column j =  665
+ user_model1.run(): tid =  0  is working on column j =  666
+ user_model1.run(): tid =  0  is working on column j =  667
+ user_model1.run(): tid =  0  is working on column j =  668
+ user_model1.run(): tid =  0  is working on column j =  669
+ user_model1.run(): tid =  0  is working on column j =  670
+ user_model1.run(): tid =  0  is working on column j =  671
  user_model1.run(): tid =  0  is working on column j =  672
  user_model1.run(): tid =  0  is working on column j =  673
  user_model1.run(): tid =  0  is working on column j =  674
@@ -6373,38 +5797,74 @@ ncores = 8
  user_model1.run(): tid =  0  is working on column j =  737
  user_model1.run(): tid =  0  is working on column j =  738
  user_model1.run(): tid =  0  is working on column j =  739
- user_model1.run(): tid =  0  is working on column j =  740
- user_model1.run(): tid =  0  is working on column j =  741
- user_model1.run(): tid =  0  is working on column j =  742
- user_model1.run(): tid =  0  is working on column j =  743
- user_model1.run(): tid =  0  is working on column j =  744
- user_model1.run(): tid =  0  is working on column j =  745
- user_model1.run(): tid =  0  is working on column j =  746
- user_model1.run(): tid =  0  is working on column j =  747
- user_model1.run(): tid =  0  is working on column j =  748
- user_model1.run(): tid =  0  is working on column j =  749
- user_model1.run(): tid =  0  is working on column j =  750
- User Comp1 Run returning
- Comp 1 Run returned, rc = 2*0
- User Coupler Run starting
- User Coupler Run returning
- Coupler Run returned, rc = 2*0
- Comp 2 Run returned, rc = 2*0
- User Coupler Final starting
- User Coupler Final returning
- Coupler Finalize finished, rc = 2*0
- User Comp1 Final starting
- User Comp1 Final returning
- Comp 1 Finalize finished, rc = 2*0
- Comp 2 Finalize finished, rc = 2*0
- All Destroy routines done
-  System Test ESMF_ArrayRedistOpenMPSTest                                                                                                                                                                                                                         complete.
- ------------------------------------------------------------
- ------------------------------------------------------------
- Test finished, localPet =  2
- ------------------------------------------------------------
- ------------------------------------------------------------
-  PASS  System Test ESMF_ArrayRedistOpenMPSTest, ESMF_ArrayRedistOpenMPSTest.F90, line 391
+ user_model1.run(): tid =  0  is working on column j =  604
+ user_model1.run(): tid =  0  is working on column j =  605
+ user_model1.run(): tid =  0  is working on column j =  606
+ user_model1.run(): tid =  0  is working on column j =  607
+ user_model1.run(): tid =  0  is working on column j =  608
+ user_model1.run(): tid =  0  is working on column j =  609
+ user_model1.run(): tid =  0  is working on column j =  610
+ user_model1.run(): tid =  0  is working on column j =  611
+ user_model1.run(): tid =  0  is working on column j =  612
+ user_model1.run(): tid =  0  is working on column j =  613
+ user_model1.run(): tid =  0  is working on column j =  614
+ user_model1.run(): tid =  0  is working on column j =  615
+ user_model1.run(): tid =  0  is working on column j =  616
+ user_model1.run(): tid =  0  is working on column j =  617
+ user_model1.run(): tid =  0  is working on column j =  618
+ user_model1.run(): tid =  0  is working on column j =  619
+ user_model1.run(): tid =  0  is working on column j =  620
+ user_model1.run(): tid =  0  is working on column j =  621
+ user_model1.run(): tid =  0  is working on column j =  622
+ user_model1.run(): tid =  0  is working on column j =  623
+ user_model1.run(): tid =  0  is working on column j =  624
+ user_model1.run(): tid =  0  is working on column j =  625
+ user_model1.run(): tid =  0  is working on column j =  626
+ user_model1.run(): tid =  0  is working on column j =  627
+ user_model1.run(): tid =  0  is working on column j =  628
+ user_model1.run(): tid =  0  is working on column j =  629
+ user_model1.run(): tid =  0  is working on column j =  630
+ user_model1.run(): tid =  0  is working on column j =  631
+ user_model1.run(): tid =  0  is working on column j =  632
+ user_model1.run(): tid =  0  is working on column j =  633
+ user_model1.run(): tid =  0  is working on column j =  634
+ user_model1.run(): tid =  0  is working on column j =  635
+ user_model1.run(): tid =  0  is working on column j =  636
+ user_model1.run(): tid =  0  is working on column j =  637
+ user_model1.run(): tid =  0  is working on column j =  638
+ user_model1.run(): tid =  0  is working on column j =  639
+ user_model1.run(): tid =  0  is working on column j =  640
+ user_model1.run(): tid =  0  is working on column j =  641
+ user_model1.run(): tid =  0  is working on column j =  642
+ user_model1.run(): tid =  0  is working on column j =  643
+ user_model1.run(): tid =  0  is working on column j =  644
+ user_model1.run(): tid =  0  is working on column j =  645
+ user_model1.run(): tid =  0  is working on column j =  646
+ user_model1.run(): tid =  0  is working on column j =  647
+ user_model1.run(): tid =  0  is working on column j =  648
+ user_model1.run(): tid =  0  is working on column j =  649
+ user_model1.run(): tid =  0  is working on column j =  650
+ user_model1.run(): tid =  0  is working on column j =  651
+ user_model1.run(): tid =  0  is working on column j =  652
+ user_model1.run(): tid =  0  is working on column j =  653
+ user_model1.run(): tid =  0  is working on column j =  654
+ user_model1.run(): tid =  0  is working on column j =  655
+ user_model1.run(): tid =  0  is working on column j =  656
+ user_model1.run(): tid =  0  is working on column j =  657
+ user_model1.run(): tid =  0  is working on column j =  658
+ user_model1.run(): tid =  0  is working on column j =  659
+ user_model1.run(): tid =  0  is working on column j =  660
+ user_model1.run(): tid =  0  is working on column j =  661
+ user_model1.run(): tid =  0  is working on column j =  662
+ user_model1.run(): tid =  0  is working on column j =  663
+ user_model1.run(): tid =  0  is working on column j =  664
+ user_model1.run(): tid =  0  is working on column j =  665
+ user_model1.run(): tid =  0  is working on column j =  666
+ user_model1.run(): tid =  0  is working on column j =  667
+ user_model1.run(): tid =  0  is working on column j =  668
+ user_model1.run(): tid =  0  is working on column j =  669
+ user_model1.run(): tid =  0  is working on column j =  670
+ user_model1.run(): tid =  0  is working on column j =  671
  user_model1.run(): tid =  0  is working on column j =  672
  user_model1.run(): tid =  0  is working on column j =  673
  user_model1.run(): tid =  0  is working on column j =  674
@@ -6505,6 +5965,74 @@ ncores = 8
  ------------------------------------------------------------
  ------------------------------------------------------------
   PASS  System Test ESMF_ArrayRedistOpenMPSTest, ESMF_ArrayRedistOpenMPSTest.F90, line 391
+ user_model1.run(): tid =  0  is working on column j =  672
+ user_model1.run(): tid =  0  is working on column j =  673
+ user_model1.run(): tid =  0  is working on column j =  674
+ user_model1.run(): tid =  0  is working on column j =  675
+ user_model1.run(): tid =  0  is working on column j =  676
+ user_model1.run(): tid =  0  is working on column j =  677
+ user_model1.run(): tid =  0  is working on column j =  678
+ user_model1.run(): tid =  0  is working on column j =  679
+ user_model1.run(): tid =  0  is working on column j =  680
+ user_model1.run(): tid =  0  is working on column j =  681
+ user_model1.run(): tid =  0  is working on column j =  682
+ user_model1.run(): tid =  0  is working on column j =  683
+ user_model1.run(): tid =  0  is working on column j =  684
+ user_model1.run(): tid =  0  is working on column j =  685
+ user_model1.run(): tid =  0  is working on column j =  686
+ user_model1.run(): tid =  0  is working on column j =  687
+ user_model1.run(): tid =  0  is working on column j =  688
+ user_model1.run(): tid =  0  is working on column j =  689
+ user_model1.run(): tid =  0  is working on column j =  690
+ user_model1.run(): tid =  0  is working on column j =  691
+ user_model1.run(): tid =  0  is working on column j =  692
+ user_model1.run(): tid =  0  is working on column j =  693
+ user_model1.run(): tid =  0  is working on column j =  694
+ user_model1.run(): tid =  0  is working on column j =  695
+ user_model1.run(): tid =  0  is working on column j =  696
+ user_model1.run(): tid =  0  is working on column j =  697
+ user_model1.run(): tid =  0  is working on column j =  698
+ user_model1.run(): tid =  0  is working on column j =  699
+ user_model1.run(): tid =  0  is working on column j =  700
+ user_model1.run(): tid =  0  is working on column j =  701
+ user_model1.run(): tid =  0  is working on column j =  702
+ user_model1.run(): tid =  0  is working on column j =  703
+ user_model1.run(): tid =  0  is working on column j =  704
+ user_model1.run(): tid =  0  is working on column j =  705
+ user_model1.run(): tid =  0  is working on column j =  706
+ user_model1.run(): tid =  0  is working on column j =  707
+ user_model1.run(): tid =  0  is working on column j =  708
+ user_model1.run(): tid =  0  is working on column j =  709
+ user_model1.run(): tid =  0  is working on column j =  710
+ user_model1.run(): tid =  0  is working on column j =  711
+ user_model1.run(): tid =  0  is working on column j =  712
+ user_model1.run(): tid =  0  is working on column j =  713
+ user_model1.run(): tid =  0  is working on column j =  714
+ user_model1.run(): tid =  0  is working on column j =  715
+ user_model1.run(): tid =  0  is working on column j =  716
+ user_model1.run(): tid =  0  is working on column j =  717
+ user_model1.run(): tid =  0  is working on column j =  718
+ user_model1.run(): tid =  0  is working on column j =  719
+ user_model1.run(): tid =  0  is working on column j =  720
+ user_model1.run(): tid =  0  is working on column j =  721
+ user_model1.run(): tid =  0  is working on column j =  722
+ user_model1.run(): tid =  0  is working on column j =  723
+ user_model1.run(): tid =  0  is working on column j =  724
+ user_model1.run(): tid =  0  is working on column j =  725
+ user_model1.run(): tid =  0  is working on column j =  726
+ user_model1.run(): tid =  0  is working on column j =  727
+ user_model1.run(): tid =  0  is working on column j =  728
+ user_model1.run(): tid =  0  is working on column j =  729
+ user_model1.run(): tid =  0  is working on column j =  730
+ user_model1.run(): tid =  0  is working on column j =  731
+ user_model1.run(): tid =  0  is working on column j =  732
+ user_model1.run(): tid =  0  is working on column j =  733
+ user_model1.run(): tid =  0  is working on column j =  734
+ user_model1.run(): tid =  0  is working on column j =  735
+ user_model1.run(): tid =  0  is working on column j =  736
+ user_model1.run(): tid =  0  is working on column j =  737
+ user_model1.run(): tid =  0  is working on column j =  738
+ user_model1.run(): tid =  0  is working on column j =  739
  user_model1.run(): tid =  0  is working on column j =  740
  user_model1.run(): tid =  0  is working on column j =  741
  user_model1.run(): tid =  0  is working on column j =  742
@@ -6534,6 +6062,478 @@ ncores = 8
  ------------------------------------------------------------
  ------------------------------------------------------------
  Test finished, localPet =  3
+ ------------------------------------------------------------
+ ------------------------------------------------------------
+  PASS  System Test ESMF_ArrayRedistOpenMPSTest, ESMF_ArrayRedistOpenMPSTest.F90, line 391
+ user_model1.run(): tid =  0  is working on column j =  740
+ user_model1.run(): tid =  0  is working on column j =  741
+ user_model1.run(): tid =  0  is working on column j =  742
+ user_model1.run(): tid =  0  is working on column j =  743
+ user_model1.run(): tid =  0  is working on column j =  744
+ user_model1.run(): tid =  0  is working on column j =  745
+ user_model1.run(): tid =  0  is working on column j =  746
+ user_model1.run(): tid =  0  is working on column j =  747
+ user_model1.run(): tid =  0  is working on column j =  748
+ user_model1.run(): tid =  0  is working on column j =  749
+ user_model1.run(): tid =  0  is working on column j =  750
+ User Comp1 Run returning
+ Comp 1 Run returned, rc = 2*0
+ User Coupler Run starting
+ User Coupler Run returning
+ Coupler Run returned, rc = 2*0
+ Comp 2 Run returned, rc = 2*0
+ User Coupler Final starting
+ User Coupler Final returning
+ Coupler Finalize finished, rc = 2*0
+ User Comp1 Final starting
+ User Comp1 Final returning
+ Comp 1 Finalize finished, rc = 2*0
+ Comp 2 Finalize finished, rc = 2*0
+ All Destroy routines done
+  System Test ESMF_ArrayRedistOpenMPSTest                                                                                                                                                                                                                         complete.
+ ------------------------------------------------------------
+ ------------------------------------------------------------
+ Test finished, localPet =  2
+ ------------------------------------------------------------
+ ------------------------------------------------------------
+  PASS  System Test ESMF_ArrayRedistOpenMPSTest, ESMF_ArrayRedistOpenMPSTest.F90, line 391
+ user_model1.run(): tid =  0  is working on column j =  332
+ user_model1.run(): tid =  0  is working on column j =  333
+ user_model1.run(): tid =  0  is working on column j =  334
+ user_model1.run(): tid =  0  is working on column j =  335
+ user_model1.run(): tid =  0  is working on column j =  336
+ user_model1.run(): tid =  0  is working on column j =  337
+ user_model1.run(): tid =  0  is working on column j =  338
+ user_model1.run(): tid =  0  is working on column j =  339
+ user_model1.run(): tid =  0  is working on column j =  340
+ user_model1.run(): tid =  0  is working on column j =  341
+ user_model1.run(): tid =  0  is working on column j =  342
+ user_model1.run(): tid =  0  is working on column j =  343
+ user_model1.run(): tid =  0  is working on column j =  344
+ user_model1.run(): tid =  0  is working on column j =  345
+ user_model1.run(): tid =  0  is working on column j =  346
+ user_model1.run(): tid =  0  is working on column j =  347
+ user_model1.run(): tid =  0  is working on column j =  348
+ user_model1.run(): tid =  0  is working on column j =  349
+ user_model1.run(): tid =  0  is working on column j =  350
+ user_model1.run(): tid =  0  is working on column j =  351
+ user_model1.run(): tid =  0  is working on column j =  352
+ user_model1.run(): tid =  0  is working on column j =  353
+ user_model1.run(): tid =  0  is working on column j =  354
+ user_model1.run(): tid =  0  is working on column j =  355
+ user_model1.run(): tid =  0  is working on column j =  356
+ user_model1.run(): tid =  0  is working on column j =  357
+ user_model1.run(): tid =  0  is working on column j =  358
+ user_model1.run(): tid =  0  is working on column j =  359
+ user_model1.run(): tid =  0  is working on column j =  360
+ user_model1.run(): tid =  0  is working on column j =  361
+ user_model1.run(): tid =  0  is working on column j =  362
+ user_model1.run(): tid =  0  is working on column j =  363
+ user_model1.run(): tid =  0  is working on column j =  364
+ user_model1.run(): tid =  0  is working on column j =  365
+ user_model1.run(): tid =  0  is working on column j =  366
+ user_model1.run(): tid =  0  is working on column j =  367
+ user_model1.run(): tid =  0  is working on column j =  368
+ user_model1.run(): tid =  0  is working on column j =  369
+ user_model1.run(): tid =  0  is working on column j =  370
+ user_model1.run(): tid =  0  is working on column j =  371
+ user_model1.run(): tid =  0  is working on column j =  372
+ user_model1.run(): tid =  0  is working on column j =  373
+ user_model1.run(): tid =  0  is working on column j =  374
+ user_model1.run(): tid =  0  is working on column j =  375
+ user_model1.run(): tid =  0  is working on column j =  376
+ user_model1.run(): tid =  0  is working on column j =  377
+ user_model1.run(): tid =  0  is working on column j =  378
+ user_model1.run(): tid =  0  is working on column j =  379
+ user_model1.run(): tid =  0  is working on column j =  380
+ user_model1.run(): tid =  0  is working on column j =  381
+ user_model1.run(): tid =  0  is working on column j =  382
+ user_model1.run(): tid =  0  is working on column j =  383
+ user_model1.run(): tid =  0  is working on column j =  384
+ user_model1.run(): tid =  0  is working on column j =  385
+ user_model1.run(): tid =  0  is working on column j =  386
+ user_model1.run(): tid =  0  is working on column j =  387
+ user_model1.run(): tid =  0  is working on column j =  388
+ user_model1.run(): tid =  0  is working on column j =  389
+ user_model1.run(): tid =  0  is working on column j =  390
+ user_model1.run(): tid =  0  is working on column j =  391
+ user_model1.run(): tid =  0  is working on column j =  392
+ user_model1.run(): tid =  0  is working on column j =  393
+ user_model1.run(): tid =  0  is working on column j =  394
+ user_model1.run(): tid =  0  is working on column j =  395
+ user_model1.run(): tid =  0  is working on column j =  396
+ user_model1.run(): tid =  0  is working on column j =  397
+ user_model1.run(): tid =  0  is working on column j =  398
+ user_model1.run(): tid =  0  is working on column j =  399
+ user_model1.run(): tid =  0  is working on column j =  400
+ user_model1.run(): tid =  0  is working on column j =  401
+ user_model1.run(): tid =  0  is working on column j =  402
+ user_model1.run(): tid =  0  is working on column j =  403
+ user_model1.run(): tid =  0  is working on column j =  404
+ user_model1.run(): tid =  0  is working on column j =  405
+ user_model1.run(): tid =  0  is working on column j =  406
+ user_model1.run(): tid =  0  is working on column j =  407
+ user_model1.run(): tid =  0  is working on column j =  408
+ user_model1.run(): tid =  0  is working on column j =  409
+ user_model1.run(): tid =  0  is working on column j =  410
+ user_model1.run(): tid =  0  is working on column j =  411
+ user_model1.run(): tid =  0  is working on column j =  412
+ user_model1.run(): tid =  0  is working on column j =  413
+ user_model1.run(): tid =  0  is working on column j =  414
+ user_model1.run(): tid =  0  is working on column j =  415
+ user_model1.run(): tid =  0  is working on column j =  416
+ user_model1.run(): tid =  0  is working on column j =  417
+ user_model1.run(): tid =  0  is working on column j =  418
+ user_model1.run(): tid =  0  is working on column j =  419
+ user_model1.run(): tid =  0  is working on column j =  420
+ user_model1.run(): tid =  0  is working on column j =  421
+ user_model1.run(): tid =  0  is working on column j =  422
+ user_model1.run(): tid =  0  is working on column j =  423
+ user_model1.run(): tid =  0  is working on column j =  424
+ user_model1.run(): tid =  0  is working on column j =  425
+ user_model1.run(): tid =  0  is working on column j =  426
+ user_model1.run(): tid =  0  is working on column j =  427
+ user_model1.run(): tid =  0  is working on column j =  428
+ user_model1.run(): tid =  0  is working on column j =  429
+ user_model1.run(): tid =  0  is working on column j =  430
+ user_model1.run(): tid =  0  is working on column j =  431
+ user_model1.run(): tid =  0  is working on column j =  432
+ user_model1.run(): tid =  0  is working on column j =  433
+ user_model1.run(): tid =  0  is working on column j =  434
+ user_model1.run(): tid =  0  is working on column j =  435
+ user_model1.run(): tid =  0  is working on column j =  436
+ user_model1.run(): tid =  0  is working on column j =  437
+ user_model1.run(): tid =  0  is working on column j =  438
+ user_model1.run(): tid =  0  is working on column j =  439
+ user_model1.run(): tid =  0  is working on column j =  440
+ user_model1.run(): tid =  0  is working on column j =  441
+ user_model1.run(): tid =  0  is working on column j =  442
+ user_model1.run(): tid =  0  is working on column j =  443
+ user_model1.run(): tid =  0  is working on column j =  444
+ user_model1.run(): tid =  0  is working on column j =  445
+ user_model1.run(): tid =  0  is working on column j =  446
+ user_model1.run(): tid =  0  is working on column j =  447
+ user_model1.run(): tid =  0  is working on column j =  448
+ user_model1.run(): tid =  0  is working on column j =  449
+ user_model1.run(): tid =  0  is working on column j =  450
+ user_model1.run(): tid =  0  is working on column j =  451
+ user_model1.run(): tid =  0  is working on column j =  452
+ user_model1.run(): tid =  0  is working on column j =  453
+ user_model1.run(): tid =  0  is working on column j =  454
+ user_model1.run(): tid =  0  is working on column j =  455
+ user_model1.run(): tid =  0  is working on column j =  456
+ user_model1.run(): tid =  0  is working on column j =  457
+ user_model1.run(): tid =  0  is working on column j =  458
+ user_model1.run(): tid =  0  is working on column j =  459
+ user_model1.run(): tid =  0  is working on column j =  460
+ user_model1.run(): tid =  0  is working on column j =  461
+ user_model1.run(): tid =  0  is working on column j =  462
+ user_model1.run(): tid =  0  is working on column j =  463
+ user_model1.run(): tid =  0  is working on column j =  464
+ user_model1.run(): tid =  0  is working on column j =  465
+ user_model1.run(): tid =  0  is working on column j =  466
+ user_model1.run(): tid =  0  is working on column j =  467
+ user_model1.run(): tid =  0  is working on column j =  468
+ user_model1.run(): tid =  0  is working on column j =  469
+ user_model1.run(): tid =  0  is working on column j =  470
+ user_model1.run(): tid =  0  is working on column j =  471
+ user_model1.run(): tid =  0  is working on column j =  472
+ user_model1.run(): tid =  0  is working on column j =  473
+ user_model1.run(): tid =  0  is working on column j =  474
+ user_model1.run(): tid =  0  is working on column j =  475
+ user_model1.run(): tid =  0  is working on column j =  476
+ user_model1.run(): tid =  0  is working on column j =  477
+ user_model1.run(): tid =  0  is working on column j =  478
+ user_model1.run(): tid =  0  is working on column j =  479
+ user_model1.run(): tid =  0  is working on column j =  480
+ user_model1.run(): tid =  0  is working on column j =  481
+ user_model1.run(): tid =  0  is working on column j =  482
+ user_model1.run(): tid =  0  is working on column j =  483
+ user_model1.run(): tid =  0  is working on column j =  484
+ user_model1.run(): tid =  0  is working on column j =  485
+ user_model1.run(): tid =  0  is working on column j =  486
+ user_model1.run(): tid =  0  is working on column j =  487
+ user_model1.run(): tid =  0  is working on column j =  488
+ user_model1.run(): tid =  0  is working on column j =  489
+ user_model1.run(): tid =  0  is working on column j =  490
+ user_model1.run(): tid =  0  is working on column j =  491
+ user_model1.run(): tid =  0  is working on column j =  492
+ user_model1.run(): tid =  0  is working on column j =  493
+ user_model1.run(): tid =  0  is working on column j =  494
+ user_model1.run(): tid =  0  is working on column j =  495
+ user_model1.run(): tid =  0  is working on column j =  496
+ user_model1.run(): tid =  0  is working on column j =  497
+ user_model1.run(): tid =  0  is working on column j =  498
+ user_model1.run(): tid =  0  is working on column j =  499
+ user_model1.run(): tid =  0  is working on column j =  500
+ user_model1.run(): tid =  0  is working on column j =  501
+ user_model1.run(): tid =  0  is working on column j =  502
+ user_model1.run(): tid =  0  is working on column j =  503
+ user_model1.run(): tid =  0  is working on column j =  504
+ user_model1.run(): tid =  0  is working on column j =  505
+ user_model1.run(): tid =  0  is working on column j =  506
+ user_model1.run(): tid =  0  is working on column j =  507
+ user_model1.run(): tid =  0  is working on column j =  508
+ user_model1.run(): tid =  0  is working on column j =  509
+ user_model1.run(): tid =  0  is working on column j =  510
+ user_model1.run(): tid =  0  is working on column j =  511
+ user_model1.run(): tid =  0  is working on column j =  512
+ user_model1.run(): tid =  0  is working on column j =  513
+ user_model1.run(): tid =  0  is working on column j =  514
+ user_model1.run(): tid =  0  is working on column j =  515
+ user_model1.run(): tid =  0  is working on column j =  516
+ user_model1.run(): tid =  0  is working on column j =  517
+ user_model1.run(): tid =  0  is working on column j =  518
+ user_model1.run(): tid =  0  is working on column j =  519
+ user_model1.run(): tid =  0  is working on column j =  520
+ user_model1.run(): tid =  0  is working on column j =  521
+ user_model1.run(): tid =  0  is working on column j =  522
+ user_model1.run(): tid =  0  is working on column j =  523
+ user_model1.run(): tid =  0  is working on column j =  524
+ user_model1.run(): tid =  0  is working on column j =  525
+ user_model1.run(): tid =  0  is working on column j =  526
+ user_model1.run(): tid =  0  is working on column j =  527
+ user_model1.run(): tid =  0  is working on column j =  528
+ user_model1.run(): tid =  0  is working on column j =  529
+ user_model1.run(): tid =  0  is working on column j =  530
+ user_model1.run(): tid =  0  is working on column j =  531
+ user_model1.run(): tid =  0  is working on column j =  532
+ user_model1.run(): tid =  0  is working on column j =  533
+ user_model1.run(): tid =  0  is working on column j =  534
+ user_model1.run(): tid =  0  is working on column j =  535
+ user_model1.run(): tid =  0  is working on column j =  536
+ user_model1.run(): tid =  0  is working on column j =  537
+ user_model1.run(): tid =  0  is working on column j =  538
+ user_model1.run(): tid =  0  is working on column j =  539
+ user_model1.run(): tid =  0  is working on column j =  540
+ user_model1.run(): tid =  0  is working on column j =  541
+ user_model1.run(): tid =  0  is working on column j =  542
+ user_model1.run(): tid =  0  is working on column j =  543
+ user_model1.run(): tid =  0  is working on column j =  544
+ user_model1.run(): tid =  0  is working on column j =  545
+ user_model1.run(): tid =  0  is working on column j =  546
+ user_model1.run(): tid =  0  is working on column j =  547
+ user_model1.run(): tid =  0  is working on column j =  548
+ user_model1.run(): tid =  0  is working on column j =  549
+ user_model1.run(): tid =  0  is working on column j =  550
+ user_model1.run(): tid =  0  is working on column j =  551
+ user_model1.run(): tid =  0  is working on column j =  552
+ user_model1.run(): tid =  0  is working on column j =  553
+ user_model1.run(): tid =  0  is working on column j =  554
+ user_model1.run(): tid =  0  is working on column j =  555
+ user_model1.run(): tid =  0  is working on column j =  556
+ user_model1.run(): tid =  0  is working on column j =  557
+ user_model1.run(): tid =  0  is working on column j =  558
+ user_model1.run(): tid =  0  is working on column j =  559
+ user_model1.run(): tid =  0  is working on column j =  560
+ user_model1.run(): tid =  0  is working on column j =  561
+ user_model1.run(): tid =  0  is working on column j =  562
+ user_model1.run(): tid =  0  is working on column j =  563
+ user_model1.run(): tid =  0  is working on column j =  564
+ user_model1.run(): tid =  0  is working on column j =  565
+ user_model1.run(): tid =  0  is working on column j =  566
+ user_model1.run(): tid =  0  is working on column j =  567
+ user_model1.run(): tid =  0  is working on column j =  568
+ user_model1.run(): tid =  0  is working on column j =  569
+ user_model1.run(): tid =  0  is working on column j =  570
+ user_model1.run(): tid =  0  is working on column j =  571
+ user_model1.run(): tid =  0  is working on column j =  572
+ user_model1.run(): tid =  0  is working on column j =  573
+ user_model1.run(): tid =  0  is working on column j =  574
+ user_model1.run(): tid =  0  is working on column j =  575
+ user_model1.run(): tid =  0  is working on column j =  576
+ user_model1.run(): tid =  0  is working on column j =  577
+ user_model1.run(): tid =  0  is working on column j =  578
+ user_model1.run(): tid =  0  is working on column j =  579
+ user_model1.run(): tid =  0  is working on column j =  580
+ user_model1.run(): tid =  0  is working on column j =  581
+ user_model1.run(): tid =  0  is working on column j =  582
+ user_model1.run(): tid =  0  is working on column j =  583
+ user_model1.run(): tid =  0  is working on column j =  584
+ user_model1.run(): tid =  0  is working on column j =  585
+ user_model1.run(): tid =  0  is working on column j =  586
+ user_model1.run(): tid =  0  is working on column j =  587
+ user_model1.run(): tid =  0  is working on column j =  588
+ user_model1.run(): tid =  0  is working on column j =  589
+ user_model1.run(): tid =  0  is working on column j =  590
+ user_model1.run(): tid =  0  is working on column j =  591
+ user_model1.run(): tid =  0  is working on column j =  592
+ user_model1.run(): tid =  0  is working on column j =  593
+ user_model1.run(): tid =  0  is working on column j =  594
+ user_model1.run(): tid =  0  is working on column j =  595
+ user_model1.run(): tid =  0  is working on column j =  596
+ user_model1.run(): tid =  0  is working on column j =  597
+ user_model1.run(): tid =  0  is working on column j =  598
+ user_model1.run(): tid =  0  is working on column j =  599
+ user_model1.run(): tid =  0  is working on column j =  600
+ user_model1.run(): tid =  0  is working on column j =  601
+ user_model1.run(): tid =  0  is working on column j =  602
+ user_model1.run(): tid =  0  is working on column j =  603
+ user_model1.run(): tid =  0  is working on column j =  604
+ user_model1.run(): tid =  0  is working on column j =  605
+ user_model1.run(): tid =  0  is working on column j =  606
+ user_model1.run(): tid =  0  is working on column j =  607
+ user_model1.run(): tid =  0  is working on column j =  608
+ user_model1.run(): tid =  0  is working on column j =  609
+ user_model1.run(): tid =  0  is working on column j =  610
+ user_model1.run(): tid =  0  is working on column j =  611
+ user_model1.run(): tid =  0  is working on column j =  612
+ user_model1.run(): tid =  0  is working on column j =  613
+ user_model1.run(): tid =  0  is working on column j =  614
+ user_model1.run(): tid =  0  is working on column j =  615
+ user_model1.run(): tid =  0  is working on column j =  616
+ user_model1.run(): tid =  0  is working on column j =  617
+ user_model1.run(): tid =  0  is working on column j =  618
+ user_model1.run(): tid =  0  is working on column j =  619
+ user_model1.run(): tid =  0  is working on column j =  620
+ user_model1.run(): tid =  0  is working on column j =  621
+ user_model1.run(): tid =  0  is working on column j =  622
+ user_model1.run(): tid =  0  is working on column j =  623
+ user_model1.run(): tid =  0  is working on column j =  624
+ user_model1.run(): tid =  0  is working on column j =  625
+ user_model1.run(): tid =  0  is working on column j =  626
+ user_model1.run(): tid =  0  is working on column j =  627
+ user_model1.run(): tid =  0  is working on column j =  628
+ user_model1.run(): tid =  0  is working on column j =  629
+ user_model1.run(): tid =  0  is working on column j =  630
+ user_model1.run(): tid =  0  is working on column j =  631
+ user_model1.run(): tid =  0  is working on column j =  632
+ user_model1.run(): tid =  0  is working on column j =  633
+ user_model1.run(): tid =  0  is working on column j =  634
+ user_model1.run(): tid =  0  is working on column j =  635
+ user_model1.run(): tid =  0  is working on column j =  636
+ user_model1.run(): tid =  0  is working on column j =  637
+ user_model1.run(): tid =  0  is working on column j =  638
+ user_model1.run(): tid =  0  is working on column j =  639
+ user_model1.run(): tid =  0  is working on column j =  640
+ user_model1.run(): tid =  0  is working on column j =  641
+ user_model1.run(): tid =  0  is working on column j =  642
+ user_model1.run(): tid =  0  is working on column j =  643
+ user_model1.run(): tid =  0  is working on column j =  644
+ user_model1.run(): tid =  0  is working on column j =  645
+ user_model1.run(): tid =  0  is working on column j =  646
+ user_model1.run(): tid =  0  is working on column j =  647
+ user_model1.run(): tid =  0  is working on column j =  648
+ user_model1.run(): tid =  0  is working on column j =  649
+ user_model1.run(): tid =  0  is working on column j =  650
+ user_model1.run(): tid =  0  is working on column j =  651
+ user_model1.run(): tid =  0  is working on column j =  652
+ user_model1.run(): tid =  0  is working on column j =  653
+ user_model1.run(): tid =  0  is working on column j =  654
+ user_model1.run(): tid =  0  is working on column j =  655
+ user_model1.run(): tid =  0  is working on column j =  656
+ user_model1.run(): tid =  0  is working on column j =  657
+ user_model1.run(): tid =  0  is working on column j =  658
+ user_model1.run(): tid =  0  is working on column j =  659
+ user_model1.run(): tid =  0  is working on column j =  660
+ user_model1.run(): tid =  0  is working on column j =  661
+ user_model1.run(): tid =  0  is working on column j =  662
+ user_model1.run(): tid =  0  is working on column j =  663
+ user_model1.run(): tid =  0  is working on column j =  664
+ user_model1.run(): tid =  0  is working on column j =  665
+ user_model1.run(): tid =  0  is working on column j =  666
+ user_model1.run(): tid =  0  is working on column j =  667
+ user_model1.run(): tid =  0  is working on column j =  668
+ user_model1.run(): tid =  0  is working on column j =  669
+ user_model1.run(): tid =  0  is working on column j =  670
+ user_model1.run(): tid =  0  is working on column j =  671
+ user_model1.run(): tid =  0  is working on column j =  672
+ user_model1.run(): tid =  0  is working on column j =  673
+ user_model1.run(): tid =  0  is working on column j =  674
+ user_model1.run(): tid =  0  is working on column j =  675
+ user_model1.run(): tid =  0  is working on column j =  676
+ user_model1.run(): tid =  0  is working on column j =  677
+ user_model1.run(): tid =  0  is working on column j =  678
+ user_model1.run(): tid =  0  is working on column j =  679
+ user_model1.run(): tid =  0  is working on column j =  680
+ user_model1.run(): tid =  0  is working on column j =  681
+ user_model1.run(): tid =  0  is working on column j =  682
+ user_model1.run(): tid =  0  is working on column j =  683
+ user_model1.run(): tid =  0  is working on column j =  684
+ user_model1.run(): tid =  0  is working on column j =  685
+ user_model1.run(): tid =  0  is working on column j =  686
+ user_model1.run(): tid =  0  is working on column j =  687
+ user_model1.run(): tid =  0  is working on column j =  688
+ user_model1.run(): tid =  0  is working on column j =  689
+ user_model1.run(): tid =  0  is working on column j =  690
+ user_model1.run(): tid =  0  is working on column j =  691
+ user_model1.run(): tid =  0  is working on column j =  692
+ user_model1.run(): tid =  0  is working on column j =  693
+ user_model1.run(): tid =  0  is working on column j =  694
+ user_model1.run(): tid =  0  is working on column j =  695
+ user_model1.run(): tid =  0  is working on column j =  696
+ user_model1.run(): tid =  0  is working on column j =  697
+ user_model1.run(): tid =  0  is working on column j =  698
+ user_model1.run(): tid =  0  is working on column j =  699
+ user_model1.run(): tid =  0  is working on column j =  700
+ user_model1.run(): tid =  0  is working on column j =  701
+ user_model1.run(): tid =  0  is working on column j =  702
+ user_model1.run(): tid =  0  is working on column j =  703
+ user_model1.run(): tid =  0  is working on column j =  704
+ user_model1.run(): tid =  0  is working on column j =  705
+ user_model1.run(): tid =  0  is working on column j =  706
+ user_model1.run(): tid =  0  is working on column j =  707
+ user_model1.run(): tid =  0  is working on column j =  708
+ user_model1.run(): tid =  0  is working on column j =  709
+ user_model1.run(): tid =  0  is working on column j =  710
+ user_model1.run(): tid =  0  is working on column j =  711
+ user_model1.run(): tid =  0  is working on column j =  712
+ user_model1.run(): tid =  0  is working on column j =  713
+ user_model1.run(): tid =  0  is working on column j =  714
+ user_model1.run(): tid =  0  is working on column j =  715
+ user_model1.run(): tid =  0  is working on column j =  716
+ user_model1.run(): tid =  0  is working on column j =  717
+ user_model1.run(): tid =  0  is working on column j =  718
+ user_model1.run(): tid =  0  is working on column j =  719
+ user_model1.run(): tid =  0  is working on column j =  720
+ user_model1.run(): tid =  0  is working on column j =  721
+ user_model1.run(): tid =  0  is working on column j =  722
+ user_model1.run(): tid =  0  is working on column j =  723
+ user_model1.run(): tid =  0  is working on column j =  724
+ user_model1.run(): tid =  0  is working on column j =  725
+ user_model1.run(): tid =  0  is working on column j =  726
+ user_model1.run(): tid =  0  is working on column j =  727
+ user_model1.run(): tid =  0  is working on column j =  728
+ user_model1.run(): tid =  0  is working on column j =  729
+ user_model1.run(): tid =  0  is working on column j =  730
+ user_model1.run(): tid =  0  is working on column j =  731
+ user_model1.run(): tid =  0  is working on column j =  732
+ user_model1.run(): tid =  0  is working on column j =  733
+ user_model1.run(): tid =  0  is working on column j =  734
+ user_model1.run(): tid =  0  is working on column j =  735
+ user_model1.run(): tid =  0  is working on column j =  736
+ user_model1.run(): tid =  0  is working on column j =  737
+ user_model1.run(): tid =  0  is working on column j =  738
+ user_model1.run(): tid =  0  is working on column j =  739
+ user_model1.run(): tid =  0  is working on column j =  740
+ user_model1.run(): tid =  0  is working on column j =  741
+ user_model1.run(): tid =  0  is working on column j =  742
+ user_model1.run(): tid =  0  is working on column j =  743
+ user_model1.run(): tid =  0  is working on column j =  744
+ user_model1.run(): tid =  0  is working on column j =  745
+ user_model1.run(): tid =  0  is working on column j =  746
+ user_model1.run(): tid =  0  is working on column j =  747
+ user_model1.run(): tid =  0  is working on column j =  748
+ user_model1.run(): tid =  0  is working on column j =  749
+ user_model1.run(): tid =  0  is working on column j =  750
+ User Comp1 Run returning
+ Comp 1 Run returned, rc = 2*0
+ User Coupler Run starting
+ User Coupler Run returning
+ Coupler Run returned, rc = 2*0
+ Comp 2 Run returned, rc = 2*0
+ User Coupler Final starting
+ User Coupler Final returning
+ Coupler Finalize finished, rc = 2*0
+ User Comp1 Final starting
+ User Comp1 Final returning
+ Comp 1 Finalize finished, rc = 2*0
+ Comp 2 Finalize finished, rc = 2*0
+ All Destroy routines done
+  System Test ESMF_ArrayRedistOpenMPSTest                                                                                                                                                                                                                         complete.
+ ------------------------------------------------------------
+ ------------------------------------------------------------
+ Test finished, localPet =  0
  ------------------------------------------------------------
  ------------------------------------------------------------
   PASS  System Test ESMF_ArrayRedistOpenMPSTest, ESMF_ArrayRedistOpenMPSTest.F90, line 391

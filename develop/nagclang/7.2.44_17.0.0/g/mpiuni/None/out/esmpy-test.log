@@ -1,0 +1,10 @@
+find . -name "*ESMF_LogFile*" -exec rm -f {} \; || :
+find . -name "*.report.json" -exec rm -rf {} \; || :
+find . -name "*-summary.json" -exec rm -rf {} \; || :
+find . -name "*.test" -exec rm -rf {} \; || :
+bash src/esmpy/test/test_all.bash "/usr/local/esmf/esmf-testing/nagclang_7.2.44_17.0.0_mpiuni_g_develop/esmf/src/Infrastructure/stubs/mpiuni/mpirun"
+/usr/local/esmf/esmf-testing/nagclang_7.2.44_17.0.0_mpiuni_g_develop/esmpy_venv/lib/python3.11/site-packages/esmpy/interface/loadESMF_helpers.py:45: VersionWarning: You are using development versions of ESMF and ESMPy; we cannot verify if these versions are compatible
+  warnings.warn("You are using development versions of ESMF and ESMPy; "
+Testing ESMPy 9.0.0b0
+/usr/local/esmf/esmf-testing/nagclang_7.2.44_17.0.0_mpiuni_g_develop/esmf/src/Infrastructure/stubs/mpiuni/mpirun -np 1 python3 -m pytest -vs --json-report --json-report-summary --json-report-file esmpy9.0.0b0-petx1-summary.json > esmpy9.0.0b0-petx1.test 2>&1
+Report is in esmpy9.0.0b0-petx1.test
